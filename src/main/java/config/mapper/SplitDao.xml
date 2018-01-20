@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.nieyue.dao.SplitDao">
+<!-- 添加拆分-->
+<insert id="addSplit" parameterType="Split" keyProperty="splitId" flushCache="true"  >  
+   INSERT IGNORE INTO
+   		  Split_tb 
+   		 (
+   		 realname,
+   		 number,
+   		 price,
+   		 apply_date,
+   		 split_date,
+   		 create_date,
+   		 update_date,
+   		 status,
+   		 account_id,
+   		 buy_account_id
+   		 )
+   VALUES
+    	 (
+    	 #{realname},
+    	 #{number},
+    	 #{price},
+    	 #{applyDate},
+    	 #{splitDate},
+    	 #{createDate},
+    	 #{updateDate},
+    	 #{status},
+    	 #{accountId},
+    	 #{buyAccountId}
+    	 )  
+</insert>  
+<!-- 更新拆分-->
+<update id="updateSplit" parameterType="Split" >  
+    UPDATE 
+    	split_tb 
+    <set>
+    	<if test="realname!=null">
+    	realname=#{realname},
+    	</if>
+    	<if test="number!=null">
+    	number=#{number},
+    	</if>
+    	<if test="price!=null">
+    	price=#{price},
+    	</if>
+    	<if test="applyDate!=null">
+    	apply_date=#{applyDate},
+    	</if>
+    	<if test="splitDate!=null">
+    	split_date=#{splitDate},
+    	</if>
+    	<if test="createDate!=null">
+    	create_date=#{createDate},
+    	</if>
+    	<if test="updateDate!=null">
+    	update_date=#{updateDate},
+    	</if>
+    	<if test="status!=null">
+    	status=#{status},
+    	</if>
+    	<if test="accountId!=null">
+    	account_id=#{accountId},
+    	</if>
+    	<if test="buyAccountId!=null">
+    	buy_account_id=#{buyAccountId},
+    	</if>
+    </set> 
+    WHERE
+    	 Split_id=#{SplitId} 
+</update> 
+<!-- 删除视频-->
+<delete id="delSplit"  parameterType="Integer" >  
+    DELETE FROM
+    	 split_tb 
+    	 WHERE split_id=#{splitId}
+</delete>  
+<!-- 加载视频-->
+<select id="loadSplit" parameterType="Integer" resultType="Split" >
+SELECT 
+		 split_id,
+	 	 realname,
+   		 number,
+   		 price,
+   		 apply_date,
+   		 split_date,
+   		 create_date,
+   		 update_date,
+   		 status,
+   		 account_id,
+   		 buy_account_id
+FROM split_tb 
+WHERE split_id=#{splitId}
+</select>
+
+<!-- 分页查询视频-->
+<select id="browsePagingSplit" resultType="Split">  
+        SELECT
+	     split_id,
+	 	 realname,
+   		 number,
+   		 price,
+   		 apply_date,
+   		 split_date,
+   		 create_date,
+   		 update_date,
+   		 status,
+   		 account_id,
+   		 buy_account_id
+	FROM split_tb
+	<where>
+	<if test="accountId!=null">
+		AND  account_id=#{accountId}
+		</if>
+	<if test="buyAccountId!=null">
+		AND  buy_account_id=#{buyAccountId}
+		</if>
+	<if test="applyDate!=null">
+		AND  DATE(apply_date)=DATE(#{applyDate})
+		</if>
+	<if test="splitDate!=null">
+		AND  DATE(split_date)=DATE(#{splitDate})
+		</if>
+	<if test="createDate!=null">
+		AND  DATE(create_date)=DATE(#{createDate})
+		</if>
+	<if test="updateDate!=null">
+		AND  DATE(update_date)=DATE(#{updateDate})
+		</if>
+	<if test="status!=null">
+		AND  status=#{status}
+		</if>
+	WHERE ${orderName} 
+	<if test="orderWay=='asc'">
+	<![CDATA[>=]]> 
+	</if>
+	<if test="orderWay=='desc'">
+	  <![CDATA[<= ]]>
+	</if>
+	(SELECT ${orderName} FROM split_tb 
+		ORDER BY 
+		<where>
+		<if test="accountId!=null">
+		AND  account_id=#{accountId}
+		</if>
+	<if test="buyAccountId!=null">
+		AND  buy_account_id=#{buyAccountId}
+		</if>
+	<if test="applyDate!=null">
+		AND  DATE(apply_date)=DATE(#{applyDate})
+		</if>
+	<if test="splitDate!=null">
+		AND  DATE(split_date)=DATE(#{splitDate})
+		</if>
+	<if test="createDate!=null">
+		AND  DATE(create_date)=DATE(#{createDate})
+		</if>
+	<if test="updateDate!=null">
+		AND  DATE(update_date)=DATE(#{updateDate})
+		</if>
+	<if test="status!=null">
+		AND  status=#{status}
+		</if>
+		</where>
+			${orderName}  ${orderWay}
+		LIMIT #{pageNum}, 1
+		) 
+	</where>
+	ORDER BY
+		${orderName}  ${orderWay}
+	LIMIT
+		#{pageSize}
+</select> 
+
+<!-- 统计记录条数 -->
+<select id="countAll"  resultType="int">  
+	SELECT
+	 	count(split_id)
+	FROM split_tb
+	<where>
+	<if test="accountId!=null">
+		AND  account_id=#{accountId}
+		</if>
+	<if test="buyAccountId!=null">
+		AND  buy_account_id=#{buyAccountId}
+		</if>
+	<if test="applyDate!=null">
+		AND  DATE(apply_date)=DATE(#{applyDate})
+		</if>
+	<if test="splitDate!=null">
+		AND  DATE(split_date)=DATE(#{splitDate})
+		</if>
+	<if test="createDate!=null">
+		AND  DATE(create_date)=DATE(#{createDate})
+		</if>
+	<if test="updateDate!=null">
+		AND  DATE(update_date)=DATE(#{updateDate})
+		</if>
+	<if test="status!=null">
+		AND  status=#{status}
+		</if>
+		</where>
+</select>   
+   
+ 
+</mapper>

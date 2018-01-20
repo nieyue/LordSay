@@ -1,0 +1,35 @@
+server:
+  port: 9000
+  session:
+    timeout: 1800
+    cookie: 
+      name: SESSION
+  tomcat: 
+    max-threads: 1000
+    min-spare-threads: 200
+    accept-count: 1000
+    max-connections: 1000
+ # connection-timeout: 60 
+spring:
+   datasource:
+     name: master
+     driver-class-name: com.mysql.jdbc.Driver
+     url: jdbc:mysql://118.190.133.146:3306/lord_say_db
+     username: root
+     password: liliu
+myPugin: 
+  session: 
+    myDomainName: laoyeshuo.cn
+  projectName: LordSay
+  requestAuth: requestAuthProd
+  lordSayProjectDomainUrl: http://www.laoyeshuo.cn
+  yunSmsUID: 150241
+  yunSmsPWD: rmfbj9
+  yunSmsSignName: 【老爷说】
+  qiniu: 
+    accessKey: dGJBFJKfsq-c74QCzTSxLAzPgcDw338-__AKWM8n
+    secretKey: yTswXYndF5kVG7LrGb4mX6YqaitNDdjNIpxXIDyk
+    bucketName: laoyeshuo
+    privateBucketName: laoyeshuovideo
+    domain: p2bhwwngu.bkt.clouddn.com
+    privateDomain: p2c30vvva.bkt.clouddn.com
