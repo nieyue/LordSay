@@ -2,10 +2,14 @@ package com.nieyue.bean;
 
 import java.io.Serializable;
 import java.util.Date;
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 /**
  * 视频缓存
  * @author 聂跃
  */
+@ApiModel(value="视频缓存",description="视频缓存")
 public class VideoCache implements Serializable {
 
 	/**
@@ -15,34 +19,42 @@ public class VideoCache implements Serializable {
 	/**
 	 * 视频缓存id
 	 */
+	@ApiModelProperty(value="视频缓存id",example="视频缓存id")
 	private Integer videoCacheId;
 	/**
 	 * 名称
 	 */
+	@ApiModelProperty(value="名称",example="名称")
 	private String name;
 	/**
 	 * 封面
 	 */
+	@ApiModelProperty(value="封面",example="封面")
 	private String imgAddress;
 	/**
 	 * 时长
 	 */
+	@ApiModelProperty(value="时长",example="时长")
 	private String duration;
 	/**
 	 * 容量，单位byte
 	 */
+	@ApiModelProperty(value="容量，单位byte",example="容量，单位byte")
 	private String size;
 	/**
 	 * 创建时间
 	 */
+	@ApiModelProperty(value="创建时间",example="创建时间")
 	private Date createDate;
 	/**
 	 * 观看者id外键
 	 */
+	@ApiModelProperty(value="观看者id外键",example="观看者id外键")
 	private Integer accountId;
 	/**
 	 * 视频id,外键
 	 */
+	@ApiModelProperty(value="视频id,外键",example="视频id,外键")
 	private Integer videoId;
 	public Integer getVideoCacheId() {
 		return videoCacheId;

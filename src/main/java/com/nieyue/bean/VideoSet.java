@@ -2,11 +2,15 @@ package com.nieyue.bean;
 
 import java.io.Serializable;
 import java.util.Date;
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 /**
  * 视频集
  * @author 聂跃
  * @date 2017年4月12日
  */
+@ApiModel(value="视频集",description="视频集")
 public class VideoSet implements Serializable {
 
 	/**
@@ -16,54 +20,67 @@ public class VideoSet implements Serializable {
 	/**
 	 * 视频集id
 	 */
+	@ApiModelProperty(value="视频集id",example="视频集id")
 	private Integer videoSetId;
 	/**
 	 * 视频集名称
 	 */
+	@ApiModelProperty(value="视频集名称",example="视频集名称")
 	private String name;
 	/**
 	 * 封面
 	 */
+	@ApiModelProperty(value="封面",example="封面")
 	private String imgAddress;
 	/**
 	 * 作者
 	 */
+	@ApiModelProperty(value="作者",example="作者")
 	private String author;
 	/**
 	 * 简介
 	 */
+	@ApiModelProperty(value="简介",example="简介")
 	private String summary;
 	/**
 	 * 推荐，默认0不推，1封推，2热门推荐，3专栏
 	 */
+	@ApiModelProperty(value="推荐，默认0不推，1封推，2热门推荐，3专栏",example="推荐，默认0不推，1封推，2热门推荐，3专栏")
 	private Integer recommend;
 	/**
 	 * 是否收费，0免费，1vip免费，2付费课程
 	 */
+	@ApiModelProperty(value="是否收费，0免费，1vip免费，2付费课程",example="是否收费，0免费，1vip免费，2付费课程")
 	private Integer cost;
 	/**
 	 * 视频集数
 	 */
+	@ApiModelProperty(value="视频集数",example="视频集数")
 	private Integer number;
 	/**
 	 * 播放总次数
 	 */
+	@ApiModelProperty(value="播放总次数",example="播放总次数")
 	private Integer playNumber;
 	/**
 	 * 状态0下架,默认1上架
 	 */
+	@ApiModelProperty(value="状态0下架,默认1上架",example="状态0下架,默认1上架")
 	private Integer status;
 	/**
 	 * 视频集类型id,外键
 	 */
+	@ApiModelProperty(value="视频集类型id,外键",example="视频集类型id,外键")
 	private Integer videoSetCateId;
 	/**
 	 * 创建时间
 	 */
+	@ApiModelProperty(value="创建时间",example="创建时间")
 	private Date createDate;
 	/**
 	 * 更新时间
 	 */
+	@ApiModelProperty(value="更新时间",example="更新时间")
 	private Date updateDate;
 	public Integer getVideoSetId() {
 		return videoSetId;

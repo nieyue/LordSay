@@ -7,9 +7,9 @@
 <insert id="addNotice" parameterType="Notice" keyProperty="noticeId" flushCache="true"  >  
    INSERT IGNORE INTO
    		  notice_tb 
-   		 (title,img_address,content,create_date,update_date,account_id)
+   		 (title,img_address,content,status,create_date,update_date,account_id)
    VALUES
-    	 (#{title},#{imgAddress},#{content},#{createDate},#{updateDate},#{accountId})  
+    	 (#{title},#{imgAddress},#{content},#{status},#{createDate},#{updateDate},#{accountId})  
 </insert>  
 <!-- 更新通知 -->
 <update id="updateNotice" parameterType="Notice" >  
@@ -19,6 +19,7 @@
     	title=#{title},
     	img_address=#{imgAddress},
     	content=#{content},
+    	status=#{status},
     	create_date=#{createDate},
     	update_date=#{updateDate},
     	account_id=#{accountId}
@@ -38,6 +39,7 @@ SELECT
 	 	title,
 	 	img_address,
     	content,
+    	status,
     	create_date,
     	update_date,
     	account_id
@@ -52,6 +54,7 @@ WHERE notice_id=#{noticeId}
 	 	title,
 	 	img_address,
     	content,
+    	status,
     	create_date,
     	update_date,
     	account_id
@@ -59,6 +62,9 @@ WHERE notice_id=#{noticeId}
 	<where>
 	<if test="title!=null">
 		AND  title=#{title}
+		</if>
+	<if test="status!=null">
+		AND  status=#{status}
 		</if>
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
@@ -74,6 +80,9 @@ WHERE notice_id=#{noticeId}
 	<where>
 	<if test="title!=null">
 		AND  title=#{title}
+		</if>
+	<if test="status!=null">
+		AND  status=#{status}
 		</if>
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
@@ -98,6 +107,9 @@ WHERE notice_id=#{noticeId}
 	<where>
 	<if test="title!=null">
 		AND  title=#{title}
+		</if>
+	<if test="status!=null">
+		AND  status=#{status}
 		</if>
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}

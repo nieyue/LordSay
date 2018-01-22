@@ -47,6 +47,7 @@ public class NoticeController {
 	@ApiOperation(value = "通知列表", notes = "通知分页浏览")
 	@ApiImplicitParams({
 	  @ApiImplicitParam(name="title",value="标题",dataType="string", paramType = "query"),
+	  @ApiImplicitParam(name="status",value="状态，默认0未读，1已读",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="accountId",value="账户ID",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="pageNum",value="页头数位",dataType="int", paramType = "query",defaultValue="1"),
 	  @ApiImplicitParam(name="pageSize",value="每页数目",dataType="int", paramType = "query",defaultValue="10"),
@@ -57,12 +58,13 @@ public class NoticeController {
 	public @ResponseBody StateResultList browsePagingNotice(
 			@RequestParam(value="title",required=false)String title,
 			@RequestParam(value="accountId",required=false)Integer accountId,
+			@RequestParam(value="status",required=false)Integer status,
 			@RequestParam(value="pageNum",defaultValue="1",required=false)int pageNum,
 			@RequestParam(value="pageSize",defaultValue="10",required=false) int pageSize,
 			@RequestParam(value="orderName",required=false,defaultValue="notice_id") String orderName,
 			@RequestParam(value="orderWay",required=false,defaultValue="desc") String orderWay)  {
 			List<Notice> list = new ArrayList<Notice>();
-			list= noticeService.browsePagingNotice(title,accountId,pageNum, pageSize, orderName, orderWay);
+			list= noticeService.browsePagingNotice(title,status,accountId,pageNum, pageSize, orderName, orderWay);
 			if(list.size()>0){
 				return ResultUtil.getSlefSRSuccessList(list);
 				
@@ -110,14 +112,16 @@ public class NoticeController {
 	@ApiOperation(value = "通知数量", notes = "通知数量查询")
 	@ApiImplicitParams({
 		  @ApiImplicitParam(name="title",value="标题",dataType="string", paramType = "query"),
+		  @ApiImplicitParam(name="status",value="状态，默认0未读，1已读",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="accountId",value="通知人id",dataType="int", paramType = "query")
 		  })
 	@RequestMapping(value = "/count", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody int countAll(
 			@RequestParam(value="title",required=false)String title,
+			@RequestParam(value="status",required=false)Integer status,
 			@RequestParam(value="accountId",required=false)Integer accountId,
 			HttpSession session)  {
-		int count = noticeService.countAll(title,accountId);
+		int count = noticeService.countAll(title,status,accountId);
 		return count;
 	}
 	/**

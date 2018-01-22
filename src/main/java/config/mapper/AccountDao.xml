@@ -30,6 +30,7 @@
    		 create_date,
    		 login_date,
    		 status,
+   		 master_id,
    		 role_id,
    		 role_name)
    VALUES
@@ -56,6 +57,7 @@
     	 #{createDate},
     	 #{loginDate},
     	 #{status},
+    	 #{masterId},
     	 #{roleId},
     	 #{roleName}
     	 )  
@@ -131,6 +133,9 @@
     <if test="status!=null">
     	status=#{status},
     	</if>
+    <if test="masterId!=null">
+    	master_id=#{masterId},
+    	</if>
     <if test="roleId!=null">
     	role_id=#{roleId},
     	</if>
@@ -173,6 +178,7 @@ SELECT
    		 create_date,
    		 login_date,
    		 status,
+   		 master_id,
    		 role_id,
    		 role_name
 FROM account_tb 
@@ -205,6 +211,7 @@ WHERE account_id=#{accountId}
    		 create_date,
    		 login_date,
    		 status,
+   		 master_id,
    		 role_id,
    		 role_name
 	FROM account_tb
@@ -336,6 +343,7 @@ SELECT
    		 create_date,
    		 login_date,
    		 status,
+   		 master_id,
    		 role_id,
    		 role_name
 FROM account_tb 

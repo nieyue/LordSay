@@ -90,6 +90,7 @@ public class ToolController {
 	 * @return
 	 * @throws Exception 
 	 */
+	@ApiOperation(value = "二维码", notes = "二维码")
 	@RequestMapping(value="/getBarcode", method = {RequestMethod.GET,RequestMethod.POST})
 	public void getBarcode(
 			@RequestParam("acountId")Integer acountId,
@@ -105,6 +106,7 @@ public class ToolController {
 	 * @return
 	 * @throws Exception 
 	 */
+	@ApiOperation(value = "二维码Url", notes = "二维码Url")
 	@RequestMapping(value="/getBarcodeUrl", method = {RequestMethod.GET,RequestMethod.POST})
 	public StateResultList getBarcodeUrl(
 			@RequestParam("acountId")Integer acountId,

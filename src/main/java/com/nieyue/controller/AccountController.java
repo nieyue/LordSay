@@ -3,7 +3,9 @@ package com.nieyue.controller;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Pattern;
 
 import javax.annotation.Resource;
@@ -32,7 +34,11 @@ import com.nieyue.service.AccountLevelService;
 import com.nieyue.service.AccountParentService;
 import com.nieyue.service.AccountService;
 import com.nieyue.service.FinanceService;
+import com.nieyue.service.NoticeService;
 import com.nieyue.service.RoleService;
+import com.nieyue.service.VideoCacheService;
+import com.nieyue.service.VideoPlayRecordService;
+import com.nieyue.service.VideoSetCollectService;
 import com.nieyue.thirdparty.yun.YunSms;
 import com.nieyue.util.MyDESutil;
 import com.nieyue.util.MyValidator;
@@ -43,7 +49,11 @@ import com.nieyue.util.StateResultList;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 
 
 /**
@@ -65,6 +75,14 @@ public class AccountController {
 	private AccountParentService accountParentService;
 	@Resource
 	private AccountLevelService accountLevelService;
+	@Resource
+	private VideoPlayRecordService videoPlayRecordService;
+	@Resource
+	private VideoCacheService videoCacheService;
+	@Resource
+	private VideoSetCollectService videoSetCollectService;
+	@Resource
+	private NoticeService noticeService;
 	@Resource
 	private YunSms yunSms;
 	@Value("${myPugin.projectName}")
@@ -284,9 +302,10 @@ public class AccountController {
 	 * 账户增加
 	 * @return 
 	 */
+	
 	@ApiOperation(value = "账户增加", notes = "账户增加")
 	@RequestMapping(value = "/add", method = {RequestMethod.GET,RequestMethod.POST})
-	public @ResponseBody StateResult addAccount(@ModelAttribute Account account, HttpSession session) {
+	public  @ResponseBody StateResult addAccount(@ModelAttribute Account account, HttpSession session) {
 		//账户已经存在
 		if(accountService.loginAccount(account.getPhone(), null,null)!=null ){
 			return ResultUtil.getSR(false);
@@ -300,6 +319,9 @@ public class AccountController {
 	 * @return
 	 */
 	@ApiOperation(value = "账户删除", notes = "账户删除")
+	@ApiImplicitParams({
+		  @ApiImplicitParam(name="accountId",value="账户ID",dataType="int", paramType = "query",required=true)
+		 	  })
 	@RequestMapping(value = "/delete", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResult delAccount(
 			@RequestParam("accountId") Integer accountId,
@@ -504,7 +526,21 @@ public class AccountController {
 			session.setAttribute("role", r);
 			List<Finance> f = financeService.browsePagingFinance(null,account.getAccountId(), 1, 1, "finance_id", "asc");
 			session.setAttribute("finance", f.get(0));
-			list.add(account);
+			Map<Object,Object> map=new HashMap<>();
+			map.put("account", account);
+			//视频播放记录数
+			int videoPlayRecordCount = videoPlayRecordService.countAll(null,account.getAccountId());
+			map.put("videoPlayRecordCount", videoPlayRecordCount);
+			//视频缓存数
+			int videoCacheCount = videoCacheService.countAll(null,account.getAccountId());
+			map.put("videoCacheCount", videoCacheCount);
+			//视频集收藏数
+			int videoSetCollectCount = videoSetCollectService.countAll(null,account.getAccountId());
+			map.put("videoSetCollectCount", videoSetCollectCount);
+			//未读通知数
+			int noticeCount = noticeService.countAll(null, 0, account.getAccountId());
+			map.put("notice0", noticeCount);
+			list.add(map);
 			//return ResultUtil.getSlefSRSuccessList(list);
 			return ResultUtil.getSlefSRSuccessList(list);
 			}
@@ -538,7 +574,7 @@ public class AccountController {
 			HttpSession session) throws AccountIsExistException, VerifyCodeErrorException  {
 		//手机验证码
 		String vc = (String) session.getAttribute("validCode");
-		List<Account> list = new ArrayList<Account>();
+		List<Map<Object,Object>> list = new ArrayList<>();
 		if(!vc.equals(validCode)){
 			throw new VerifyCodeErrorException();//验证码错误
 		}
@@ -549,7 +585,22 @@ public class AccountController {
 		}
 			//新用户注册登录
 				Account account=new Account();
-				
+				//获取masterId
+				if(masterId!=null&&!masterId.equals("")){
+					//账户上级
+					AccountParent accountParent=new AccountParent();
+					accountParent.setAccountId(account.getAccountId());
+					List<AccountLevel> accountLevelList=accountLevelService.browsePagingAccountLevel(0, null, 1, 1, "account_level_id", "asc");
+					//accountLevelList.get(0).
+					accountParent.setAccountLevelId(accountLevelList.get(0).getAccountLevelId());;
+					accountParent.setName(accountLevelList.get(0).getName());
+					accountParent.setMasterId(masterId);
+					accountParent.setRealMasterId(masterId);
+					accountParent.setPhone(adminName);
+					accountParent.setRealname(adminName);
+					accountParentService.addAccountParent(accountParent);
+					account.setMasterId(masterId);
+				}
 					account.setPhone(adminName);
 					//Account.setNickname(adminName);
 					account.setPassword(MyDESutil.getMD5(password));
@@ -564,27 +615,20 @@ public class AccountController {
 					account.setLoginDate(new Date());
 					boolean b = accountService.addAccount(account);
 				if(b){
-					//获取masterId
-					if(masterId!=null&&!masterId.equals("")){
-						AccountParent accountParent=new AccountParent();
-						accountParent.setAccountId(account.getAccountId());
-						List<AccountLevel> accountLevelList=accountLevelService.browsePagingAccountLevel(0, null, 1, 1, "account_level_id", "asc");
-						//accountLevelList.get(0).
-						accountParent.setAccountLevelId(accountLevelList.get(0).getAccountLevelId());;
-						accountParent.setName(accountLevelList.get(0).getName());
-						accountParent.setMasterId(masterId);
-						accountParent.setRealMasterId(masterId);
-						accountParent.setPhone(adminName);
-						accountParent.setRealname(adminName);
-						accountParentService.addAccountParent(accountParent);
-					}
+				
 				session.setAttribute("account", account);
 				Role role = roleService.loadRole(account.getRoleId());
 				session.setAttribute("role", role);
 				List<Finance> f = financeService.browsePagingFinance(null,account.getAccountId(), 1, 1, "finance_id", "asc");
 				//System.out.println(f.get(0).toString());
 				session.setAttribute("finance", f.get(0));
-				list.add(account);
+				Map<Object,Object> map=new HashMap<>();
+				map.put("account", account);
+				map.put("videoPlayRecordeCount", 0);
+				map.put("videoCacheCount", 0);
+				map.put("videoSetCount", 0);
+				map.put("notice0", 0);
+				list.add(map);
 				return ResultUtil.getSlefSRSuccessList(list);
 				}else{
 					return ResultUtil.getSlefSRFailList(list);

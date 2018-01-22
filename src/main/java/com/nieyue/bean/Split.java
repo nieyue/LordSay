@@ -3,11 +3,15 @@ package com.nieyue.bean;
 import java.io.Serializable;
 import java.util.Date;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * 拆分
  * @author yy
  *
  */
+@ApiModel(value="拆分",description="拆分")
 public class Split implements Serializable{
 
 	/**
@@ -17,47 +21,58 @@ public class Split implements Serializable{
 	/**
 	 * 拆分id
 	 */
+	@ApiModelProperty(value="拆分id",example="拆分id")
 	private Integer splitId;
 	
 	/**
 	 * 购买人
 	 */
+	@ApiModelProperty(value="购买人",example="购买人")
 	private String realname;
 	/**
 	 *数量
 	 */
+	@ApiModelProperty(value="数量",example="数量")
 	private Integer number;
 	/**
 	 *金额
 	 */
+	@ApiModelProperty(value="金额",example="金额")
 	private Double price;
 	/**
 	 * 申请时间
 	 */
+	@ApiModelProperty(value="申请时间",example="申请时间")
 	private Date applyDate;
 	/**
 	 * 拆分时间
 	 */
+	@ApiModelProperty(value="拆分时间",example="拆分时间")
 	private Date splitDate;
 	/**
 	 * 创建更新时间
 	 */
+	@ApiModelProperty(value="创建更新时间",example="创建更新时间")
 	private Date createDate;
 	/**
 	 * 更新时间
 	 */
+	@ApiModelProperty(value="更新时间",example="更新时间")
 	private Date updateDate;
 	/**
 	 * 拆分状态，默认0已申请，1已拆分，2已拒绝，3已退款，4已推荐给上级
 	 */
+	@ApiModelProperty(value="拆分状态，默认0已申请，1已拆分，2已拒绝，3已退款，4已推荐给上级",example="拆分状态，默认0已申请，1已拆分，2已拒绝，3已退款，4已推荐给上级")
 	private Integer status;
 	/**
 	 * 账户自身id,邀请码
 	 */
+	@ApiModelProperty(value="账户自身id,邀请码",example="账户自身id,邀请码")
 	private Integer accountId;
 	/**
 	 * 购买者id,外键
 	 */
+	@ApiModelProperty(value="购买者id,外键",example="购买者id,外键")
 	private Integer buyAccountId;
 	public Integer getSplitId() {
 		return splitId;

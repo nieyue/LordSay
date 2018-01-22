@@ -3,11 +3,15 @@ package com.nieyue.bean;
 import java.io.Serializable;
 import java.util.Date;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * 分发
  * @author yy
  *
  */
+@ApiModel(value="分发",description="分发")
 public class Distribute implements Serializable{
 
 	/**
@@ -17,43 +21,53 @@ public class Distribute implements Serializable{
 	/**
 	 * 分发id
 	 */
+	@ApiModelProperty(value="分发id",example="分发id")
 	private Integer distributeId;
 	
 	/**
 	 * 购买人
 	 */
+	@ApiModelProperty(value="购买人",example="购买人")
 	private String realname;
 	/**
 	 *数量，默认1张
 	 */
+	@ApiModelProperty(value="数量，默认1张",example="数量，默认1张")
 	private Integer number;
 	/**
 	 *金额
 	 */
+	@ApiModelProperty(value="金额",example="金额")
 	private Double price;
 	/**
 	 * 分发时间
 	 */
+	@ApiModelProperty(value="分发时间",example="分发时间")
 	private Date distributeDate;
 	/**
 	 * 创建更新时间
 	 */
+	@ApiModelProperty(value="创建更新时间",example="创建更新时间")
 	private Date createDate;
 	/**
 	 * 更新时间
 	 */
+	@ApiModelProperty(value="更新时间",example="更新时间")
 	private Date updateDate;
 	/**
 	 * 分发状态，默认1已分发
 	 */
+	@ApiModelProperty(value="分发状态，默认1已分发",example="分发状态，默认1已分发")
 	private Integer status;
 	/**
 	 * 账户自身id,邀请码
 	 */
+	@ApiModelProperty(value="账户自身id,邀请码",example="账户自身id,邀请码")
 	private Integer accountId;
 	/**
 	 * 购买者id,外键
 	 */
+	@ApiModelProperty(value="购买者id,外键",example="购买者id,外键")
 	private Integer buyAccountId;
 	public Integer getDistributeId() {
 		return distributeId;

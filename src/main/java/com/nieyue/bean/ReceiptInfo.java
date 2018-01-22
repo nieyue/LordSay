@@ -3,11 +3,15 @@ package com.nieyue.bean;
 import java.io.Serializable;
 import java.util.Date;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * 收货信息
  * @author yy
  *
  */
+@ApiModel(value="收货信息",description="收货信息")
 public class ReceiptInfo implements Serializable{
 
 	/**
@@ -17,35 +21,43 @@ public class ReceiptInfo implements Serializable{
 	/**
 	 * 收货信息id
 	 */
+	@ApiModelProperty(value="收货信息id",example="收货信息id")
 	private Integer receiptInfoId;
 	
 	/**
 	 * 收货信息姓名
 	 */
+	@ApiModelProperty(value="收货信息姓名",example="收货信息姓名")
 	private String name;
 	/**
 	 * 收货地址手机号
 	 */
+	@ApiModelProperty(value="收货地址手机号",example="收货地址手机号")
 	private String phone;
 	/**
 	 * 收货地址
 	 */
+	@ApiModelProperty(value="收货地址",example="收货地址")
 	private String address;
 	/**
 	 * 默认为0不是，1是
 	 */
+	@ApiModelProperty(value="默认为0不是，1是",example="默认为0不是，1是")
 	private Integer isDefault;
 	/**
 	 * 创建时间
 	 */
+	@ApiModelProperty(value="创建时间",example="创建时间")
 	private Date createDate;
 	/**
 	 * 更新时间
 	 */
+	@ApiModelProperty(value="更新时间",example="更新时间")
 	private Date updateDate;
 	/**
 	 * 账户Id
 	 */
+	@ApiModelProperty(value="账户Id",example="账户Id")
 	private Integer acountId;
 	public Integer getReceiptInfoId() {
 		return receiptInfoId;

@@ -577,6 +577,7 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         			//自身
         			if((
         					request.getRequestURI().indexOf("/feedback/list")>-1
+        					|| request.getRequestURI().indexOf("/feedback/add")>-1
         					||method.getName().equals("loadFeedback")
         					)
         					&& request.getParameter("accountId").equals(sessionAccount.getAccountId().toString())){

@@ -2,10 +2,14 @@ package com.nieyue.bean;
 
 import java.io.Serializable;
 import java.util.Date;
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 /**
  * 文章类型
  * @author 聂跃
  */
+@ApiModel(value="文章类型",description="文章类型")
 public class ArticleCate implements Serializable {
 
 	/**
@@ -15,14 +19,17 @@ public class ArticleCate implements Serializable {
 	/**
 	 * 文章类型id
 	 */
+	@ApiModelProperty(value="文章类型id",example="文章类型id")
 	private Integer articleCateId;
 	/**
 	 * 名称
 	 */
+	@ApiModelProperty(value="名称",example="名称")
 	private String name;
 	/**
 	 * 更新时间
 	 */
+	@ApiModelProperty(value="更新时间",example="更新时间")
 	private Date updateDate;
 	public Integer getArticleCateId() {
 		return articleCateId;
