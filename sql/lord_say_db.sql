@@ -334,9 +334,11 @@ type tinyint(4) DEFAULT 0 COMMENT '类型，1VIP购买，2团购卡团购，3付
 create_date datetime  COMMENT '创建时间',
 update_date datetime  COMMENT '更新时间',
 account_id int(11) COMMENT '下单人',
+status tinyint(4) COMMENT '订单状态，1待处理，2已完成',
 PRIMARY KEY (order_id),
 INDEX INDEX_TYPE (type) USING BTREE,
 INDEX INDEX_ACCOUNTID (account_id) USING BTREE,
+INDEX INDEX_STATUS (status) USING BTREE,
 INDEX INDEX_CREATEDATE (create_date) USING BTREE,
 INDEX INDEX_UPDATEDATE (update_date) USING BTREE
 )ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='视频订单表';
@@ -350,13 +352,11 @@ total_price decimal(11,2) COMMENT '总价',
 number decimal(11,2) COMMENT '数量/集数',
 create_date datetime  COMMENT '创建时间',
 update_date datetime  COMMENT '更新时间',
-status tinyint(4) COMMENT '订单状态，1待处理，2已完成',
 order_id int(11) COMMENT '订单ID',
 PRIMARY KEY (order_detail_id),
 INDEX INDEX_ORDERID (order_id) USING BTREE,
 INDEX INDEX_CREATEDATE (create_date) USING BTREE,
-INDEX INDEX_UPDATEDATE (update_date) USING BTREE,
-INDEX INDEX_STATUS (status) USING BTREE
+INDEX INDEX_UPDATEDATE (update_date) USING BTREE
 )ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='订单详情表';
 
 #创建文章类型表 

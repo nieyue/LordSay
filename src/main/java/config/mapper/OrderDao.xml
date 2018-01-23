@@ -11,6 +11,7 @@
    		 order_number,
    		 type,
    		 account_id,
+   		 status,
    		 create_date,
    		 update_date
    		 )
@@ -19,6 +20,7 @@
     	 #{orderNumber},
     	 #{type},
     	 #{accountId},
+    	 #{status},
     	 #{createDate},
     	 #{updateDate}
     	 )  
@@ -36,6 +38,9 @@
     	</if>
     	<if test="accountId!=null">
     	account_id=#{accountId},
+    	</if>
+    	<if test="status!=null">
+    	status=#{status},
     	</if>
     	<if test="createDate!=null">
     	create_date=#{createDate},
@@ -60,6 +65,7 @@ SELECT
 	 	 order_number,
    		 type,
    		 account_id,
+   		 status,
    		 create_date,
    		 update_date
 FROM order_tb 
@@ -73,6 +79,7 @@ WHERE order_id=#{orderId}
 	 	 order_number,
    		 type,
    		 account_id,
+   		 status,
    		 create_date,
    		 update_date
 	FROM order_tb
@@ -82,6 +89,9 @@ WHERE order_id=#{orderId}
 		</if>
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
+		</if>
+	<if test="status!=null">
+		AND  status=#{status}
 		</if>
 <if test="createDate!=null">
 		AND  DATE(create_date)=DATE(#{createDate})
@@ -104,6 +114,9 @@ WHERE order_id=#{orderId}
 		</if>
 		<if test="accountId!=null">
 		AND  account_id=#{accountId}
+		</if>
+		<if test="status!=null">
+		AND  status=#{status}
 		</if>
 	<if test="createDate!=null">
 		AND  DATE(create_date)=DATE(#{createDate})
@@ -133,6 +146,9 @@ WHERE order_id=#{orderId}
 		</if>
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
+		</if>
+	<if test="status!=null">
+		AND  status=#{status}
 		</if>
 <if test="createDate!=null">
 		AND  DATE(create_date)=DATE(#{createDate})

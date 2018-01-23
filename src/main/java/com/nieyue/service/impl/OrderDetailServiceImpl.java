@@ -47,11 +47,10 @@ public class OrderDetailServiceImpl implements OrderDetailService{
 	public int countAll(
 			Integer orderId,
 			Date createDate,
-			Date updateDate,
-			Integer status
+			Date updateDate
 			) {
 		int c = orderDetailDao.countAll(
-				orderId,createDate,updateDate,status);
+				orderId,createDate,updateDate);
 		return c;
 	}
 
@@ -60,7 +59,6 @@ public class OrderDetailServiceImpl implements OrderDetailService{
 			Integer orderId,
 			Date createDate,
 			Date updateDate,
-			Integer status,
 			int pageNum, int pageSize,
 			String orderName, String orderWay) {
 		if(pageNum<1){
@@ -73,7 +71,6 @@ public class OrderDetailServiceImpl implements OrderDetailService{
 				orderId,
 				createDate,
 				updateDate,
-				status,
 				pageNum,
 				pageSize,
 				orderName,

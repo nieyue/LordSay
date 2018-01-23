@@ -52,15 +52,10 @@ public class OrderDetail implements Serializable {
 	@ApiModelProperty(value="更新时间",example="更新时间")
 	private Date updateDate;
 	/**
-	 * 订单状态，1待处理，2已完成
-	 */
-	@ApiModelProperty(value="订单状态，1待处理，2已完成",example="订单状态，1待处理，2已完成")
-	private Integer status;
-	/**
 	 * 下单人
 	 */
-	@ApiModelProperty(value="下单人",example="下单人")
-	private Integer accountId;
+	@ApiModelProperty(value="订单ID",example="订单ID")
+	private Integer orderId;
 	public Integer getOrderDetailId() {
 		return orderDetailId;
 	}
@@ -103,17 +98,12 @@ public class OrderDetail implements Serializable {
 	public void setUpdateDate(Date updateDate) {
 		this.updateDate = updateDate;
 	}
-	public Integer getStatus() {
-		return status;
+	
+	public Integer getOrderId() {
+		return orderId;
 	}
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
-	public Integer getAccountId() {
-		return accountId;
-	}
-	public void setAccountId(Integer accountId) {
-		this.accountId = accountId;
+	public void setOrderId(Integer orderId) {
+		this.orderId = orderId;
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;

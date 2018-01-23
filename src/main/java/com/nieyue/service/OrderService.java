@@ -23,6 +23,7 @@ public interface OrderService {
 	public int countAll(
 			Integer type,
 			Integer accountId,
+			Integer status,
 			Date createDate,
 			Date updateDate
 			);
@@ -30,6 +31,7 @@ public interface OrderService {
 	public List<Order> browsePagingOrder(
 			Integer type,
 			Integer accountId,
+			Integer status,
 			Date createDate,
 			Date updateDate,
 			int pageNum,

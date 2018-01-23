@@ -22,6 +22,11 @@ public class Order implements Serializable {
 	@ApiModelProperty(value="订单id",example="订单id")
 	private Integer orderId;
 	/**
+	 * 订单号
+	 */
+	@ApiModelProperty(value="订单号",example="订单号")
+	private Integer orderNumber;
+	/**
 	 * 类型，1VIP购买，2团购卡团购，3付费课程
 	 */
 	@ApiModelProperty(value="类型，1VIP购买，2团购卡团购，3付费课程",example="类型，1VIP购买，2团购卡团购，3付费课程")
@@ -36,6 +41,11 @@ public class Order implements Serializable {
 	 */
 	@ApiModelProperty(value="更新时间",example="更新时间")
 	private Date updateDate;
+	/**
+	 * 订单状态，1待处理，2已完成
+	 */
+	@ApiModelProperty(value="订单状态，1待处理，2已完成",example="订单状态，1待处理，2已完成")
+	private Integer status;
 	/**
 	 * 下单人
 	 */
@@ -73,5 +83,17 @@ public class Order implements Serializable {
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	public Integer getStatus() {
+		return status;
+	}
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
+	public Integer getOrderNumber() {
+		return orderNumber;
+	}
+	public void setOrderNumber(Integer orderNumber) {
+		this.orderNumber = orderNumber;
 	}
 }

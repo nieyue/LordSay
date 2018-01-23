@@ -50,7 +50,6 @@ public class OrderDetailController {
 	  @ApiImplicitParam(name="orderId",value="订单Id",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="createDate",value="创建时间",dataType="date-time", paramType = "query"),
 	  @ApiImplicitParam(name="updateDate",value="更新时间",dataType="date-time", paramType = "query"),
-	  @ApiImplicitParam(name="status",value="订单状态，1待处理，2已完成",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="pageNum",value="页头数位",dataType="int", paramType = "query",defaultValue="1"),
 	  @ApiImplicitParam(name="pageSize",value="每页数目",dataType="int", paramType = "query",defaultValue="10"),
 	  @ApiImplicitParam(name="OrderDetailName",value="排序字段",dataType="string", paramType = "query",defaultValue="create_date"),
@@ -61,13 +60,12 @@ public class OrderDetailController {
 			@RequestParam(value="orderId",required=false)Integer orderId,
 			@RequestParam(value="createDate",required=false)Date createDate,
 			@RequestParam(value="updateDate",required=false)Date updateDate,
-			@RequestParam(value="status",required=false)Integer status,
 			@RequestParam(value="pageNum",defaultValue="1",required=false)int pageNum,
 			@RequestParam(value="pageSize",defaultValue="10",required=false) int pageSize,
 			@RequestParam(value="OrderDetailName",required=false,defaultValue="create_date") String OrderDetailName,
 			@RequestParam(value="OrderDetailWay",required=false,defaultValue="desc") String OrderDetailWay)  {
 			List<OrderDetail> list = new ArrayList<OrderDetail>();
-			list= orderDetailService.browsePagingOrderDetail(orderId,createDate,updateDate,status,pageNum, pageSize, OrderDetailName, OrderDetailWay);
+			list= orderDetailService.browsePagingOrderDetail(orderId,createDate,updateDate,pageNum, pageSize, OrderDetailName, OrderDetailWay);
 			if(list.size()>0){
 				return ResultUtil.getSlefSRSuccessList(list);
 			}else{
@@ -115,17 +113,15 @@ public class OrderDetailController {
 	@ApiImplicitParams({
 		@ApiImplicitParam(name="orderId",value="订单Id",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="createDate",value="创建时间",dataType="date-time", paramType = "query"),
-		  @ApiImplicitParam(name="updateDate",value="更新时间",dataType="date-time", paramType = "query"),
-		  @ApiImplicitParam(name="status",value="订单状态，1待处理，2已完成",dataType="int", paramType = "query")
+		  @ApiImplicitParam(name="updateDate",value="更新时间",dataType="date-time", paramType = "query")
 		  })
 	@RequestMapping(value = "/count", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody int countAll(
 			@RequestParam(value="orderId",required=false)Integer orderId,
 			@RequestParam(value="createDate",required=false)Date createDate,
 			@RequestParam(value="updateDate",required=false)Date updateDate,
-			@RequestParam(value="status",required=false)Integer status,
 			HttpSession session)  {
-		int count = orderDetailService.countAll(orderId,createDate,updateDate,status);
+		int count = orderDetailService.countAll(orderId,createDate,updateDate);
 		return count;
 	}
 	/**

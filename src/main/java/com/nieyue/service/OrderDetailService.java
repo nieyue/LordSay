@@ -23,15 +23,13 @@ public interface OrderDetailService {
 	public int countAll(
 			Integer orderId,
 			Date createDate,
-			Date updateDate,
-			Integer status
+			Date updateDate
 			);
 	/** 分页订单详情信息 */
 	public List<OrderDetail> browsePagingOrderDetail(
 			Integer orderId,
 			Date createDate,
 			Date updateDate,
-			Integer status,
 			int pageNum,
 			int pageSize,
 			String orderName,

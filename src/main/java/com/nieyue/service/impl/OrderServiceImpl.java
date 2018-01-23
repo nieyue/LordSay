@@ -47,11 +47,12 @@ public class OrderServiceImpl implements OrderService{
 	public int countAll(
 			Integer type,
 			Integer accountId,
+			Integer status,
 			Date createDate,
 			Date updateDate
 			) {
 		int c = orderDao.countAll(
-				type,accountId,createDate,updateDate);
+				type,accountId,status,createDate,updateDate);
 		return c;
 	}
 
@@ -59,6 +60,7 @@ public class OrderServiceImpl implements OrderService{
 	public List<Order> browsePagingOrder(
 			Integer type,
 			Integer accountId,
+			Integer status,
 			Date createDate,
 			Date updateDate,
 			int pageNum, int pageSize,
@@ -72,6 +74,7 @@ public class OrderServiceImpl implements OrderService{
 		List<Order> l = orderDao.browsePagingOrder(
 				type,
 				accountId,
+				status,
 				createDate,
 				updateDate,
 				pageNum,

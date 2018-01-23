@@ -27,6 +27,7 @@ public interface OrderDao {
 	public int countAll(
 			@Param("type")Integer type,
 			@Param("accountId")Integer accountId,
+			@Param("status")Integer status,
 			@Param("createDate")Date createDate,
 			@Param("updateDate")Date updateDate
 			);	
@@ -34,6 +35,7 @@ public interface OrderDao {
 	public List<Order> browsePagingOrder(
 			@Param("type")Integer type,
 			@Param("accountId")Integer accountId,
+			@Param("status")Integer status,
 			@Param("createDate")Date createDate,
 			@Param("updateDate")Date updateDate,
 			@Param("pageNum")int pageNum,

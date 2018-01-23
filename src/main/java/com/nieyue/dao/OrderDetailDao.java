@@ -27,15 +27,13 @@ public interface OrderDetailDao {
 	public int countAll(
 			@Param("orderId")Integer orderId,
 			@Param("createDate")Date createDate,
-			@Param("updateDate")Date updateDate,
-			@Param("status")Integer status
+			@Param("updateDate")Date updateDate
 			);	
 	/** 分页订单详情信息 */
 	public List<OrderDetail> browsePagingOrderDetail(
 			@Param("orderId")Integer orderId,
 			@Param("createDate")Date createDate,
 			@Param("updateDate")Date updateDate,
-			@Param("status")Integer status,
 			@Param("pageNum")int pageNum,
 			@Param("pageSize")int pageSize,
 			@Param("orderName")String orderName,

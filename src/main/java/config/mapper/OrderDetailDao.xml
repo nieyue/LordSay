@@ -14,7 +14,6 @@
    		 number,
    		 create_date,
    		 update_date,
-   		 status,
    		 order_id
    		 )
    VALUES
@@ -25,7 +24,6 @@
     	 #{number},
     	 #{createDate},
     	 #{updateDate},
-    	 #{status},
     	 #{orderId}
     	 )  
 </insert>  
@@ -52,9 +50,6 @@
     	<if test="updateDate!=null">
     	update_date=#{updateDate},
     	</if>
-    	<if test="status!=null">
-    	status=#{status},
-    	</if>
     	<if test="orderId!=null">
     	order_id=#{orderId},
     	</if>
@@ -78,7 +73,6 @@ SELECT
    		 number,
    		 create_date,
    		 update_date,
-   		 status,
    		 order_id
 FROM order_detail_tb 
 WHERE order_detail_id=#{orderDetailId}
@@ -94,7 +88,6 @@ WHERE order_detail_id=#{orderDetailId}
    		 number,
    		 create_date,
    		 update_date,
-   		 status,
    		 order_id
 	FROM order_detail_tb
 	<where>
@@ -106,9 +99,6 @@ WHERE order_detail_id=#{orderDetailId}
 		</if>
 	<if test="updateDate!=null">
 		AND  DATE(update_date)=DATE(#{updateDate})
-		</if>
-	<if test="status!=null">
-		AND  status=#{status}
 		</if>
 	WHERE ${orderName} 
 	<if test="orderWay=='asc'">
@@ -128,9 +118,6 @@ WHERE order_detail_id=#{orderDetailId}
 		</if>
 	<if test="updateDate!=null">
 		AND  DATE(update_date)=DATE(#{updateDate})
-		</if>
-	<if test="status!=null">
-		AND  status=#{status}
 		</if>
 		</where>
 			${orderName}  ${orderWay}
@@ -157,9 +144,6 @@ WHERE order_detail_id=#{orderDetailId}
 		</if>
 	<if test="updateDate!=null">
 		AND  DATE(update_date)=DATE(#{updateDate})
-		</if>
-	<if test="status!=null">
-		AND  status=#{status}
 		</if>
 		</where>
 </select>   
