@@ -103,7 +103,7 @@ WHERE medal_id=#{medalId}
 	<if test="updateDate!=null">
 		AND  DATE(update_date)=DATE(#{updateDate})
 		</if>
-	WHERE ${orderName} 
+	AND ${orderName} 
 	<if test="orderWay=='asc'">
 	<![CDATA[>=]]> 
 	</if>
@@ -111,7 +111,6 @@ WHERE medal_id=#{medalId}
 	  <![CDATA[<= ]]>
 	</if>
 	(SELECT ${orderName} FROM medal_tb 
-		ORDER BY 
 		<where>
 	<if test="medalTermId!=null">
 		AND  medal_term_id=#{medalTermId}
@@ -126,6 +125,7 @@ WHERE medal_id=#{medalId}
 		AND  DATE(update_date)=DATE(#{updateDate})
 		</if>
 		</where>
+		ORDER BY 
 			${orderName}  ${orderWay}
 		LIMIT #{pageNum}, 1
 		) 

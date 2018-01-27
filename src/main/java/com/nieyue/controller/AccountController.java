@@ -22,10 +22,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.nieyue.bean.Account;
-import com.nieyue.bean.AccountLevel;
 import com.nieyue.bean.AccountParent;
 import com.nieyue.bean.Finance;
+import com.nieyue.bean.Integral;
 import com.nieyue.bean.Role;
+import com.nieyue.bean.Vip;
 import com.nieyue.exception.AccountIsExistException;
 import com.nieyue.exception.MySessionException;
 import com.nieyue.exception.RequestLimitException;
@@ -34,11 +35,13 @@ import com.nieyue.service.AccountLevelService;
 import com.nieyue.service.AccountParentService;
 import com.nieyue.service.AccountService;
 import com.nieyue.service.FinanceService;
+import com.nieyue.service.IntegralService;
 import com.nieyue.service.NoticeService;
 import com.nieyue.service.RoleService;
 import com.nieyue.service.VideoCacheService;
 import com.nieyue.service.VideoPlayRecordService;
 import com.nieyue.service.VideoSetCollectService;
+import com.nieyue.service.VipService;
 import com.nieyue.thirdparty.yun.YunSms;
 import com.nieyue.util.MyDESutil;
 import com.nieyue.util.MyValidator;
@@ -49,11 +52,7 @@ import com.nieyue.util.StateResultList;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
 
 
 /**
@@ -81,6 +80,10 @@ public class AccountController {
 	private VideoCacheService videoCacheService;
 	@Resource
 	private VideoSetCollectService videoSetCollectService;
+	@Resource
+	private VipService vipService;
+	@Resource
+	private IntegralService integralService;
 	@Resource
 	private NoticeService noticeService;
 	@Resource
@@ -139,20 +142,23 @@ public class AccountController {
 	 */
 	@ApiOperation(value = "账户修改", notes = "账户修改")
 	@RequestMapping(value = "/update", method = {RequestMethod.GET,RequestMethod.POST})
-	public @ResponseBody StateResult updateAccount(
-		@ModelAttribute Account Account,
+	public @ResponseBody StateResultList updateAccount(
+		@ModelAttribute Account account,
 			HttpSession session)  {
+		List<Account> list=new ArrayList<>();
 		//账户已经存在
-		if(accountService.loginAccount(Account.getPhone(), null,Account.getAccountId())!=null
-				//||AccountService.loginAccount(Account.getEmail(), null,Account.getAccountId())!=null
+		if(accountService.loginAccount(account.getPhone(), null,account.getAccountId())!=null
+				//||accountService.loginAccount(account.getEmail(), null,Account.getAccountId())!=null
 				){
-			return ResultUtil.getSR(false);
+			return ResultUtil.getSlefSRFailList(list);
 		}
-		//System.err.println(Account);
-		boolean um = accountService.updateAccount(Account);
-		session.setAttribute("Account", Account);
-		//System.err.println(um);
-		return ResultUtil.getSR(um);
+		boolean um = accountService.updateAccount(account);
+		if(um){
+		session.setAttribute("account", account);
+		list.add(account);
+		return ResultUtil.getSlefSRSuccessList(list);
+		}
+		return ResultUtil.getSlefSRFailList(list);
 	}
 	/**
 	 * 账户修改密码
@@ -202,6 +208,7 @@ public class AccountController {
 	@ApiOperation(value = "账户修改用户信息", notes = "账户修改用户信息")
 	@ApiImplicitParams({
 		@ApiImplicitParam(name="accountId",value="账户ID",dataType="int", paramType = "query",required=true),
+		@ApiImplicitParam(name="icon",value="头像",dataType="string", paramType = "query"),
 		@ApiImplicitParam(name="nickname",value="昵称",dataType="string", paramType = "query"),
 		@ApiImplicitParam(name="sex",value="性别,默认为0未知，为1男性，为2女性",dataType="int", paramType = "query"),
 		@ApiImplicitParam(name="age",value="年龄",dataType="int", paramType = "query"),
@@ -213,8 +220,9 @@ public class AccountController {
 		@ApiImplicitParam(name="alipay",value="支付宝账号",dataType="string", paramType = "query")
 	})
 	@RequestMapping(value = "/updateInfo", method = {RequestMethod.GET,RequestMethod.POST})
-	public @ResponseBody StateResult updateInfoAccount(
+	public @ResponseBody StateResultList updateInfoAccount(
 			@RequestParam(value="accountId",required=false)Integer accountId,
+			@RequestParam(value="icon",required=false)String icon,
 			@RequestParam(value="nickname",required=false)String nickname,
 			@RequestParam(value="sex",required=false)Integer sex,
 			@RequestParam(value="age",required=false)Integer age,
@@ -225,9 +233,13 @@ public class AccountController {
 			@RequestParam(value="wechat",required=false)String wechat,
 			@RequestParam(value="alipay",required=false)String alipay,
 			HttpSession session)  {
+		List<Account> list=new ArrayList<>();
 		Account newa = accountService.loadAccount(accountId);
 		if(!((Account)session.getAttribute("account")).getAccountId().equals(accountId)){
-			return ResultUtil.getSR(false);
+			return ResultUtil.getSlefSRFailList(list);
+		}
+		if(icon!=null){
+			newa.setIcon(icon);			
 		}
 		if(nickname!=null){
 			newa.setNickname(nickname);			
@@ -257,8 +269,12 @@ public class AccountController {
 		newa.setAlipay(alipay);
 		}
 		boolean um = accountService.updateAccount(newa);
-		session.setAttribute("account", newa);
-		return ResultUtil.getSR(um);
+		if(um){
+			session.setAttribute("account", newa);
+			list.add(newa);
+			return ResultUtil.getSlefSRSuccessList(list);
+		}
+		return ResultUtil.getSlefSRFailList(list);
 	}
 	/**
 	 * 账户实名认证
@@ -291,6 +307,15 @@ public class AccountController {
 			account.setIdentityCardsBackImg(identityCardsBackImg);
 			boolean b = accountService.updateAccount(account);
 			if(b){
+				List<AccountParent> apl = accountParentService.browsePagingAccountParent(null, accountId, null, null, null, null, 1, 1, "account_parent_id","asc");
+				if(apl.size()==1){
+				AccountParent accountParent=apl.get(0);
+				accountParent.setRealname(realname);
+				accountParent.setCreateDate(new Date());
+				accountParent.setUpdateDate(new Date());
+				accountParentService.addAccountParent(accountParent);
+				}
+				list.add(account);
 				return ResultUtil.getSlefSRSuccessList(list);
 			}
 			return ResultUtil.getSlefSRFailList(list);
@@ -305,14 +330,19 @@ public class AccountController {
 	
 	@ApiOperation(value = "账户增加", notes = "账户增加")
 	@RequestMapping(value = "/add", method = {RequestMethod.GET,RequestMethod.POST})
-	public  @ResponseBody StateResult addAccount(@ModelAttribute Account account, HttpSession session) {
+	public  @ResponseBody StateResultList addAccount(@ModelAttribute Account account, HttpSession session) {
+		List<Account> list=new ArrayList<>();
 		//账户已经存在
 		if(accountService.loginAccount(account.getPhone(), null,null)!=null ){
-			return ResultUtil.getSR(false);
+			return ResultUtil.getSlefSRFailList(list);
 		}
 		account.setPassword(MyDESutil.getMD5(account.getPassword()));
 		boolean am = accountService.addAccount(account);
-		return ResultUtil.getSR(am);
+		if(am){
+			list.add(account);
+			return ResultUtil.getSlefSRSuccessList(list);
+		}
+		return ResultUtil.getSlefSRFailList(list);
 	}
 	/**
 	 * 账户删除
@@ -496,7 +526,7 @@ public class AccountController {
 	@ApiImplicitParams({
 		  @ApiImplicitParam(name="adminName",value="手机号/电子邮箱",dataType="string", paramType = "query",required=true),
 		  @ApiImplicitParam(name="password",value="密码",dataType="string", paramType = "query",required=true),
-		  @ApiImplicitParam(name="random",value="验证码",dataType="string", paramType = "query",required=true)
+		  @ApiImplicitParam(name="random",value="验证码",dataType="string", paramType = "query")
 		  })
 	@RequestMapping(value = "/weblogin", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList webLoginAccount(
@@ -527,7 +557,23 @@ public class AccountController {
 			List<Finance> f = financeService.browsePagingFinance(null,account.getAccountId(), 1, 1, "finance_id", "asc");
 			session.setAttribute("finance", f.get(0));
 			Map<Object,Object> map=new HashMap<>();
+			//账户
 			map.put("account", account);
+			//财务
+			map.put("finance",  f.get(0));
+			//账户上级
+			List<AccountParent> accountParentl = accountParentService.browsePagingAccountParent(null, account.getAccountId(), null, null, null, null, 1, 1, "account_parent_id", "asc");
+			if(accountParentl.size()>0){
+				map.put("accountParent",  accountParentl.get(0));
+				}else{
+				map.put("accountParent",  new Object());
+				}
+			//vip
+			List<Vip> vipl = vipService.browsePagingVip(account.getAccountId(), null, null, 1, 1, "vip_id", "asc");
+			map.put("vip",  vipl.get(0));
+			//积分
+			List<Integral> integrall = integralService.browsePagingIntegral(account.getAccountId(), null, null, 1, 1, "integral_id", "asc");
+			map.put("integrall",  integrall.get(0));
 			//视频播放记录数
 			int videoPlayRecordCount = videoPlayRecordService.countAll(null,account.getAccountId());
 			map.put("videoPlayRecordCount", videoPlayRecordCount);
@@ -587,18 +633,6 @@ public class AccountController {
 				Account account=new Account();
 				//获取masterId
 				if(masterId!=null&&!masterId.equals("")){
-					//账户上级
-					AccountParent accountParent=new AccountParent();
-					accountParent.setAccountId(account.getAccountId());
-					List<AccountLevel> accountLevelList=accountLevelService.browsePagingAccountLevel(0, null, 1, 1, "account_level_id", "asc");
-					//accountLevelList.get(0).
-					accountParent.setAccountLevelId(accountLevelList.get(0).getAccountLevelId());;
-					accountParent.setName(accountLevelList.get(0).getName());
-					accountParent.setMasterId(masterId);
-					accountParent.setRealMasterId(masterId);
-					accountParent.setPhone(adminName);
-					accountParent.setRealname(adminName);
-					accountParentService.addAccountParent(accountParent);
 					account.setMasterId(masterId);
 				}
 					account.setPhone(adminName);
@@ -623,10 +657,30 @@ public class AccountController {
 				//System.out.println(f.get(0).toString());
 				session.setAttribute("finance", f.get(0));
 				Map<Object,Object> map=new HashMap<>();
+				//账户
 				map.put("account", account);
+				//财务
+				map.put("finance",  f.get(0));
+				//账户上级
+				List<AccountParent> accountParentl = accountParentService.browsePagingAccountParent(null, account.getAccountId(), null, null, null, null, 1, 1, "account_parent_id", "asc");
+				if(accountParentl.size()>0){
+				map.put("accountParent",  accountParentl.get(0));
+				}else{
+				map.put("accountParent",  new Object());
+				}
+				//vip
+				List<Vip> vipl = vipService.browsePagingVip(account.getAccountId(), null, null, 1, 1, "vip_id", "asc");
+				map.put("vip",  vipl.get(0));
+				//积分
+				List<Integral> integrall = integralService.browsePagingIntegral(account.getAccountId(), null, null, 1, 1, "integral_id", "asc");
+				map.put("integrall",  integrall.get(0));
+				//视频播放记录
 				map.put("videoPlayRecordeCount", 0);
+				//视频缓存
 				map.put("videoCacheCount", 0);
+				//视频集
 				map.put("videoSetCount", 0);
+				//未读
 				map.put("notice0", 0);
 				list.add(map);
 				return ResultUtil.getSlefSRSuccessList(list);
@@ -644,7 +698,7 @@ public class AccountController {
 	@RequestMapping(value = "/islogin", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList isLoginAccount(
 			HttpSession session)  {
-		Account Account = (Account) session.getAttribute("Account");
+		Account Account = (Account) session.getAttribute("account");
 		List<Account> list = new ArrayList<Account>();
 		if(Account!=null && !Account.equals("")){
 			list.add(Account);

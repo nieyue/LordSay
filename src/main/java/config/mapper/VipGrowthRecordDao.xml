@@ -86,7 +86,7 @@ WHERE vip_growth_record_id=#{vipGrowthRecordId}
 	<if test="createDate!=null">
 		AND  DATE(create_date)=DATE(#{createDate})
 		</if>
-	WHERE ${orderName} 
+	AND ${orderName} 
 	<if test="orderWay=='asc'">
 	<![CDATA[>=]]> 
 	</if>
@@ -94,7 +94,6 @@ WHERE vip_growth_record_id=#{vipGrowthRecordId}
 	  <![CDATA[<= ]]>
 	</if>
 	(SELECT ${orderName} FROM vip_growth_record_tb 
-		ORDER BY 
 		<where>
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
@@ -106,6 +105,7 @@ WHERE vip_growth_record_id=#{vipGrowthRecordId}
 		AND  DATE(create_date)=DATE(#{createDate})
 		</if>
 		</where>
+		ORDER BY 
 			${orderName}  ${orderWay}
 		LIMIT #{pageNum}, 1
 		) 

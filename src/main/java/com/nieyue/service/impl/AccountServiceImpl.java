@@ -10,9 +10,17 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.nieyue.bean.Account;
+import com.nieyue.bean.AccountLevel;
+import com.nieyue.bean.AccountParent;
 import com.nieyue.bean.Finance;
+import com.nieyue.bean.Integral;
+import com.nieyue.bean.Vip;
 import com.nieyue.dao.AccountDao;
+import com.nieyue.dao.AccountLevelDao;
+import com.nieyue.dao.AccountParentDao;
 import com.nieyue.dao.FinanceDao;
+import com.nieyue.dao.IntegralDao;
+import com.nieyue.dao.VipDao;
 import com.nieyue.service.AccountService;
 @Service
 public class AccountServiceImpl implements AccountService{
@@ -20,16 +28,30 @@ public class AccountServiceImpl implements AccountService{
 	AccountDao accountDao;
 	@Resource
 	FinanceDao financeDao;
+	@Resource
+	AccountLevelDao accountLevelDao;
+	@Resource
+	AccountParentDao accountParentDao;
+	@Resource
+	VipDao vipDao;
+	@Resource
+	IntegralDao integralDao;
 	
 	@Transactional(propagation=Propagation.REQUIRED)
 	@Override
 	public boolean addAccount(Account account) {
+		boolean b=false;
+		List<AccountLevel> accountLevell = accountLevelDao.browsePagingAccountLevel(0, null, 0, 1, "account_level_id", "asc");
+		if(accountLevell.size()!=1){
+			return b;
+		}
 		Date date=new Date();
 		account.setCreateDate(date);
 		account.setLoginDate(date);
 		account.setStatus(0);
 		account.setAuth(0);//没认证
-		boolean b = accountDao.addAccount(account);
+		//增加账户
+		b = accountDao.addAccount(account);
 		Finance finance=new Finance();
 		finance.setRecharge(0.0);//充值金额
 		finance.setConsume(0.0);//消费金额
@@ -45,7 +67,43 @@ public class AccountServiceImpl implements AccountService{
 		finance.setCreateDate(date);
 		finance.setUpdateDate(date);
 		finance.setAccountId(account.getAccountId());
+		//增加财务
 		b=financeDao.addFinance(finance);
+		//增加积分
+		Integral integral =new Integral();
+		integral.setAccountId(account.getAccountId());
+		integral.setBaseProfit(0.0);
+		integral.setIntegral(0.0);
+		integral.setRecharge(0.0);
+		integral.setConsume(0.0);
+		integral.setCreateDate(new Date());
+		integral.setUpdateDate(new Date());
+		b=integralDao.addIntegral(integral);
+		//增加vip
+		Vip vip=new Vip();
+		vip.setName(accountLevell.get(0).getName());
+		vip.setLevel(0);//默认0，学徒没有vip
+		vip.setStatus(0);//到期
+		vip.setExpireDate(new Date());
+		vip.setCreateDate(new Date());
+		vip.setUpdateDate(new Date());
+		vip.setAccountId(account.getAccountId());
+		b=vipDao.addVip(vip);
+		
+		//账户上级
+		if(account.getMasterId()!=null){	
+		AccountParent accountParent=new AccountParent();
+		accountParent.setAccountId(account.getAccountId());
+		accountParent.setPhone(account.getPhone());
+		accountParent.setSubordinateNumber(0);//默认0个学员
+		accountParent.setMasterId(account.getMasterId());
+		accountParent.setRealMasterId(account.getMasterId());
+		accountParent.setAccountLevelId(accountLevell.get(0).getAccountLevelId());
+		accountParent.setName(accountLevell.get(0).getName());
+		accountParent.setCreateDate(new Date());
+		accountParent.setUpdateDate(new Date());
+		accountParentDao.addAccountParent(accountParent);
+		}
 		return b;
 	}
 	@Transactional(propagation=Propagation.REQUIRED)

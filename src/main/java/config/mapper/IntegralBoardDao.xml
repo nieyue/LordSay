@@ -106,7 +106,7 @@ WHERE integral_board_id=#{integralBoardId}
 	<if test="updateDate!=null">
 		AND  DATE(update_date)=DATE(#{updateDate})
 		</if>
-	WHERE ${orderName} 
+	AND ${orderName} 
 	<if test="orderWay=='asc'">
 	<![CDATA[>=]]> 
 	</if>
@@ -114,7 +114,6 @@ WHERE integral_board_id=#{integralBoardId}
 	  <![CDATA[<= ]]>
 	</if>
 	(SELECT ${orderName} FROM integral_board_tb 
-		ORDER BY 
 		<where>
 		<if test="type!=null">
 		AND  type=#{type}
@@ -132,6 +131,7 @@ WHERE integral_board_id=#{integralBoardId}
 		AND  DATE(update_date)=DATE(#{updateDate})
 		</if>
 		</where>
+		ORDER BY 
 			${orderName}  ${orderWay}
 		LIMIT #{pageNum}, 1
 		) 

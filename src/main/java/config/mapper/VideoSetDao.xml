@@ -151,7 +151,7 @@ WHERE video_set_id=#{videoSetId}
 	<if test="status!=null">
 		AND  status=#{status}
 		</if>
-	WHERE ${orderName} 
+	AND ${orderName} 
 	<if test="orderWay=='asc'">
 	<![CDATA[>=]]> 
 	</if>
@@ -159,7 +159,6 @@ WHERE video_set_id=#{videoSetId}
 	  <![CDATA[<= ]]>
 	</if>
 	(SELECT ${orderName} FROM video_set_tb 
-		ORDER BY 
 		<where>
 		<if test="recommend!=null">
 		AND  recommend=#{recommend}
@@ -180,6 +179,7 @@ WHERE video_set_id=#{videoSetId}
 		AND  status=#{status}
 		</if>
 		</where>
+		ORDER BY 
 			${orderName}  ${orderWay}
 		LIMIT #{pageNum}, 1
 		) 

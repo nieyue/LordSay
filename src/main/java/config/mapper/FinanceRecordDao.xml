@@ -41,9 +41,6 @@
     	<if test="transactionNumber!=null">
     	transaction_number=#{transactionNumber},
     	</if>
-    	<if test="money!=null">
-    	money=#{money},
-    	</if>
     	<if test="createDate!=null">
     	create_date=#{createDate},
     	</if>
@@ -94,13 +91,22 @@ WHERE finance_record_id=#{financeRecordId}
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
 		</if>
+		<if test="method!=null">
+    	AND method=#{method}
+    	</if>
+    	<if test="type!=null">
+    	AND type=#{type}
+    	</if>
+    	<if test="transactionNumber!=null">
+    	AND transaction_number=#{transactionNumber}
+    	</if>
 	<if test="createDate!=null">
 		AND  DATE(create_date)=DATE(#{createDate})
 		</if>
 	<if test="updateDate!=null">
 		AND  DATE(update_date)=DATE(#{updateDate})
 		</if>
-	WHERE ${orderName} 
+	AND ${orderName} 
 	<if test="orderWay=='asc'">
 	<![CDATA[>=]]> 
 	</if>
@@ -108,11 +114,19 @@ WHERE finance_record_id=#{financeRecordId}
 	  <![CDATA[<= ]]>
 	</if>
 	(SELECT ${orderName} FROM finance_record_tb 
-		ORDER BY 
 		<where>
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
 		</if>
+		<if test="method!=null">
+    	AND method=#{method}
+    	</if>
+    	<if test="type!=null">
+    	AND type=#{type}
+    	</if>
+    	<if test="transactionNumber!=null">
+    	AND transaction_number=#{transactionNumber}
+    	</if>
 	<if test="createDate!=null">
 		AND  DATE(create_date)=DATE(#{createDate})
 		</if>
@@ -120,6 +134,7 @@ WHERE finance_record_id=#{financeRecordId}
 		AND  DATE(update_date)=DATE(#{updateDate})
 		</if>
 		</where>
+		ORDER BY 
 			${orderName}  ${orderWay}
 		LIMIT #{pageNum}, 1
 		) 
@@ -139,6 +154,15 @@ WHERE finance_record_id=#{financeRecordId}
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
 		</if>
+		<if test="method!=null">
+    	AND method=#{method}
+    	</if>
+    	<if test="type!=null">
+    	AND type=#{type}
+    	</if>
+    	<if test="transactionNumber!=null">
+    	AND transaction_number=#{transactionNumber}
+    	</if>
 	<if test="createDate!=null">
 		AND  DATE(create_date)=DATE(#{createDate})
 		</if>

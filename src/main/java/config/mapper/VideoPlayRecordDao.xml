@@ -97,7 +97,7 @@ WHERE video_play_record_id=#{videoPlayRecordId}
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
 		</if>
-	WHERE ${orderName} 
+	AND ${orderName} 
 	<if test="orderWay=='asc'">
 	<![CDATA[>=]]> 
 	</if>
@@ -105,7 +105,6 @@ WHERE video_play_record_id=#{videoPlayRecordId}
 	  <![CDATA[<= ]]>
 	</if>
 	(SELECT ${orderName} FROM video_play_record_tb 
-		ORDER BY 
 		<where>
 		<if test="videoId!=null">
 		AND  video_id=#{videoId}
@@ -114,6 +113,7 @@ WHERE video_play_record_id=#{videoPlayRecordId}
 		AND  account_id=#{accountId}
 		</if>
 		</where>
+		ORDER BY 
 			${orderName}  ${orderWay}
 		LIMIT #{pageNum}, 1
 		) 

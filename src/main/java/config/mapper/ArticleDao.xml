@@ -110,7 +110,7 @@ WHERE article_id=#{articleId}
 	<if test="status!=null">
 		AND  status=#{status}
 		</if>
-	WHERE ${orderName} 
+	AND ${orderName} 
 	<if test="orderWay=='asc'">
 	<![CDATA[>=]]> 
 	</if>
@@ -118,7 +118,6 @@ WHERE article_id=#{articleId}
 	  <![CDATA[<= ]]>
 	</if>
 	(SELECT ${orderName} FROM Article_tb 
-		ORDER BY 
 		<where>
 		<if test="articleCateId!=null">
 		AND  article_cate_id=#{articleCateId}
@@ -133,6 +132,7 @@ WHERE article_id=#{articleId}
 		AND  status=#{status}
 		</if>
 		</where>
+		ORDER BY 
 			${orderName}  ${orderWay}
 		LIMIT #{pageNum}, 1
 		) 

@@ -124,7 +124,7 @@ WHERE video_id=#{videoId}
 	<if test="status!=null">
 		AND  status=#{status}
 		</if>
-	WHERE ${orderName} 
+	AND ${orderName} 
 	<if test="orderWay=='asc'">
 	<![CDATA[>=]]> 
 	</if>
@@ -132,7 +132,6 @@ WHERE video_id=#{videoId}
 	  <![CDATA[<= ]]>
 	</if>
 	(SELECT ${orderName} FROM video_tb 
-		ORDER BY 
 		<where>
 		<if test="videoSetId!=null">
 		AND  video_set_id=#{videoSetId}
@@ -147,6 +146,7 @@ WHERE video_id=#{videoId}
 		AND  status=#{status}
 		</if>
 		</where>
+		ORDER BY 
 			${orderName}  ${orderWay}
 		LIMIT #{pageNum}, 1
 		) 

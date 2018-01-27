@@ -100,7 +100,7 @@ WHERE article_comment_id=#{articleCommentId}
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
 		</if>
-	WHERE ${orderName} 
+	AND ${orderName} 
 	<if test="orderWay=='asc'">
 	<![CDATA[>=]]> 
 	</if>
@@ -108,7 +108,6 @@ WHERE article_comment_id=#{articleCommentId}
 	  <![CDATA[<= ]]>
 	</if>
 	(SELECT ${orderName} FROM article_comment_tb 
-		ORDER BY 
 		<where>
 		<if test="pointNumber!=null">
 		AND  point_number=#{pointNumber}
@@ -120,6 +119,7 @@ WHERE article_comment_id=#{articleCommentId}
 		AND  account_id=#{accountId}
 		</if>
 		</where>
+		ORDER BY 
 			${orderName}  ${orderWay}
 		LIMIT #{pageNum}, 1
 		) 

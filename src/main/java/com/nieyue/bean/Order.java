@@ -2,6 +2,7 @@ package com.nieyue.bean;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -51,6 +52,10 @@ public class Order implements Serializable {
 	 */
 	@ApiModelProperty(value="下单人",example="下单人")
 	private Integer accountId;
+	/**
+	 * 订单详情列表
+	 */
+	private List<OrderDetail> orderDetailList;
 	public Integer getOrderId() {
 		return orderId;
 	}
@@ -95,5 +100,11 @@ public class Order implements Serializable {
 	}
 	public void setOrderNumber(Integer orderNumber) {
 		this.orderNumber = orderNumber;
+	}
+	public List<OrderDetail> getOrderDetailList() {
+		return orderDetailList;
+	}
+	public void setOrderDetailList(List<OrderDetail> orderDetailList) {
+		this.orderDetailList = orderDetailList;
 	}
 }

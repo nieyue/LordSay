@@ -100,7 +100,7 @@ WHERE vip_id=#{vipId}
 	<if test="createDate!=null">
 		AND  DATE(create_date)=DATE(#{createDate})
 		</if>
-	WHERE ${orderName} 
+	AND ${orderName} 
 	<if test="orderWay=='asc'">
 	<![CDATA[>=]]> 
 	</if>
@@ -108,7 +108,6 @@ WHERE vip_id=#{vipId}
 	  <![CDATA[<= ]]>
 	</if>
 	(SELECT ${orderName} FROM vip_tb 
-		ORDER BY 
 		<where>
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
@@ -120,6 +119,7 @@ WHERE vip_id=#{vipId}
 		AND  DATE(create_date)=DATE(#{createDate})
 		</if>
 		</where>
+		ORDER BY 
 			${orderName}  ${orderWay}
 		LIMIT #{pageNum}, 1
 		) 

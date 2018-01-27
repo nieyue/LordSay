@@ -133,7 +133,7 @@ WHERE split_id=#{splitId}
 	<if test="status!=null">
 		AND  status=#{status}
 		</if>
-	WHERE ${orderName} 
+	AND ${orderName} 
 	<if test="orderWay=='asc'">
 	<![CDATA[>=]]> 
 	</if>
@@ -141,7 +141,6 @@ WHERE split_id=#{splitId}
 	  <![CDATA[<= ]]>
 	</if>
 	(SELECT ${orderName} FROM split_tb 
-		ORDER BY 
 		<where>
 		<if test="accountId!=null">
 		AND  account_id=#{accountId}
@@ -165,6 +164,7 @@ WHERE split_id=#{splitId}
 		AND  status=#{status}
 		</if>
 		</where>
+		ORDER BY 
 			${orderName}  ${orderWay}
 		LIMIT #{pageNum}, 1
 		) 

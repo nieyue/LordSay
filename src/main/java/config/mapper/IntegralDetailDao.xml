@@ -89,7 +89,7 @@ WHERE integral_detail_id=#{integralDetailId}
 	<if test="updateDate!=null">
 		AND  DATE(update_date)=DATE(#{updateDate})
 		</if>
-	WHERE ${orderName} 
+	AND ${orderName} 
 	<if test="orderWay=='asc'">
 	<![CDATA[>=]]> 
 	</if>
@@ -97,7 +97,6 @@ WHERE integral_detail_id=#{integralDetailId}
 	  <![CDATA[<= ]]>
 	</if>
 	(SELECT ${orderName} FROM integral_detail_tb 
-		ORDER BY 
 		<where>
 		<if test="type!=null">
 		AND  type=#{type}
@@ -112,6 +111,7 @@ WHERE integral_detail_id=#{integralDetailId}
 		AND  DATE(update_date)=DATE(#{updateDate})
 		</if>
 		</where>
+		ORDER BY 
 			${orderName}  ${orderWay}
 		LIMIT #{pageNum}, 1
 		) 

@@ -55,7 +55,7 @@ public class IntegralBoard implements Serializable {
 	 * 账户id外键
 	 */
 	@ApiModelProperty(value="账户id外键",example="账户id外键")
-	private Integer acountId;
+	private Integer accountId;
 	public Integer getIntegralBoardId() {
 		return integralBoardId;
 	}
@@ -98,11 +98,11 @@ public class IntegralBoard implements Serializable {
 	public void setUpdateDate(Date updateDate) {
 		this.updateDate = updateDate;
 	}
-	public Integer getAcountId() {
-		return acountId;
+	public Integer getAccountId() {
+		return accountId;
 	}
-	public void setAcountId(Integer acountId) {
-		this.acountId = acountId;
+	public void setAccountId(Integer accountId) {
+		this.accountId = accountId;
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;

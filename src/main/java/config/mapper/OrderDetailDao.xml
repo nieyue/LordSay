@@ -100,7 +100,7 @@ WHERE order_detail_id=#{orderDetailId}
 	<if test="updateDate!=null">
 		AND  DATE(update_date)=DATE(#{updateDate})
 		</if>
-	WHERE ${orderName} 
+	AND ${orderName} 
 	<if test="orderWay=='asc'">
 	<![CDATA[>=]]> 
 	</if>
@@ -108,7 +108,6 @@ WHERE order_detail_id=#{orderDetailId}
 	  <![CDATA[<= ]]>
 	</if>
 	(SELECT ${orderName} FROM order_detail_tb 
-		order BY 
 		<where>
 		<if test="orderId!=null">
 		AND  order_id=#{orderId}
@@ -120,6 +119,7 @@ WHERE order_detail_id=#{orderDetailId}
 		AND  DATE(update_date)=DATE(#{updateDate})
 		</if>
 		</where>
+		order BY 
 			${orderName}  ${orderWay}
 		LIMIT #{pageNum}, 1
 		) 

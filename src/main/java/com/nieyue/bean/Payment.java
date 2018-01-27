@@ -77,7 +77,7 @@ public class Payment implements Serializable{
 	 *账户id,外键
 	 */
 	@ApiModelProperty(value="账户id,外键",example="账户id,外键")
-	private Integer acountId;
+	private Integer accountId;
 	/**
 	 * 支付创建时间
 	 */
@@ -95,7 +95,7 @@ public class Payment implements Serializable{
 
 	public Payment(Integer paymentId, String subject, String body, String notifyUrl, Integer type, String orderNumber,
 			Double money, Integer status, Integer businessType, Integer businessId, String businessNotifyUrl,
-			Integer acountId, Date createDate, Date updateDate) {
+			Integer accountId, Date createDate, Date updateDate) {
 		super();
 		this.paymentId = paymentId;
 		this.subject = subject;
@@ -108,7 +108,7 @@ public class Payment implements Serializable{
 		this.businessType = businessType;
 		this.businessId = businessId;
 		this.businessNotifyUrl = businessNotifyUrl;
-		this.acountId = acountId;
+		this.accountId = accountId;
 		this.createDate = createDate;
 		this.updateDate = updateDate;
 	}
@@ -163,12 +163,12 @@ public class Payment implements Serializable{
 		this.businessId = businessId;
 	}
 
-	public Integer getAcountId() {
-		return acountId;
+	public Integer getAccountId() {
+		return accountId;
 	}
 
-	public void setAcountId(Integer acountId) {
-		this.acountId = acountId;
+	public void setAccountId(Integer accountId) {
+		this.accountId = accountId;
 	}
 
 	public Date getCreateDate() {

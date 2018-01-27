@@ -94,7 +94,7 @@ WHERE platform_day_id=#{platformDayId}
 	<if test="createDate!=null">
 		AND  DATE(create_date)=DATE(#{createDate})
 		</if>
-	WHERE ${orderName} 
+	AND ${orderName} 
 	<if test="orderWay=='asc'">
 	<![CDATA[>=]]> 
 	</if>
@@ -102,12 +102,12 @@ WHERE platform_day_id=#{platformDayId}
 	  <![CDATA[<= ]]>
 	</if>
 	(SELECT ${orderName} FROM platform_day_tb 
-		ORDER BY 
 		<where>
 	<if test="createDate!=null">
 		AND  DATE(create_date)=DATE(#{createDate})
 		</if>
 		</where>
+		ORDER BY 
 			${orderName}  ${orderWay}
 		LIMIT #{pageNum}, 1
 		) 

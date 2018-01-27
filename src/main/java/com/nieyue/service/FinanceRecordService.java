@@ -22,12 +22,18 @@ public interface FinanceRecordService {
 	/** 财务记录总共数目 */	
 	public int countAll(
 			Integer accountId,
+			Integer method,
+			Integer type,
+			String transactionNumber,
 			Date createDate,
 			Date updateDate
 			);
 	/** 分页财务记录信息 */
 	public List<FinanceRecord> browsePagingFinanceRecord(
 			Integer accountId,
+			Integer method,
+			Integer type,
+			String transactionNumber,
 			Date createDate,
 			Date updateDate,
 			int pageNum,

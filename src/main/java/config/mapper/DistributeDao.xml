@@ -123,7 +123,7 @@ WHERE distribute_id=#{distributeId}
 	<if test="status!=null">
 		AND  status=#{status}
 		</if>
-	WHERE ${orderName} 
+	AND ${orderName} 
 	<if test="orderWay=='asc'">
 	<![CDATA[>=]]> 
 	</if>
@@ -131,7 +131,6 @@ WHERE distribute_id=#{distributeId}
 	  <![CDATA[<= ]]>
 	</if>
 	(SELECT ${orderName} FROM distribute_tb 
-		ORDER BY 
 		<where>
 			<if test="accountId!=null">
 		AND  account_id=#{accountId}
@@ -152,6 +151,7 @@ WHERE distribute_id=#{distributeId}
 		AND  status=#{status}
 		</if>
 		</where>
+		ORDER BY 
 			${orderName}  ${orderWay}
 		LIMIT #{pageNum}, 1
 		) 

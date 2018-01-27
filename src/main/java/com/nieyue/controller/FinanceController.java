@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.nieyue.bean.Finance;
 import com.nieyue.service.AccountService;
 import com.nieyue.service.FinanceService;
+import com.nieyue.util.MyDESutil;
 import com.nieyue.util.ResultUtil;
 import com.nieyue.util.StateResult;
 import com.nieyue.util.StateResultList;
@@ -82,6 +83,33 @@ public class FinanceController {
 	public @ResponseBody StateResult updateFinance(@ModelAttribute Finance finance,HttpSession session)  {
 		boolean um = financeService.updateFinance(finance);
 		return ResultUtil.getSR(um);
+	}
+	/**
+	 * 修改或增加交易密码
+	 * @return
+	 */
+	@ApiOperation(value = "修改或增加交易密码", notes = "修改或增加交易密码")
+	@ApiImplicitParams({
+		@ApiImplicitParam(name="accountId",value="账户ID",dataType="int", paramType = "query",required=true),
+		  @ApiImplicitParam(name="password",value="交易密码",dataType="string", paramType = "query",required=true),
+		  })
+	@RequestMapping(value = "/updatePassword", method = {RequestMethod.GET,RequestMethod.POST})
+	public @ResponseBody StateResultList updatePassword(
+			@RequestParam(value="accountId")Integer accountId,
+			@RequestParam(value="password")Double password,
+			HttpSession session)  {
+		List<Finance> list=new ArrayList<>();
+		List<Finance> fl = financeService.browsePagingFinance(null, accountId, 1, 1, "finance_id", "asc");
+		if(fl.size()==1){
+			Finance finance = fl.get(0);
+			fl.get(0).setPassword(MyDESutil.getMD5(password));
+			boolean um = financeService.updateFinance(finance);
+			if(um){
+				list.add(finance);
+				return ResultUtil.getSlefSRSuccessList(list);
+			}
+		}
+		return ResultUtil.getSlefSRFailList(list);
 	}
 	/**
 	 * 财务增加

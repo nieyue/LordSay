@@ -170,7 +170,7 @@ WHERE team_purchase_info_id=#{teamPurchaseInfoId}
 	<if test="updateDate!=null">
 		AND  DATE(update_date)=DATE(#{updateDate})
 		</if>
-	WHERE ${orderName} 
+	AND ${orderName} 
 	<if test="orderWay=='asc'">
 	<![CDATA[>=]]> 
 	</if>
@@ -178,7 +178,6 @@ WHERE team_purchase_info_id=#{teamPurchaseInfoId}
 	  <![CDATA[<= ]]>
 	</if>
 	(SELECT ${orderName} FROM team_purchase_info_tb 
-		ORDER BY 
 		<where>
 		<if test="accountId!=null">
 		AND  account_id=#{accountId}
@@ -190,6 +189,7 @@ WHERE team_purchase_info_id=#{teamPurchaseInfoId}
 		AND  DATE(update_date)=DATE(#{updateDate})
 		</if>
 		</where>
+		ORDER BY 
 			${orderName}  ${orderWay}
 		LIMIT #{pageNum}, 1
 		) 

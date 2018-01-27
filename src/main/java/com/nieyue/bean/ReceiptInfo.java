@@ -58,7 +58,7 @@ public class ReceiptInfo implements Serializable{
 	 * 账户Id
 	 */
 	@ApiModelProperty(value="账户Id",example="账户Id")
-	private Integer acountId;
+	private Integer accountId;
 	public Integer getReceiptInfoId() {
 		return receiptInfoId;
 	}
@@ -101,17 +101,17 @@ public class ReceiptInfo implements Serializable{
 	public void setUpdateDate(Date updateDate) {
 		this.updateDate = updateDate;
 	}
-	public Integer getAcountId() {
-		return acountId;
+	public Integer getAccountId() {
+		return accountId;
 	}
-	public void setAcountId(Integer acountId) {
-		this.acountId = acountId;
+	public void setAccountId(Integer accountId) {
+		this.accountId = accountId;
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
 	public ReceiptInfo(Integer receiptInfoId, String name, String phone, String address, Integer isDefault,
-			Date createDate, Date updateDate, Integer acountId) {
+			Date createDate, Date updateDate, Integer accountId) {
 		super();
 		this.receiptInfoId = receiptInfoId;
 		this.name = name;
@@ -120,7 +120,7 @@ public class ReceiptInfo implements Serializable{
 		this.isDefault = isDefault;
 		this.createDate = createDate;
 		this.updateDate = updateDate;
-		this.acountId = acountId;
+		this.accountId = accountId;
 	}
 	public ReceiptInfo() {
 		super();
