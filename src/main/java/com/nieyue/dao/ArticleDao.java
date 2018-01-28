@@ -26,6 +26,7 @@ public interface ArticleDao {
 	/** 文章总共数目 */	
 	public int countAll(
 			@Param("articleCateId")Integer articleCateId,
+			@Param("commentNumber")Integer commentNumber,
 			@Param("createDate")Date createDate,
 			@Param("updateDate")Date updateDate,
 			@Param("status")Integer status
@@ -33,6 +34,7 @@ public interface ArticleDao {
 	/** 分页文章信息 */
 	public List<Article> browsePagingArticle(
 			@Param("articleCateId")Integer articleCateId,
+			@Param("commentNumber")Integer commentNumber,
 			@Param("createDate")Date createDate,
 			@Param("updateDate")Date updateDate,
 			@Param("status")Integer status,

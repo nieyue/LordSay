@@ -21,6 +21,10 @@ public class ArticleServiceImpl implements ArticleService{
 	public boolean addArticle(Article article) {
 		article.setCreateDate(new Date());
 		article.setUpdateDate(new Date());
+		article.setCommentNumber(0);
+		if(article.getStatus()==null){
+			article.setStatus(1);
+		}
 		boolean b = articleDao.addArticle(article);
 		return b;
 	}
@@ -46,18 +50,20 @@ public class ArticleServiceImpl implements ArticleService{
 	@Override
 	public int countAll(
 			Integer articleCateId,
+			Integer  commentNumber,
 			Date createDate,
 			Date updateDate,
 			Integer status
 			) {
 		int c = articleDao.countAll(
-				articleCateId,createDate,updateDate,status);
+				articleCateId,commentNumber,createDate,updateDate,status);
 		return c;
 	}
 
 	@Override
 	public List<Article> browsePagingArticle(
 			Integer articleCateId,
+			Integer  commentNumber,
 			Date createDate,
 			Date updateDate,
 			Integer status,
@@ -71,10 +77,11 @@ public class ArticleServiceImpl implements ArticleService{
 		}
 		List<Article> l = articleDao.browsePagingArticle(
 				articleCateId,
+				commentNumber,
 				createDate,
 				updateDate,
 				status,
-				pageNum,
+				pageNum-1,
 				pageSize,
 				orderName,
 				orderWay);

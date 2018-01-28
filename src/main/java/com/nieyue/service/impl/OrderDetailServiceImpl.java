@@ -71,7 +71,7 @@ public class OrderDetailServiceImpl implements OrderDetailService{
 				orderId,
 				createDate,
 				updateDate,
-				pageNum,
+				pageNum-1,
 				pageSize,
 				orderName,
 				orderWay);

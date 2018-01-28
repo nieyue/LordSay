@@ -40,7 +40,7 @@ public class Article implements Serializable {
 	 * 评论数
 	 */
 	@ApiModelProperty(value="评论数",example="评论数")
-	private String commentNumber;
+	private Integer commentNumber;
 	/**
 	 * 状态,下架0，上架1
 	 */
@@ -85,10 +85,10 @@ public class Article implements Serializable {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getCommentNumber() {
+	public Integer getCommentNumber() {
 		return commentNumber;
 	}
-	public void setCommentNumber(String commentNumber) {
+	public void setCommentNumber(Integer commentNumber) {
 		this.commentNumber = commentNumber;
 	}
 	public Integer getStatus() {

@@ -87,7 +87,7 @@ public class OrderServiceImpl implements OrderService{
 				status,
 				createDate,
 				updateDate,
-				pageNum,
+				pageNum-1,
 				pageSize,
 				orderName,
 				orderWay);

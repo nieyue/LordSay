@@ -65,7 +65,7 @@ public class VideoSetCollectServiceImpl implements VideoSetCollectService{
 		}
 		List<VideoSetCollect> l = videoSetCollectDao.browsePagingVideoSetCollect(
 				videoSetId,accountId,
-				pageNum,
+				pageNum-1,
 				pageSize,
 				orderName,
 				orderWay);

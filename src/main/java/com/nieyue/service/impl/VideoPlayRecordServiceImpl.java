@@ -64,8 +64,9 @@ public class VideoPlayRecordServiceImpl implements VideoPlayRecordService{
 			pageSize=0;//没有数据
 		}
 		List<VideoPlayRecord> l = videoPlayRecordDao.browsePagingVideoPlayRecord(
-				videoId,accountId,
-				pageNum,
+				videoId,
+				accountId,
+				pageNum-1,
 				pageSize,
 				orderName,
 				orderWay);

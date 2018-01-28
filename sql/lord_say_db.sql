@@ -383,6 +383,7 @@ update_date datetime COMMENT '更新时间',
 article_cate_id int(11) COMMENT '文章类型id外键',
 PRIMARY KEY (article_id),
 INDEX INDEX_ARTICLECATEID (article_cate_id) USING BTREE,
+INDEX INDEX_COMMENTNUMBER (comment_number) USING BTREE,
 INDEX INDEX_CREATEDATE (create_date) USING BTREE,
 INDEX INDEX_UPDATEDATE (update_date) USING BTREE,
 INDEX INDEX_STATUS (status) USING BTREE

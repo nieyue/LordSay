@@ -90,7 +90,7 @@ WHERE article_id=#{articleId}
 	     article_id,
 	 	 title,
    		 redirect_url,
-   		 content,
+   		 <!-- content, -->
    		 comment_number,
    		 status,
    		 create_date,
@@ -100,6 +100,9 @@ WHERE article_id=#{articleId}
 	<where>
 	<if test="articleCateId!=null">
 		AND  article_cate_id=#{articleCateId}
+		</if>
+	<if test="commentNumber!=null">
+		AND  comment_number=#{commentNumber}
 		</if>
 	<if test="createDate!=null">
 		AND  DATE(create_date)=DATE(#{createDate})
@@ -117,10 +120,13 @@ WHERE article_id=#{articleId}
 	<if test="orderWay=='desc'">
 	  <![CDATA[<= ]]>
 	</if>
-	(SELECT ${orderName} FROM Article_tb 
+	(SELECT ${orderName} FROM article_tb 
 		<where>
 		<if test="articleCateId!=null">
 		AND  article_cate_id=#{articleCateId}
+		</if>
+		<if test="commentNumber!=null">
+		AND  comment_number=#{commentNumber}
 		</if>
 	<if test="createDate!=null">
 		AND  DATE(create_date)=DATE(#{createDate})
@@ -151,6 +157,9 @@ WHERE article_id=#{articleId}
 	<where>
 	<if test="articleCateId!=null">
 		AND  article_cate_id=#{articleCateId}
+		</if>
+		<if test="commentNumber!=null">
+		AND  comment_number=#{commentNumber}
 		</if>
 	<if test="createDate!=null">
 		AND  DATE(create_date)=DATE(#{createDate})

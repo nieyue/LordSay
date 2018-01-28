@@ -64,8 +64,9 @@ public class VideoCacheServiceImpl implements VideoCacheService{
 			pageSize=0;//没有数据
 		}
 		List<VideoCache> l = videoCacheDao.browsePagingVideoCache(
-				videoId,accountId,
-				pageNum,
+				videoId,
+				accountId,
+				pageNum-1,
 				pageSize,
 				orderName,
 				orderWay);

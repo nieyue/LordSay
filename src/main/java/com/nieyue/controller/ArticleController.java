@@ -48,6 +48,7 @@ public class ArticleController {
 	@ApiOperation(value = "文章列表", notes = "文章分页浏览")
 	@ApiImplicitParams({
 	  @ApiImplicitParam(name="articleCateId",value="文章类型id外键",dataType="int", paramType = "query"),
+	  @ApiImplicitParam(name="commentNumber",value="评论数",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="createDate",value="创建时间",dataType="date-time", paramType = "query"),
 	  @ApiImplicitParam(name="updateDate",value="更新时间",dataType="date-time", paramType = "query"),
 	  @ApiImplicitParam(name="status",value="状态0下架,默认1上架",dataType="int", paramType = "query"),
@@ -59,6 +60,7 @@ public class ArticleController {
 	@RequestMapping(value = "/list", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList browsePagingArticle(
 			@RequestParam(value="articleCateId",required=false)Integer articleCateId,
+			@RequestParam(value="commentNumber",required=false)Integer commentNumber,
 			@RequestParam(value="createDate",required=false)Date createDate,
 			@RequestParam(value="updateDate",required=false)Date updateDate,
 			@RequestParam(value="status",required=false)Integer status,
@@ -67,7 +69,7 @@ public class ArticleController {
 			@RequestParam(value="orderName",required=false,defaultValue="update_date") String orderName,
 			@RequestParam(value="orderWay",required=false,defaultValue="desc") String orderWay)  {
 			List<Article> list = new ArrayList<Article>();
-			list= articleService.browsePagingArticle(articleCateId,createDate,updateDate,status,pageNum, pageSize, orderName, orderWay);
+			list= articleService.browsePagingArticle(articleCateId,commentNumber,createDate,updateDate,status,pageNum, pageSize, orderName, orderWay);
 			if(list.size()>0){
 				return ResultUtil.getSlefSRSuccessList(list);
 			}else{
@@ -100,7 +102,7 @@ public class ArticleController {
 	 */
 	@ApiOperation(value = "文章删除", notes = "文章删除")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="ArticleId",value="文章ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="articleId",value="文章ID",dataType="int", paramType = "query",required=true)
 		  })
 	@RequestMapping(value = "/delete", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResult delArticle(@RequestParam("articleId") Integer articleId,HttpSession session)  {
@@ -114,6 +116,7 @@ public class ArticleController {
 	@ApiOperation(value = "文章数量", notes = "文章数量查询")
 	@ApiImplicitParams({
 		  @ApiImplicitParam(name="articleCateId",value="文章类型id,外键",dataType="int", paramType = "query"),
+		  @ApiImplicitParam(name="commentNumber",value="评论数",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="createDate",value="创建时间",dataType="date-time", paramType = "query"),
 		  @ApiImplicitParam(name="updateDate",value="更新时间",dataType="date-time", paramType = "query"),
 		  @ApiImplicitParam(name="status",value="状态0下架,默认1上架",dataType="int", paramType = "query")
@@ -121,11 +124,12 @@ public class ArticleController {
 	@RequestMapping(value = "/count", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody int countAll(
 			@RequestParam(value="articleCateId",required=false)Integer articleCateId,
+			@RequestParam(value="commentNumber",required=false)Integer commentNumber,
 			@RequestParam(value="createDate",required=false)Date createDate,
 			@RequestParam(value="updateDate",required=false)Date updateDate,
 			@RequestParam(value="status",required=false)Integer status,
 			HttpSession session)  {
-		int count = articleService.countAll(articleCateId,createDate,updateDate,status);
+		int count = articleService.countAll(articleCateId,commentNumber,createDate,updateDate,status);
 		return count;
 	}
 	/**
