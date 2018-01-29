@@ -21,6 +21,22 @@ public class VideoSetServiceImpl implements VideoSetService{
 	public boolean addVideoSet(VideoSet videoSet) {
 		videoSet.setCreateDate(new Date());
 		videoSet.setUpdateDate(new Date());
+		if(videoSet.getRecommend()==null){
+			videoSet.setRecommend(0);
+		}
+		if(videoSet.getCost()==null){
+			videoSet.setCost(0);
+		}
+			videoSet.setNumber(0);
+			if(videoSet.getStatus()==null){
+				videoSet.setStatus(1);
+			}
+			if(videoSet.getPlayNumber()==null){
+				videoSet.setPlayNumber(0);
+			}
+			if(videoSet.getTotalPrice()==null){
+				videoSet.setTotalPrice(0.0);
+			}
 		boolean b = videoSetDao.addVideoSet(videoSet);
 		return b;
 	}

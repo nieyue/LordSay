@@ -16,7 +16,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.view.RedirectView;
 
+import com.nieyue.bean.VideoCache;
 import com.nieyue.comments.RequestToMethdoItemUtils;
+import com.nieyue.thirdparty.qiniu.QiniuUtil;
 import com.nieyue.util.ResultUtil;
 import com.nieyue.util.StateResultList;
 import com.nieyue.util.barcode.QRCodeUtil;
@@ -35,12 +37,12 @@ import io.swagger.annotations.ApiOperation;
 @Api(tags={"tool"},value="工具",description="工具接口管理")
 @RestController
 public class ToolController {
-	
-	
 	@Resource
 	RequestToMethdoItemUtils requestToMethdoItemUtils;
 	@Resource
 	VerificationCode verificationCode;
+	@Resource
+	QiniuUtil qiniuUtil;
 	@Value("${myPugin.projectName}")
 	String projectName;
 	/**
@@ -80,6 +82,18 @@ public class ToolController {
 		System.err.println(session.getAttribute("role"));
 		System.err.println(session.getAttribute("finance"));
 		return session.getId();
+		
+	}
+	/**
+	 * 获取七牛token
+	 * @return
+	 */
+	@RequestMapping(value={"/tool/qiniuToken"}, method = {RequestMethod.GET,RequestMethod.POST})
+	public StateResultList getQiniuToken(
+			){
+		List<Object> list = new ArrayList<Object>();
+		list.add(qiniuUtil.getQiniuUploadToken());
+		return ResultUtil.getSlefSRSuccessList(list);
 		
 	}
 	

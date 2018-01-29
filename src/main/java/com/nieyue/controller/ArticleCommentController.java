@@ -24,6 +24,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import net.sf.json.JSONObject;
 
 
 /**
@@ -142,5 +143,23 @@ public class ArticleCommentController {
 				return ResultUtil.getSlefSRFailList(list);
 			}
 	}
-	
+	/**
+	 * 点赞
+	 * @return
+	 */
+	@RequestMapping(value = "/point", method = {RequestMethod.GET,RequestMethod.POST})
+	public  StateResultList pointComment(
+			@RequestParam("articleCommentId") Integer articleCommentId,
+			@RequestParam("articleId") Integer articleId,
+			@RequestParam("acountId") Integer acountId,
+			HttpSession session)  {
+		List<JSONObject> list = new ArrayList<JSONObject>();
+		ArticleComment articleComment = articleCommentService.loadArticleComment(articleCommentId);
+		JSONObject json = new JSONObject();
+			articleComment.setPointNumber(articleComment.getPointNumber()+1);
+			articleCommentService.updateArticleComment(articleComment);
+			json.put("isPoint", 1);
+			list.add(json);
+			return ResultUtil.getSlefSRSuccessList(list);
+	}
 }

@@ -55,6 +55,11 @@ public class VideoSet implements Serializable {
 	/**
 	 * 视频集数
 	 */
+	@ApiModelProperty(value="总价，默认为0，若为0则免费",example="总价，默认为0，若为0则免费")
+	private Double totalPrice;
+	/**
+	 * 视频集数
+	 */
 	@ApiModelProperty(value="视频集数",example="视频集数")
 	private Integer number;
 	/**
@@ -162,6 +167,12 @@ public class VideoSet implements Serializable {
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	public Double getTotalPrice() {
+		return totalPrice;
+	}
+	public void setTotalPrice(Double totalPrice) {
+		this.totalPrice = totalPrice;
 	}
 	
 }

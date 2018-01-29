@@ -20,6 +20,7 @@ public class ArticleCommentServiceImpl implements ArticleCommentService{
 	@Override
 	public boolean addArticleComment(ArticleComment articleComment) {
 		articleComment.setCreateDate(new Date());
+		articleComment.setPointNumber(0);
 		boolean b = articleCommentDao.addArticleComment(articleComment);
 		return b;
 	}

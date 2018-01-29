@@ -60,6 +60,7 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         		||request.getRequestURI().indexOf("swagger")>-1
         		||request.getRequestURI().indexOf("api-docs")>-1
         		||request.getRequestURI().indexOf("getAPI")>-1
+        		||request.getRequestURI().indexOf("tool")>-1
         		||request.getRequestURI().indexOf("validCode")>-1
         		||request.getRequestURI().indexOf("getVerificationCode")>-1
         		//role
@@ -460,10 +461,11 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         		//文章评论
         		if( request.getRequestURI().indexOf("/articleComment/delete")>-1 
         				|| request.getRequestURI().indexOf("/articleComment/update")>-1 
+        				|| request.getRequestURI().indexOf("/articleComment/point")>-1 
         				|| request.getRequestURI().indexOf("/articleComment/add")>-1){
         			//自身
-        			if((
-        					request.getRequestURI().indexOf("/articleComment/add")>-1
+        			if((request.getRequestURI().indexOf("/articleComment/add")>-1
+        					|| request.getRequestURI().indexOf("/articleComment/point")>-1 
         					)
         					&& request.getParameter("accountId").equals(sessionAccount.getAccountId().toString())){
         				return true;

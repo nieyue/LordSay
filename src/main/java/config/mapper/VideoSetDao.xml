@@ -80,8 +80,8 @@
     	<if test="createDate!=null">
     	create_date=#{createDate},
     	</if>
-    	<if test="accountId!=null">
-    	account_id=#{accountId},
+    	<if test="updateDate!=null">
+    	update_date=#{updateDate},
     	</if>
     </set> 
     WHERE

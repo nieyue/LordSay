@@ -2,6 +2,9 @@ package com.nieyue.thirdparty.qiniu;
 
 import java.util.Date;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+
 import com.qiniu.util.Auth;
 
 /**
@@ -9,22 +12,22 @@ import com.qiniu.util.Auth;
  * @author 聂跃
  * @date 2018年1月10日
  */
-//@Configuration
+@Configuration
 public class QiniuUtil {
-//   @Value("${myPugin.qiniu.accessKey}")
-//   String accessKey;
-//   @Value("${myPugin.qiniu.secretKey}")
-//   String secretKey;
-//   @Value("${myPugin.qiniu.bucketName}")
-//   String bucketName;
-//   @Value("${myPugin.qiniu.privateBucketName}")
-//   String privateBucketName;
-   static String accessKey="dGJBFJKfsq-c74QCzTSxLAzPgcDw338-__AKWM8n";
-   static String secretKey="yTswXYndF5kVG7LrGb4mX6YqaitNDdjNIpxXIDyk";
-   static String bucketName="laoyeshuo";
-   static String privateBucketName="laoyeshuovideo";
-   static String domain="p2bhwwngu.bkt.clouddn.com";
-   static String privateDomain="p2c30vvva.bkt.clouddn.com";
+   @Value("${myPugin.qiniu.accessKey}")
+   String accessKey;
+   @Value("${myPugin.qiniu.secretKey}")
+   String secretKey;
+   @Value("${myPugin.qiniu.bucketName}")
+   String bucketName;
+   @Value("${myPugin.qiniu.privateBucketName}")
+   String privateBucketName;
+//   static String accessKey="dGJBFJKfsq-c74QCzTSxLAzPgcDw338-__AKWM8n";
+//   static String secretKey="yTswXYndF5kVG7LrGb4mX6YqaitNDdjNIpxXIDyk";
+//   static String bucketName="laoyeshuo";
+//   static String privateBucketName="laoyeshuovideo";
+//   static String domain="p2bhwwngu.bkt.clouddn.com";
+//   static String privateDomain="p2c30vvva.bkt.clouddn.com";
    /**
     * 获取uploadToken
     * @return
@@ -55,6 +58,6 @@ public class QiniuUtil {
    }
    public static void main(String[] args) {
 	//System.out.println(new QiniuUtil().getQiniuUploadToken());
-	System.out.println(new QiniuUtil().getQiniuPrivateUDownloadUrl("http://"+privateDomain+"/a.mp4",15));
+	//System.out.println(new QiniuUtil().getQiniuPrivateUDownloadUrl("http://"+privateDomain+"/a.mp4",15));
 }
 }
