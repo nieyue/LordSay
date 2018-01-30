@@ -9,6 +9,7 @@
    		  article_tb 
    		 (
    		 title,
+   		 img_address,
    		 redirect_url,
    		 content,
    		 comment_number,
@@ -20,6 +21,7 @@
    VALUES
     	 (
     	 #{title},
+    	 #{imgAddress},
     	 #{redirectUrl},
     	 #{content},
     	 #{commentNumber},
@@ -36,6 +38,9 @@
     <set>
     	<if test="title!=null">
     	title=#{title},
+    	</if>
+    	<if test="imgAddress!=null">
+    	img_address=#{imgAddress},
     	</if>
     	<if test="redirectUrl!=null">
     	redirect_url=#{redirectUrl},
@@ -73,6 +78,7 @@
 SELECT 
 		 article_id,
 	 	 title,
+	 	 img_address,
    		 redirect_url,
    		 content,
    		 comment_number,
@@ -89,6 +95,7 @@ WHERE article_id=#{articleId}
         SELECT
 	     article_id,
 	 	 title,
+	 	 img_address,
    		 redirect_url,
    		 <!-- content, -->
    		 comment_number,

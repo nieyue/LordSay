@@ -2,6 +2,7 @@ package com.nieyue.bean;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -87,6 +88,11 @@ public class VideoSet implements Serializable {
 	 */
 	@ApiModelProperty(value="更新时间",example="更新时间")
 	private Date updateDate;
+	/**
+	 * 视频列表
+	 */
+	@ApiModelProperty(value="视频列表",example="视频列表")
+	private List<Video> videoList;
 	public Integer getVideoSetId() {
 		return videoSetId;
 	}
@@ -173,6 +179,12 @@ public class VideoSet implements Serializable {
 	}
 	public void setTotalPrice(Double totalPrice) {
 		this.totalPrice = totalPrice;
+	}
+	public List<Video> getVideoList() {
+		return videoList;
+	}
+	public void setVideoList(List<Video> videoList) {
+		this.videoList = videoList;
 	}
 	
 }

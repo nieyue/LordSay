@@ -374,6 +374,7 @@ PRIMARY KEY (article_cate_id)
 CREATE TABLE article_tb(
 article_id int(11) NOT NULL AUTO_INCREMENT COMMENT '文章id',
 title varchar(255) COMMENT '标题',
+imgAddress varchar(255) COMMENT '封面',
 redirect_url varchar(255)  COMMENT '跳转url',
 content longtext  COMMENT '内容',
 comment_number bigint(20) DEFAULT 0 COMMENT '评论数',

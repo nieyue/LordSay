@@ -10,24 +10,45 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.nieyue.bean.Video;
+import com.nieyue.bean.VideoSet;
 import com.nieyue.dao.VideoDao;
 import com.nieyue.service.VideoService;
+import com.nieyue.service.VideoSetService;
 @Service
 public class VideoServiceImpl implements VideoService{
 	@Resource
 	VideoDao videoDao;
+	@Resource
+	VideoSetService videoSetService;
 	@Transactional(propagation=Propagation.REQUIRED)
 	@Override
 	public boolean addVideo(Video video) {
 		video.setCreateDate(new Date());
 		video.setUpdateDate(new Date());
+		if(video.getStatus()==null){
+			video.setStatus(1);
+		}
+		video.setPlayNumber(0);
 		boolean b = videoDao.addVideo(video);
+		if(video.getVideoSetId()!=null){
+			VideoSet videoSet = videoSetService.loadVideoSet(video.getVideoSetId());
+			int vc = videoDao.countAll(video.getVideoSetId(), null, null, null);
+			videoSet.setNumber(vc);
+			b=videoSetService.updateVideoSet(videoSet);
+		}
 		return b;
 	}
 	@Transactional(propagation=Propagation.REQUIRED)
 	@Override
 	public boolean delVideo(Integer videoId) {
+		Video video = videoDao.loadVideo(videoId);
 		boolean b = videoDao.delVideo(videoId);
+		if(b==true &&video.getVideoSetId()!=null){
+			VideoSet videoSet = videoSetService.loadVideoSet(video.getVideoSetId());
+			int vc = videoDao.countAll(video.getVideoSetId(), null, null, null);
+			videoSet.setNumber(vc);
+			b=videoSetService.updateVideoSet(videoSet);
+		}
 		return b;
 	}
 	@Transactional(propagation=Propagation.REQUIRED)

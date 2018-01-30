@@ -9,13 +9,17 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.nieyue.bean.Video;
 import com.nieyue.bean.VideoSet;
 import com.nieyue.dao.VideoSetDao;
+import com.nieyue.service.VideoService;
 import com.nieyue.service.VideoSetService;
 @Service
 public class VideoSetServiceImpl implements VideoSetService{
 	@Resource
 	VideoSetDao videoSetDao;
+	@Resource
+	VideoService videoService;
 	@Transactional(propagation=Propagation.REQUIRED)
 	@Override
 	public boolean addVideoSet(VideoSet videoSet) {
@@ -57,6 +61,8 @@ public class VideoSetServiceImpl implements VideoSetService{
 	@Override
 	public VideoSet loadVideoSet(Integer videoSetId) {
 		VideoSet r = videoSetDao.loadVideoSet(videoSetId);
+		List<Video> videolist = videoService.browsePagingVideo(videoSetId, null, null, null, 1, Integer.MAX_VALUE, "video_id", "asc");
+		r.setVideoList(videolist);
 		return r;
 	}
 

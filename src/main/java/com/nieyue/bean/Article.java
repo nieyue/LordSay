@@ -27,6 +27,11 @@ public class Article implements Serializable {
 	@ApiModelProperty(value="标题",example="标题")
 	private String title;
 	/**
+	 *封面
+	 */
+	@ApiModelProperty(value="封面",example="封面")
+	private String imgAddress;
+	/**
 	 * 跳转url
 	 */
 	@ApiModelProperty(value="跳转url",example="跳转url")
@@ -117,6 +122,12 @@ public class Article implements Serializable {
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	public String getImgAddress() {
+		return imgAddress;
+	}
+	public void setImgAddress(String imgAddress) {
+		this.imgAddress = imgAddress;
 	}
 	
 }
