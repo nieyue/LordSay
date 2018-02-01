@@ -27,6 +27,11 @@ public class Article implements Serializable {
 	@ApiModelProperty(value="标题",example="标题")
 	private String title;
 	/**
+	 * 子标题
+	 */
+	@ApiModelProperty(value="子标题",example="子标题")
+	private String subtitle;
+	/**
 	 *封面
 	 */
 	@ApiModelProperty(value="封面",example="封面")
@@ -128,6 +133,12 @@ public class Article implements Serializable {
 	}
 	public void setImgAddress(String imgAddress) {
 		this.imgAddress = imgAddress;
+	}
+	public String getSubtitle() {
+		return subtitle;
+	}
+	public void setSubtitle(String subtitle) {
+		this.subtitle = subtitle;
 	}
 	
 }

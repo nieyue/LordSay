@@ -235,6 +235,7 @@ INDEX INDEX_UPDATEDATE (update_date) USING BTREE
 CREATE TABLE video_set_cate_tb(
 video_set_cate_id int(11) NOT NULL AUTO_INCREMENT COMMENT '视频集类型id',
 name varchar(255) COMMENT '视频集类型名称',
+icon varchar(255) COMMENT '视频集类型图标',
 update_date datetime COMMENT '更新时间',
 PRIMARY KEY (video_set_cate_id)
 )ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='视频集类型表';
@@ -374,6 +375,7 @@ PRIMARY KEY (article_cate_id)
 CREATE TABLE article_tb(
 article_id int(11) NOT NULL AUTO_INCREMENT COMMENT '文章id',
 title varchar(255) COMMENT '标题',
+subtitle varchar(255) COMMENT '子标题',
 imgAddress varchar(255) COMMENT '封面',
 redirect_url varchar(255)  COMMENT '跳转url',
 content longtext  COMMENT '内容',

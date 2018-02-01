@@ -28,6 +28,11 @@ public class VideoSetCate implements Serializable {
 	@ApiModelProperty(value="视频集类型名称",example="视频集类型名称")
 	private String name;
 	/**
+	 * 视频集类型图标
+	 */
+	@ApiModelProperty(value="视频集类型图标",example="视频集类型图标")
+	private String icon;
+	/**
 	 * 更新时间
 	 */
 	@ApiModelProperty(value="更新时间",example="更新时间")
@@ -52,6 +57,12 @@ public class VideoSetCate implements Serializable {
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	public String getIcon() {
+		return icon;
+	}
+	public void setIcon(String icon) {
+		this.icon = icon;
 	}
 	
 }
