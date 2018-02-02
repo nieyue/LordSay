@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.view.RedirectView;
 
-import com.nieyue.bean.VideoCache;
 import com.nieyue.comments.RequestToMethdoItemUtils;
 import com.nieyue.thirdparty.qiniu.QiniuUtil;
 import com.nieyue.util.ResultUtil;

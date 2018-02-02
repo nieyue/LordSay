@@ -32,6 +32,16 @@ public class IntegralBoard implements Serializable {
 	@ApiModelProperty(value="时间类型,1周，2月，3总",example="时间类型,1周，2月，3总")
 	private Integer timeType;
 	/**
+	 * 真实姓名
+	 */
+	@ApiModelProperty(value="真实姓名",example="真实姓名")
+	private String realname;
+	/**
+	 * 图像
+	 */
+	@ApiModelProperty(value="图像",example="图像")
+	private String icon;
+	/**
 	 * 积分
 	 */
 	@ApiModelProperty(value="积分",example="积分")
@@ -107,4 +117,17 @@ public class IntegralBoard implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+	public String getRealname() {
+		return realname;
+	}
+	public void setRealname(String realname) {
+		this.realname = realname;
+	}
+	public String getIcon() {
+		return icon;
+	}
+	public void setIcon(String icon) {
+		this.icon = icon;
+	}
+	
 }

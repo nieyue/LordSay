@@ -113,7 +113,15 @@ SELECT
 FROM video_set_tb 
 WHERE video_set_id=#{videoSetId}
 </select>
-
+<!-- 观看视频集-->
+<update id="watchVideoSet" parameterType="Integer" >  
+    UPDATE 
+    	video_set_tb 
+    SET
+    	play_number=play_number+1,
+    WHERE
+    	 video_set_id=#{videoSetId} 
+</update> 
 <!-- 分页查询视频集-->
 <select id="browsePagingVideoSet" resultType="VideoSet">  
         SELECT
@@ -133,6 +141,9 @@ WHERE video_set_id=#{videoSetId}
    		 update_date
 	FROM video_set_tb
 	<where>
+	<if test="name!=null">
+		AND  name like CONCAT('%','${name}','%' )
+		</if>
 	<if test="recommend!=null">
 		AND  recommend=#{recommend}
 		</if>
@@ -160,6 +171,9 @@ WHERE video_set_id=#{videoSetId}
 	</if>
 	(SELECT ${orderName} FROM video_set_tb 
 		<where>
+		<if test="name!=null">
+		AND  name like CONCAT('%','${name}','%' )
+		</if>
 		<if test="recommend!=null">
 		AND  recommend=#{recommend}
 		</if>
@@ -196,6 +210,9 @@ WHERE video_set_id=#{videoSetId}
 	 	count(video_set_id)
 	FROM video_set_tb
 	<where>
+	<if test="name!=null">
+		AND  name like CONCAT('%','${name}','%' )
+		</if>
 	<if test="recommend!=null">
 		AND  recommend=#{recommend}
 		</if>

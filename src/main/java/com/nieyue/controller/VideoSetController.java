@@ -47,6 +47,7 @@ public class VideoSetController {
 	 */
 	@ApiOperation(value = "视频集列表", notes = "视频集分页浏览")
 	@ApiImplicitParams({
+	  @ApiImplicitParam(name="name",value="名称",dataType="string", paramType = "query"),
 	  @ApiImplicitParam(name="recommend",value="推荐，默认0不推，1封推，2热门推荐，3专栏",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="cost",value="是否收费，0免费，1vip免费，2付费课程",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="videoSetCateId",value="视频集类型id,外键",dataType="int", paramType = "query"),
@@ -60,6 +61,7 @@ public class VideoSetController {
 	  })
 	@RequestMapping(value = "/list", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList browsePagingVideoSet(
+			@RequestParam(value="name",required=false)String name,
 			@RequestParam(value="recommend",required=false)Integer recommend,
 			@RequestParam(value="cost",required=false)Integer cost,
 			@RequestParam(value="videoSetCateId",required=false)Integer videoSetCateId,
@@ -71,7 +73,7 @@ public class VideoSetController {
 			@RequestParam(value="orderName",required=false,defaultValue="update_date") String orderName,
 			@RequestParam(value="orderWay",required=false,defaultValue="desc") String orderWay)  {
 			List<VideoSet> list = new ArrayList<VideoSet>();
-			list= videoSetService.browsePagingVideoSet(recommend,cost,videoSetCateId,createDate,updateDate,status,pageNum, pageSize, orderName, orderWay);
+			list= videoSetService.browsePagingVideoSet(name,recommend,cost,videoSetCateId,createDate,updateDate,status,pageNum, pageSize, orderName, orderWay);
 			if(list.size()>0){
 				return ResultUtil.getSlefSRSuccessList(list);
 			}else{
@@ -117,7 +119,8 @@ public class VideoSetController {
 	 */
 	@ApiOperation(value = "视频集数量", notes = "视频集数量查询")
 	@ApiImplicitParams({
-		 @ApiImplicitParam(name="recommend",value="推荐，默认0不推，1封推，2热门推荐，3专栏",dataType="int", paramType = "query"),
+		  @ApiImplicitParam(name="name",value="名称",dataType="string", paramType = "query"),
+		  @ApiImplicitParam(name="recommend",value="推荐，默认0不推，1封推，2热门推荐，3专栏",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="cost",value="是否收费，0免费，1vip免费，2付费课程",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="videoSetCateId",value="视频集类型id,外键",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="createDate",value="创建时间",dataType="date-time", paramType = "query"),
@@ -126,6 +129,7 @@ public class VideoSetController {
 		  })
 	@RequestMapping(value = "/count", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody int countAll(
+			@RequestParam(value="name",required=false)String name,
 			@RequestParam(value="recommend",required=false)Integer recommend,
 			@RequestParam(value="cost",required=false)Integer cost,
 			@RequestParam(value="videoSetCateId",required=false)Integer videoSetCateId,
@@ -133,7 +137,7 @@ public class VideoSetController {
 			@RequestParam(value="updateDate",required=false)Date updateDate,
 			@RequestParam(value="status",required=false)Integer status,
 			HttpSession session)  {
-		int count = videoSetService.countAll(recommend,cost,videoSetCateId,createDate,updateDate,status);
+		int count = videoSetService.countAll(name,recommend,cost,videoSetCateId,createDate,updateDate,status);
 		return count;
 	}
 	/**

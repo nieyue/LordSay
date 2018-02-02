@@ -18,9 +18,12 @@ public interface VideoSetService {
 	/** 更新视频集*/	
 	public boolean updateVideoSet(VideoSet videoSet);
 	/** 装载视频集 */	
-	public VideoSet loadVideoSet(Integer videoSetId);	
+	public VideoSet loadVideoSet(Integer videoSetId);
+	/** 观看视频集 */	
+	public boolean watchVideoSet(Integer videoSetId,Integer accountId);
 	/** 视频集总共数目 */	
 	public int countAll(
+			String name,
 			Integer recommend,
 			Integer cost,
 			Integer videoSetCateId,
@@ -30,6 +33,7 @@ public interface VideoSetService {
 			);
 	/** 分页视频集信息 */
 	public List<VideoSet> browsePagingVideoSet(
+			String name,
 			Integer recommend,
 			Integer cost,
 			Integer videoSetCateId,

@@ -10,6 +10,8 @@
    		 (
    		 type,
    		 time_type,
+   		 realname,
+   		 icon,
    		 integral,
    		 record_time,
    		 create_date,
@@ -20,6 +22,8 @@
     	 (
     	 #{type},
     	 #{timeType},
+    	 #{realname},
+    	 #{icon},
     	 #{integral},
     	 #{recordTime},
     	 #{createDate},
@@ -37,6 +41,12 @@
     	</if>
     	<if test="timeType!=null">
     	time_type=#{timeType},
+    	</if>
+    	<if test="realname!=null">
+    	realname=#{realname},
+    	</if>
+    	<if test="icon!=null">
+    	icon=#{icon},
     	</if>
     	<if test="integral!=null">
     	integral=#{integral},
@@ -69,6 +79,8 @@ SELECT
 		 integral_board_id,
 	 	 type,
    		 time_type,
+   		 realname,
+   		 icon,
    		 integral,
    		 record_time,
    		 create_date,
@@ -84,6 +96,8 @@ WHERE integral_board_id=#{integralBoardId}
 	     integral_board_id,
 	 	 type,
    		 time_type,
+   		 realname,
+   		 icon,
    		 integral,
    		 record_time,
    		 create_date,

@@ -9,9 +9,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.nieyue.bean.Integral;
+import com.nieyue.bean.IntegralDetail;
 import com.nieyue.bean.Video;
 import com.nieyue.bean.VideoSet;
 import com.nieyue.dao.VideoDao;
+import com.nieyue.service.IntegralBoardService;
+import com.nieyue.service.IntegralDetailService;
+import com.nieyue.service.IntegralService;
 import com.nieyue.service.VideoService;
 import com.nieyue.service.VideoSetService;
 @Service
@@ -20,6 +25,10 @@ public class VideoServiceImpl implements VideoService{
 	VideoDao videoDao;
 	@Resource
 	VideoSetService videoSetService;
+	@Resource
+	IntegralService integralService;
+	@Resource
+	IntegralDetailService integralDetailService;
 	@Transactional(propagation=Propagation.REQUIRED)
 	@Override
 	public boolean addVideo(Video video) {
@@ -100,6 +109,36 @@ public class VideoServiceImpl implements VideoService{
 				orderName,
 				orderWay);
 		return l;
+	}
+	@Override
+	public boolean watchVideo(Integer videoId, Integer accountId,Integer type) {
+		boolean b=false;
+		Video video = videoDao.loadVideo(videoId);
+		if(type==1){//开始播放
+		//增加视频播放次数
+		b = videoDao.watchVideo(videoId);
+		if(b){
+		//增加视频集播放次数	
+		b=videoSetService.watchVideoSet(video.getVideoSetId(), accountId);
+		}
+		}else if(type==2){//播放中
+			b=true;
+		}
+		
+		if(b==true &&video.getVideoSetId()!=null){
+			//积分增加
+			List<Integral> integrall = integralService.browsePagingIntegral(accountId, null, null, 1, 1, "integral_id", "asc");
+			Integral integral = integrall.get(0);
+			integral.setIntegral(integral.getIntegral()+1.0);
+			b=integralService.updateIntegral(integral);
+			//积分详情增加
+			IntegralDetail integralDetail=new IntegralDetail();
+			integralDetail.setAccountId(accountId);
+			integralDetail.setIntegral(1.0);
+			integralDetail.setType(1);//获得
+			b=integralDetailService.addIntegralDetail(integralDetail);
+		}
+		return b;
 	}
 
 	

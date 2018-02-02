@@ -14,7 +14,6 @@ import com.nieyue.bean.Account;
 import com.nieyue.bean.Finance;
 import com.nieyue.bean.Role;
 import com.nieyue.exception.MySessionException;
-import com.nieyue.util.MyDESutil;
 
 /**
  * 用户session控制拦截器
@@ -94,6 +93,15 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         		||request.getRequestURI().indexOf("videoSetCate/count")>-1
         		||request.getRequestURI().indexOf("videoSetCate/list")>-1
         		||method.getName().equals("loadVideoSetCate")
+        		//视频集标签
+        		||request.getRequestURI().indexOf("videoSetTag/count")>-1
+        		||request.getRequestURI().indexOf("videoSetTag/list")>-1
+        		||method.getName().equals("loadVideoSetTag")
+        		//视频集搜索
+        		||request.getRequestURI().indexOf("videoSetSearch/search")>-1
+        		||request.getRequestURI().indexOf("videoSetSearch/count")>-1
+        		||request.getRequestURI().indexOf("videoSetSearch/list")>-1
+        		||method.getName().equals("loadVideoSetSearch")
         		//视频集
         		||request.getRequestURI().indexOf("videoSet/count")>-1
         		||request.getRequestURI().indexOf("videoSet/list")>-1
@@ -361,6 +369,25 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         				|| request.getRequestURI().indexOf("/videoSetCate/add")>-1){
         			throw new MySessionException();
         		}
+        		//视频集标签
+        		if( request.getRequestURI().indexOf("/videoSetTag/delete")>-1 
+        				|| request.getRequestURI().indexOf("/videoSetTag/update")>-1 
+        				|| request.getRequestURI().indexOf("/videoSetTag/add")>-1){
+        			throw new MySessionException();
+        		}
+        		//视频集搜索
+        		if( request.getRequestURI().indexOf("/videoSetSearch/delete")>-1 
+        				|| request.getRequestURI().indexOf("/videoSetSearch/update")>-1 
+        				|| request.getRequestURI().indexOf("/videoSetSearch/add")>-1){
+        			//自身
+        			if((
+        					request.getRequestURI().indexOf("/videoSetSearch/add")>-1
+        					)
+        					&& request.getParameter("accountId").equals(sessionAccount.getAccountId().toString())){
+        				return true;
+        			}
+        			throw new MySessionException();
+        		}
         		//视频集
         		if( request.getRequestURI().indexOf("/videoSet/delete")>-1 
         				|| request.getRequestURI().indexOf("/videoSet/update")>-1 
@@ -372,10 +399,12 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         				||request.getRequestURI().indexOf("/video/list")>-1
         				|| request.getRequestURI().indexOf("/video/update")>-1 
         				|| request.getRequestURI().indexOf("/video/add")>-1
+        				|| request.getRequestURI().indexOf("/video/watch")>-1
         				||method.getName().equals("loadVideo")){
         			//自身
         			if((
         					request.getRequestURI().indexOf("/video/list")>-1
+        					||request.getRequestURI().indexOf("/video/watch")>-1
         					||method.getName().equals("loadVideo")
         					)
         					&& request.getParameter("accountId").equals(sessionAccount.getAccountId().toString())){
@@ -404,13 +433,36 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         		//视频播放记录
         		if( request.getRequestURI().indexOf("/videoPlayRecord/delete")>-1 
         				|| request.getRequestURI().indexOf("/videoPlayRecord/update")>-1 
+                		||request.getRequestURI().indexOf("videoPlayRecord/deleteBatch")>-1
         				|| request.getRequestURI().indexOf("/videoPlayRecord/add")>-1){
+        			//自身
+        			if((
+        					request.getRequestURI().indexOf("/videoPlayRecord/delete")>-1
+        					||request.getRequestURI().indexOf("/videoPlayRecord/list")>-1
+        					|| request.getRequestURI().indexOf("/videoPlayRecord/update")>-1
+        					|| request.getRequestURI().indexOf("/videoPlayRecord/add")>-1
+        					|| request.getRequestURI().indexOf("/videoPlayRecord/deleteBatch")>-1
+        					||method.getName().equals("loadVideoPlayRecord")
+        					)
+        					&& request.getParameter("accountId").equals(sessionAccount.getAccountId().toString())){
+        				return true;
+        			}
         			throw new MySessionException();
         		}
         		//视频缓存
         		if( request.getRequestURI().indexOf("/videoCache/delete")>-1 
         				|| request.getRequestURI().indexOf("/videoCache/update")>-1 
         				|| request.getRequestURI().indexOf("/videoCache/add")>-1){
+        			//自身
+        			if((
+        					request.getRequestURI().indexOf("/videoCache/delete")>-1
+        					||request.getRequestURI().indexOf("/videoCache/list")>-1
+        					|| request.getRequestURI().indexOf("/videoCache/add")>-1
+        					||method.getName().equals("loadVideoCache")
+        					)
+        					&& request.getParameter("accountId").equals(sessionAccount.getAccountId().toString())){
+        				return true;
+        			}
         			throw new MySessionException();
         		}
         		//订单

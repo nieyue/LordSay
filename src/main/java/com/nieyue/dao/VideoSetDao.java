@@ -23,8 +23,11 @@ public interface VideoSetDao {
 	public boolean updateVideoSet(VideoSet videoSet);
 	/** 装载视频集 */	
 	public VideoSet loadVideoSet(Integer videoSetId);	
+	/** 观看视频集*/	
+	public boolean watchVideoSet(@Param("videoSetId")Integer videoSetId);	
 	/** 视频集总共数目 */	
 	public int countAll(
+			@Param("name")String name,
 			@Param("recommend")Integer recommend,
 			@Param("cost")Integer cost,
 			@Param("videoSetCateId")Integer videoSetCateId,
@@ -34,6 +37,7 @@ public interface VideoSetDao {
 			);	
 	/** 分页视频集信息 */
 	public List<VideoSet> browsePagingVideoSet(
+			@Param("name")String name,
 			@Param("recommend")Integer recommend,
 			@Param("cost")Integer cost,
 			@Param("videoSetCateId")Integer videoSetCateId,

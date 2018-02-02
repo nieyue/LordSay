@@ -23,6 +23,8 @@ public interface VideoDao {
 	public boolean updateVideo(Video video);
 	/** 装载视频 */	
 	public Video loadVideo(Integer videoId);	
+	/** 观看视频 */	
+	public boolean watchVideo(@Param("videoId")Integer videoId);	
 	/** 视频总共数目 */	
 	public int countAll(
 			@Param("videoSetId")Integer videoSetId,

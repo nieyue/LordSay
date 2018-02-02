@@ -218,6 +218,8 @@ CREATE TABLE integral_board_tb(
 integral_board_id int(11) NOT NULL AUTO_INCREMENT COMMENT '积分榜id',
 type tinyint(4) DEFAULT 1 COMMENT '类型,1个人，2团队',
 time_type tinyint(4) DEFAULT 1 COMMENT '时间类型,1周，2月，3总',
+realname varchar(255) COMMENT '真实姓名',
+icon varchar(255) COMMENT '图像',
 integral decimal(11,2) DEFAULT 0 COMMENT '积分',
 record_time datetime COMMENT '记录时间',
 create_date datetime COMMENT '创建时间',
@@ -240,6 +242,27 @@ update_date datetime COMMENT '更新时间',
 PRIMARY KEY (video_set_cate_id)
 )ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='视频集类型表';
 
+#创建视频集标签表 
+CREATE TABLE video_set_tag_tb(
+video_set_tag_id int(11) NOT NULL AUTO_INCREMENT COMMENT '视频集标签id',
+name varchar(255) COMMENT '视频集标签名称',
+update_date datetime COMMENT '更新时间',
+video_set_id int(11) COMMENT '视频集id',
+PRIMARY KEY (video_set_tag_id),
+INDEX INDEX_VIDEOSETID (video_set_id) USING BTREE
+)ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='视频集标签表';
+
+#创建视频集搜索表 
+CREATE TABLE video_set_search_tb(
+video_set_search_id int(11) NOT NULL AUTO_INCREMENT COMMENT '视频集搜索id',
+name varchar(255) COMMENT '视频集搜索名称',
+number int(11) COMMENT '次数',
+update_date datetime COMMENT '更新时间',
+PRIMARY KEY (video_set_search_id),
+INDEX INDEX_NAME (name) USING BTREE,
+INDEX INDEX_NUMBER (number) USING BTREE
+)ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='视频集搜索表';
+
 #创建视频集表 
 CREATE TABLE video_set_tb(
 video_set_id int(11) NOT NULL AUTO_INCREMENT COMMENT '视频集id',
@@ -257,6 +280,7 @@ video_set_cate_id int(11) COMMENT '视频集类型id,外键',
 create_date datetime  COMMENT '创建时间',
 update_date datetime  COMMENT '更新时间',
 PRIMARY KEY (video_set_id),
+INDEX INDEX_NAME (name) USING BTREE,
 INDEX INDEX_RECOMMEND (recommend) USING BTREE,
 INDEX INDEX_COST (cost) USING BTREE,
 INDEX INDEX_VIDEOSETCATEID (video_set_cate_id) USING BTREE,

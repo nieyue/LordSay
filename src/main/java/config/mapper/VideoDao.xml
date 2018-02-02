@@ -95,6 +95,15 @@ SELECT
 FROM video_tb 
 WHERE video_id=#{videoId}
 </select>
+<!-- 观看视频-->
+<update id="watchVideo" parameterType="Integer" >  
+    UPDATE 
+    	video_tb 
+    SET
+    	play_number=play_number+1,
+    WHERE
+    	 video_id=#{videoId} 
+</update> 
 
 <!-- 分页查询视频-->
 <select id="browsePagingVideo" resultType="Video">  

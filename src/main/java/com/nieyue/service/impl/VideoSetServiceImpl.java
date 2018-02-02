@@ -11,15 +11,19 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.nieyue.bean.Video;
 import com.nieyue.bean.VideoSet;
+import com.nieyue.bean.VideoSetTag;
 import com.nieyue.dao.VideoSetDao;
 import com.nieyue.service.VideoService;
 import com.nieyue.service.VideoSetService;
+import com.nieyue.service.VideoSetTagService;
 @Service
 public class VideoSetServiceImpl implements VideoSetService{
 	@Resource
 	VideoSetDao videoSetDao;
 	@Resource
 	VideoService videoService;
+	@Resource
+	VideoSetTagService videoSetTagService;
 	@Transactional(propagation=Propagation.REQUIRED)
 	@Override
 	public boolean addVideoSet(VideoSet videoSet) {
@@ -63,11 +67,14 @@ public class VideoSetServiceImpl implements VideoSetService{
 		VideoSet r = videoSetDao.loadVideoSet(videoSetId);
 		List<Video> videolist = videoService.browsePagingVideo(videoSetId, null, null, null, 1, Integer.MAX_VALUE, "video_id", "asc");
 		r.setVideoList(videolist);
+		List<VideoSetTag> vstl = videoSetTagService.browsePagingVideoSetTag(videoSetId,1, Integer.MAX_VALUE, "video_set_tag_id", "asc");
+		r.setVideoSetTagList(vstl);
 		return r;
 	}
 
 	@Override
 	public int countAll(
+			String name,
 			Integer recommend,
 			Integer cost,
 			Integer videoSetCateId,
@@ -75,12 +82,14 @@ public class VideoSetServiceImpl implements VideoSetService{
 			Date updateDate,
 			Integer status) {
 		int c = videoSetDao.countAll(
+				name,
 				recommend,cost,videoSetCateId,createDate,updateDate,status);
 		return c;
 	}
 
 	@Override
 	public List<VideoSet> browsePagingVideoSet(
+			String name,
 			Integer recommend,
 			Integer cost,
 			Integer videoSetCateId,
@@ -96,6 +105,7 @@ public class VideoSetServiceImpl implements VideoSetService{
 			pageSize=0;//没有数据
 		}
 		List<VideoSet> l = videoSetDao.browsePagingVideoSet(
+				 name,
 				recommend,
 				cost,
 				videoSetCateId,
@@ -106,7 +116,16 @@ public class VideoSetServiceImpl implements VideoSetService{
 				pageSize,
 				orderName,
 				orderWay);
+		for (int i = 0; i < l.size(); i++) {
+			List<VideoSetTag> vstl = videoSetTagService.browsePagingVideoSetTag(l.get(i).getVideoSetId(),1, Integer.MAX_VALUE, "video_set_tag_id", "asc");
+			l.get(i).setVideoSetTagList(vstl);
+		}
 		return l;
+	}
+	@Override
+	public boolean watchVideoSet(Integer videoSetId, Integer accountId) {
+		boolean b = videoSetDao.watchVideoSet(videoSetId);
+		return b;
 	}
 
 	

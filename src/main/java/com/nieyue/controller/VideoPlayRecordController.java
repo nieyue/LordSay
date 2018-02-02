@@ -103,6 +103,24 @@ public class VideoPlayRecordController {
 		return ResultUtil.getSR(dm);
 	}
 	/**
+	 * 视频播放记录批量删除
+	 * @return
+	 */
+	@ApiOperation(value = "视频播放记录批量删除", notes = "视频播放记录批量删除")
+	@ApiImplicitParams({
+		@ApiImplicitParam(name="videoPlayRecordId",value="视频播放记录ID列表",dataType="array", paramType = "query",required=true)
+	})
+	@RequestMapping(value = "/deleteBatch", method = {RequestMethod.GET,RequestMethod.POST})
+	public @ResponseBody StateResult delVideoPlayRecordList(
+		 @RequestParam(value = "videoPlayRecordId") Integer[] videoPlayRecordId,
+			HttpSession session)  {
+		 boolean dm=false;
+		for(int i=0;i<videoPlayRecordId.length;i++){
+		    dm = videoPlayRecordService.delVideoPlayRecord(videoPlayRecordId[i]);
+		  }
+		return ResultUtil.getSR(dm);
+	}
+	/**
 	 * 视频播放记录浏览数量
 	 * @return
 	 */

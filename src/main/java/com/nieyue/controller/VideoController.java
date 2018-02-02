@@ -147,5 +147,29 @@ public class VideoController {
 				return ResultUtil.getSlefSRFailList(list);
 			}
 	}
+	/**
+	 * 观看视频
+	 * @return
+	 */
+	@ApiOperation(value = "观看视频", notes = "观看视频")
+	@ApiImplicitParams({
+		@ApiImplicitParam(name="videoId",value="视频ID",dataType="int", paramType = "query",required=true),
+		@ApiImplicitParam(name="accountId",value="账户ID",dataType="int", paramType = "query",required=true),
+		@ApiImplicitParam(name="type",value="类型，默认1开始看视频，2观看中（只加积分，不算播放次数）",dataType="int", paramType = "query",required=true)
+	})
+	@RequestMapping(value = "/watch", method = {RequestMethod.GET,RequestMethod.POST})
+	public  StateResultList watchVideo(
+			@RequestParam("videoId") Integer videoId,
+			@RequestParam("accountId") Integer accountId,
+			@RequestParam(value="type") Integer type,
+			HttpSession session)  {
+		List<Video> list = new ArrayList<Video>();
+		boolean b = videoService.watchVideo(videoId, accountId,type);
+		if(b){
+			return ResultUtil.getSlefSRSuccessList(list);
+		}else{
+			return ResultUtil.getSlefSRFailList(list);
+		}
+	}
 	
 }

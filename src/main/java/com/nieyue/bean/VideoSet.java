@@ -93,6 +93,11 @@ public class VideoSet implements Serializable {
 	 */
 	@ApiModelProperty(value="视频列表",example="视频列表")
 	private List<Video> videoList;
+	/**
+	 * 视频集标签列表
+	 */
+	@ApiModelProperty(value="视频集标签列表",example="视频集标签列表")
+	private List<VideoSetTag> videoSetTagList;
 	public Integer getVideoSetId() {
 		return videoSetId;
 	}
@@ -185,6 +190,12 @@ public class VideoSet implements Serializable {
 	}
 	public void setVideoList(List<Video> videoList) {
 		this.videoList = videoList;
+	}
+	public List<VideoSetTag> getVideoSetTagList() {
+		return videoSetTagList;
+	}
+	public void setVideoSetTagList(List<VideoSetTag> videoSetTagList) {
+		this.videoSetTagList = videoSetTagList;
 	}
 	
 }
