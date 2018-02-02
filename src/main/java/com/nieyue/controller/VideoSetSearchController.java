@@ -157,8 +157,8 @@ public class VideoSetSearchController {
 		  })
 	@RequestMapping(value = "/count", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody int countAll(
-			@RequestParam("name") String name,
-			@RequestParam("number") Integer number,
+			@RequestParam(value="name",required=false) String name,
+			@RequestParam(value="number",required=false) Integer number,
 			HttpSession session)  {
 		int count = videoSetSearchService.countAll(name,number);
 		return count;
