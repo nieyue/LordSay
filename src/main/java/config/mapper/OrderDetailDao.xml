@@ -8,6 +8,7 @@
    INSERT IGNORE INTO
    		  order_detail_tb 
    		 (
+   		 pay_type,
    		 name,
    		 img_address,
    		 total_price,
@@ -18,6 +19,7 @@
    		 )
    VALUES
     	 (
+    	 #{payType},
     	 #{name},
     	 #{imgAddress},
     	 #{totalPrice},
@@ -32,6 +34,9 @@
     UPDATE 
     	order_detail_tb 
     <set>
+    	<if test="payType!=null">
+    	pay_type=#{payType},
+    	</if>
     	<if test="name!=null">
     	name=#{name},
     	</if>
@@ -67,6 +72,7 @@
 <select id="loadOrderDetail" parameterType="Integer" resultType="OrderDetail" >
 SELECT 
 		 order_detail_id,
+		 pay_type,
 	 	 name,
    		 img_address,
    		 total_price,
@@ -82,6 +88,7 @@ WHERE order_detail_id=#{orderDetailId}
 <select id="browsePagingOrderDetail" resultType="OrderDetail">  
         SELECT
 	     order_detail_id,
+	     pay_type,
 	 	 name,
    		 img_address,
    		 total_price,

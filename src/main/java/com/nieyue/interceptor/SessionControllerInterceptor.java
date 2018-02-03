@@ -297,6 +297,12 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         					&& request.getParameter("accountId").equals(sessionAccount.getAccountId().toString())){
         				return true;
         			}
+        			//充值。提现
+        			if((request.getRequestURI().indexOf("/finance/recharge")>-1
+        					||request.getRequestURI().indexOf("/finance/withdrawals")>-1)
+        					&& request.getParameter("accountId").equals(sessionAccount.getAccountId().toString())){
+        				return true;
+        			}
         			//加载自身财务
         			if((method.getName().equals("loadFinance"))
         					&& request.getRequestURI().indexOf(sessionFinance.getFinanceId().toString())>-1){

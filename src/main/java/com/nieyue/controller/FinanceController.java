@@ -15,8 +15,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.nieyue.bean.Finance;
+import com.nieyue.bean.FinanceRecord;
 import com.nieyue.service.AccountService;
+import com.nieyue.service.FinanceRecordService;
 import com.nieyue.service.FinanceService;
+import com.nieyue.util.DateUtil;
 import com.nieyue.util.MyDESutil;
 import com.nieyue.util.ResultUtil;
 import com.nieyue.util.StateResult;
@@ -39,6 +42,8 @@ import io.swagger.annotations.ApiOperation;
 public class FinanceController {
 	@Resource
 	private FinanceService financeService;
+	@Resource
+	private FinanceRecordService financeRecordService;
 	@Resource
 	private AccountService accountService;
 	
@@ -109,6 +114,91 @@ public class FinanceController {
 				return ResultUtil.getSlefSRSuccessList(list);
 			}
 		}
+		return ResultUtil.getSlefSRFailList(list);
+	}
+	/**
+	 * 充值
+	 * @return 
+	 */
+	@ApiOperation(value = "充值", notes = "充值")
+	@ApiImplicitParams({
+		  @ApiImplicitParam(name="accountId",value="账户ID",dataType="int", paramType = "query"),
+		  @ApiImplicitParam(name="method",value="方式，1支付宝，2微信,3ios内购",dataType="int", paramType = "query"),
+		  @ApiImplicitParam(name="money",value="金额",dataType="double", paramType = "query")
+		  })
+	@RequestMapping(value = "/recharge", method = {RequestMethod.GET,RequestMethod.POST})
+	public @ResponseBody StateResultList rechargeFinance(
+			@RequestParam(value="accountId")Integer accountId,
+			@RequestParam(value="method")Integer method,
+			@RequestParam(value="money")Double money,
+			HttpSession session) {
+		List<Finance> list=new ArrayList<Finance>();
+		FinanceRecord fr=new FinanceRecord();
+		fr.setAccountId(accountId);
+		fr.setMethod(method);
+		String transactionNumber = ((int) (Math.random()*9000)+1000)+DateUtil.getOrdersTime()+(accountId+10000);
+		fr.setTransactionNumber(transactionNumber);
+		fr.setType(1);//1是账户充值
+		fr.setStatus(2);//充值直接成功
+		boolean b = financeRecordService.addFinanceRecord(fr);
+		if(b){
+			List<Finance> fl = financeService.browsePagingFinance(null, accountId, 1, 1, "finance_id", "asc");
+			if(fl.size()==1){
+				Finance f = fl.get(0);
+				f.setMoney(f.getMoney()+money);
+				f.setRecharge(f.getRecharge()+money);
+				b= financeService.updateFinance(f);
+				if(b){
+					list.add(f);
+					return ResultUtil.getSlefSRSuccessList(list);
+				}
+			}
+		}
+		return ResultUtil.getSlefSRFailList(list);
+	}
+	/**
+	 * 提现
+	 * @return 
+	 */
+	@ApiOperation(value = "提现", notes = "提现")
+	@ApiImplicitParams({
+		  @ApiImplicitParam(name="accountId",value="账户ID",dataType="int", paramType = "query"),
+		  @ApiImplicitParam(name="method",value="方式，1支付宝，2微信,3ios内购",dataType="int", paramType = "query"),
+		  @ApiImplicitParam(name="money",value="金额",dataType="double", paramType = "query")
+		  })
+	@RequestMapping(value = "/withdrawals", method = {RequestMethod.GET,RequestMethod.POST})
+	public @ResponseBody StateResultList withdrawalsFinance(
+			@RequestParam(value="accountId")Integer accountId,
+			@RequestParam(value="method")Integer method,
+			@RequestParam(value="money")Double money,
+			HttpSession session) {
+		List<Finance> list=new ArrayList<Finance>();
+		List<Finance> fl = financeService.browsePagingFinance(null, accountId, 1, 1, "finance_id", "asc");
+		boolean b=false;
+		if(fl.size()==1){
+			Finance f = fl.get(0);
+			if(f.getMoney()-money<0){
+				return ResultUtil.getSlefSRFailList(list);
+			}
+			f.setMoney(f.getMoney()-money);
+			f.setRecharge(f.getWithdrawals()+money);
+			b= financeService.updateFinance(f);
+			if(b){
+				FinanceRecord fr=new FinanceRecord();
+				fr.setAccountId(accountId);
+				fr.setMethod(method);
+				String transactionNumber = ((int) (Math.random()*9000)+1000)+DateUtil.getOrdersTime()+(accountId+10000);
+				fr.setTransactionNumber(transactionNumber);
+				fr.setType(2);//2是账户提现
+				fr.setStatus(1);//提现待处理，后台显示操作成功
+				b = financeRecordService.addFinanceRecord(fr);
+				if(b){
+					list.add(f);
+					return ResultUtil.getSlefSRSuccessList(list);
+				}
+			}
+		}
+		
 		return ResultUtil.getSlefSRFailList(list);
 	}
 	/**

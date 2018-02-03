@@ -12,6 +12,7 @@
    		 type,
    		 transaction_number,
    		 money,
+   		 status,
    		 create_date,
    		 update_date,
    		 account_id
@@ -22,6 +23,7 @@
     	 #{type},
     	 #{transactionNumber},
     	 #{money},
+    	 #{status},
     	 #{createDate},
     	 #{updateDate},
     	 #{accountId}
@@ -40,6 +42,12 @@
     	</if>
     	<if test="transactionNumber!=null">
     	transaction_number=#{transactionNumber},
+    	</if>
+    	<if test="money!=null">
+    	money=#{money},
+    	</if>
+    	<if test="status!=null">
+    	status=#{status},
     	</if>
     	<if test="createDate!=null">
     	create_date=#{createDate},
@@ -68,6 +76,7 @@ SELECT
    		 type,
    		 transaction_number,
    		 money,
+   		 status,
    		 create_date,
    		 update_date,
    		 account_id
@@ -83,6 +92,7 @@ WHERE finance_record_id=#{financeRecordId}
    		 type,
    		 transaction_number,
    		 money,
+   		 status,
    		 create_date,
    		 update_date,
    		 account_id
@@ -91,6 +101,9 @@ WHERE finance_record_id=#{financeRecordId}
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
 		</if>
+		<if test="status!=null">
+    	AND status=#{status}
+    	</if>
 		<if test="method!=null">
     	AND method=#{method}
     	</if>
@@ -118,6 +131,9 @@ WHERE finance_record_id=#{financeRecordId}
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
 		</if>
+		<if test="status!=null">
+    	AND status=#{status}
+    	</if>
 		<if test="method!=null">
     	AND method=#{method}
     	</if>
@@ -154,6 +170,9 @@ WHERE finance_record_id=#{financeRecordId}
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
 		</if>
+		<if test="status!=null">
+    	AND status=#{status}
+    	</if>
 		<if test="method!=null">
     	AND method=#{method}
     	</if>

@@ -6,9 +6,10 @@
 <!-- 添加拆分-->
 <insert id="addSplit" parameterType="Split" keyProperty="splitId" flushCache="true"  >  
    INSERT IGNORE INTO
-   		  Split_tb 
+   		  split_tb 
    		 (
    		 realname,
+   		 remark,
    		 number,
    		 price,
    		 apply_date,
@@ -22,6 +23,7 @@
    VALUES
     	 (
     	 #{realname},
+    	 #{remark},
     	 #{number},
     	 #{price},
     	 #{applyDate},
@@ -40,6 +42,9 @@
     <set>
     	<if test="realname!=null">
     	realname=#{realname},
+    	</if>
+    	<if test="remark!=null">
+    	remark=#{remark},
     	</if>
     	<if test="number!=null">
     	number=#{number},
@@ -70,7 +75,7 @@
     	</if>
     </set> 
     WHERE
-    	 Split_id=#{SplitId} 
+    	 split_id=#{splitId} 
 </update> 
 <!-- 删除视频-->
 <delete id="delSplit"  parameterType="Integer" >  
@@ -83,6 +88,7 @@
 SELECT 
 		 split_id,
 	 	 realname,
+	 	 remark,
    		 number,
    		 price,
    		 apply_date,
@@ -101,6 +107,7 @@ WHERE split_id=#{splitId}
         SELECT
 	     split_id,
 	 	 realname,
+	 	 remark,
    		 number,
    		 price,
    		 apply_date,

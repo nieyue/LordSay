@@ -43,6 +43,11 @@ public class FinanceRecord implements Serializable {
 	@ApiModelProperty(value="余额",example="余额")
 	private Double money;
 	/**
+	 * 状态，默认1待处理，2成功，3已拒绝
+	 */
+	@ApiModelProperty(value="状态，默认1待处理，2成功，3已拒绝",example="状态，默认1待处理，2成功，3已拒绝")
+	private Integer status;
+	/**
 	 * 创建时间
 	 */
 	@ApiModelProperty(value="创建时间",example="创建时间")
@@ -107,6 +112,12 @@ public class FinanceRecord implements Serializable {
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	public Integer getStatus() {
+		return status;
+	}
+	public void setStatus(Integer status) {
+		this.status = status;
 	}
 	
 }

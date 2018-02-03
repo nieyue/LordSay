@@ -30,6 +30,11 @@ public class Split implements Serializable{
 	@ApiModelProperty(value="购买人",example="购买人")
 	private String realname;
 	/**
+	 *备注
+	 */
+	@ApiModelProperty(value="备注",example="备注")
+	private String remark;
+	/**
 	 *数量
 	 */
 	@ApiModelProperty(value="数量",example="数量")
@@ -142,6 +147,12 @@ public class Split implements Serializable{
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	public String getRemark() {
+		return remark;
+	}
+	public void setRemark(String remark) {
+		this.remark = remark;
 	}
 	
 }

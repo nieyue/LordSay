@@ -22,6 +22,7 @@ public interface FinanceRecordService {
 	/** 财务记录总共数目 */	
 	public int countAll(
 			Integer accountId,
+			Integer status,
 			Integer method,
 			Integer type,
 			String transactionNumber,
@@ -31,6 +32,7 @@ public interface FinanceRecordService {
 	/** 分页财务记录信息 */
 	public List<FinanceRecord> browsePagingFinanceRecord(
 			Integer accountId,
+			Integer status,
 			Integer method,
 			Integer type,
 			String transactionNumber,

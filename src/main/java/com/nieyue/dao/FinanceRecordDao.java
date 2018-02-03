@@ -26,6 +26,7 @@ public interface FinanceRecordDao {
 	/** 财务记录总共数目 */	
 	public int countAll(
 			@Param("accountId")Integer accountId,
+			@Param("status")Integer status,
 			@Param("method")Integer method,
 			@Param("type")Integer type,
 			@Param("transactionNumber")String transactionNumber,
@@ -35,6 +36,7 @@ public interface FinanceRecordDao {
 	/** 分页财务记录信息 */
 	public List<FinanceRecord> browsePagingFinanceRecord(
 			@Param("accountId")Integer accountId,
+			@Param("status")Integer status,
 			@Param("method")Integer method,
 			@Param("type")Integer type,
 			@Param("transactionNumber")String transactionNumber,

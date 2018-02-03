@@ -48,6 +48,7 @@ public class FinanceRecordController {
 	@ApiOperation(value = "财务记录列表", notes = "财务记录分页浏览")
 	@ApiImplicitParams({
 	  @ApiImplicitParam(name="accountId",value="账户Id",dataType="int", paramType = "query"),
+	  @ApiImplicitParam(name="status",value="状态，默认1待处理，2成功，3已拒绝",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="method",value="方式，1支付宝，2微信,3ios内购",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="type",value="类型，1账户充值，2账户提现,3招收学员佣金,4推荐佣金,5团购账单,6拆分账单",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="transactionNumber",value="交易单号",dataType="int", paramType = "query"),
@@ -61,6 +62,7 @@ public class FinanceRecordController {
 	@RequestMapping(value = "/list", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList browsePagingFinanceRecord(
 			@RequestParam(value="accountId",required=false)Integer accountId,
+			@RequestParam(value="status",required=false)Integer status,
 			@RequestParam(value="method",required=false)Integer method,
 			@RequestParam(value="type",required=false)Integer type,
 			@RequestParam(value="transactionNumber",required=false)String transactionNumber,
@@ -71,7 +73,7 @@ public class FinanceRecordController {
 			@RequestParam(value="orderName",required=false,defaultValue="update_date") String orderName,
 			@RequestParam(value="orderWay",required=false,defaultValue="desc") String orderWay)  {
 			List<FinanceRecord> list = new ArrayList<FinanceRecord>();
-			list= financeRecordService.browsePagingFinanceRecord(accountId,method,type,transactionNumber,createDate,updateDate,pageNum, pageSize, orderName, orderWay);
+			list= financeRecordService.browsePagingFinanceRecord(accountId,status,method,type,transactionNumber,createDate,updateDate,pageNum, pageSize, orderName, orderWay);
 			if(list.size()>0){
 				return ResultUtil.getSlefSRSuccessList(list);
 			}else{
@@ -118,6 +120,7 @@ public class FinanceRecordController {
 	@ApiOperation(value = "财务记录数量", notes = "财务记录数量查询")
 	@ApiImplicitParams({
 		  @ApiImplicitParam(name="accountId",value="账户Id",dataType="int", paramType = "query"),
+		  @ApiImplicitParam(name="status",value="状态，默认1待处理，2成功，3已拒绝",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="method",value="方式，1支付宝，2微信,3ios内购",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="type",value="类型，1账户充值，2账户提现,3招收学员佣金,4推荐佣金,5团购账单,6拆分账单",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="transactionNumber",value="交易单号",dataType="int", paramType = "query"),
@@ -127,13 +130,14 @@ public class FinanceRecordController {
 	@RequestMapping(value = "/count", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody int countAll(
 			@RequestParam(value="accountId",required=false)Integer accountId,
+			@RequestParam(value="status",required=false)Integer status,
 			@RequestParam(value="method",required=false)Integer method,
 			@RequestParam(value="type",required=false)Integer type,
 			@RequestParam(value="transactionNumber",required=false)String transactionNumber,
 			@RequestParam(value="createDate",required=false)Date createDate,
 			@RequestParam(value="updateDate",required=false)Date updateDate,
 			HttpSession session)  {
-		int count = financeRecordService.countAll(accountId,method,type,transactionNumber,createDate,updateDate);
+		int count = financeRecordService.countAll(accountId,status,method,type,transactionNumber,createDate,updateDate);
 		return count;
 	}
 	/**

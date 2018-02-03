@@ -47,18 +47,20 @@ public class FinanceRecordServiceImpl implements FinanceRecordService{
 	@Override
 	public int countAll(
 			Integer accountId,
+			Integer status,
 			Integer method,
 			Integer type,
 			String transactionNumber,
 			Date createDate,
 			Date updateDate) {
-		int c = financeRecordDao.countAll(accountId,method,type,transactionNumber,createDate,updateDate);
+		int c = financeRecordDao.countAll(accountId,status,method,type,transactionNumber,createDate,updateDate);
 		return c;
 	}
 
 	@Override
 	public List<FinanceRecord> browsePagingFinanceRecord(
 			Integer accountId,
+			Integer status,
 			Integer method,
 			Integer type,
 			String transactionNumber,
@@ -72,7 +74,7 @@ public class FinanceRecordServiceImpl implements FinanceRecordService{
 		if(pageSize<1){
 			pageSize=0;//没有数据
 		}
-		List<FinanceRecord> l = financeRecordDao.browsePagingFinanceRecord(accountId,method,type,transactionNumber,createDate,updateDate,pageNum-1, pageSize, orderName, orderWay);
+		List<FinanceRecord> l = financeRecordDao.browsePagingFinanceRecord(accountId,status,method,type,transactionNumber,createDate,updateDate,pageNum-1, pageSize, orderName, orderWay);
 		return l;
 	}
 
