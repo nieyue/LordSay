@@ -2,7 +2,9 @@ package com.nieyue.controller;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -48,6 +50,7 @@ public class OrderController {
 	@ApiOperation(value = "订单列表", notes = "订单分页浏览")
 	@ApiImplicitParams({
 	  @ApiImplicitParam(name="type",value="类型，1VIP购买，2团购卡团购，3付费课程",dataType="int", paramType = "query"),
+	  @ApiImplicitParam(name="payType",value="支付类型，1支付宝，2微信,3余额支付,4ios内购",dataType="int", paramType = "query"), 
 	  @ApiImplicitParam(name="accountId",value="下单人id外键",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="status",value="订单状态，1待处理，2已完成",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="createDate",value="创建时间",dataType="date-time", paramType = "query"),
@@ -60,6 +63,7 @@ public class OrderController {
 	@RequestMapping(value = "/list", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList browsePagingOrder(
 			@RequestParam(value="type",required=false)Integer type,
+			@RequestParam(value="payType",required=false)Integer payType,
 			@RequestParam(value="accountId",required=false)Integer accountId,
 			@RequestParam(value="status",required=false)Integer status,
 			@RequestParam(value="createDate",required=false)Date createDate,
@@ -69,12 +73,57 @@ public class OrderController {
 			@RequestParam(value="orderName",required=false,defaultValue="create_date") String orderName,
 			@RequestParam(value="orderWay",required=false,defaultValue="desc") String orderWay)  {
 			List<Order> list = new ArrayList<Order>();
-			list= orderService.browsePagingOrder(type,accountId,status,createDate,updateDate,pageNum, pageSize, orderName, orderWay);
+			list= orderService.browsePagingOrder(type,payType,accountId,status,createDate,updateDate,pageNum, pageSize, orderName, orderWay);
 			if(list.size()>0){
 				return ResultUtil.getSlefSRSuccessList(list);
 			}else{
 				return ResultUtil.getSlefSRFailList(list);
 			}
+	}
+	/**
+	 * 申请订单 类型，1VIP购买，2团购卡团购，3付费课程
+	 * @return 
+	 */
+	@ApiOperation(value = "申请订单", notes = "申请订单,返回值都是list里面的map格式,(生产环境，payType=3,mapkey是“order”,其他的返回 “result”，拿着这个result去请求支付。测试环境都是“order”)")
+	@ApiImplicitParams({
+		  @ApiImplicitParam(name="type",value="类型，1VIP购买，2团购卡团购，3付费课程",dataType="int", paramType = "query",required=true),
+		  @ApiImplicitParam(name="payType",value="支付类型，1支付宝，2微信,3余额支付,4ios内购",dataType="int", paramType = "query",required=true),
+		  @ApiImplicitParam(name="accountId",value="下单人id外键",dataType="int", paramType = "query",required=true),
+		  @ApiImplicitParam(name="businessId",value="业务id",dataType="int", paramType = "query",required=true)
+		  })
+	@RequestMapping(value = "/payment", method = {RequestMethod.GET,RequestMethod.POST})
+	public @ResponseBody StateResultList paymentOrder(
+			@RequestParam(value="type")Integer type,
+			@RequestParam(value="payType")Integer payType,
+			@RequestParam(value="accountId")Integer accountId,
+			@RequestParam(value="businessId")Integer businessId,
+			 HttpSession session) {
+		List<Map<Object,Object>> list=new ArrayList<>();
+//		if(payType==3){//余额支付
+//			Order o = orderService.balancePaymentOrder(type, payType, accountId, businessId);
+//			if(o!=null){
+//				Map<Object,Object> map=new HashMap<Object,Object>();
+//				map.put("order", o);
+//				list.add(map);
+//				return ResultUtil.getSlefSRSuccessList(list);
+//			}
+//		}else{//微信、支付宝、ios内购支付
+//			String str = orderService.thirdPartyPaymentOrder(type,payType,accountId,businessId);
+//			if(str!=null && !str.equals("")){
+//			Map<Object,Object> map=new HashMap<Object,Object>();
+//			map.put("result", str);
+//			list.add(map);
+//			return ResultUtil.getSlefSRSuccessList(list);
+//			}
+//		}
+		Order o = orderService.balancePaymentOrder(type, payType, accountId, businessId);
+		if(o!=null){
+			Map<Object,Object> map=new HashMap<Object,Object>();
+			map.put("order", o);
+			list.add(map);
+			return ResultUtil.getSlefSRSuccessList(list);
+		}
+		return ResultUtil.getSlefSRFailList(list);
 	}
 	/**
 	 * 订单修改
@@ -116,6 +165,7 @@ public class OrderController {
 	@ApiOperation(value = "订单数量", notes = "订单数量查询")
 	@ApiImplicitParams({
 		  @ApiImplicitParam(name="type",value="类型，1VIP购买，2团购卡团购，3付费课程",dataType="int", paramType = "query"),
+		  @ApiImplicitParam(name="payType",value="支付类型，1支付宝，2微信,3余额支付,4ios内购",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="accountId",value="下单人id外键",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="status",value="订单状态，1待处理，2已完成",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="createDate",value="创建时间",dataType="date-time", paramType = "query"),
@@ -124,12 +174,13 @@ public class OrderController {
 	@RequestMapping(value = "/count", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody int countAll(
 			@RequestParam(value="type",required=false)Integer type,
+			@RequestParam(value="payType",required=false)Integer payType,
 			@RequestParam(value="accountId",required=false)Integer accountId,
 			@RequestParam(value="status",required=false)Integer status,
 			@RequestParam(value="createDate",required=false)Date createDate,
 			@RequestParam(value="updateDate",required=false)Date updateDate,
 			HttpSession session)  {
-		int count = orderService.countAll(type,accountId,status,createDate,updateDate);
+		int count = orderService.countAll(type,payType,accountId,status,createDate,updateDate);
 		return count;
 	}
 	/**

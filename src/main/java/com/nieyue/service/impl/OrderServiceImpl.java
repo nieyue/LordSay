@@ -1,9 +1,11 @@
 package com.nieyue.service.impl;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -11,15 +13,96 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.nieyue.bean.Order;
 import com.nieyue.bean.OrderDetail;
+import com.nieyue.business.FinanceBusiness;
+import com.nieyue.business.PaymentBusiness;
 import com.nieyue.dao.OrderDao;
+import com.nieyue.exception.PayException;
+import com.nieyue.service.AccountService;
+import com.nieyue.service.FinanceService;
 import com.nieyue.service.OrderDetailService;
 import com.nieyue.service.OrderService;
+import com.nieyue.util.DateUtil;
 @Service
 public class OrderServiceImpl implements OrderService{
 	@Resource
 	OrderDao orderDao;
 	@Resource
 	OrderDetailService orderDetailService;
+	@Resource
+	AccountService accountService;
+	@Resource
+	FinanceService financeService;
+	@Resource
+	FinanceBusiness financeBusiness;
+	@Resource
+	PaymentBusiness paymentBusiness;
+	/**
+	 * 第三方支付
+	 */
+	@Transactional(propagation=Propagation.REQUIRED)
+	@Override
+	public String thirdPartyPaymentOrder(
+			Integer type,
+			Integer payType,
+			Integer accountId,
+			Integer businessId
+			) {
+		String result=null;
+		if(payType==1){//支付宝
+			
+		}else if(payType==2){//微信
+			
+		}else if(payType==4){//ios内购
+			
+		}
+		return result;
+	}
+	/**
+	 * 余额支付
+	 */
+	@Transactional(propagation=Propagation.REQUIRED)
+	@Override
+	public Order balancePaymentOrder(Integer type,
+			Integer payType,
+			Integer accountId,
+			Integer businessId) {
+		//1.获取订单详情
+		OrderDetail orderDetail = paymentBusiness.getPaymentType(type, payType, accountId, businessId);
+		if(orderDetail==null){
+			throw new PayException();
+		}
+		//2.财务执行
+		int r = financeBusiness.financeExcute(type, payType, accountId, orderDetail.getTotalPrice());
+		if(r==-1){
+			throw new PayException();
+		}else if(r==0){
+			return null;
+		}
+				boolean b=false;
+				Order order=new Order();
+				order.setCreateDate(new Date());
+				order.setUpdateDate(new Date());
+				order.setAccountId(accountId);
+				order.setStatus(2);//已完成
+				order.setType(type);
+				order.setPayType(payType);
+				String orderNumber=((int) (Math.random()*9000)+1000)+DateUtil.getOrdersTime()+((int)(Math.random()*9000)+10000);
+				order.setOrderNumber(orderNumber);
+				 b = orderDao.addOrder(order);
+				if(b){
+					orderDetail.setOrderId(order.getOrderId());
+					b=orderDetailService.addOrderDetail(orderDetail);
+					if(b){
+						List<OrderDetail> orderDetailList=new ArrayList<>();
+						orderDetailList.add(orderDetail);
+						order.setOrderDetailList(orderDetailList);
+						return order;
+					}else{
+						throw new PayException();		
+					}
+				}
+		return null;
+	}
 	@Transactional(propagation=Propagation.REQUIRED)
 	@Override
 	public boolean addOrder(Order order) {
@@ -56,19 +139,21 @@ public class OrderServiceImpl implements OrderService{
 	@Override
 	public int countAll(
 			Integer type,
+			Integer payType,
 			Integer accountId,
 			Integer status,
 			Date createDate,
 			Date updateDate
 			) {
 		int c = orderDao.countAll(
-				type,accountId,status,createDate,updateDate);
+				type,payType,accountId,status,createDate,updateDate);
 		return c;
 	}
 
 	@Override
 	public List<Order> browsePagingOrder(
 			Integer type,
+			Integer payType,
 			Integer accountId,
 			Integer status,
 			Date createDate,
@@ -83,6 +168,7 @@ public class OrderServiceImpl implements OrderService{
 		}
 		List<Order> l = orderDao.browsePagingOrder(
 				type,
+				payType,
 				accountId,
 				status,
 				createDate,
@@ -97,6 +183,21 @@ public class OrderServiceImpl implements OrderService{
 			o.setOrderDetailList(orderDetailList);
 		}
 		return l;
+	}
+	@Override
+	public String alipayNotifyUrl(HttpServletRequest request) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public String wechatpayNotifyUrl(HttpServletRequest request) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public String iospayNotifyUrl(HttpServletRequest request) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	

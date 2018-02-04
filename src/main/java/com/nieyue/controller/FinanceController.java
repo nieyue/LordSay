@@ -14,8 +14,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.nieyue.bean.Account;
 import com.nieyue.bean.Finance;
 import com.nieyue.bean.FinanceRecord;
+import com.nieyue.exception.VerifyCodeErrorException;
 import com.nieyue.service.AccountService;
 import com.nieyue.service.FinanceRecordService;
 import com.nieyue.service.FinanceService;
@@ -95,14 +97,21 @@ public class FinanceController {
 	 */
 	@ApiOperation(value = "修改或增加交易密码", notes = "修改或增加交易密码")
 	@ApiImplicitParams({
-		@ApiImplicitParam(name="accountId",value="账户ID",dataType="int", paramType = "query",required=true),
+		  @ApiImplicitParam(name="accountId",value="账户ID",dataType="int", paramType = "query",required=true),
 		  @ApiImplicitParam(name="password",value="交易密码",dataType="string", paramType = "query",required=true),
+		  @ApiImplicitParam(name="validCode",value="短信验证码",dataType="string", paramType = "query",required=true)
 		  })
 	@RequestMapping(value = "/updatePassword", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList updatePassword(
 			@RequestParam(value="accountId")Integer accountId,
-			@RequestParam(value="password")Double password,
+			@RequestParam(value="password")String password,
+			@RequestParam(value="validCode") String validCode,
 			HttpSession session)  {
+		//手机验证码
+		String vc=(String) session.getAttribute("validCode");
+		if(!vc.equals(validCode)){
+			throw new VerifyCodeErrorException();//验证码错误
+		}
 		List<Finance> list=new ArrayList<>();
 		List<Finance> fl = financeService.browsePagingFinance(null, accountId, 1, 1, "finance_id", "asc");
 		if(fl.size()==1){
@@ -132,10 +141,18 @@ public class FinanceController {
 			@RequestParam(value="method")Integer method,
 			@RequestParam(value="money")Double money,
 			HttpSession session) {
+		Account a = accountService.loadAccount(accountId);
 		List<Finance> list=new ArrayList<Finance>();
+		if(a==null){
+			return ResultUtil.getSlefSRFailList(list);		
+		}
+		if(a.getAuth()!=2){//没认证
+			return ResultUtil.getSlefSRList("40000", "没认证", list);
+		}
 		FinanceRecord fr=new FinanceRecord();
 		fr.setAccountId(accountId);
 		fr.setMethod(method);
+		fr.setMoney(money);
 		String transactionNumber = ((int) (Math.random()*9000)+1000)+DateUtil.getOrdersTime()+(accountId+10000);
 		fr.setTransactionNumber(transactionNumber);
 		fr.setType(1);//1是账户充值
@@ -172,7 +189,14 @@ public class FinanceController {
 			@RequestParam(value="method")Integer method,
 			@RequestParam(value="money")Double money,
 			HttpSession session) {
+		Account a = accountService.loadAccount(accountId);
 		List<Finance> list=new ArrayList<Finance>();
+		if(a==null){
+			return ResultUtil.getSlefSRFailList(list);		
+		}
+		if(a.getAuth()!=2){//没认证
+			return ResultUtil.getSlefSRList("40000", "没认证", list);
+		}
 		List<Finance> fl = financeService.browsePagingFinance(null, accountId, 1, 1, "finance_id", "asc");
 		boolean b=false;
 		if(fl.size()==1){
@@ -181,12 +205,13 @@ public class FinanceController {
 				return ResultUtil.getSlefSRFailList(list);
 			}
 			f.setMoney(f.getMoney()-money);
-			f.setRecharge(f.getWithdrawals()+money);
+			f.setWithdrawals(f.getWithdrawals()+money);
 			b= financeService.updateFinance(f);
 			if(b){
 				FinanceRecord fr=new FinanceRecord();
 				fr.setAccountId(accountId);
 				fr.setMethod(method);
+				fr.setMoney(money);
 				String transactionNumber = ((int) (Math.random()*9000)+1000)+DateUtil.getOrdersTime()+(accountId+10000);
 				fr.setTransactionNumber(transactionNumber);
 				fr.setType(2);//2是账户提现

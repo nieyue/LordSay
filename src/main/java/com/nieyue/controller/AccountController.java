@@ -307,13 +307,13 @@ public class AccountController {
 			account.setIdentityCardsBackImg(identityCardsBackImg);
 			boolean b = accountService.updateAccount(account);
 			if(b){
-				List<AccountParent> apl = accountParentService.browsePagingAccountParent(null, accountId, null, null, null, null, 1, 1, "account_parent_id","asc");
+				List<AccountParent> apl = accountParentService.browsePagingAccountParent(null,null, accountId, null, null, null, null, 1, 1, "account_parent_id","asc");
 				if(apl.size()==1){
 				AccountParent accountParent=apl.get(0);
 				accountParent.setRealname(realname);
 				accountParent.setCreateDate(new Date());
 				accountParent.setUpdateDate(new Date());
-				accountParentService.addAccountParent(accountParent);
+				accountParentService.updateAccountParent(accountParent);
 				}
 				list.add(account);
 				return ResultUtil.getSlefSRSuccessList(list);
@@ -562,7 +562,7 @@ public class AccountController {
 			//财务
 			map.put("finance",  f.get(0));
 			//账户上级
-			List<AccountParent> accountParentl = accountParentService.browsePagingAccountParent(null, account.getAccountId(), null, null, null, null, 1, 1, "account_parent_id", "asc");
+			List<AccountParent> accountParentl = accountParentService.browsePagingAccountParent(null,null, account.getAccountId(), null, null, null, null, 1, 1, "account_parent_id", "asc");
 			if(accountParentl.size()>0){
 				map.put("accountParent",  accountParentl.get(0));
 				}else{
@@ -633,6 +633,10 @@ public class AccountController {
 				Account account=new Account();
 				//获取masterId
 				if(masterId!=null&&!masterId.equals("")){
+					Account masterAcount = accountService.loadAccount(masterId);
+					if(masterAcount==null){
+						throw new MySessionException();
+					}
 					account.setMasterId(masterId);
 				}
 					account.setPhone(adminName);
@@ -662,7 +666,7 @@ public class AccountController {
 				//财务
 				map.put("finance",  f.get(0));
 				//账户上级
-				List<AccountParent> accountParentl = accountParentService.browsePagingAccountParent(null, account.getAccountId(), null, null, null, null, 1, 1, "account_parent_id", "asc");
+				List<AccountParent> accountParentl = accountParentService.browsePagingAccountParent(null,null, account.getAccountId(), null, null, null, null, 1, 1, "account_parent_id", "asc");
 				if(accountParentl.size()>0){
 				map.put("accountParent",  accountParentl.get(0));
 				}else{

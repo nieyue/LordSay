@@ -10,6 +10,7 @@
    		 (
    		 order_number,
    		 type,
+   		 pay_type,
    		 account_id,
    		 status,
    		 create_date,
@@ -19,6 +20,7 @@
     	 (
     	 #{orderNumber},
     	 #{type},
+    	 #{payType},
     	 #{accountId},
     	 #{status},
     	 #{createDate},
@@ -35,6 +37,9 @@
     	</if>
     	<if test="type!=null">
     	type=#{type},
+    	</if>
+    	<if test="payType!=null">
+    	pay_type=#{payType},
     	</if>
     	<if test="accountId!=null">
     	account_id=#{accountId},
@@ -64,6 +69,7 @@ SELECT
 		 order_id,
 	 	 order_number,
    		 type,
+   		 pay_type,
    		 account_id,
    		 status,
    		 create_date,
@@ -78,6 +84,7 @@ WHERE order_id=#{orderId}
 	     order_id,
 	 	 order_number,
    		 type,
+   		 pay_type,
    		 account_id,
    		 status,
    		 create_date,
@@ -86,6 +93,9 @@ WHERE order_id=#{orderId}
 	<where>
 	<if test="type!=null">
 		AND  type=#{type}
+		</if>
+	<if test="payType!=null">
+		AND  pay_type=#{payType}
 		</if>
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
@@ -110,6 +120,9 @@ WHERE order_id=#{orderId}
 		<where>
 		<if test="type!=null">
 		AND  type=#{type}
+		</if>
+		<if test="payType!=null">
+		AND  pay_type=#{payType}
 		</if>
 		<if test="accountId!=null">
 		AND  account_id=#{accountId}
@@ -143,6 +156,9 @@ WHERE order_id=#{orderId}
 	<where>
 	<if test="type!=null">
 		AND  type=#{type}
+		</if>
+	<if test="payType!=null">
+		AND  pay_type=#{payType}
 		</if>
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}

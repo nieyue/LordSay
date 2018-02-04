@@ -8,7 +8,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-
+import java.util.GregorianCalendar;
 
 import net.sf.json.JSONObject;
 
@@ -292,6 +292,128 @@ public class DateUtil {
     	 Date nDate =calendar.getTime();
     	 return nDate;
     	}
+    /**
+     * 向前向后计算n年
+     * @param date
+     * @param flag 年减一为-1，加一为1
+     * @return
+     */
+    public static Date nextYear(Date date,int flag) {
+    	Calendar calendar = Calendar.getInstance();//日历对象
+    	calendar.setTime(date);//设置当前日期
+    	calendar.add(calendar.YEAR, flag);//年减一为-1，加一为1
+    	Date nDate =calendar.getTime();
+    	return nDate;
+    }
+    /** 
+     * 取得当前日期是多少周 
+     * 
+     * @param date 
+     * @return 
+     */ 
+     public static int getWeekOfYear(Date date) { 
+     Calendar c = new GregorianCalendar(); 
+     c.setFirstDayOfWeek(Calendar.MONDAY); 
+     c.setMinimalDaysInFirstWeek(7); 
+     c.setTime (date);
+     return c.get(Calendar.WEEK_OF_YEAR); 
+     }
+     /** 
+     * 得到某一年周的总数 
+     * 
+     * @param year 
+     * @return 
+     */ 
+     public static int getMaxWeekNumOfYear(int year) { 
+     Calendar c = new GregorianCalendar(); 
+     c.set(year, Calendar.DECEMBER, 31, 23, 59, 59);
+     return getWeekOfYear(c.getTime()); 
+     }
+     /** 
+     * 得到某年某周的第一天 
+     * 
+     * @param year 
+     * @param week 
+     * @return 
+     */ 
+     public static Date getFirstDayOfWeek(int year, int week) { 
+     Calendar c = new GregorianCalendar(); 
+     c.set(Calendar.YEAR, year); 
+     c.set (Calendar.MONTH, Calendar.JANUARY); 
+     c.set(Calendar.DATE, 1);
+     Calendar cal = (GregorianCalendar) c.clone(); 
+     cal.add(Calendar.DATE, week * 7);
+     return getFirstDayOfWeek(cal.getTime ()); 
+     }
+     /** 
+     * 得到某年某周的最后一天 
+     * 
+     * @param year 
+     * @param week 
+     * @return 
+     */ 
+     public static Date getLastDayOfWeek(int year, int week) { 
+     Calendar c = new GregorianCalendar(); 
+     c.set(Calendar.YEAR, year); 
+     c.set(Calendar.MONTH, Calendar.JANUARY); 
+     c.set(Calendar.DATE, 1);
+     Calendar cal = (GregorianCalendar) c.clone(); 
+     cal.add(Calendar.DATE , week * 7);
+     return getLastDayOfWeek(cal.getTime()); 
+     }
+     /** 
+     * 取得指定日期所在周的第一天 
+     * 
+     * @param date 
+     * @return 
+     */ 
+     public static Date getFirstDayOfWeek(Date date) { 
+     Calendar c = new GregorianCalendar(); 
+     c.setFirstDayOfWeek(Calendar.MONDAY); 
+     c.setTime(date); 
+     c.set(Calendar.DAY_OF_WEEK, c.getFirstDayOfWeek()); // Monday 
+     return c.getTime (); 
+     }
+     /** 
+     * 取得指定日期所在周的最后一天 
+     * 
+     * @param date 
+     * @return 
+     */ 
+     public static Date getLastDayOfWeek(Date date) { 
+     Calendar c = new GregorianCalendar(); 
+     c.setFirstDayOfWeek(Calendar.MONDAY); 
+     c.setTime(date); 
+     c.set(Calendar.DAY_OF_WEEK, c.getFirstDayOfWeek() + 6); // Sunday 
+     return c.getTime(); 
+     } 
+     
+     /** 
+     * 取得当前日期所在周的第一天 
+     * 
+     * @param date 
+     * @return 
+     */ 
+     public static Date getFirstDayOfWeek() { 
+     Calendar c = new GregorianCalendar(); 
+     c.setFirstDayOfWeek(Calendar.MONDAY); 
+     c.setTime(new Date()); 
+     c.set(Calendar.DAY_OF_WEEK, c.getFirstDayOfWeek()); // Monday 
+     return c.getTime (); 
+     }
+     /** 
+     * 取得当前日期所在周的最后一天 
+     * 
+     * @param date 
+     * @return 
+     */ 
+     public static Date getLastDayOfWeek() { 
+     Calendar c = new GregorianCalendar(); 
+     c.setFirstDayOfWeek(Calendar.MONDAY); 
+     c.setTime(new Date()); 
+     c.set(Calendar.DAY_OF_WEEK, c.getFirstDayOfWeek() + 6); // Sunday 
+     return c.getTime(); 
+     } 
     //  输出结果：  
     //  timeStamp=1417792627  
     //  date=2014-12-05 23:17:07  
@@ -329,9 +451,11 @@ public class DateUtil {
 			e.printStackTrace();
 		}
 		
-		System.err.println(nextMonth(new Date(),5).toLocaleString());
+		//System.err.println(nextMonth(new Date(),5).toLocaleString());
 		
 		String payjson="{\"package\":\"Sign=WXPay\",\"appid\":\"wx9916b928e1ae2ccb\",\"sign\":\"9B37B64AC655A30B9F4978062322986C\",\"partnerid\":\"1489128222\",\"prepayid\":\"wx20171017102519c838e5f5bb0128546383\",\"noncestr\":\"63c844009ee348aab0ebc8c1d5d59feb\",\"timestamp\":\"1508207117\"}";
 		System.out.println(JSONObject.fromObject(payjson).get("appid"));
+		System.err.println(getFirstDayOfWeek(new Date()).toLocaleString());
+		System.err.println(getFirstDayOfWeek(new Date()).getDay());
     }  
 }

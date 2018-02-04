@@ -23,14 +23,14 @@ public class FinanceRecord implements Serializable {
 	@ApiModelProperty(value="财务记录id",example="财务记录id")
 	private Integer financeRecordId;
 	/**
-	 * 方式，1支付宝，2微信,3ios内购
+	 * 方式，1支付宝，2微信,3余额支付,4ios内购
 	 */
-	@ApiModelProperty(value="方式，1支付宝，2微信,3ios内购",example="方式，1支付宝，2微信,3ios内购")
+	@ApiModelProperty(value="方式，1支付宝，2微信,3余额支付,4ios内购",example="方式，1支付宝，2微信,3余额支付,4ios内购")
 	private Integer method;
 	/**
 	 * 类型，1账户充值，2账户提现,3招收学员佣金,4推荐佣金,5团购账单,6拆分账单
 	 */
-	@ApiModelProperty(value="类型，1账户充值，2账户提现,3招收学员佣金,4推荐佣金,5团购账单,6拆分账单",example="类型，1账户充值，2账户提现,3招收学员佣金,4推荐佣金,5团购账单,6拆分账单")
+	@ApiModelProperty(value="类型，1账户充值，2账户提现,3招收学员佣金,4推荐佣金,5团购账单,6拆分账单,7二级团购奖励,8vip购买,9分发奖励，10二级购买vip奖励,11付费课程购买")
 	private Integer type;
 	/**
 	 * 交易单号

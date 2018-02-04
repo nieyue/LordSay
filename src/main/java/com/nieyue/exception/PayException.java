@@ -1,14 +1,10 @@
 package com.nieyue.exception;
 
-
-
-
-public class MySessionException extends RuntimeException {
+public class PayException extends RuntimeException {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	
 }

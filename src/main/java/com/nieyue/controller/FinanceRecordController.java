@@ -16,7 +16,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.nieyue.bean.FinanceRecord;
+import com.nieyue.bean.Notice;
+import com.nieyue.business.NoticeBusiness;
 import com.nieyue.service.FinanceRecordService;
+import com.nieyue.service.NoticeService;
 import com.nieyue.util.ResultUtil;
 import com.nieyue.util.StateResult;
 import com.nieyue.util.StateResultList;
@@ -38,6 +41,10 @@ import io.swagger.annotations.ApiOperation;
 public class FinanceRecordController {
 	@Resource
 	private FinanceRecordService financeRecordService;
+	@Resource
+	private NoticeService noticeService;
+	@Resource
+	private NoticeBusiness noticeBusiness;
 	
 	/**
 	 * 财务记录分页浏览
@@ -49,8 +56,8 @@ public class FinanceRecordController {
 	@ApiImplicitParams({
 	  @ApiImplicitParam(name="accountId",value="账户Id",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="status",value="状态，默认1待处理，2成功，3已拒绝",dataType="int", paramType = "query"),
-	  @ApiImplicitParam(name="method",value="方式，1支付宝，2微信,3ios内购",dataType="int", paramType = "query"),
-	  @ApiImplicitParam(name="type",value="类型，1账户充值，2账户提现,3招收学员佣金,4推荐佣金,5团购账单,6拆分账单",dataType="int", paramType = "query"),
+	  @ApiImplicitParam(name="method",value="方式，1支付宝，2微信,3余额支付,4ios内购",dataType="int", paramType = "query"),
+	  @ApiImplicitParam(name="type",value="类型，1账户充值，2账户提现,3招收学员佣金,4推荐佣金,5团购账单,6拆分账单,7二级团购奖励,8vip购买,9分发奖励，10二级购买vip奖励,11付费课程购买",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="transactionNumber",value="交易单号",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="createDate",value="创建时间",dataType="date-time", paramType = "query"),
 	  @ApiImplicitParam(name="updateDate",value="更新时间",dataType="date-time", paramType = "query"),
@@ -121,8 +128,8 @@ public class FinanceRecordController {
 	@ApiImplicitParams({
 		  @ApiImplicitParam(name="accountId",value="账户Id",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="status",value="状态，默认1待处理，2成功，3已拒绝",dataType="int", paramType = "query"),
-		  @ApiImplicitParam(name="method",value="方式，1支付宝，2微信,3ios内购",dataType="int", paramType = "query"),
-		  @ApiImplicitParam(name="type",value="类型，1账户充值，2账户提现,3招收学员佣金,4推荐佣金,5团购账单,6拆分账单",dataType="int", paramType = "query"),
+		  @ApiImplicitParam(name="method",value="方式，1支付宝，2微信,3余额支付,4ios内购",dataType="int", paramType = "query"),
+		  @ApiImplicitParam(name="type",value="类型，1账户充值，2账户提现,3招收学员佣金,4推荐佣金,5团购账单,6拆分账单,7二级团购奖励,8vip购买,9分发奖励，10二级购买vip奖励,11付费课程购买",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="transactionNumber",value="交易单号",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="createDate",value="创建时间",dataType="date-time", paramType = "query"),
 		  @ApiImplicitParam(name="updateDate",value="更新时间",dataType="date-time", paramType = "query")
@@ -158,6 +165,37 @@ public class FinanceRecordController {
 			}else{
 				return ResultUtil.getSlefSRFailList(list);
 			}
+	}
+	/**
+	 *提现到账
+	 * @return
+	 */
+	@ApiOperation(value = "提现到账", notes = "提现到账")
+	@ApiImplicitParams({
+		@ApiImplicitParam(name="financeRecordId",value="财务记录ID",dataType="int", paramType = "query",required=true)
+	})
+	@RequestMapping(value = "/withdrawals", method = {RequestMethod.GET,RequestMethod.POST})
+	public  StateResultList withdrawalsFinanceRecord(
+			@RequestParam("financeRecordId") Integer financeRecordId,
+			HttpSession session)  {
+		List<FinanceRecord> list = new ArrayList<FinanceRecord>();
+		FinanceRecord financeRecord = financeRecordService.loadFinanceRecord(financeRecordId);
+		if(financeRecord.getStatus()==1){
+			financeRecord.setStatus(2);//成功
+		}
+		boolean b = financeRecordService.updateFinanceRecord(financeRecord);
+		if(b && financeRecord!=null &&!financeRecord.equals("")){
+			//到账通知
+			Notice notice = noticeBusiness.getNoticeByDaozhang(financeRecord.getAccountId(), financeRecord.getMethod(), financeRecord.getMoney());
+			b=noticeService.addNotice(notice);
+			if(b){
+				list.add(financeRecord);
+				return ResultUtil.getSlefSRSuccessList(list);
+			}
+			return ResultUtil.getSlefSRFailList(list);
+		}else{
+			return ResultUtil.getSlefSRFailList(list);
+		}
 	}
 	
 }

@@ -41,6 +41,10 @@ public class VipServiceImpl implements VipService{
 	@Override
 	public Vip loadVip(Integer vipId) {
 		Vip r = vipDao.loadVip(vipId);
+		if((r.getStatus()==1 )&&( r.getExpireDate().before(new Date()))){
+			r.setStatus(0);
+			vipDao.updateVip(r);
+		}
 		return r;
 	}
 
@@ -60,6 +64,13 @@ public class VipServiceImpl implements VipService{
 			pageSize=0;//没有数据
 		}
 		List<Vip> l = vipDao.browsePagingVip(accountId,level,createDate,pageNum-1, pageSize, orderName, orderWay);
+		for (int i = 0; i < l.size(); i++) {
+			Vip r = l.get(i);
+			if((r.getStatus()==1 )&&( r.getExpireDate().before(new Date()))){
+				r.setStatus(0);
+				vipDao.updateVip(r);
+			}
+		}
 		return l;
 	}
 

@@ -21,6 +21,7 @@ import com.nieyue.dao.AccountParentDao;
 import com.nieyue.dao.FinanceDao;
 import com.nieyue.dao.IntegralDao;
 import com.nieyue.dao.VipDao;
+import com.nieyue.exception.MySessionException;
 import com.nieyue.service.AccountService;
 @Service
 public class AccountServiceImpl implements AccountService{
@@ -102,7 +103,17 @@ public class AccountServiceImpl implements AccountService{
 		accountParent.setName(accountLevell.get(0).getName());
 		accountParent.setCreateDate(new Date());
 		accountParent.setUpdateDate(new Date());
-		accountParentDao.addAccountParent(accountParent);
+		b=accountParentDao.addAccountParent(accountParent);
+		}
+		//注册账户的上级增加学员数
+		List<AccountParent> accountl = accountParentDao.browsePagingAccountParent(null, null, account.getMasterId(), null, null, null, null, 0, 1, "account_parent_id", "asc");
+		if(accountl.size()==1){
+			AccountParent ap = accountl.get(0);
+			ap.setSubordinateNumber(ap.getSubordinateNumber()+1);
+			b=accountParentDao.updateAccountParent(ap);
+		}
+		if(!b){
+			throw new MySessionException();			
 		}
 		return b;
 	}

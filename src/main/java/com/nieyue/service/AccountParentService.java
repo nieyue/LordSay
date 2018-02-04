@@ -21,6 +21,7 @@ public interface AccountParentService {
 	public AccountParent loadAccountParent(Integer accountParentId);	
 	/** 账户上级总共数目 */	
 	public int countAll(
+			String phone,
 			Integer accountLevelId,
 			Integer accountId,
 			Integer masterId,
@@ -30,6 +31,7 @@ public interface AccountParentService {
 			);
 	/** 分页账户上级信息 */
 	public List<AccountParent> browsePagingAccountParent(
+			String phone,
 			Integer accountLevelId,
 			Integer accountId,
 			Integer masterId,

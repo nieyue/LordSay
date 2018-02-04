@@ -47,6 +47,7 @@ public class AccountParentController {
 	 */
 	@ApiOperation(value = "账户上级列表", notes = "账户上级分页浏览")
 	@ApiImplicitParams({
+	  @ApiImplicitParam(name="phone",value="模糊查询手机号",dataType="string", paramType = "query"),
 	  @ApiImplicitParam(name="accountLevelId",value="账户等级ID",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="accountId",value="账户Id",dataType="int", paramType = "query"),
       @ApiImplicitParam(name="masterId",value="直接上级Id",dataType="int", paramType = "query"),
@@ -60,6 +61,7 @@ public class AccountParentController {
 	  })
 	@RequestMapping(value = "/list", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList browsePagingAccountParent(
+			@RequestParam(value="phone",required=false)String phone,
 			@RequestParam(value="accountLevelId",required=false)Integer accountLevelId,
 			@RequestParam(value="accountId",required=false)Integer accountId,
 			@RequestParam(value="masterId",required=false)Integer masterId,
@@ -72,6 +74,7 @@ public class AccountParentController {
 			@RequestParam(value="orderWay",required=false,defaultValue="desc") String orderWay)  {
 			List<AccountParent> list = new ArrayList<AccountParent>();
 			list= accountParentService.browsePagingAccountParent(
+					phone,
 					accountLevelId,
 					accountId,
 					masterId,
@@ -124,6 +127,7 @@ public class AccountParentController {
 	 */
 	@ApiOperation(value = "账户上级数量", notes = "账户上级数量查询")
 	@ApiImplicitParams({
+		@ApiImplicitParam(name="phone",value="模糊查询手机号",dataType="string", paramType = "query"),
 		 @ApiImplicitParam(name="accountLevelId",value="账户等级ID",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="accountId",value="账户Id",dataType="int", paramType = "query"),
 	      @ApiImplicitParam(name="masterId",value="直接上级Id",dataType="int", paramType = "query"),
@@ -133,6 +137,7 @@ public class AccountParentController {
 		  })
 	@RequestMapping(value = "/count", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody int countAll(
+			@RequestParam(value="phone",required=false)String phone,
 			@RequestParam(value="accountLevelId",required=false)Integer accountLevelId,
 			@RequestParam(value="accountId",required=false)Integer accountId,
 			@RequestParam(value="masterId",required=false)Integer masterId,
@@ -141,6 +146,7 @@ public class AccountParentController {
 			@RequestParam(value="updateDate",required=false)Date updateDate,
 			HttpSession session)  {
 		int count = accountParentService.countAll(
+				phone,
 				accountLevelId,
 				accountId,
 				masterId,

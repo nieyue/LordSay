@@ -25,6 +25,7 @@ public interface AccountParentDao {
 	public AccountParent loadAccountParent(Integer accountParentId);	
 	/** 账户上级总共数目 */	
 	public int countAll(
+			@Param("phone")String phone,
 			@Param("accountLevelId")Integer accountLevelId,
 			@Param("accountId")Integer accountId,
 			@Param("masterId")Integer masterId,
@@ -34,6 +35,7 @@ public interface AccountParentDao {
 			);	
 	/** 分页账户上级信息 */
 	public List<AccountParent> browsePagingAccountParent(
+			@Param("phone")String phone,
 			@Param("accountLevelId")Integer accountLevelId,
 			@Param("accountId")Integer accountId,
 			@Param("masterId")Integer masterId,

@@ -1,6 +1,5 @@
 package com.nieyue.exception;
 
-import javax.servlet.ServletException;
 
 
 /**
@@ -8,7 +7,7 @@ import javax.servlet.ServletException;
  * @author 聂跃
  * @date 2017年8月8日
  */
-public class VerifyCodeErrorException extends ServletException {
+public class VerifyCodeErrorException extends RuntimeException {
 
 	/**
 	 * 

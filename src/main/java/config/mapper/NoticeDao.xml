@@ -67,7 +67,8 @@ WHERE notice_id=#{noticeId}
 		AND  status=#{status}
 		</if>
 	<if test="accountId!=null">
-		AND  account_id=#{accountId}
+		AND ( account_id=#{accountId}
+		OR ISNULL(account_id))
 		</if>
 	AND ${orderName} 
 	<if test="orderWay=='asc'">
@@ -85,7 +86,8 @@ WHERE notice_id=#{noticeId}
 		AND  status=#{status}
 		</if>
 	<if test="accountId!=null">
-		AND  account_id=#{accountId}
+		AND ( account_id=#{accountId}
+		OR ISNULL(account_id))
 		</if>
 	</where>
 		ORDER BY 

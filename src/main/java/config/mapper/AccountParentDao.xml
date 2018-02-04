@@ -112,6 +112,9 @@ WHERE account_parent_id=#{accountParentId}
    		 update_date
 	FROM account_parent_tb
 	<where>
+	<if test="phone!=null">
+		AND  phone like CONCAT('%','${phone}','%' )
+		</if>
 	<if test="accountLevelId!=null">
 		AND  account_level_id=#{accountLevelId}
 		</if>
@@ -139,6 +142,9 @@ WHERE account_parent_id=#{accountParentId}
 	</if>
 	(SELECT ${orderName} FROM account_parent_tb 
 		<where>
+	<if test="phone!=null">
+		AND  phone like CONCAT('%','${phone}','%' )
+		</if>
 	<if test="accountLevelId!=null">
 		AND  account_level_id=#{accountLevelId}
 		</if>
@@ -175,6 +181,9 @@ WHERE account_parent_id=#{accountParentId}
 	 	count(account_parent_id)
 	FROM account_parent_tb
 	<where>
+	<if test="phone!=null">
+		AND  phone like CONCAT('%','${phone}','%' )
+		</if>
 	<if test="accountLevelId!=null">
 		AND  account_level_id=#{accountLevelId}
 		</if>

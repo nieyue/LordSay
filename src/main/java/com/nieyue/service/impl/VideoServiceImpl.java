@@ -29,6 +29,8 @@ public class VideoServiceImpl implements VideoService{
 	IntegralService integralService;
 	@Resource
 	IntegralDetailService integralDetailService;
+	@Resource
+	IntegralBoardService integralBoardService;
 	@Transactional(propagation=Propagation.REQUIRED)
 	@Override
 	public boolean addVideo(Video video) {
@@ -137,6 +139,8 @@ public class VideoServiceImpl implements VideoService{
 			integralDetail.setIntegral(1.0);
 			integralDetail.setType(1);//获得
 			b=integralDetailService.addIntegralDetail(integralDetail);
+			//个人积分榜 周
+			//integralBoardService.br
 		}
 		return b;
 	}

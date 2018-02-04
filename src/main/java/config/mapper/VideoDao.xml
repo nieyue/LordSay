@@ -100,8 +100,8 @@ WHERE video_id=#{videoId}
     UPDATE 
     	video_tb 
     SET
-    	play_number=play_number+1,
-    WHERE
+    	play_number=play_number+1
+       WHERE
     	 video_id=#{videoId} 
 </update> 
 

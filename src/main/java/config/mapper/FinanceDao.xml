@@ -47,7 +47,7 @@
     	finance_tb 
     <set>
     <if test="password">
-    	money=#{password},
+    	password=#{password},
     </if>
     <if test="money">
     	money=#{money},

@@ -22,11 +22,6 @@ public class OrderDetail implements Serializable {
 	@ApiModelProperty(value="订单详情id",example="订单详情id")
 	private Integer orderDetailId;
 	/**
-	 * 支付类型
-	 */
-	@ApiModelProperty(value="支付类型",example="支付类型")
-	private Integer payType;
-	/**
 	 * 名称
 	 */
 	@ApiModelProperty(value="名称",example="名称")
@@ -56,6 +51,11 @@ public class OrderDetail implements Serializable {
 	 */
 	@ApiModelProperty(value="更新时间",example="更新时间")
 	private Date updateDate;
+	/**
+	 * 业务id
+	 */
+	@ApiModelProperty(value="业务ID",example="业务ID")
+	private Integer businessId;
 	/**
 	 * 下单人
 	 */
@@ -113,11 +113,11 @@ public class OrderDetail implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	public Integer getPayType() {
-		return payType;
+	public Integer getBusinessId() {
+		return businessId;
 	}
-	public void setPayType(Integer payType) {
-		this.payType = payType;
+	public void setBusinessId(Integer businessId) {
+		this.businessId = businessId;
 	}
 	
 }

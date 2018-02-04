@@ -26,12 +26,17 @@ public class Order implements Serializable {
 	 * 订单号
 	 */
 	@ApiModelProperty(value="订单号",example="订单号")
-	private Integer orderNumber;
+	private String orderNumber;
 	/**
 	 * 类型，1VIP购买，2团购卡团购，3付费课程
 	 */
 	@ApiModelProperty(value="类型，1VIP购买，2团购卡团购，3付费课程",example="类型，1VIP购买，2团购卡团购，3付费课程")
 	private Integer type;
+	/**
+	 * 支付类型，1支付宝，2微信,3余额支付,4ios内购
+	 */
+	@ApiModelProperty(value="支付类型，1支付宝，2微信,3余额支付,4ios内购",example="支付类型，1支付宝，2微信,3余额支付,4ios内购")
+	private Integer payType;
 	/**
 	 * 创建时间
 	 */
@@ -95,10 +100,10 @@ public class Order implements Serializable {
 	public void setStatus(Integer status) {
 		this.status = status;
 	}
-	public Integer getOrderNumber() {
+	public String getOrderNumber() {
 		return orderNumber;
 	}
-	public void setOrderNumber(Integer orderNumber) {
+	public void setOrderNumber(String orderNumber) {
 		this.orderNumber = orderNumber;
 	}
 	public List<OrderDetail> getOrderDetailList() {
@@ -106,5 +111,11 @@ public class Order implements Serializable {
 	}
 	public void setOrderDetailList(List<OrderDetail> orderDetailList) {
 		this.orderDetailList = orderDetailList;
+	}
+	public Integer getPayType() {
+		return payType;
+	}
+	public void setPayType(Integer payType) {
+		this.payType = payType;
 	}
 }

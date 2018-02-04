@@ -47,6 +47,7 @@ public class AccountParentServiceImpl implements AccountParentService{
 
 	@Override
 	public int countAll(
+			String phone,
 			Integer accountLevelId,
 			Integer accountId,
 			Integer masterId,
@@ -54,6 +55,7 @@ public class AccountParentServiceImpl implements AccountParentService{
 			Date createDate,
 			Date updateDate) {
 		int c = accountParentDao.countAll(
+				 phone,
 				 accountLevelId,
 				 accountId,
 				 masterId,
@@ -65,6 +67,7 @@ public class AccountParentServiceImpl implements AccountParentService{
 
 	@Override
 	public List<AccountParent> browsePagingAccountParent(
+			String phone,
 			Integer accountLevelId,
 			Integer accountId,
 			Integer masterId,
@@ -82,6 +85,7 @@ public class AccountParentServiceImpl implements AccountParentService{
 			pageSize=0;//没有数据
 		}
 		List<AccountParent> l = accountParentDao.browsePagingAccountParent(
+				 phone, 
 				 accountLevelId,
 				 accountId,
 				 masterId,

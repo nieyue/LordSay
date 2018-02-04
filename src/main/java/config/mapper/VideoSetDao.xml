@@ -118,9 +118,9 @@ WHERE video_set_id=#{videoSetId}
     UPDATE 
     	video_set_tb 
     SET
-    	play_number=play_number+1,
+    	play_number=play_number+1
     WHERE
-    	 video_set_id=#{videoSetId} 
+ 		video_set_id=#{videoSetId} 
 </update> 
 <!-- 分页查询视频集-->
 <select id="browsePagingVideoSet" resultType="VideoSet">  

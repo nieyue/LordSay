@@ -118,6 +118,10 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         		||request.getRequestURI().indexOf("videoCache/count")>-1
         		||request.getRequestURI().indexOf("videoCache/list")>-1
         		||method.getName().equals("loadVideoCache")
+        		//vip购买次数
+        		||request.getRequestURI().indexOf("vipNumber/count")>-1
+        		||request.getRequestURI().indexOf("vipNumber/list")>-1
+        		||method.getName().equals("loadVipNumber")
         		//订单
         		||request.getRequestURI().indexOf("order/count")>-1
         		//订单详情
@@ -313,6 +317,7 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         		//财务记录
         		if( request.getRequestURI().indexOf("/financeRecord/delete")>-1 
         				|| request.getRequestURI().indexOf("/financeRecord/update")>-1 
+        				|| request.getRequestURI().indexOf("/financeRecord/withdrawals")>-1 
         				|| request.getRequestURI().indexOf("/financeRecord/list")>-1 
         				|| request.getRequestURI().indexOf("/financeRecord/add")>-1 
         				||method.getName().equals("loadFinanceRecord")){
@@ -471,16 +476,24 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         			}
         			throw new MySessionException();
         		}
+        		//vip购买次数
+        		if( request.getRequestURI().indexOf("/vipNumber/delete")>-1 
+        				|| request.getRequestURI().indexOf("/vipNumber/update")>-1 
+        				|| request.getRequestURI().indexOf("/vipNumber/add")>-1){
+        			throw new MySessionException();
+        		}
         		//订单
         		if( request.getRequestURI().indexOf("/order/delete")>-1 
         				|| request.getRequestURI().indexOf("/order/list")>-1 
         				|| request.getRequestURI().indexOf("/order/update")>-1 
         				|| request.getRequestURI().indexOf("/order/add")>-1
+        				|| request.getRequestURI().indexOf("/order/payment")>-1
         				||method.getName().equals("loadOrder")){
         			//自身
         			if((
         					request.getRequestURI().indexOf("/order/list")>-1
         					|| request.getRequestURI().indexOf("/order/add")>-1
+        					|| request.getRequestURI().indexOf("/order/payment")>-1
         					||method.getName().equals("loadOrder")
         					)
         					&& request.getParameter("accountId").equals(sessionAccount.getAccountId().toString())){

@@ -94,6 +94,7 @@ name varchar(255) COMMENT '等级名',
 create_date datetime COMMENT '创建时间',
 update_date datetime COMMENT '更新时间',
 PRIMARY KEY (account_parent_id),
+INDEX INDEX_PHONE (phone) USING BTREE,
 INDEX INDEX_AOCUNTLEVELID (account_level_id) USING BTREE,
 INDEX INDEX_ACCOUNTID (account_id) USING BTREE,
 INDEX INDEX_MASTERID (master_id) USING BTREE,
@@ -166,8 +167,8 @@ INDEX INDEX_UPDATEDATE (update_date) USING BTREE
 #创建财务记录表 
 CREATE TABLE finance_record_tb(
 finance_record_id int(11) NOT NULL AUTO_INCREMENT COMMENT '财务记录id',
-method tinyint(4) COMMENT '方式，1支付宝，2微信,3ios内购',
-type tinyint(4) COMMENT '类型，1账户充值，2账户提现,3招收学员佣金,4推荐佣金,5团购账单,6拆分账单',
+method tinyint(4) COMMENT '方式，1支付宝，2微信,3余额支付,4ios内购',
+type tinyint(4) COMMENT '类型，1账户充值，2账户提现,3招收学员佣金,4推荐佣金,5团购账单,6拆分账单,7二级团购奖励,8vip购买,9分发奖励，10二级购买vip奖励,11付费课程购买',
 transaction_number varchar(255) COMMENT '交易单号',
 money decimal(11,2) DEFAULT 0 COMMENT '金额',
 status tinyint(4) COMMENT '状态，默认1待处理，2成功，3已拒绝',
@@ -356,17 +357,38 @@ INDEX INDEX_VIDEOID (video_id) USING BTREE,
 INDEX INDEX_ACCOUNTID (account_id) USING BTREE
 )ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='视频缓存表';
 
+#vip购买次数
+CREATE TABLE vip_number_tb(
+vip_number_id int(11) NOT NULL AUTO_INCREMENT COMMENT 'vip购买次数id',
+number tinyint(4) COMMENT '次数',
+create_date datetime  COMMENT '创建时间',
+update_date datetime  COMMENT '更新时间',
+account_id int(11) COMMENT '购买人id',
+real_master_id int(11) COMMENT '真实上级id',
+status tinyint(4) COMMENT '状态，1待处理，2已处理，3已超次',
+PRIMARY KEY (vip_number_id),
+INDEX INDEX_NUMBER (number) USING BTREE,
+INDEX INDEX_ACCOUNTID (account_id) USING BTREE,
+INDEX INDEX_REALMASTERID (real_master_id) USING BTREE,
+INDEX INDEX_STATUS (status) USING BTREE,
+INDEX INDEX_CREATEDATE (create_date) USING BTREE,
+INDEX INDEX_UPDATEDATE (update_date) USING BTREE
+)ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='vip购买次数表';
+
+
 #创建订单表 
 CREATE TABLE order_tb(
 order_id int(11) NOT NULL AUTO_INCREMENT COMMENT '订单id',
 order_number varchar(255) COMMENT '订单号',
 type tinyint(4) DEFAULT 0 COMMENT '类型，1VIP购买，2团购卡团购，3付费课程',
+pay_type tinyint(4) COMMENT '支付类型，1支付宝，2微信,3余额支付,4ios内购',
 create_date datetime  COMMENT '创建时间',
 update_date datetime  COMMENT '更新时间',
 account_id int(11) COMMENT '下单人',
 status tinyint(4) COMMENT '订单状态，1待处理，2已完成',
 PRIMARY KEY (order_id),
 INDEX INDEX_TYPE (type) USING BTREE,
+INDEX INDEX_PAYTYPE (pay_type) USING BTREE,
 INDEX INDEX_ACCOUNTID (account_id) USING BTREE,
 INDEX INDEX_STATUS (status) USING BTREE,
 INDEX INDEX_CREATEDATE (create_date) USING BTREE,
@@ -376,13 +398,13 @@ INDEX INDEX_UPDATEDATE (update_date) USING BTREE
 #创建订单详情表 
 CREATE TABLE order_detail_tb(
 order_detail_id int(11) NOT NULL AUTO_INCREMENT COMMENT '订单详情id',
-pay_type tinyint(4) COMMENT '支付类型，默认1支付宝支付，2微信支付，3余额支付',
 name varchar(255) COMMENT '名称',
 img_address varchar(255) COMMENT '封面',
 total_price decimal(11,2) COMMENT '总价',
 number decimal(11,2) COMMENT '数量/集数',
 create_date datetime  COMMENT '创建时间',
 update_date datetime  COMMENT '更新时间',
+business_id int(11) COMMENT '业务ID',
 order_id int(11) COMMENT '订单ID',
 PRIMARY KEY (order_detail_id),
 INDEX INDEX_ORDERID (order_id) USING BTREE,

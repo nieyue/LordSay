@@ -26,6 +26,7 @@ public interface OrderDao {
 	/** 订单总共数目 */	
 	public int countAll(
 			@Param("type")Integer type,
+			@Param("payType")Integer payType,
 			@Param("accountId")Integer accountId,
 			@Param("status")Integer status,
 			@Param("createDate")Date createDate,
@@ -34,6 +35,7 @@ public interface OrderDao {
 	/** 分页订单信息 */
 	public List<Order> browsePagingOrder(
 			@Param("type")Integer type,
+			@Param("payType")Integer payType,
 			@Param("accountId")Integer accountId,
 			@Param("status")Integer status,
 			@Param("createDate")Date createDate,
