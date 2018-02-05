@@ -608,7 +608,7 @@ CREATE TABLE feedback_tb(
 feedback_id int(11) NOT NULL AUTO_INCREMENT COMMENT '意见反馈id',
 content varchar(255) COMMENT '内容',
 create_date datetime COMMENT '创建时间',
-acount_id int(11) COMMENT '提交人账户id外键',
+account_id int(11) COMMENT '提交人账户id外键',
 phone varchar(255) COMMENT '提交人注册手机号',
 PRIMARY KEY (feedback_id)
 )ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='意见反馈表';

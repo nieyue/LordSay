@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.nieyue.bean.Account;
+import com.nieyue.bean.AccountLevel;
 import com.nieyue.bean.AccountParent;
 import com.nieyue.bean.Finance;
 import com.nieyue.bean.Integral;
@@ -561,6 +562,13 @@ public class AccountController {
 			map.put("account", account);
 			//财务
 			map.put("finance",  f.get(0));
+			//账户等级
+			List<AccountLevel> all = accountLevelService.browsePagingAccountLevel(null, null, 1, Integer.MAX_VALUE, "account_level_id", "desc");
+			if(all.size()>0){
+				map.put("accountLevelList",  all);
+				}else{
+				map.put("accountLevelList",  new ArrayList<AccountLevel>());
+				}
 			//账户上级
 			List<AccountParent> accountParentl = accountParentService.browsePagingAccountParent(null,null, account.getAccountId(), null, null, null, null, 1, 1, "account_parent_id", "asc");
 			if(accountParentl.size()>0){
@@ -665,6 +673,13 @@ public class AccountController {
 				map.put("account", account);
 				//财务
 				map.put("finance",  f.get(0));
+				//账户等级
+				List<AccountLevel> all = accountLevelService.browsePagingAccountLevel(null, null, 1, Integer.MAX_VALUE, "account_level_id", "desc");
+				if(all.size()>0){
+					map.put("accountLevelList",  all);
+					}else{
+					map.put("accountLevelList",  new ArrayList<AccountLevel>());
+					}
 				//账户上级
 				List<AccountParent> accountParentl = accountParentService.browsePagingAccountParent(null,null, account.getAccountId(), null, null, null, null, 1, 1, "account_parent_id", "asc");
 				if(accountParentl.size()>0){

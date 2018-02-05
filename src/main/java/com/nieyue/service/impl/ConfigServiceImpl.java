@@ -20,6 +20,7 @@ public class ConfigServiceImpl implements ConfigService{
 	@Override
 	public boolean addConfig(Config config) {
 		config.setCreateDate(new Date());
+		config.setUpdateDate(new Date());
 		boolean b = configDao.addConfig(config);
 		return b;
 	}
@@ -32,6 +33,7 @@ public class ConfigServiceImpl implements ConfigService{
 	@Transactional(propagation=Propagation.REQUIRED)
 	@Override
 	public boolean updateConfig(Config config) {
+		config.setUpdateDate(new Date());
 		boolean b = configDao.updateConfig(config);
 		return b;
 	}

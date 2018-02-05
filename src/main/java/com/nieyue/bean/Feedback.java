@@ -7,11 +7,11 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * 勋章
+ * 意见反馈
  * @author yy
  *
  */
-@ApiModel(value="勋章",description="勋章")
+@ApiModel(value="意见",description="意见反馈")
 public class Feedback implements Serializable{
 
 	/**
@@ -19,9 +19,9 @@ public class Feedback implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
-	 * 勋章id
+	 * 意见反馈id
 	 */
-	@ApiModelProperty(value="勋章id",example="勋章id")
+	@ApiModelProperty(value="意见反馈id",example="意见反馈id")
 	private Integer feedbackId;
 	/**
 	 * 内容

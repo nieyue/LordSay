@@ -10,14 +10,14 @@
    		 (
    		 content,
    		 create_date,
-   		 acount_id,
+   		 account_id,
    		 phone
    		 )
    VALUES
     	 (
     	 #{content},
     	 #{createDate},
-    	 #{acountId},
+    	 #{accountId},
     	 #{phone}
     	 )  
 </insert>  
@@ -28,7 +28,7 @@
     SET 
     	content=#{content},
     	create_date=#{createDate},
-    	acount_id=#{acountId},
+    	account_id=#{accountId},
     	phone=#{phone}
     WHERE
     	 feedback_id=#{feedbackId} 
@@ -45,7 +45,7 @@ SELECT
 		feedback_id,
 	 	content,
 	 	create_date,
-	 	acount_id,
+	 	account_id,
     	phone
 FROM feedback_tb 
 WHERE feedback_id=#{feedbackId}
@@ -57,9 +57,9 @@ WHERE feedback_id=#{feedbackId}
 	    feedback_id,
 	 	content,
 	 	create_date,
-	 	acount_id,
+	 	account_id,
     	phone
-	FROM medal_term_tb
+	FROM feedback_tb
 	WHERE ${orderName} 
 	<if test="orderWay=='asc'">
 	<![CDATA[>=]]> 

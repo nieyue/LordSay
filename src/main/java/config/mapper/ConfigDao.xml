@@ -26,7 +26,7 @@
     SET 
     	customer_service_phone=#{customerServicePhone},
     	create_date=#{createDate},
-    	updateDate=#{update_date}
+    	update_date=#{updateDate}
     WHERE
     	 config_id=#{configId} 
 </update> 

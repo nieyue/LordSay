@@ -105,7 +105,7 @@
     	</if>
     </set> 
     WHERE
-    	 team_purchase_info_tb=#{teamPurchaseInfoId} 
+    	 team_purchase_info_id=#{teamPurchaseInfoId} 
 </update> 
 <!-- 删除团购信息-->
 <delete id="delTeamPurchaseInfo"  parameterType="Integer" >  

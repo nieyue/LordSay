@@ -179,12 +179,13 @@ public class FinanceBusiness {
 								vn.setStatus(3);//已超次
 							}
 							vipNumberService.updateVipNumber(vn);
-							
 						}
 						return 0;//让部分执行
 					}
 				//升级人的等级	
 				AccountLevel al = accountLevelService.loadAccountLevel(ap.getAccountLevelId());
+				//升级成功后的等级
+				AccountLevel nal = accountLevelService.loadAccountLevel(ap.getAccountLevelId()+1);
 				//只有是0级别才能购买
 				if(al.getLevel()==0){
 					//余额支付，修改财务表
@@ -214,7 +215,7 @@ public class FinanceBusiness {
 						return -1;
 					}
 					//拆分奖励
-					Double splitReward = al.getSplitReward();
+					Double splitReward = nal.getSplitReward();
 					//上级财务
 					List<Finance> sfinancel= financeService.browsePagingFinance(null, aprmid, 1, 1, "finance_id", "asc");
 					Finance sfinance = sfinancel.get(0);
@@ -238,12 +239,13 @@ public class FinanceBusiness {
 						return -1;
 					}
 					//拆分分上级奖励
-					Double splitParentReward = al.getSplitParentReward();
+					Double splitParentReward = nal.getSplitParentReward();
 					//获取上上级别
 					List<AccountParent> sapl = accountParentService.browsePagingAccountParent(null, null, aprmid, null, null, null, null, 1, 1, "account_parent_id", "asc");
 					if(sapl.size()==1 &&sapl.get(0)!=null){
 					AccountParent sap = sapl.get(0);
 					Integer saprmid = sap.getRealMasterId();//上级的真实上级id
+					if(saprmid!=null){
 					//上上级财务
 					List<Finance> ssfinancel= financeService.browsePagingFinance(null, saprmid, 1, 1, "finance_id", "asc");
 					Finance ssfinance = ssfinancel.get(0);
@@ -263,9 +265,10 @@ public class FinanceBusiness {
 					ssfr.setStatus(2);//1是待处理，2成功，3已拒绝
 					ssfr.setMoney(money);
 					b=financeRecordService.addFinanceRecord(ssfr);
-					}
 					if(!b){
 						return -1;
+					}
+					}
 					}
 					//创建vip表
 					List<Vip> vipl = vipService.browsePagingVip(accountId, 0, null, 1, 1, "vip_id", "asc");
@@ -326,7 +329,12 @@ public class FinanceBusiness {
 					teamPurchaseInfo.setWaitDisposePrice(0.0);//待处理总额
 					teamPurchaseInfo.setWaitDisposeUpdateDate(new Date());//待处理更新时间
 					b=teamPurchaseInfoService.addTeamPurchaseInfo(teamPurchaseInfo);
-					
+					if(!b){
+						return -1;
+					}
+					//上级团购信息表更新
+					stpi.setTeamPurchaseCardAllowance(stpi.getTeamPurchaseCardAllowance()-1);//升级vip就减团购卡
+					b=teamPurchaseInfoService.updateTeamPurchaseInfo(stpi);
 					if(b){
 						return 1;
 					}
