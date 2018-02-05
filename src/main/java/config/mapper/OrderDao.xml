@@ -100,9 +100,17 @@ WHERE order_id=#{orderId}
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
 		</if>
-	<if test="status!=null">
+	<!-- <if test="status!=null">
 		AND  status=#{status}
-		</if>
+		</if> -->
+		<choose>
+			<when test="status!=null">  
+                AND status=#{status}  
+            </when>  
+            <otherwise>  
+                AND status!=0  
+            </otherwise> 
+		</choose>
 <if test="createDate!=null">
 		AND  DATE(create_date)=DATE(#{createDate})
 		</if>
@@ -127,9 +135,17 @@ WHERE order_id=#{orderId}
 		<if test="accountId!=null">
 		AND  account_id=#{accountId}
 		</if>
-		<if test="status!=null">
+		<!-- <if test="status!=null">
 		AND  status=#{status}
-		</if>
+		</if> -->
+		<choose>
+			<when test="status!=null">  
+                AND status=#{status}  
+            </when>  
+            <otherwise>  
+                AND status!=0  
+            </otherwise> 
+		</choose>
 	<if test="createDate!=null">
 		AND  DATE(create_date)=DATE(#{createDate})
 		</if>
@@ -163,9 +179,17 @@ WHERE order_id=#{orderId}
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
 		</if>
-	<if test="status!=null">
+	<!-- <if test="status!=null">
 		AND  status=#{status}
-		</if>
+		</if> -->
+		<choose>
+			<when test="status!=null">  
+                AND status=#{status}  
+            </when>  
+            <otherwise>  
+                AND status!=0  
+            </otherwise> 
+		</choose>
 <if test="createDate!=null">
 		AND  DATE(create_date)=DATE(#{createDate})
 		</if>

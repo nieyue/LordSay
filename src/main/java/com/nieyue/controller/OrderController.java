@@ -52,7 +52,7 @@ public class OrderController {
 	  @ApiImplicitParam(name="type",value="类型，1VIP购买，2团购卡团购，3付费课程",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="payType",value="支付类型，1支付宝，2微信,3余额支付,4ios内购",dataType="int", paramType = "query"), 
 	  @ApiImplicitParam(name="accountId",value="下单人id外键",dataType="int", paramType = "query"),
-	  @ApiImplicitParam(name="status",value="订单状态，1待处理，2已完成",dataType="int", paramType = "query"),
+	  @ApiImplicitParam(name="status",value="订单状态，0已删除,1待处理，2已完成",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="createDate",value="创建时间",dataType="date-time", paramType = "query"),
 	  @ApiImplicitParam(name="updateDate",value="更新时间",dataType="date-time", paramType = "query"),
 	  @ApiImplicitParam(name="pageNum",value="页头数位",dataType="int", paramType = "query",defaultValue="1"),
@@ -167,7 +167,7 @@ public class OrderController {
 		  @ApiImplicitParam(name="type",value="类型，1VIP购买，2团购卡团购，3付费课程",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="payType",value="支付类型，1支付宝，2微信,3余额支付,4ios内购",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="accountId",value="下单人id外键",dataType="int", paramType = "query"),
-		  @ApiImplicitParam(name="status",value="订单状态，1待处理，2已完成",dataType="int", paramType = "query"),
+		  @ApiImplicitParam(name="status",value="订单状态，0已删除，1待处理，2已完成",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="createDate",value="创建时间",dataType="date-time", paramType = "query"),
 		  @ApiImplicitParam(name="updateDate",value="更新时间",dataType="date-time", paramType = "query"),
 		  })

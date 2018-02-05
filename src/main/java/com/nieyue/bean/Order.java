@@ -48,7 +48,7 @@ public class Order implements Serializable {
 	@ApiModelProperty(value="更新时间",example="更新时间")
 	private Date updateDate;
 	/**
-	 * 订单状态，1待处理，2已完成
+	 * 订单状态，0已删除，1待处理，2已完成
 	 */
 	@ApiModelProperty(value="订单状态，1待处理，2已完成",example="订单状态，1待处理，2已完成")
 	private Integer status;

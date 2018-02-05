@@ -493,6 +493,7 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         			if((
         					request.getRequestURI().indexOf("/order/list")>-1
         					|| request.getRequestURI().indexOf("/order/add")>-1
+        					|| request.getRequestURI().indexOf("/order/update")>-1
         					|| request.getRequestURI().indexOf("/order/payment")>-1
         					||method.getName().equals("loadOrder")
         					)
