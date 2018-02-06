@@ -72,7 +72,7 @@ public class OrderServiceImpl implements OrderService{
 			throw new PayException();
 		}
 		//2.财务执行
-		int r = financeBusiness.financeExcute(type, payType, accountId, orderDetail.getTotalPrice());
+		int r = financeBusiness.financeExcute(type, payType, accountId,businessId, orderDetail.getTotalPrice());
 		if(r==-1){
 			throw new PayException();
 		}else if(r==0){

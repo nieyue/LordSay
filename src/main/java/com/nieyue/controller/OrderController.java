@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.nieyue.bean.Order;
+import com.nieyue.bean.OrderDetail;
+import com.nieyue.service.OrderDetailService;
 import com.nieyue.service.OrderService;
 import com.nieyue.util.ResultUtil;
 import com.nieyue.util.StateResult;
@@ -41,6 +43,9 @@ public class OrderController {
 	@Resource
 	private OrderService orderService;
 	
+	@Resource
+	private OrderDetailService orderDetailService;
+	
 	/**
 	 * 订单分页浏览
 	 * @param orderName 商品排序数据库字段
@@ -52,7 +57,7 @@ public class OrderController {
 	  @ApiImplicitParam(name="type",value="类型，1VIP购买，2团购卡团购，3付费课程",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="payType",value="支付类型，1支付宝，2微信,3余额支付,4ios内购",dataType="int", paramType = "query"), 
 	  @ApiImplicitParam(name="accountId",value="下单人id外键",dataType="int", paramType = "query"),
-	  @ApiImplicitParam(name="status",value="订单状态，0已删除,1待处理，2已完成",dataType="int", paramType = "query"),
+	  @ApiImplicitParam(name="status",value="订单状态，-1待处理删除，0已完成删除,1待处理，2已完成",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="createDate",value="创建时间",dataType="date-time", paramType = "query"),
 	  @ApiImplicitParam(name="updateDate",value="更新时间",dataType="date-time", paramType = "query"),
 	  @ApiImplicitParam(name="pageNum",value="页头数位",dataType="int", paramType = "query",defaultValue="1"),
@@ -126,6 +131,47 @@ public class OrderController {
 		return ResultUtil.getSlefSRFailList(list);
 	}
 	/**
+	 * 视频集是否订单
+	 * @return
+	 */
+	@ApiOperation(value = "视频集是否订单。videoSetIsOrder默认0，非订单，1是已经是订单", notes = "视频集是否订单。videoSetIsOrder默认0，非订单，1是已经是订单")
+	@ApiImplicitParams({
+		  @ApiImplicitParam(name="accountId",value="账户Id",dataType="int", paramType = "query",required=true),
+		  @ApiImplicitParam(name="videoSetId",value="视频集id",dataType="int", paramType = "query",required=true)
+		  })
+	@RequestMapping(value = "/videoSetIsOrder", method = {RequestMethod.GET,RequestMethod.POST})
+	public @ResponseBody StateResultList VideoSetOrder(
+			@RequestParam(value="accountId")Integer accountId,
+			@RequestParam(value="videoSetId")Integer videoSetId,
+			HttpSession session)  {
+		int videoSetIsOrder=0;//默认0，非订单
+		//0是已成功删除
+		List<Order> o0l = orderService.browsePagingOrder(3, null, accountId, 0, null, null, 1, Integer.MAX_VALUE, "order_id", "asc");
+		for (int i = 0; i < o0l.size(); i++) {
+			Order o0 = o0l.get(i);
+			Integer o0Id = o0.getOrderId();
+			List<OrderDetail> o0dl = orderDetailService.browsePagingOrderDetail(o0Id, null, null, 1, 1, "order_detail_id", "asc");
+				if(o0dl.size()==1){
+					videoSetIsOrder=1;
+				}
+		}
+		//是已成功
+		List<Order> o2l = orderService.browsePagingOrder(3, null, accountId, 2, null, null, 1, Integer.MAX_VALUE,  "order_id", "asc");
+		for (int j = 0; j < o2l.size(); j++) {
+			Order o2 = o2l.get(j);
+			Integer o2Id = o2.getOrderId();
+			List<OrderDetail> o2dl = orderDetailService.browsePagingOrderDetail(o2Id, null, null, 1, 1, "order_detail_id", "asc");
+				if(o2dl.size()==1){
+					videoSetIsOrder=1;
+				}
+		}
+		List<Map<Object,Object>> list=new ArrayList<>();
+		Map<Object,Object> map=new HashMap<>();
+				map.put("videoSetIsOrder", videoSetIsOrder);
+				list.add(map);
+		return ResultUtil.getSlefSRSuccessList(list);
+	}
+	/**
 	 * 订单修改
 	 * @return
 	 */
@@ -167,7 +213,7 @@ public class OrderController {
 		  @ApiImplicitParam(name="type",value="类型，1VIP购买，2团购卡团购，3付费课程",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="payType",value="支付类型，1支付宝，2微信,3余额支付,4ios内购",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="accountId",value="下单人id外键",dataType="int", paramType = "query"),
-		  @ApiImplicitParam(name="status",value="订单状态，0已删除，1待处理，2已完成",dataType="int", paramType = "query"),
+		  @ApiImplicitParam(name="status",value="订单状态，-1待处理删除，0已完成删除,1待处理，2已完成",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="createDate",value="创建时间",dataType="date-time", paramType = "query"),
 		  @ApiImplicitParam(name="updateDate",value="更新时间",dataType="date-time", paramType = "query"),
 		  })

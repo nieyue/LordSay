@@ -108,7 +108,8 @@ WHERE order_id=#{orderId}
                 AND status=#{status}  
             </when>  
             <otherwise>  
-                AND status!=0  
+                AND status!=0 
+                AND status!=-1 
             </otherwise> 
 		</choose>
 <if test="createDate!=null">
@@ -143,7 +144,8 @@ WHERE order_id=#{orderId}
                 AND status=#{status}  
             </when>  
             <otherwise>  
-                AND status!=0  
+                AND status!=0 
+                AND status!=-1 
             </otherwise> 
 		</choose>
 	<if test="createDate!=null">
@@ -187,7 +189,8 @@ WHERE order_id=#{orderId}
                 AND status=#{status}  
             </when>  
             <otherwise>  
-                AND status!=0  
+                AND status!=0 
+                AND status!=-1 
             </otherwise> 
 		</choose>
 <if test="createDate!=null">

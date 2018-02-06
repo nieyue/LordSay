@@ -385,7 +385,7 @@ pay_type tinyint(4) COMMENT '支付类型，1支付宝，2微信,3余额支付,4
 create_date datetime  COMMENT '创建时间',
 update_date datetime  COMMENT '更新时间',
 account_id int(11) COMMENT '下单人',
-status tinyint(4) COMMENT '订单状态，1待处理，2已完成',
+status tinyint(4) COMMENT '订单状态，-1待处理删除，0已完成删除,1待处理，2已完成',
 PRIMARY KEY (order_id),
 INDEX INDEX_TYPE (type) USING BTREE,
 INDEX INDEX_PAYTYPE (pay_type) USING BTREE,

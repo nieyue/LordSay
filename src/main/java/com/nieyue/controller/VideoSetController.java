@@ -80,6 +80,7 @@ public class VideoSetController {
 				return ResultUtil.getSlefSRFailList(list);
 			}
 	}
+
 	/**
 	 * 视频集修改
 	 * @return

@@ -150,7 +150,7 @@ public class Account implements Serializable {
 	public Integer getAccountId() {
 		return accountId;
 	}
-	public void setAcountId(Integer accountId) {
+	public void setAccountId(Integer accountId) {
 		this.accountId = accountId;
 	}
 	public String getPhone() {

@@ -189,11 +189,14 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         		if( request.getRequestURI().indexOf("/accountLevel/delete")>-1 
         				|| request.getRequestURI().indexOf("/accountLevel/add")>-1
         				|| request.getRequestURI().equals("/accountLevel/list")
+        				|| request.getRequestURI().equals("/accountLevel/teamAccountLevelList")
         				|| request.getRequestURI().indexOf("/accountLevel/update")>-1
         				||method.getName().equals("loadAccountLevel")
         				){
         			//自身信息
-        			if((request.getRequestURI().indexOf("/accountLevel/list")>-1
+        			if((
+        					request.getRequestURI().indexOf("/accountLevel/list")>-1
+        					||request.getRequestURI().indexOf("/accountLevel/teamAccountLevelList")>-1
         					||method.getName().equals("loadAccountLevel")
         					)
         					&& request.getParameter("accountId").equals(sessionAccount.getAccountId().toString())){
@@ -488,6 +491,7 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         				|| request.getRequestURI().indexOf("/order/update")>-1 
         				|| request.getRequestURI().indexOf("/order/add")>-1
         				|| request.getRequestURI().indexOf("/order/payment")>-1
+        				|| request.getRequestURI().indexOf("/order/videoSetIsOrder")>-1
         				||method.getName().equals("loadOrder")){
         			//自身
         			if((
@@ -495,6 +499,7 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         					|| request.getRequestURI().indexOf("/order/add")>-1
         					|| request.getRequestURI().indexOf("/order/update")>-1
         					|| request.getRequestURI().indexOf("/order/payment")>-1
+        					|| request.getRequestURI().indexOf("/order/videoSetIsOrder")>-1
         					||method.getName().equals("loadOrder")
         					)
         					&& request.getParameter("accountId").equals(sessionAccount.getAccountId().toString())){

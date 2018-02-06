@@ -106,7 +106,7 @@ public class VideoPlayRecordController {
 	 * 视频播放记录批量删除
 	 * @return
 	 */
-	@ApiOperation(value = "视频播放记录批量删除", notes = "视频播放记录批量删除")
+	@ApiOperation(value = "视频播放记录批量删除videoPlayRecordId=1&videoPlayRecordId=2", notes = "视频播放记录批量删除")
 	@ApiImplicitParams({
 		@ApiImplicitParam(name="videoPlayRecordId",value="视频播放记录ID列表",dataType="array", paramType = "query",required=true)
 	})

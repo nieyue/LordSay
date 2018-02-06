@@ -125,7 +125,7 @@ public class AccountController {
 			@RequestParam(value="loginDate",required=false)Date loginDate,
 			@RequestParam(value="pageNum",defaultValue="1",required=false)int pageNum,
 			@RequestParam(value="pageSize",defaultValue="10",required=false) int pageSize,
-			@RequestParam(value="orderName",required=false,defaultValue="Account_id") String orderName,
+			@RequestParam(value="orderName",required=false,defaultValue="account_id") String orderName,
 			@RequestParam(value="orderWay",required=false,defaultValue="desc") String orderWay,HttpSession session)  {
 			List<Account> list = new ArrayList<Account>();
 			list= accountService.browsePagingAccount(accountId,auth,phone,realname,roleId,status,createDate,loginDate,pageNum, pageSize, orderName, orderWay);
@@ -153,7 +153,11 @@ public class AccountController {
 				){
 			return ResultUtil.getSlefSRFailList(list);
 		}
+		if(account.getPassword()!=null){
+			account.setPassword(MyDESutil.getMD5(account.getPassword()));
+		}
 		boolean um = accountService.updateAccount(account);
+		System.err.println(111123);
 		if(um){
 		session.setAttribute("account", account);
 		list.add(account);

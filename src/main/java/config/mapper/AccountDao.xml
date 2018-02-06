@@ -247,7 +247,7 @@ WHERE account_id=#{accountId}
 	<if test="orderWay=='desc'">
 	  <![CDATA[<= ]]>
 	</if>
-	(SELECT ${orderName} FROM Account_tb 
+	(SELECT ${orderName} FROM account_tb 
 		 <where>
 		 <if test="accountId!=null">
 		AND  account_id=#{accountId}

@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.nieyue.bean.AccountLevel;
+import com.nieyue.business.AccountLevelBusiness;
 import com.nieyue.service.AccountLevelService;
+import com.nieyue.service.AccountParentService;
 import com.nieyue.util.ResultUtil;
 import com.nieyue.util.StateResult;
 import com.nieyue.util.StateResultList;
@@ -37,6 +39,10 @@ import io.swagger.annotations.ApiOperation;
 public class AccountLevelController {
 	@Resource
 	private AccountLevelService accountLevelService;
+	@Resource
+	private AccountParentService accountParentService;
+	@Resource
+	private AccountLevelBusiness accountLevelBusiness;
 	
 	/**
 	 * 等级分页浏览
@@ -68,6 +74,23 @@ public class AccountLevelController {
 			}else{
 				return ResultUtil.getSlefSRFailList(list);
 			}
+	}
+	/**
+	 * 返回当前人的可选团购等级
+	 * @return
+	 */
+	@ApiOperation(value = "返回当前人的可选团购等级", notes = "返回当前人的可选团购等级")
+	@RequestMapping(value = "/teamAccountLevelList", method = {RequestMethod.GET,RequestMethod.POST})
+	public @ResponseBody StateResultList getAccountLevel(
+			@RequestParam("accountId") Integer accountId,
+			HttpSession session)  {
+		List<AccountLevel> alist=new ArrayList<>();
+		alist=accountLevelBusiness.getTeamAccountLevelListByAccountId(accountId);
+		if(alist.size()>0){
+			
+			return ResultUtil.getSlefSRSuccessList(alist);
+		}
+		return ResultUtil.getSlefSRFailList(alist);
 	}
 	/**
 	 * 等级修改
