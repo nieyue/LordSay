@@ -72,35 +72,12 @@ public class OrderServiceImpl implements OrderService{
 			throw new PayException();
 		}
 		//2.财务执行
-		int r = financeBusiness.financeExcute(type, payType, accountId,businessId, orderDetail.getTotalPrice());
+		int r = financeBusiness.financeExcute(type, payType, accountId,businessId, orderDetail);
 		if(r==-1){
 			throw new PayException();
 		}else if(r==0){
 			return null;
-		}
-				boolean b=false;
-				Order order=new Order();
-				order.setCreateDate(new Date());
-				order.setUpdateDate(new Date());
-				order.setAccountId(accountId);
-				order.setStatus(2);//已完成
-				order.setType(type);
-				order.setPayType(payType);
-				String orderNumber=((int) (Math.random()*9000)+1000)+DateUtil.getOrdersTime()+((int)(Math.random()*9000)+10000);
-				order.setOrderNumber(orderNumber);
-				 b = orderDao.addOrder(order);
-				if(b){
-					orderDetail.setOrderId(order.getOrderId());
-					b=orderDetailService.addOrderDetail(orderDetail);
-					if(b){
-						List<OrderDetail> orderDetailList=new ArrayList<>();
-						orderDetailList.add(orderDetail);
-						order.setOrderDetailList(orderDetailList);
-						return order;
-					}else{
-						throw new PayException();		
-					}
-				}
+		}	
 		return null;
 	}
 	@Transactional(propagation=Propagation.REQUIRED)

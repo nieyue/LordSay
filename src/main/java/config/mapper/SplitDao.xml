@@ -13,12 +13,18 @@
    		 number,
    		 price,
    		 apply_date,
+   		 <if test="splitDate!=null">
    		 split_date,
+   		 </if>
    		 create_date,
    		 update_date,
    		 status,
+   		 <if test="recommendAccountId!=null">
+   		 recommend_account_id,
+   		 </if>
    		 account_id,
-   		 buy_account_id
+   		 buy_account_id,
+   		 order_id
    		 )
    VALUES
     	 (
@@ -27,12 +33,18 @@
     	 #{number},
     	 #{price},
     	 #{applyDate},
+    	 <if test="splitDate!=null">
     	 #{splitDate},
+    	 </if>
     	 #{createDate},
     	 #{updateDate},
     	 #{status},
+    	  <if test="recommendAccountId!=null">
+    	 #{recommendAccountId},
+    	 </if>
     	 #{accountId},
-    	 #{buyAccountId}
+    	 #{buyAccountId},
+    	 #{orderId}
     	 )  
 </insert>  
 <!-- 更新拆分-->
@@ -67,11 +79,17 @@
     	<if test="status!=null">
     	status=#{status},
     	</if>
+    	<if test="recommendAccountId!=null">
+    	recommend_account_id=#{recommendAccountId},
+    	</if>
     	<if test="accountId!=null">
     	account_id=#{accountId},
     	</if>
     	<if test="buyAccountId!=null">
     	buy_account_id=#{buyAccountId},
+    	</if>
+    	<if test="orderId!=null">
+    	order_id=#{orderId},
     	</if>
     </set> 
     WHERE
@@ -96,8 +114,10 @@ SELECT
    		 create_date,
    		 update_date,
    		 status,
+   		 recommend_account_id,
    		 account_id,
-   		 buy_account_id
+   		 buy_account_id,
+   		 order_id
 FROM split_tb 
 WHERE split_id=#{splitId}
 </select>
@@ -115,10 +135,15 @@ WHERE split_id=#{splitId}
    		 create_date,
    		 update_date,
    		 status,
+   		 recommend_account_id,
    		 account_id,
-   		 buy_account_id
+   		 buy_account_id,
+   		 order_id
 	FROM split_tb
 	<where>
+	<if test="recommendAccountId!=null">
+		AND  recommend_account_id=#{recommendAccountId}
+		</if>
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
 		</if>
@@ -149,6 +174,9 @@ WHERE split_id=#{splitId}
 	</if>
 	(SELECT ${orderName} FROM split_tb 
 		<where>
+		<if test="recommendAccountId!=null">
+		AND  recommend_account_id=#{recommendAccountId}
+		</if>
 		<if test="accountId!=null">
 		AND  account_id=#{accountId}
 		</if>
@@ -188,6 +216,9 @@ WHERE split_id=#{splitId}
 	 	count(split_id)
 	FROM split_tb
 	<where>
+	<if test="recommendAccountId!=null">
+		AND  recommend_account_id=#{recommendAccountId}
+		</if>
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
 		</if>

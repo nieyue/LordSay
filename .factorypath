@@ -9,6 +9,10 @@
     <factorypathentry kind="VARJAR" id="ECLIPSE_HOME/work/LordSay/src/lib/taobao-sdk-java-auto_1455552377940-20161118.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="ECLIPSE_HOME/work/LordSay/src/lib/taobao-sdk-java-auto_1457071677200-20160815-source.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="ECLIPSE_HOME/work/LordSay/src/lib/taobao-sdk-java-auto_1457071677200-20160815.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="ECLIPSE_HOME/work/LordSay/src/main/lib/alipay-sdk-java20170829142630-source.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="ECLIPSE_HOME/work/LordSay/src/main/lib/alipay-sdk-java20170829142630.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="ECLIPSE_HOME/work/LordSay/src/main/lib/commons-logging-1.1.1-sources.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="ECLIPSE_HOME/work/LordSay/src/main/lib/commons-logging-1.1.1.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/apache/poi/poi/3.13/poi-3.13.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/lowagie/itext/2.1.7/itext-2.1.7.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/bouncycastle/bcmail-jdk14/138/bcmail-jdk14-138.jar" enabled="true" runInBatchMode="false"/>
@@ -123,7 +127,7 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/plugin/spring-plugin-metadata/1.2.0.RELEASE/spring-plugin-metadata-1.2.0.RELEASE.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/mapstruct/mapstruct/1.0.0.Final/mapstruct-1.0.0.Final.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/springfox/springfox-swagger-ui/2.6.1/springfox-swagger-ui-2.6.1.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/com/qiniu/qiniu-java-sdk/7.2.9/qiniu-java-sdk-7.2.9.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/qiniu/qiniu-java-sdk/7.2.10/qiniu-java-sdk-7.2.10.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/squareup/okhttp3/okhttp/3.9.1/okhttp-3.9.1.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/squareup/okio/okio/1.13.0/okio-1.13.0.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar" enabled="true" runInBatchMode="false"/>

@@ -65,7 +65,7 @@ public class NoticeBusiness {
 	}
 	/**
 	 *  团购通知
-	 *  accountId 账户id
+	 *  accountId 申请人的账户id
 	 *  money 金额
 	 */
 	public Notice getNoticeByTuangou(
@@ -116,8 +116,8 @@ public class NoticeBusiness {
 	}
 	/**
 	 *  团购申请
-	 *  accountId 账户id
-	 *  realname  真实姓名
+	 *  accountId 接受人的账户id
+	 *  realname  申请人的真实姓名
 	 *  money 金额
 	 */
 	public Notice getNoticeByShenqing(

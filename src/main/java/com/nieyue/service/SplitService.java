@@ -19,8 +19,13 @@ public interface SplitService {
 	public boolean updateSplit(Split split);
 	/** 装载拆分 */	
 	public Split loadSplit(Integer splitId);	
+	/** 推荐给上级 */	
+	public boolean recommendParent(Integer splitId,Integer accountId);	
+	/** 立即拆分 */	
+	public boolean immediatelySplit(Integer splitId,Integer accountId);	
 	/** 拆分总共数目 */	
 	public int countAll(
+			Integer recommendAccountId,
 			Integer accountId,
 			Integer buyAccountId,
 			Date applyDate,
@@ -31,6 +36,7 @@ public interface SplitService {
 			);
 	/** 分页拆分信息 */
 	public List<Split> browsePagingSplit(
+			Integer recommendAccountId,
 			Integer accountId,
 			Integer buyAccountId,
 			Date splitDate,

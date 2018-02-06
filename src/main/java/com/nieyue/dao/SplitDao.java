@@ -25,6 +25,7 @@ public interface SplitDao {
 	public Split loadSplit(Integer splitId);	
 	/** 拆分总共数目 */	
 	public int countAll(
+			@Param("recommendAccountId")Integer recommendAccountId,
 			@Param("accountId")Integer accountId,
 			@Param("buyAccountId")Integer buyAccountId,
 			@Param("applyDate")Date applyDate,
@@ -35,6 +36,7 @@ public interface SplitDao {
 			);	
 	/** 分页拆分信息 */
 	public List<Split> browsePagingSplit(
+			@Param("recommendAccountId")Integer recommendAccountId,
 			@Param("accountId")Integer accountId,
 			@Param("buyAccountId")Integer buyAccountId,
 			@Param("applyDate")Date applyDate,

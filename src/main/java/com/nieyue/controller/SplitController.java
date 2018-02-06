@@ -39,6 +39,7 @@ public class SplitController {
 	@Resource
 	private SplitService splitService;
 	
+	
 	/**
 	 * 拆分分页浏览
 	 * @param orderName 商品排序数据库字段
@@ -47,6 +48,7 @@ public class SplitController {
 	 */
 	@ApiOperation(value = "拆分列表", notes = "拆分分页浏览")
 	@ApiImplicitParams({
+	  @ApiImplicitParam(name="recommendAccountId",value="推荐人id",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="accountId",value="账户自身id,邀请码",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="buyAccountId",value="购买者id,外键",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="applyDate",value="申请时间",dataType="date-time", paramType = "query"),
@@ -61,6 +63,7 @@ public class SplitController {
 	  })
 	@RequestMapping(value = "/list", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList browsePagingSplit(
+			@RequestParam(value="recommendAccountId",required=false)Integer recommendAccountId,
 			@RequestParam(value="accountId",required=false)Integer accountId,
 			@RequestParam(value="buyAccountId",required=false)Integer buyAccountId,
 			@RequestParam(value="applyDate",required=false)Date applyDate,
@@ -73,12 +76,47 @@ public class SplitController {
 			@RequestParam(value="orderName",required=false,defaultValue="create_date") String orderName,
 			@RequestParam(value="orderWay",required=false,defaultValue="desc") String orderWay)  {
 			List<Split> list = new ArrayList<Split>();
-			list= splitService.browsePagingSplit(accountId,buyAccountId,applyDate,splitDate,createDate,updateDate,status,pageNum, pageSize, orderName, orderWay);
+			list= splitService.browsePagingSplit(recommendAccountId,accountId,buyAccountId,applyDate,splitDate,createDate,updateDate,status,pageNum, pageSize, orderName, orderWay);
 			if(list.size()>0){
 				return ResultUtil.getSlefSRSuccessList(list);
 			}else{
 				return ResultUtil.getSlefSRFailList(list);
 			}
+	}
+	/**
+	 * 立即拆分
+	 * @return
+	 */
+	@ApiOperation(value = "立即拆分", notes = "立即拆分")
+	@ApiImplicitParams({
+		@ApiImplicitParam(name="splitId",value="拆分id",dataType="int", paramType = "query",required=true),
+		@ApiImplicitParam(name="accountId",value="拆分人的id",dataType="int", paramType = "query",required=true)
+	})
+	@RequestMapping(value = "/immediatelySplit", method = {RequestMethod.GET,RequestMethod.POST})
+	public @ResponseBody StateResult immediatelySplit(
+			@RequestParam(value="splitId")Integer splitId,
+			@RequestParam(value="accountId")Integer accountId,
+			HttpSession session)  {
+		boolean b = splitService.immediatelySplit(splitId, accountId);
+		return ResultUtil.getSR(b);
+		
+	}
+	/**
+	 * 推荐给上级
+	 * @return
+	 */
+	@ApiOperation(value = "推荐给上级", notes = "推荐给上级")
+	@ApiImplicitParams({
+		  @ApiImplicitParam(name="splitId",value="拆分id",dataType="int", paramType = "query",required=true),
+		  @ApiImplicitParam(name="accountId",value="点击推荐上级的人的账户id",dataType="int", paramType = "query",required=true)
+		  })
+	@RequestMapping(value = "/recommendParent", method = {RequestMethod.GET,RequestMethod.POST})
+	public @ResponseBody StateResult recommendParent(
+			@RequestParam(value="splitId")Integer splitId,
+			@RequestParam(value="accountId")Integer accountId,
+			HttpSession session)  {
+		boolean b = splitService.recommendParent(splitId, accountId);
+		return ResultUtil.getSR(b);
 	}
 	/**
 	 * 拆分修改
@@ -106,7 +144,7 @@ public class SplitController {
 	 */
 	@ApiOperation(value = "拆分删除", notes = "拆分删除")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="SplitId",value="拆分ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="splitId",value="拆分ID",dataType="int", paramType = "query",required=true)
 		  })
 	@RequestMapping(value = "/delete", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResult delSplit(@RequestParam("splitId") Integer splitId,HttpSession session)  {
@@ -119,7 +157,8 @@ public class SplitController {
 	 */
 	@ApiOperation(value = "拆分数量", notes = "拆分数量查询")
 	@ApiImplicitParams({
-		@ApiImplicitParam(name="accountId",value="账户自身id,邀请码",dataType="int", paramType = "query"),
+		  @ApiImplicitParam(name="recommendAccountId",value="推荐人id",dataType="int", paramType = "query"),
+		  @ApiImplicitParam(name="accountId",value="账户自身id,邀请码",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="buyAccountId",value="购买者id,外键",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="applyDate",value="申请时间",dataType="date-time", paramType = "query"),
 		  @ApiImplicitParam(name="splitDate",value="拆分时间",dataType="date-time", paramType = "query"),
@@ -129,6 +168,7 @@ public class SplitController {
 		  })
 	@RequestMapping(value = "/count", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody int countAll(
+			@RequestParam(value="recommendAccountId",required=false)Integer recommendAccountId,
 			@RequestParam(value="accountId",required=false)Integer accountId,
 			@RequestParam(value="buyAccountId",required=false)Integer buyAccountId,
 			@RequestParam(value="applyDate",required=false)Date applyDate,
@@ -137,7 +177,7 @@ public class SplitController {
 			@RequestParam(value="updateDate",required=false)Date updateDate,
 			@RequestParam(value="status",required=false)Integer status,
 			HttpSession session)  {
-		int count = splitService.countAll(accountId,buyAccountId,applyDate,splitDate,createDate,updateDate,status);
+		int count = splitService.countAll(recommendAccountId,accountId,buyAccountId,applyDate,splitDate,createDate,updateDate,status);
 		return count;
 	}
 	/**

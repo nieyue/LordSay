@@ -79,5 +79,18 @@ public class AccountLevelBusiness {
 		AccountLevel al = accountLevelService.loadAccountLevel(businessId);
 		return al;
 	}
+	/**
+	 * 获取当前账户id的账户等级id
+	 * @return false 不包含，  true 包含
+	 */
+	public AccountLevel getAccountLevelByAccountId(Integer accountId){
+		List<AccountParent> apl = accountParentService.browsePagingAccountParent(null, null, accountId, null, null, null, null, 1, 1, "account_parent_id", "asc");
+		AccountLevel al=null;
+		if(apl.size()==1){
+			AccountParent ap = apl.get(0);//真实上级的
+		 al = accountLevelService.loadAccountLevel(ap.getAccountLevelId());
+		}
+		return al;
+	}
 	
 }

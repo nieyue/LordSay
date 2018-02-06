@@ -620,11 +620,15 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         		if( request.getRequestURI().indexOf("/split/delete")>-1 
         				|| request.getRequestURI().indexOf("/split/list")>-1 
         				|| request.getRequestURI().indexOf("/split/update")>-1 
+        				|| request.getRequestURI().indexOf("/split/recommendParent")>-1 
+        				|| request.getRequestURI().indexOf("/split/immediatelySplit")>-1 
         				|| request.getRequestURI().indexOf("/split/add")>-1
         				||method.getName().equals("loadSplit")){
         			//自身
         			if((
         					request.getRequestURI().indexOf("/split/list")>-1
+        					||request.getRequestURI().indexOf("/split/recommendParent")>-1
+        					||request.getRequestURI().indexOf("/split/immediatelySplit")>-1
         					||method.getName().equals("loadSplit")
         					)
         					&& request.getParameter("accountId").equals(sessionAccount.getAccountId().toString())){

@@ -70,6 +70,11 @@ public class Split implements Serializable{
 	@ApiModelProperty(value="拆分状态，默认0已申请，1已拆分，2已拒绝，3已退款，4已推荐给上级",example="拆分状态，默认0已申请，1已拆分，2已拒绝，3已退款，4已推荐给上级")
 	private Integer status;
 	/**
+	 * 推荐人ID
+	 */
+	@ApiModelProperty(value="推荐人ID",example="推荐人ID")
+	private Integer recommendAccountId;
+	/**
 	 * 账户自身id,邀请码
 	 */
 	@ApiModelProperty(value="账户自身id,邀请码",example="账户自身id,邀请码")
@@ -79,6 +84,11 @@ public class Split implements Serializable{
 	 */
 	@ApiModelProperty(value="购买者id,外键",example="购买者id,外键")
 	private Integer buyAccountId;
+	/**
+	 * 订单id,外键
+	 */
+	@ApiModelProperty(value="订单id,外键",example="订单id,外键")
+	private Integer orderId;
 	public Integer getSplitId() {
 		return splitId;
 	}
@@ -153,6 +163,18 @@ public class Split implements Serializable{
 	}
 	public void setRemark(String remark) {
 		this.remark = remark;
+	}
+	public Integer getRecommendAccountId() {
+		return recommendAccountId;
+	}
+	public void setRecommendAccountId(Integer recommendAccountId) {
+		this.recommendAccountId = recommendAccountId;
+	}
+	public Integer getOrderId() {
+		return orderId;
+	}
+	public void setOrderId(Integer orderId) {
+		this.orderId = orderId;
 	}
 	
 }
