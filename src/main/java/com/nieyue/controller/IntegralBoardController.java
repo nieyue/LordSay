@@ -2,7 +2,9 @@ package com.nieyue.controller;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.nieyue.bean.IntegralBoard;
 import com.nieyue.service.IntegralBoardService;
+import com.nieyue.util.DateUtil;
 import com.nieyue.util.ResultUtil;
 import com.nieyue.util.StateResult;
 import com.nieyue.util.StateResultList;
@@ -50,6 +53,7 @@ public class IntegralBoardController {
 	  @ApiImplicitParam(name="type",value="类型,1个人，2团队",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="timeType",value="时间类型,1周，2月，3总",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="accountId",value="账户Id",dataType="int", paramType = "query"),
+	  @ApiImplicitParam(name="recordTime",value="记录时间",dataType="date-time", paramType = "query"),
 	  @ApiImplicitParam(name="createDate",value="创建时间",dataType="date-time", paramType = "query"),
 	  @ApiImplicitParam(name="updateDate",value="更新时间",dataType="date-time", paramType = "query"),
 	  @ApiImplicitParam(name="pageNum",value="页头数位",dataType="int", paramType = "query",defaultValue="1"),
@@ -62,6 +66,7 @@ public class IntegralBoardController {
 			@RequestParam(value="type",required=false)Integer type,
 			@RequestParam(value="timeType",required=false)Integer timeType,
 			@RequestParam(value="accountId",required=false)Integer accountId,
+			@RequestParam(value="recordTime",required=false)Date recordTime,
 			@RequestParam(value="createDate",required=false)Date createDate,
 			@RequestParam(value="updateDate",required=false)Date updateDate,
 			@RequestParam(value="pageNum",defaultValue="1",required=false)int pageNum,
@@ -69,12 +74,58 @@ public class IntegralBoardController {
 			@RequestParam(value="orderName",required=false,defaultValue="update_date") String orderName,
 			@RequestParam(value="orderWay",required=false,defaultValue="desc") String orderWay)  {
 			List<IntegralBoard> list = new ArrayList<IntegralBoard>();
-			list= integralBoardService.browsePagingIntegralBoard(type,timeType,accountId,createDate,updateDate,pageNum, pageSize, orderName, orderWay);
+			list= integralBoardService.browsePagingIntegralBoard(type,timeType,accountId,recordTime,createDate,updateDate,pageNum, pageSize, orderName, orderWay);
 			if(list.size()>0){
 				return ResultUtil.getSlefSRSuccessList(list);
 			}else{
 				return ResultUtil.getSlefSRFailList(list);
 			}
+	}
+	/**
+	 * 根据积分排行榜
+	 * @return
+	 */
+	@ApiOperation(value = "根据积分排行榜", notes = "根据积分排行榜,返回值中map的integralBoardList：榜单列表.level:自身排名等级")
+	@ApiImplicitParams({
+		  @ApiImplicitParam(name="type",value="类型,1个人，2团队",dataType="int", paramType = "query",required=true),
+		  @ApiImplicitParam(name="timeType",value="时间类型,1周，2月，3总",dataType="int", paramType = "query",required=true),
+		  @ApiImplicitParam(name="accountId",value="账户Id",dataType="int", paramType = "query",required=true),
+		  @ApiImplicitParam(name="pageNum",value="页头数位",dataType="int", paramType = "query",defaultValue="1"),
+		  @ApiImplicitParam(name="pageSize",value="每页数目",dataType="int", paramType = "query",defaultValue="10"),
+		  @ApiImplicitParam(name="orderName",value="排序字段",dataType="string", paramType = "query",defaultValue="integral"),
+		  @ApiImplicitParam(name="orderWay",value="排序方式",dataType="string", paramType = "query",defaultValue="desc")
+		  })
+	@RequestMapping(value = "/ranking", method = {RequestMethod.GET,RequestMethod.POST})
+	public @ResponseBody StateResultList rankingIntegralBoard(
+			@RequestParam(value="type")Integer type,
+			@RequestParam(value="timeType")Integer timeType,
+			@RequestParam(value="accountId")Integer accountId,
+			@RequestParam(value="pageNum",defaultValue="1",required=false)int pageNum,
+			@RequestParam(value="pageSize",defaultValue="10",required=false) int pageSize,
+			@RequestParam(value="orderName",required=false,defaultValue="integral") String orderName,
+			@RequestParam(value="orderWay",required=false,defaultValue="desc") String orderWay,
+			HttpSession session)  {
+		List<Map<Object,Object>> list=new ArrayList<>();
+		Date recordTime=DateUtil.getStartTime(DateUtil.getFirstDayOfWeek());
+		if(type==1 && timeType==1){//个人积分榜 周
+			recordTime=DateUtil.getStartTime(DateUtil.getFirstDayOfWeek());
+		}else if(type==1 && timeType==2){//个人积分榜 月  
+			recordTime=DateUtil.getStartTime(DateUtil.getFirstDayOfMonth());
+		}else if(timeType==3){//个人或者团队积分榜 总榜 
+			recordTime=DateUtil.getStartTime(new Date("2018/1/1 0:0:0"));
+		}
+		//榜单
+		List<IntegralBoard> ibl = integralBoardService.browsePagingIntegralBoard(type, timeType, null, recordTime, null, null, pageNum, pageSize, orderName, orderWay);
+		if(ibl.size()>0){
+			
+		Map<Object,Object> map=new HashMap<Object,Object>();
+		map.put("integralBoardList",ibl);
+		Integer level = integralBoardService.getLevel(type, timeType, accountId, recordTime);
+		map.put("level",level);
+		list.add(map);
+		return ResultUtil.getSlefSRSuccessList(list);
+		}
+		return ResultUtil.getSlefSRFailList(list);
 	}
 	/**
 	 * 积分榜修改
@@ -118,6 +169,7 @@ public class IntegralBoardController {
 		  @ApiImplicitParam(name="type",value="类型,1个人，2团队",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="timeType",value="时间类型,1周，2月，3总",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="accountId",value="账户Id",dataType="int", paramType = "query"),
+		  @ApiImplicitParam(name="recordTime",value="记录时间",dataType="date-time", paramType = "query"),
 		  @ApiImplicitParam(name="createDate",value="创建时间",dataType="date-time", paramType = "query"),
 		  @ApiImplicitParam(name="updateDate",value="更新时间",dataType="date-time", paramType = "query")
 		  })
@@ -126,10 +178,11 @@ public class IntegralBoardController {
 			@RequestParam(value="type",required=false)Integer type,
 			@RequestParam(value="timeType",required=false)Integer timeType,
 			@RequestParam(value="accountId",required=false)Integer accountId,
+			@RequestParam(value="recordTime",required=false)Date recordTime,
 			@RequestParam(value="createDate",required=false)Date createDate,
 			@RequestParam(value="updateDate",required=false)Date updateDate,
 			HttpSession session)  {
-		int count = integralBoardService.countAll(type,timeType,accountId,createDate,updateDate);
+		int count = integralBoardService.countAll(type,timeType,accountId,recordTime,createDate,updateDate);
 		return count;
 	}
 	/**

@@ -47,7 +47,7 @@ public class VideoSetController {
 	 */
 	@ApiOperation(value = "视频集列表", notes = "视频集分页浏览")
 	@ApiImplicitParams({
-	  @ApiImplicitParam(name="name",value="名称",dataType="string", paramType = "query"),
+	  @ApiImplicitParam(name="name",value="查询名称，模糊查询",dataType="string", paramType = "query"),
 	  @ApiImplicitParam(name="recommend",value="推荐，默认0不推，1封推，2热门推荐，3专栏",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="cost",value="是否收费，0免费，1vip免费，2付费课程",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="videoSetCateId",value="视频集类型id,外键",dataType="int", paramType = "query"),
@@ -120,7 +120,7 @@ public class VideoSetController {
 	 */
 	@ApiOperation(value = "视频集数量", notes = "视频集数量查询")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="name",value="名称",dataType="string", paramType = "query"),
+		  @ApiImplicitParam(name="name",value="查询名称，模糊查询",dataType="string", paramType = "query"),
 		  @ApiImplicitParam(name="recommend",value="推荐，默认0不推，1封推，2热门推荐，3专栏",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="cost",value="是否收费，0免费，1vip免费，2付费课程",dataType="int", paramType = "query"),
 		  @ApiImplicitParam(name="videoSetCateId",value="视频集类型id,外键",dataType="int", paramType = "query"),

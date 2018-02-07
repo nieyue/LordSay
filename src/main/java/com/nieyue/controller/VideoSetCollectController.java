@@ -95,10 +95,12 @@ public class VideoSetCollectController {
 	 */
 	@ApiOperation(value = "视频集收藏删除", notes = "视频集收藏删除")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="VideoSetCollectId",value="视频集收藏ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="videoSetCollectId",value="视频集收藏ID",dataType="int", paramType = "query",required=true)
 		  })
 	@RequestMapping(value = "/delete", method = {RequestMethod.GET,RequestMethod.POST})
-	public @ResponseBody StateResult delVideoSetCollect(@RequestParam("videoSetCollectId") Integer videoSetCollectId,HttpSession session)  {
+	public @ResponseBody StateResult delVideoSetCollect(
+			@RequestParam("videoSetCollectId") Integer videoSetCollectId,
+			HttpSession session)  {
 		boolean dm = videoSetCollectService.delVideoSetCollect(videoSetCollectId);
 		return ResultUtil.getSR(dm);
 	}

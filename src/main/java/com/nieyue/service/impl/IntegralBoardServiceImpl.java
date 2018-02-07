@@ -49,9 +49,10 @@ public class IntegralBoardServiceImpl implements IntegralBoardService{
 			Integer type,
 			Integer timeType,
 			Integer accountId,
+			Date  recordTime,
 			Date createDate,
 			Date updateDate) {
-		int c = integralBoardDao.countAll(type,timeType,accountId,createDate,updateDate);
+		int c = integralBoardDao.countAll(type,timeType,accountId, recordTime,createDate,updateDate);
 		return c;
 	}
 
@@ -60,6 +61,7 @@ public class IntegralBoardServiceImpl implements IntegralBoardService{
 			Integer type,
 			Integer timeType,
 			Integer accountId,
+			Date recordTime,
 			Date createDate,
 			Date updateDate,
 			int pageNum, int pageSize,
@@ -70,8 +72,18 @@ public class IntegralBoardServiceImpl implements IntegralBoardService{
 		if(pageSize<1){
 			pageSize=0;//没有数据
 		}
-		List<IntegralBoard> l = integralBoardDao.browsePagingIntegralBoard(type,timeType,accountId,createDate,updateDate,pageNum-1, pageSize, orderName, orderWay);
+		List<IntegralBoard> l = integralBoardDao.browsePagingIntegralBoard(type,timeType,accountId,recordTime,createDate,updateDate,pageNum-1, pageSize, orderName, orderWay);
 		return l;
+	}
+	@Override
+	public boolean saveOrUpdateIntegralBoard(IntegralBoard integralBoard, Double integral) {
+		boolean b = integralBoardDao.saveOrUpdateIntegralBoard(integralBoard, integral);
+		return b;
+	}
+	@Override
+	public Integer getLevel(Integer type, Integer timeType, Integer accountId, Date recordTime) {
+		Integer ib = integralBoardDao.getLevel(type, timeType, accountId, recordTime);
+		return ib;
 	}
 
 	

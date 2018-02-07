@@ -72,6 +72,17 @@ public class DateUtil {
 		long nd = date.getTime()/1000*1000;
 		return new Date(nd);
 	}  
+	 /**
+	  * 获取指定日期开始时间
+	  * @return
+	  */
+	 public static Date getStartTime(Date date){  
+		 date.setHours(0);
+		 date.setMinutes(0);
+		 date.setSeconds(0);
+		 long nd = date.getTime()/1000*1000;
+		 return new Date(nd);
+	 }  
 	  
 	/**
 	 * 获取当日结束时间
@@ -362,6 +373,30 @@ public class DateUtil {
      return getLastDayOfWeek(cal.getTime()); 
      }
      /** 
+      * 取得当前日期所在月的第一天 
+      * 
+      * @param date 
+      * @return 
+      */ 
+      public static Date getFirstDayOfMonth() { 
+      Calendar c = new GregorianCalendar(); 
+      c.setTime(new Date()); 
+      c.set(Calendar.DAY_OF_MONTH,1); 
+      return c.getTime (); 
+      }
+      /** 
+       * 取得指定日期所在月的第一天 
+       * 
+       * @param date 
+       * @return 
+       */ 
+      public static Date getFirstDayOfMonth(Date date) { 
+    	  Calendar c = new GregorianCalendar(); 
+    	  c.setTime(date); 
+    	  c.set(Calendar.DAY_OF_MONTH,1); 
+    	  return c.getTime (); 
+      }
+     /** 
      * 取得指定日期所在周的第一天 
      * 
      * @param date 
@@ -457,5 +492,6 @@ public class DateUtil {
 		System.out.println(JSONObject.fromObject(payjson).get("appid"));
 		System.err.println(getFirstDayOfWeek(new Date()).toLocaleString());
 		System.err.println(getFirstDayOfWeek(new Date()).getDay());
+		System.err.println(getStartTime(getFirstDayOfMonth(new Date("2018/01/01 00:00:00"))).toLocaleString());
     }  
 }

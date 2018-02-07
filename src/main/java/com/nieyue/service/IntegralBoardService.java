@@ -17,13 +17,22 @@ public interface IntegralBoardService {
 	public boolean delIntegralBoard(Integer integralBoardId) ;
 	/** 更新积分榜*/	
 	public boolean updateIntegralBoard(IntegralBoard integralBoard);
+	/** 更新或者增加积分榜*/	
+	public boolean saveOrUpdateIntegralBoard(IntegralBoard integralBoard,Double integral);
 	/** 装载积分榜 */	
-	public IntegralBoard loadIntegralBoard(Integer integralBoardId);	
+	public IntegralBoard loadIntegralBoard(Integer integralBoardId);
+	/** 或者账户排行等级 */	
+	public Integer getLevel(
+			Integer type,
+			Integer timeType,
+			Integer accountId,
+			Date recordTime);	
 	/** 积分榜总共数目 */	
 	public int countAll(
 			Integer type,
 			Integer timeType,
 			Integer accountId,
+			Date recordTime,
 			Date createDate,
 			Date updateDate
 			);
@@ -32,6 +41,7 @@ public interface IntegralBoardService {
 			Integer type,
 			Integer timeType,
 			Integer accountId,
+			Date recordTime,
 			Date createDate,
 			Date updateDate,
 			int pageNum,

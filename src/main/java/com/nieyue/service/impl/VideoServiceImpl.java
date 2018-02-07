@@ -9,16 +9,22 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.nieyue.bean.Account;
+import com.nieyue.bean.AccountParent;
 import com.nieyue.bean.Integral;
+import com.nieyue.bean.IntegralBoard;
 import com.nieyue.bean.IntegralDetail;
 import com.nieyue.bean.Video;
 import com.nieyue.bean.VideoSet;
 import com.nieyue.dao.VideoDao;
+import com.nieyue.service.AccountParentService;
+import com.nieyue.service.AccountService;
 import com.nieyue.service.IntegralBoardService;
 import com.nieyue.service.IntegralDetailService;
 import com.nieyue.service.IntegralService;
 import com.nieyue.service.VideoService;
 import com.nieyue.service.VideoSetService;
+import com.nieyue.util.DateUtil;
 @Service
 public class VideoServiceImpl implements VideoService{
 	@Resource
@@ -31,6 +37,10 @@ public class VideoServiceImpl implements VideoService{
 	IntegralDetailService integralDetailService;
 	@Resource
 	IntegralBoardService integralBoardService;
+	@Resource
+	AccountParentService accountParentService;
+	@Resource
+	AccountService accountService;
 	@Transactional(propagation=Propagation.REQUIRED)
 	@Override
 	public boolean addVideo(Video video) {
@@ -128,19 +138,87 @@ public class VideoServiceImpl implements VideoService{
 		}
 		
 		if(b==true &&video.getVideoSetId()!=null){
+			Double iiii=1.0;//获得积分
 			//积分增加
 			List<Integral> integrall = integralService.browsePagingIntegral(accountId, null, null, 1, 1, "integral_id", "asc");
 			Integral integral = integrall.get(0);
-			integral.setIntegral(integral.getIntegral()+1.0);
+			integral.setIntegral(integral.getIntegral()+iiii);
 			b=integralService.updateIntegral(integral);
 			//积分详情增加
 			IntegralDetail integralDetail=new IntegralDetail();
 			integralDetail.setAccountId(accountId);
-			integralDetail.setIntegral(1.0);
+			integralDetail.setIntegral(iiii);
 			integralDetail.setType(1);//获得
 			b=integralDetailService.addIntegralDetail(integralDetail);
-			//个人积分榜 周
-			//integralBoardService.br
+			//获取个人信息
+			Account a = accountService.loadAccount(accountId);
+			//个人积分榜 周    格式（每周第一天）：2018-2-5 0:00:00
+			IntegralBoard zib=new IntegralBoard();
+			zib.setType(1);//1是个人
+			zib.setTimeType(1);//1是周
+			zib.setRealname(a.getRealname());
+			zib.setIcon(a.getIcon());
+			//zib.setIntegral(iiii);
+			zib.setRecordTime(DateUtil.getStartTime(DateUtil.getFirstDayOfWeek()));
+			zib.setCreateDate(new Date());
+			zib.setUpdateDate(new Date());
+			zib.setAccountId(accountId);
+			b=integralBoardService.saveOrUpdateIntegralBoard(zib, iiii);
+			
+			//个人积分榜 月  格式（每月第一天）：2018-2-1 0:00:00
+			IntegralBoard yib=new IntegralBoard();
+			yib.setType(1);//1是个人
+			yib.setTimeType(2);//2是月
+			yib.setRealname(a.getRealname());
+			yib.setIcon(a.getIcon());
+			//yib.setIntegral(iiii);
+			yib.setRecordTime(DateUtil.getStartTime(DateUtil.getFirstDayOfMonth()));
+			yib.setCreateDate(new Date());
+			yib.setUpdateDate(new Date());
+			yib.setAccountId(accountId);
+			b=integralBoardService.saveOrUpdateIntegralBoard(yib, iiii);
+			
+			//个人积分榜 总榜 记录时间为2018-1-1 0:0:0
+			IntegralBoard gzib=new IntegralBoard();
+			gzib.setType(1);//1是个人
+			gzib.setTimeType(3);//3是总
+			gzib.setRealname(a.getRealname());
+			gzib.setIcon(a.getIcon());
+			//gzib.setIntegral(iiii);
+			gzib.setRecordTime(DateUtil.getStartTime(new Date("2018/1/1 0:0:0")));
+			gzib.setCreateDate(new Date());
+			gzib.setUpdateDate(new Date());
+			gzib.setAccountId(accountId);
+			b=integralBoardService.saveOrUpdateIntegralBoard(gzib, iiii);
+			
+			//团队总榜，只记录自身和直接下级的，记录时间为2018-1-1 0:0:0
+			//自身的增加，
+			IntegralBoard tzib=new IntegralBoard();
+			tzib.setType(2);//1是团队
+			tzib.setTimeType(2);//3是总
+			tzib.setRealname(a.getRealname());
+			tzib.setIcon(a.getIcon());
+			//tzib.setIntegral(iiii);
+			tzib.setRecordTime(DateUtil.getStartTime(new Date("2018/1/1 0:0:0")));
+			tzib.setCreateDate(new Date());
+			tzib.setUpdateDate(new Date());
+			tzib.setAccountId(accountId);
+			b=integralBoardService.saveOrUpdateIntegralBoard(tzib, iiii);
+			//上级的增加
+			List<AccountParent> accountParentl = accountParentService.browsePagingAccountParent(null, null, accountId, null, null, null, null, 1, 1, "account_parent_id", "asc");
+			AccountParent accountParent = accountParentl.get(0);
+			Account master= accountService.loadAccount(accountParent.getMasterId());//直接上级有积分
+			IntegralBoard stzib=new IntegralBoard();
+			stzib.setType(2);//1是团队
+			stzib.setTimeType(2);//3是总
+			stzib.setRealname(a.getRealname());
+			stzib.setIcon(a.getIcon());
+			//tzib.setIntegral(iiii);
+			stzib.setRecordTime(DateUtil.getStartTime(new Date("2018/1/1 0:0:0")));
+			stzib.setCreateDate(new Date());
+			stzib.setUpdateDate(new Date());
+			stzib.setAccountId(master.getAccountId());
+			b=integralBoardService.saveOrUpdateIntegralBoard(stzib, iiii);
 		}
 		return b;
 	}

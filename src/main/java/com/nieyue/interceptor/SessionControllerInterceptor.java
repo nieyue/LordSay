@@ -89,6 +89,7 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         		||request.getRequestURI().indexOf("integralDetail/count")>-1
         		//积分榜
         		||request.getRequestURI().indexOf("integralBoard/count")>-1
+        		||request.getRequestURI().indexOf("integralBoard/ranking")>-1
         		//视频集类型
         		||request.getRequestURI().indexOf("videoSetCate/count")>-1
         		||request.getRequestURI().indexOf("videoSetCate/list")>-1
@@ -418,6 +419,7 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         			//自身
         			if((
         					request.getRequestURI().indexOf("/video/list")>-1
+        					||request.getRequestURI().indexOf("/video/loadVideoSet")>-1
         					||request.getRequestURI().indexOf("/video/watch")>-1
         					||method.getName().equals("loadVideo")
         					)

@@ -16,7 +16,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.nieyue.bean.Video;
+import com.nieyue.bean.VideoSet;
 import com.nieyue.service.VideoService;
+import com.nieyue.service.VideoSetService;
 import com.nieyue.util.ResultUtil;
 import com.nieyue.util.StateResult;
 import com.nieyue.util.StateResultList;
@@ -38,6 +40,8 @@ import io.swagger.annotations.ApiOperation;
 public class VideoController {
 	@Resource
 	private VideoService videoService;
+	@Resource
+	private VideoSetService videoSetService;
 	
 	/**
 	 * 视频分页浏览
@@ -146,6 +150,30 @@ public class VideoController {
 			}else{
 				return ResultUtil.getSlefSRFailList(list);
 			}
+	}
+	/**
+	 * 根据视频id获取视频集
+	 * @return
+	 */
+			@ApiOperation(value = "根据视频id获取视频集", notes = "根据视频id获取视频集")
+	@ApiImplicitParams({
+		@ApiImplicitParam(name="videoId",value="视频ID",dataType="int", paramType = "query",required=true),
+		@ApiImplicitParam(name="accountId",value="账户ID",dataType="int", paramType = "query",required=true)
+	})
+	@RequestMapping(value = "/loadVideoSet", method = {RequestMethod.GET,RequestMethod.POST})
+	public  StateResultList loadVideoSetByVideoId(
+			@RequestParam(value="videoId")Integer videoId,
+			@RequestParam(value="accountId")Integer accountId,
+			HttpSession session)  {
+		List<VideoSet> list = new ArrayList<VideoSet>();
+		Video video = videoService.loadVideo(videoId);
+		if(video!=null &&!video.equals("")){
+			VideoSet videoSet = videoSetService.loadVideoSet(video.getVideoSetId());
+			list.add(videoSet);
+			return ResultUtil.getSlefSRSuccessList(list);
+		}else{
+			return ResultUtil.getSlefSRFailList(list);
+		}
 	}
 	/**
 	 * 观看视频

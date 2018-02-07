@@ -79,7 +79,7 @@ public class VideoSetSearchController {
 	 */
 	@ApiOperation(value = "视频集搜索 查询", notes = "视频集搜索查询")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="name",value="次数",dataType="string", paramType = "query"),
+		  @ApiImplicitParam(name="name",value="查询名称，模糊查询",dataType="string", paramType = "query"),
 		  })
 	@RequestMapping(value = "/search", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList searchVideoSetSearch(
