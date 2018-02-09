@@ -169,7 +169,7 @@ public class VideoSetSearchController {
 	 */
 	@ApiOperation(value = "视频集搜索单个加载", notes = "视频集搜索单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="videoSetSearchId",value="视频集搜索ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="videoSetSearchId",value="视频集搜索ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{videoSetSearchId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadVideoSetSearch(@PathVariable("videoSetSearchId") Integer videoSetSearchId,HttpSession session)  {

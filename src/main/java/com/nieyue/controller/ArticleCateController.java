@@ -114,7 +114,7 @@ public class ArticleCateController {
 	 */
 	@ApiOperation(value = "文章类型单个加载", notes = "文章类型单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="articleCateId",value="文章类型ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="articleCateId",value="文章类型ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{articleCateId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadArticleCate(@PathVariable("articleCateId") Integer articleCateId,HttpSession session)  {

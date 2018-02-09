@@ -114,7 +114,7 @@ public class RoleController {
 	 */
 	@ApiOperation(value = "角色单个加载", notes = "角色单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="roleId",value="角色ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="roleId",value="角色ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{roleId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadRole(@PathVariable("roleId") Integer roleId,HttpSession session)  {

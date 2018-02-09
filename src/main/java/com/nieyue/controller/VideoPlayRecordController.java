@@ -143,7 +143,7 @@ public class VideoPlayRecordController {
 	 */
 	@ApiOperation(value = "视频播放记录单个加载", notes = "视频播放记录单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="videoPlayRecordId",value="视频播放记录ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="videoPlayRecordId",value="视频播放记录ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{videoPlayRecordId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadVideoPlayRecord(@PathVariable("videoPlayRecordId") Integer videoPlayRecordId,HttpSession session)  {

@@ -127,7 +127,7 @@ public class VideoSetCollectController {
 	 */
 	@ApiOperation(value = "视频集收藏单个加载", notes = "视频集收藏单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="videoSetCollectId",value="视频集收藏ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="videoSetCollectId",value="视频集收藏ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{videoSetCollectId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadVideoSetCollect(@PathVariable("videoSetCollectId") Integer videoSetCollectId,HttpSession session)  {

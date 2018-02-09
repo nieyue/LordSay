@@ -130,7 +130,7 @@ public class IntegralController {
 	 */
 	@ApiOperation(value = "积分单个加载", notes = "积分单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="integralId",value="积分ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="integralId",value="积分ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{integralId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadIntegral(@PathVariable("integralId") Integer integralId,HttpSession session)  {

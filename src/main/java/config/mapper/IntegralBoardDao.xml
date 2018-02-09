@@ -40,7 +40,7 @@
     AND   
     time_type = #{IntegralBoard.timeType}
     AND   
-    acount_id = #{IntegralBoard.acountId}
+    account_id = #{IntegralBoard.accountId}
     AND   
     record_time = #{IntegralBoard.recordTime} 
   </selectKey>  
@@ -48,13 +48,13 @@
     update integral_board_tb   
     set 
     	integral=integral+ #{integral},
-    	update_date=#{IntegralBoard.updateDate},
-    where 
+    	update_date=#{IntegralBoard.updateDate}
+    WHERE 
     type = #{IntegralBoard.type}
     AND   
     time_type = #{IntegralBoard.timeType}
     AND   
-    acount_id = #{IntegralBoard.acountId}
+    account_id = #{IntegralBoard.accountId}
     AND   
     record_time = #{IntegralBoard.recordTime} 
   </if>  
@@ -70,7 +70,7 @@
    		 record_time,
    		 create_date,
    		 update_date,
-   		 acount_id
+   		 account_id
    		 )
    VALUES
     	 (
@@ -82,7 +82,7 @@
     	 #{IntegralBoard.recordTime},
     	 #{IntegralBoard.createDate},
     	 #{IntegralBoard.updateDate},
-    	 #{IntegralBoard.acountId}
+    	 #{IntegralBoard.accountId}
     	 )
   </if>  
 </insert> 

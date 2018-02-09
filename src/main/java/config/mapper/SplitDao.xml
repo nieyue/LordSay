@@ -8,7 +8,9 @@
    INSERT IGNORE INTO
    		  split_tb 
    		 (
-   		 realname,
+   		 nickname,
+   		 phone,
+   		 contact_phone,
    		 remark,
    		 number,
    		 price,
@@ -28,7 +30,9 @@
    		 )
    VALUES
     	 (
-    	 #{realname},
+    	 #{nickname},
+    	 #{phone},
+    	 #{contactPhone},
     	 #{remark},
     	 #{number},
     	 #{price},
@@ -52,8 +56,14 @@
     UPDATE 
     	split_tb 
     <set>
-    	<if test="realname!=null">
-    	realname=#{realname},
+    	<if test="nickname!=null">
+    	nickname=#{nickname},
+    	</if>
+    	<if test="phone!=null">
+    	phone=#{phone},
+    	</if>
+    	<if test="contactPhone!=null">
+    	contact_phone=#{contactPhone},
     	</if>
     	<if test="remark!=null">
     	remark=#{remark},
@@ -105,7 +115,9 @@
 <select id="loadSplit" parameterType="Integer" resultType="Split" >
 SELECT 
 		 split_id,
-	 	 realname,
+	 	 nickname,
+   		 phone,
+   		 contact_phone,
 	 	 remark,
    		 number,
    		 price,
@@ -126,7 +138,9 @@ WHERE split_id=#{splitId}
 <select id="browsePagingSplit" resultType="Split">  
         SELECT
 	     split_id,
-	 	 realname,
+	 	 nickname,
+   		 phone,
+   		 contact_phone,
 	 	 remark,
    		 number,
    		 price,

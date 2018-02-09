@@ -37,9 +37,9 @@ public class Video implements Serializable {
 	@ApiModelProperty(value="时长",example="时长")
 	private String duration;
 	/**
-	 * 容量，单位byte
+	 * 容量，单位MB
 	 */
-	@ApiModelProperty(value="容量，单位byte",example="容量，单位byte")
+	@ApiModelProperty(value="容量，单位MB",example="容量，单位MB")
 	private String size;
 	/**
 	 * url链接

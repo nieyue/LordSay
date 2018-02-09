@@ -9,13 +9,19 @@
    		  video_set_cate_tb 
    		 (
    		 name,
+   		 summary,
    		 icon,
+   		 img_address,
+   		 play_number,
    		 update_date
    		 )
    VALUES
     	 (
     	 #{name},
+    	 #{summary},
     	 #{icon},
+    	 #{imgAddress},
+    	 #{playNumber},
     	 #{updateDate}
     	 )  
 </insert>  
@@ -25,7 +31,10 @@
     	video_set_cate_tb 
     SET 
     	name=#{name},
+    	summary=#{summary},
     	icon=#{icon},
+    	img_address=#{imgAddress},
+    	play_number=#{playNumber},
     	update_date=#{updateDate}
     WHERE
     	 video_set_cate_id=#{videoSetCateId} 
@@ -41,7 +50,10 @@
 SELECT 
 		video_set_cate_id,
 	 	name,
+	 	summary,
 	 	icon,
+	 	img_address,
+	 	play_number,
     	update_date
 FROM video_set_cate_tb 
 WHERE video_set_cate_id=#{videoSetCateId}
@@ -52,7 +64,10 @@ WHERE video_set_cate_id=#{videoSetCateId}
         SELECT
 	    video_set_cate_id,
 	 	name,
+	 	summary,
 	 	icon,
+	 	img_address,
+	 	play_number,
     	update_date
 	FROM video_set_cate_tb
 	WHERE ${orderName} 

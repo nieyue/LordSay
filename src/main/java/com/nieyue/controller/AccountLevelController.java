@@ -144,7 +144,7 @@ public class AccountLevelController {
 	 */
 	@ApiOperation(value = "等级单个加载", notes = "等级单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="accountLevelId",value="等级ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="accountLevelId",value="等级ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{accountLevelId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadAccountLevel(@PathVariable("accountLevelId") Integer accountLevelId,HttpSession session)  {

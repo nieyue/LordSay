@@ -161,7 +161,7 @@ public class AccountParentController {
 	 */
 	@ApiOperation(value = "账户上级单个加载", notes = "账户上级单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="accountParentId",value="账户上级ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="accountParentId",value="账户上级ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{accountParentId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadAccountParent(@PathVariable("accountParentId") Integer accountParentId,HttpSession session)  {

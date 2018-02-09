@@ -1,5 +1,6 @@
 package com.nieyue.controller;
 
+import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -214,6 +215,7 @@ public class AccountController {
 	@ApiImplicitParams({
 		@ApiImplicitParam(name="accountId",value="账户ID",dataType="int", paramType = "query",required=true),
 		@ApiImplicitParam(name="icon",value="头像",dataType="string", paramType = "query"),
+		@ApiImplicitParam(name="contactPhone",value="联系手机号",dataType="string", paramType = "query"),
 		@ApiImplicitParam(name="nickname",value="昵称",dataType="string", paramType = "query"),
 		@ApiImplicitParam(name="sex",value="性别,默认为0未知，为1男性，为2女性",dataType="int", paramType = "query"),
 		@ApiImplicitParam(name="age",value="年龄",dataType="int", paramType = "query"),
@@ -228,6 +230,7 @@ public class AccountController {
 	public @ResponseBody StateResultList updateInfoAccount(
 			@RequestParam(value="accountId",required=false)Integer accountId,
 			@RequestParam(value="icon",required=false)String icon,
+			@RequestParam(value="contactPhone",required=false)String contactPhone,
 			@RequestParam(value="nickname",required=false)String nickname,
 			@RequestParam(value="sex",required=false)Integer sex,
 			@RequestParam(value="age",required=false)Integer age,
@@ -245,6 +248,9 @@ public class AccountController {
 		}
 		if(icon!=null){
 			newa.setIcon(icon);			
+		}
+		if(contactPhone!=null){
+			newa.setContactPhone(contactPhone);			
 		}
 		if(nickname!=null){
 			newa.setNickname(nickname);			
@@ -399,7 +405,7 @@ public class AccountController {
 	 */
 	@ApiOperation(value = "账户单个加载", notes = "账户单个加载")
 	@ApiImplicitParams({
-	  @ApiImplicitParam(name="accountId",value="账户ID",dataType="int", paramType = "query",required=true)
+	  @ApiImplicitParam(name="accountId",value="账户ID",dataType="int", paramType="path",required=true)
 	 	  })
 	@RequestMapping(value = "/{accountId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList loadAccount(@PathVariable("accountId") Integer accountId,HttpSession session)  {
@@ -513,12 +519,12 @@ public class AccountController {
 		
 		session.setAttribute("validCode", userValidCode.toString());
 		 
-		/*	try {
+			try {
 				yunSms.sendMsg(adminName,templateCode,String.valueOf(userValidCode));
 			} catch (IOException e) {
 				return ResultUtil.getSlefSRFailList(l);
-			}*/
-		 l.add(userValidCode.toString());			
+			}
+		 //l.add(userValidCode.toString());			
 		
 		
 		 return ResultUtil.getSlefSRSuccessList(l);
@@ -652,6 +658,7 @@ public class AccountController {
 					account.setMasterId(masterId);
 				}
 					account.setPhone(adminName);
+					account.setContactPhone(adminName);
 					//Account.setNickname(adminName);
 					account.setPassword(MyDESutil.getMD5(password));
 					account.setCreateDate(new Date());

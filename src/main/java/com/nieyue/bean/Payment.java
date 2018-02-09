@@ -3,15 +3,11 @@ package com.nieyue.bean;
 import java.io.Serializable;
 import java.util.Date;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
 /**
  * 支付
  * @author yy
  *
  */
-@ApiModel(value="支付",description="支付")
 public class Payment implements Serializable{
 
 	/**
@@ -21,96 +17,62 @@ public class Payment implements Serializable{
 	/**
 	 * 支付id
 	 */
-	@ApiModelProperty(value="支付id",example="支付id")
 	private Integer paymentId;
 	/**
 	 * 主题
 	 */
-	@ApiModelProperty(value="主题",example="主题")
 	private String subject;
 	/**
 	 * 内容
 	 */
-	@ApiModelProperty(value="内容",example="内容")
 	private String body;
 	/**
 	 * 异步通知
 	 */
-	@ApiModelProperty(value="异步通知",example="异步通知")
 	private String notifyUrl;
 	/**
-	 * 支付类型，默认1支付宝支付，2微信支付，3银联支付
+	 * 支付类型，默认1支付宝支付，2微信支付，3银联支付,4ios内购
 	 */
-	@ApiModelProperty(value="支付类型，默认1支付宝支付，2微信支付，3银联支付",example="支付类型，默认1支付宝支付，2微信支付，3银联支付")
 	private Integer type;
 	/**
 	 * 平台订单号
 	 */
-	@ApiModelProperty(value="平台订单号",example="平台订单号")
 	private String  orderNumber;
 	/**
 	 * 金额
 	 */
-	@ApiModelProperty(value="金额",example="金额")
 	private Double money;
 	/**
-	 *状态，1成功，2失败
+	 *状态，1已下单，2成功，3失败,4异常
 	 */
-	@ApiModelProperty(value="状态，1成功，2失败",example="状态，1成功，2失败")
 	private Integer status;
 	/**
-	 *业务类型默认1书城订单支付，2商城支付
+	 *业务类型默认1
 	 */
-	@ApiModelProperty(value="业务类型默认1书城订单支付，2商城支付",example="业务类型默认1书城订单支付，2商城支付")
 	private Integer businessType;
 	/**
 	 *业务Id
 	 */
-	@ApiModelProperty(value="业务Id",example="业务Id")
 	private Integer businessId;
 	/**
-	 *业务回调
+	 *业务回调 ，如果是微服务就存带参数url，本项目直接存json参数
 	 */
-	@ApiModelProperty(value="业务回调",example="业务回调")
 	private String businessNotifyUrl;
 	/**
 	 *账户id,外键
 	 */
-	@ApiModelProperty(value="账户id,外键",example="账户id,外键")
 	private Integer accountId;
 	/**
 	 * 支付创建时间
 	 */
-	@ApiModelProperty(value="支付创建时间",example="支付创建时间")
 	private Date createDate;
 	/**
 	 * 更新时间
 	 */
-	@ApiModelProperty(value="更新时间",example="更新时间")
 	private Date updateDate;
 
 	public Payment() {
 		super();
-	}
-
-	public Payment(Integer paymentId, String subject, String body, String notifyUrl, Integer type, String orderNumber,
-			Double money, Integer status, Integer businessType, Integer businessId, String businessNotifyUrl,
-			Integer accountId, Date createDate, Date updateDate) {
-		super();
-		this.paymentId = paymentId;
-		this.subject = subject;
-		this.body = body;
-		this.notifyUrl = notifyUrl;
-		this.type = type;
-		this.orderNumber = orderNumber;
-		this.money = money;
-		this.status = status;
-		this.businessType = businessType;
-		this.businessId = businessId;
-		this.businessNotifyUrl = businessNotifyUrl;
-		this.accountId = accountId;
-		this.createDate = createDate;
-		this.updateDate = updateDate;
 	}
 
 

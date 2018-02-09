@@ -191,7 +191,7 @@ public class IntegralBoardController {
 	 */
 	@ApiOperation(value = "积分榜单个加载", notes = "积分榜单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="integralBoardId",value="积分榜ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="integralBoardId",value="积分榜ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{integralBoardId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadIntegralBoard(@PathVariable("integralBoardId") Integer integralBoardId,HttpSession session)  {

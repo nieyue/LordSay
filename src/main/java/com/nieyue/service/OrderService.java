@@ -3,8 +3,6 @@ package com.nieyue.service;
 import java.util.Date;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-
 import com.nieyue.bean.Order;
 
 /**
@@ -22,25 +20,25 @@ public interface OrderService {
 	/** 装载订单 */	
 	public Order loadOrder(Integer orderId);
 	/** 余额支付订单请求 */	
-	public Order balancePaymentOrder(
+	public boolean balancePaymentOrder(
 			Integer type,
 			Integer payType,
 			Integer accountId,
-			Integer businessId
+			Integer businessId,
+			String nickname,
+			String phone,
+			String contactPhone
 			);
 	/** 第三方支付订单请求 */	
 	public String thirdPartyPaymentOrder(
 			Integer type,
 			Integer payType,
 			Integer accountId,
-			Integer businessId
+			Integer businessId,
+			String nickname,
+			String phone,
+			String contactPhone
 			);
-	/** 支付宝回调 */	
-	public String alipayNotifyUrl(HttpServletRequest request);
-	/** 微信回调 */	
-	public String wechatpayNotifyUrl(HttpServletRequest request);
-	/** ios内购回调 */	
-	public String iospayNotifyUrl(HttpServletRequest request);
 	/** 订单总共数目 */	
 	public int countAll(
 			Integer type,

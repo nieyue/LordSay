@@ -138,7 +138,7 @@ public class ArticleController {
 	 */
 	@ApiOperation(value = "文章单个加载", notes = "文章单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="articleId",value="文章ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="articleId",value="文章ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{articleId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadArticle(@PathVariable("articleId") Integer articleId,HttpSession session)  {

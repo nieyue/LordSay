@@ -114,7 +114,7 @@ public class VideoSetCateController {
 	 */
 	@ApiOperation(value = "视频集类型单个加载", notes = "视频集类型单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="videoSetCateId",value="视频集类型ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="videoSetCateId",value="视频集类型ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{videoSetCateId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadVideoSetCate(@PathVariable("videoSetCateId") Integer videoSetCateId,HttpSession session)  {

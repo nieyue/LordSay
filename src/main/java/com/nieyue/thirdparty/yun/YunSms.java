@@ -11,7 +11,6 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
-import com.aliyuncs.exceptions.ClientException;
 
 /**
  * 云短信网短信
@@ -87,9 +86,4 @@ public class YunSms {
     			return inputline;
      }
 
-    public static void main(String[] args) throws ClientException, InterruptedException {
-
-       
-
-    }
 }

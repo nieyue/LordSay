@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.nieyue.bean.Account;
 import com.nieyue.bean.AccountLevel;
 import com.nieyue.bean.AccountParent;
 import com.nieyue.bean.Finance;
@@ -24,6 +25,7 @@ import com.nieyue.business.FinanceBusiness;
 import com.nieyue.dao.SplitDao;
 import com.nieyue.exception.PayException;
 import com.nieyue.service.AccountParentService;
+import com.nieyue.service.AccountService;
 import com.nieyue.service.FinanceRecordService;
 import com.nieyue.service.FinanceService;
 import com.nieyue.service.OrderService;
@@ -176,7 +178,9 @@ public class SplitServiceImpl implements SplitService{
 			nsplit.setCreateDate(new Date());
 			nsplit.setNumber(split.getNumber());
 			nsplit.setPrice(split.getPrice());
-			nsplit.setRealname(split.getRealname());
+			nsplit.setNickname(split.getNickname());
+			nsplit.setPhone(split.getPhone());
+			nsplit.setContactPhone(split.getContactPhone());
 			nsplit.setSplitDate(null);
 			nsplit.setStatus(0);//0是已申请
 			nsplit.setUpdateDate(new Date());
@@ -260,7 +264,12 @@ public class SplitServiceImpl implements SplitService{
 		b=vipService.updateVip(vip);
 		if(!b){
 			throw new PayException();
-		}			
+		}
+		//账户上级的等级升高
+		List<AccountParent> buyapl = accountParentService.browsePagingAccountParent(null, null, split.getBuyAccountId(), null, null, null, null, 1, 1, "account_parent_id", "asc");
+		AccountParent buyap = buyapl.get(0);
+		buyap.setAccountLevelId(accountLevel.getAccountLevelId());
+		buyap.setName(accountLevel.getName());
 		//vipgroup增加记录
 		VipGrowthRecord vipGrowthRecord=new VipGrowthRecord();
 		vipGrowthRecord.setName(accountLevel.getName());
@@ -279,6 +288,7 @@ public class SplitServiceImpl implements SplitService{
 			}
 			TeamPurchaseInfo tpi = tpil.get(0);
 			tpi.setUpdateDate(new Date());//更新时间
+			tpi.setTeamPurchaseCardAllowance(tpi.getTeamPurchaseCardAllowance()+accountLevel.getNumber());//团购卡余量增加
 			tpi.setWaitDispose(tpi.getWaitDispose()-accountLevel.getNumber());//待处理（张）
 			tpi.setWaitDisposePrice(tpi.getWaitDisposePrice()-accountLevel.getTeamPurchasePrice());//待处理总额
 			tpi.setWaitDisposeUpdateDate(new Date());//待处理更新时间

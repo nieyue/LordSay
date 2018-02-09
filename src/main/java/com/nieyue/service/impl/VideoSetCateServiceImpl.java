@@ -20,6 +20,7 @@ public class VideoSetCateServiceImpl implements VideoSetCateService{
 	@Override
 	public boolean addVideoSetCate(VideoSetCate videoSetCate) {
 		videoSetCate.setUpdateDate(new Date());
+		videoSetCate.setPlayNumber(0);
 		boolean b = videoSetCateDao.addVideoSetCate(videoSetCate);
 		return b;
 	}

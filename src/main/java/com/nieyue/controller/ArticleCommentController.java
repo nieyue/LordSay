@@ -130,7 +130,7 @@ public class ArticleCommentController {
 	 */
 	@ApiOperation(value = "文章评论单个加载", notes = "文章评论单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="articleCommentId",value="文章评论ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="articleCommentId",value="文章评论ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{articleCommentId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadArticleComment(@PathVariable("articleCommentId") Integer articleCommentId,HttpSession session)  {
@@ -151,7 +151,7 @@ public class ArticleCommentController {
 	public  StateResultList pointComment(
 			@RequestParam("articleCommentId") Integer articleCommentId,
 			@RequestParam("articleId") Integer articleId,
-			@RequestParam("acountId") Integer acountId,
+			@RequestParam("accountId") Integer accountId,
 			HttpSession session)  {
 		List<JSONObject> list = new ArrayList<JSONObject>();
 		ArticleComment articleComment = articleCommentService.loadArticleComment(articleCommentId);

@@ -94,7 +94,10 @@ public class OrderController {
 		  @ApiImplicitParam(name="type",value="类型，1VIP购买，2团购卡团购，3付费课程",dataType="int", paramType = "query",required=true),
 		  @ApiImplicitParam(name="payType",value="支付类型，1支付宝，2微信,3余额支付,4ios内购",dataType="int", paramType = "query",required=true),
 		  @ApiImplicitParam(name="accountId",value="下单人id外键",dataType="int", paramType = "query",required=true),
-		  @ApiImplicitParam(name="businessId",value="业务id",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="businessId",value="业务id",dataType="int", paramType = "query",required=true),
+		  @ApiImplicitParam(name="nickname",value="昵称(团购必填)",dataType="int", paramType = "query"),
+		  @ApiImplicitParam(name="phone",value="会员账号，手机号(团购必填)",dataType="string", paramType = "query"),
+		  @ApiImplicitParam(name="contactPhone",value="联系电话(团购必填)",dataType="string", paramType = "query"),
 		  })
 	@RequestMapping(value = "/payment", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList paymentOrder(
@@ -102,18 +105,18 @@ public class OrderController {
 			@RequestParam(value="payType")Integer payType,
 			@RequestParam(value="accountId")Integer accountId,
 			@RequestParam(value="businessId")Integer businessId,
+			@RequestParam(value="nickname",required=false)String nickname,
+			@RequestParam(value="phone",required=false)String phone,
+			@RequestParam(value="contactPhone",required=false)String contactPhone,
 			 HttpSession session) {
 		List<Map<Object,Object>> list=new ArrayList<>();
 //		if(payType==3){//余额支付
-//			Order o = orderService.balancePaymentOrder(type, payType, accountId, businessId);
-//			if(o!=null){
-//				Map<Object,Object> map=new HashMap<Object,Object>();
-//				map.put("order", o);
-//				list.add(map);
+//			boolean b= orderService.balancePaymentOrder(type, payType, accountId, businessId,nickname,phone,contactPhone);
+//			if(b){
 //				return ResultUtil.getSlefSRSuccessList(list);
 //			}
 //		}else{//微信、支付宝、ios内购支付
-//			String str = orderService.thirdPartyPaymentOrder(type,payType,accountId,businessId);
+//			String str = orderService.thirdPartyPaymentOrder(type,payType,accountId,businessId,nickname,phone,contactPhone);
 //			if(str!=null && !str.equals("")){
 //			Map<Object,Object> map=new HashMap<Object,Object>();
 //			map.put("result", str);
@@ -121,11 +124,8 @@ public class OrderController {
 //			return ResultUtil.getSlefSRSuccessList(list);
 //			}
 //		}
-		Order o = orderService.balancePaymentOrder(type, payType, accountId, businessId);
-		if(o!=null){
-			Map<Object,Object> map=new HashMap<Object,Object>();
-			map.put("order", o);
-			list.add(map);
+		boolean b = orderService.balancePaymentOrder(type, payType, accountId, businessId,nickname,phone,contactPhone);
+		if(b){
 			return ResultUtil.getSlefSRSuccessList(list);
 		}
 		return ResultUtil.getSlefSRFailList(list);
@@ -235,7 +235,7 @@ public class OrderController {
 	 */
 	@ApiOperation(value = "订单单个加载", notes = "订单单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="orderId",value="订单ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="orderId",value="订单ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{orderId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadOrder(@PathVariable("orderId") Integer orderId,HttpSession session)  {

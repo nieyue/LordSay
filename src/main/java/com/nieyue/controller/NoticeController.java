@@ -130,7 +130,7 @@ public class NoticeController {
 	 */
 	@ApiOperation(value = "通知单个加载", notes = "通知单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="noticeId",value="通知ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="noticeId",value="通知ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{noticeId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadNotice(@PathVariable("noticeId") Integer noticeId,HttpSession session)  {

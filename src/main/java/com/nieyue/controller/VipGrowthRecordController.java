@@ -130,7 +130,7 @@ public class VipGrowthRecordController {
 	 */
 	@ApiOperation(value = "Vip成长记录单个加载", notes = "Vip成长记录单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="vipGrowthRecordId",value="Vip成长记录ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="vipGrowthRecordId",value="Vip成长记录ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{vipGrowthRecordId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadVipGrowthRecord(@PathVariable("vipGrowthRecordId") Integer vipGrowthRecordId,HttpSession session)  {

@@ -16,6 +16,7 @@ import com.nieyue.bean.IntegralBoard;
 import com.nieyue.bean.IntegralDetail;
 import com.nieyue.bean.Video;
 import com.nieyue.bean.VideoSet;
+import com.nieyue.bean.VideoSetCate;
 import com.nieyue.dao.VideoDao;
 import com.nieyue.service.AccountParentService;
 import com.nieyue.service.AccountService;
@@ -23,6 +24,7 @@ import com.nieyue.service.IntegralBoardService;
 import com.nieyue.service.IntegralDetailService;
 import com.nieyue.service.IntegralService;
 import com.nieyue.service.VideoService;
+import com.nieyue.service.VideoSetCateService;
 import com.nieyue.service.VideoSetService;
 import com.nieyue.util.DateUtil;
 @Service
@@ -31,6 +33,8 @@ public class VideoServiceImpl implements VideoService{
 	VideoDao videoDao;
 	@Resource
 	VideoSetService videoSetService;
+	@Resource
+	VideoSetCateService videoSetCateService;
 	@Resource
 	IntegralService integralService;
 	@Resource
@@ -132,6 +136,11 @@ public class VideoServiceImpl implements VideoService{
 		if(b){
 		//增加视频集播放次数	
 		b=videoSetService.watchVideoSet(video.getVideoSetId(), accountId);
+		//增加视频集类型播放次数
+		VideoSet videoSet = videoSetService.loadVideoSet(video.getVideoSetId());
+		VideoSetCate videoSetCate = videoSetCateService.loadVideoSetCate(videoSet.getVideoSetCateId());
+		videoSetCate.setPlayNumber(videoSetCate.getPlayNumber()+1);
+		videoSetCateService.updateVideoSetCate(videoSetCate);
 		}
 		}else if(type==2){//播放中
 			b=true;
@@ -195,7 +204,7 @@ public class VideoServiceImpl implements VideoService{
 			//自身的增加，
 			IntegralBoard tzib=new IntegralBoard();
 			tzib.setType(2);//1是团队
-			tzib.setTimeType(2);//3是总
+			tzib.setTimeType(3);//3是总
 			tzib.setRealname(a.getRealname());
 			tzib.setIcon(a.getIcon());
 			//tzib.setIntegral(iiii);

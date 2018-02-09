@@ -241,7 +241,10 @@ INDEX INDEX_UPDATEDATE (update_date) USING BTREE
 CREATE TABLE video_set_cate_tb(
 video_set_cate_id int(11) NOT NULL AUTO_INCREMENT COMMENT '视频集类型id',
 name varchar(255) COMMENT '视频集类型名称',
+summary varchar(255) COMMENT '简介',
 icon varchar(255) COMMENT '视频集类型图标',
+imgAddress varchar(255) COMMENT '封面',
+play_number int(11) DEFAULT 0  COMMENT '播放总次数',
 update_date datetime COMMENT '更新时间',
 PRIMARY KEY (video_set_cate_id)
 )ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='视频集类型表';
@@ -299,7 +302,7 @@ video_id int(11) NOT NULL AUTO_INCREMENT COMMENT '视频id',
 name varchar(255) COMMENT '名称',
 img_address varchar(255) COMMENT '封面',
 duration varchar(255) COMMENT '时长',
-size varchar(255) COMMENT '容量，单位byte',
+size varchar(255) COMMENT '容量，单位MB',
 url varchar(255) COMMENT '链接',
 play_number int(11) DEFAULT 0  COMMENT '播放次数',
 status tinyint(4) DEFAULT 1 COMMENT '状态0下架,默认1上架',
@@ -541,7 +544,9 @@ INDEX INDEX_STATUS (status) USING BTREE
 #创建拆分表 
 CREATE TABLE split_tb(
 split_id int(11) NOT NULL AUTO_INCREMENT COMMENT '拆分id',
-realname varchar(255) COMMENT '购买人',
+nickname varchar(255) COMMENT '昵称',
+phone varchar(255) COMMENT '会员账号',
+contact_phone varchar(255) COMMENT '联系电话',
 remark varchar(255) COMMENT '备注',
 number int(4) COMMENT '数量',
 price decimal(11,2) COMMENT '金额',
@@ -551,8 +556,8 @@ create_date datetime COMMENT '创建时间',
 update_date datetime COMMENT '更新时间',
 status tinyint(4)  COMMENT '拆分状态，默认0已申请，1已拆分，2已拒绝，3已退款，4已推荐给上级',
 recommend_account_id int(11) COMMENT '推荐人id',
-account_id int(11) COMMENT '账户自身id,邀请码',
-buy_account_id int(11) COMMENT '购买者id,外键',
+account_id int(11) COMMENT '购买者上级id',
+buy_account_id int(11) COMMENT '申请人邀请码，购买者',
 order_id int(11) COMMENT '订单id,外键',
 PRIMARY KEY (split_id),
 INDEX INDEX_ACCOUNTID (account_id) USING BTREE,
@@ -625,6 +630,33 @@ create_date datetime COMMENT '创建时间',
 update_date datetime COMMENT '更新时间',
 PRIMARY KEY (config_id)
 )ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='配置表';
+
+#创建支付表
+CREATE TABLE payment_tb(
+payment_id int(11) NOT NULL AUTO_INCREMENT COMMENT '支付id',
+subject varchar(255) COMMENT '主题',
+body varchar(255) COMMENT '内容',
+notify_url varchar(255) COMMENT '异步通知',
+type tinyint(4) COMMENT '支付类型，默认1支付宝支付，2微信支付，3银联支付,4ios内购',
+order_number varchar(255) COMMENT '平台订单号',
+money decimal(11,2) COMMENT '金额',
+status tinyint(4) DEFAULT 1 COMMENT '状态，1已下单-未支付，2支付成功，3支付失败,4异常',
+business_type tinyint(4) COMMENT '业务类型，1VIP购买，2团购卡团购，3付费课程',
+business_id int(11) COMMENT '业务id,外键',
+business_notify_url longtext COMMENT '业务回调,外键',
+account_id int(11) COMMENT '账户id,外键',
+create_date datetime  COMMENT '创建时间',
+update_date datetime  COMMENT '更新时间',
+PRIMARY KEY (payment_id),
+INDEX INDEX_ORDERNUMBER (order_number) USING BTREE,
+INDEX INDEX_TYPE (type) USING BTREE,
+INDEX INDEX_BUSINESSTYPE (business_type) USING BTREE,
+INDEX INDEX_BUSINESSID (business_id) USING BTREE,
+INDEX INDEX_ACCOUNTID (account_id) USING BTREE,
+INDEX INDEX_STATUS (status) USING BTREE,
+INDEX INDEX_CREATEDATE (create_date) USING BTREE,
+INDEX INDEX_UPDATEDATE (update_date) USING BTREE
+)ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='支付表';
 
 
 #设置初始角色

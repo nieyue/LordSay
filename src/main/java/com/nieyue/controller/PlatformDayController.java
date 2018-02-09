@@ -122,7 +122,7 @@ public class PlatformDayController {
 	 */
 	@ApiOperation(value = "平台日单个加载", notes = "平台日单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="platformDayId",value="平台日ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="platformDayId",value="平台日ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{platformDayId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadPlatformDay(@PathVariable("platformDayId") Integer platformDayId,HttpSession session)  {

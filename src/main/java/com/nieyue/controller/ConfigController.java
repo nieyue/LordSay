@@ -114,7 +114,7 @@ public class ConfigController {
 	 */
 	@ApiOperation(value = "配置单个加载", notes = "配置单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="configId",value="配置ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="configId",value="配置ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{configId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadConfig(@PathVariable("configId") Integer configId,HttpSession session)  {

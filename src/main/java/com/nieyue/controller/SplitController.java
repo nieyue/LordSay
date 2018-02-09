@@ -186,7 +186,7 @@ public class SplitController {
 	 */
 	@ApiOperation(value = "拆分单个加载", notes = "拆分单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="splitId",value="拆分ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="splitId",value="拆分ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{splitId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadSplit(@PathVariable("splitId") Integer splitId,HttpSession session)  {

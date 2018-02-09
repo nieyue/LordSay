@@ -130,7 +130,7 @@ public class OrderDetailController {
 	 */
 	@ApiOperation(value = "订单详情单个加载", notes = "订单详情单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="orderDetailId",value="订单详情ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="orderDetailId",value="订单详情ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{orderDetailId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadOrderDetail(@PathVariable("orderDetailId") Integer orderDetailId,HttpSession session)  {

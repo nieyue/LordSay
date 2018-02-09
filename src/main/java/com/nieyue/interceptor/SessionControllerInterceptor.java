@@ -167,6 +167,10 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         		||method.getName().equals("loadFeedback")
         		//配置
         		||request.getRequestURI().indexOf("config/count")>-1
+        		//第三方支付
+        		||request.getRequestURI().indexOf("payment/count")>-1
+        		||request.getRequestURI().indexOf("payment/alipayTradeQuery")>-1
+        		||request.getRequestURI().indexOf("payment/alipayNotifyUrl")>-1
        
         		){
         	return true;
@@ -677,6 +681,14 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         		if( request.getRequestURI().indexOf("/config/delete")>-1 
         				|| request.getRequestURI().indexOf("/config/update")>-1 
         				|| request.getRequestURI().indexOf("/config/add")>-1){
+        			throw new MySessionException();
+        		}
+        		//第三方支付
+        		if( request.getRequestURI().indexOf("/payment/delete")>-1 
+        				|| request.getRequestURI().indexOf("/payment/update")>-1 
+        				|| request.getRequestURI().indexOf("/payment/list")>-1 
+        				|| request.getRequestURI().indexOf("/payment/add")>-1
+        				||method.getName().equals("loadPayment")){
         			throw new MySessionException();
         		}
         		return true;

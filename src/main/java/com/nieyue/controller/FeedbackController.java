@@ -114,7 +114,7 @@ public class FeedbackController {
 	 */
 	@ApiOperation(value = "意见反馈单个加载", notes = "意见反馈单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="feedbackId",value="意见反馈ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="feedbackId",value="意见反馈ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{feedbackId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadFeedback(@PathVariable("feedbackId") Integer feedbackId,HttpSession session)  {

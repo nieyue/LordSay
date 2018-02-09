@@ -126,6 +126,9 @@ public class AppVersionController {
 	 * @return
 	 */
 	@ApiOperation(value = "App版本单个加载", notes = "App版本单个加载")
+	@ApiImplicitParams({
+		  @ApiImplicitParam(name="appVersionId",value="app版本ID",dataType="int", paramType = "path",required=true)
+		  })
 	@RequestMapping(value = "/{appVersionId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadAppVersion(@PathVariable("appVersionId") Integer appVersionId,HttpSession session)  {
 		List<AppVersion> list = new ArrayList<AppVersion>();

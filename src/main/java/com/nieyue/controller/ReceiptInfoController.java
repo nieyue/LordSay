@@ -136,7 +136,7 @@ public class ReceiptInfoController {
 	 */
 	@ApiOperation(value = "收货信息单个加载", notes = "收货信息单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="receiptInfoId",value="收货信息ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="receiptInfoId",value="收货信息ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{receiptInfoId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadReceiptInfo(@PathVariable("receiptInfoId") Integer receiptInfoId,HttpSession session)  {

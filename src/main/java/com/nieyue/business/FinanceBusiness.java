@@ -29,6 +29,7 @@ import com.nieyue.service.DistributeService;
 import com.nieyue.service.FinanceRecordService;
 import com.nieyue.service.FinanceService;
 import com.nieyue.service.NoticeService;
+import com.nieyue.service.OrderService;
 import com.nieyue.service.SplitService;
 import com.nieyue.service.TeamPurchaseInfoService;
 import com.nieyue.service.VideoSetService;
@@ -44,6 +45,8 @@ import com.nieyue.util.DateUtil;
 public class FinanceBusiness {
 	@Resource
 	VideoSetService videoSetService;
+	@Resource
+	OrderService orderService;
 	@Resource
 	AccountService accountService;
 	@Resource
@@ -82,6 +85,9 @@ public class FinanceBusiness {
 	 * @param payType 支付类型，默认1支付宝支付，2微信支付，3余额支付,4ios内购支付
 	 * @param accountId 账户id
 	 * @param businessId 业务id
+	 * @param nickname 昵称
+	 * @param phone 会员账号 手机号
+	 * @param contactPhone 联系手机
 	 * @param money 金额
 	 * @return -1不成功 ，0脱离事物，部分执行，1.成功
 	 */
@@ -89,21 +95,29 @@ public class FinanceBusiness {
 			Integer type,
 			Integer payType,
 			Integer accountId,
-			Integer businessId, 
-			OrderDetail orderDetail
+			Integer businessId,
+			String orderNumber,
+			String nickname,
+			String phone,
+			String contactPhone
 			){
 		boolean b=true;//默认true
+		//获取订单详情
+		OrderDetail orderDetail = paymentBusiness.getPaymentType(type, payType, accountId, businessId);
+		if(orderDetail==null){
+			return -1;
+		}
 			/**
 			 * vip购买
 			 */
 			if(type==1){
-				int r = financeExcuteVIP( type,payType,accountId,orderDetail);
+				int r = financeExcuteVIP( type,payType,accountId,orderNumber,orderDetail);
 				return r;
 			/**
 			 * 团购卡团购
 			 */
 			}else if(type==2){
-				int t=financeExcuteTeam(type,payType,accountId,businessId,orderDetail);
+				int t=financeExcuteTeam(type,payType,accountId,businessId,orderNumber,nickname,phone,contactPhone,orderDetail);
 				return t;
 			/**
 			 * 付费课程购买	
@@ -135,7 +149,9 @@ public class FinanceBusiness {
 					fr.setStatus(2);//1是待处理，2成功，3已拒绝
 					fr.setMoney(money);
 					b=financeRecordService.addFinanceRecord(fr);
-					if(b){
+					//创建订单
+					Order order = paymentBusiness.getOrder(type, payType, accountId,orderNumber, orderDetail);
+					if(b && order!=null){
 						return 1;
 					}
 				}
@@ -155,6 +171,7 @@ public class FinanceBusiness {
 			Integer type,
 			Integer payType,
 			Integer accountId,
+			String orderNumber,
 			OrderDetail orderDetail
 			){
 		Double money=orderDetail.getTotalPrice();
@@ -356,10 +373,12 @@ public class FinanceBusiness {
 					//上级团购信息表更新
 					stpi.setTeamPurchaseCardAllowance(stpi.getTeamPurchaseCardAllowance()-1);//升级vip就减团购卡
 					b=teamPurchaseInfoService.updateTeamPurchaseInfo(stpi);
-					Order order = paymentBusiness.getOrder(type, payType, accountId, orderDetail);
+					//创建订单
+					Order order = paymentBusiness.getOrder(type, payType, accountId,orderNumber, orderDetail);
 					if(order.getAccountId()==null){
 						return -1;
 					}
+					
 					if(b){
 						return 1;
 					}
@@ -372,16 +391,31 @@ public class FinanceBusiness {
 	 * @param payType 支付类型，默认1支付宝支付，2微信支付，3余额支付,4ios内购支付
 	 * @param accountId 账户id
 	 * @param businessId 业务id
-	 * @param money 金额
+	 * @param nickname 昵称
+	 * @param phone 会员账号 手机号
+	 * @param contactPhone 联系手机
+	 * @param OrderDetail 订单详情
 	 * @return -1不成功 ，0脱离事物，部分执行，1.成功
 	 */
 	public int financeExcuteTeam(
 			Integer type,
 			Integer payType,
 			Integer accountId,
-			Integer businessId, 
+			Integer businessId,
+			String orderNumber,
+			String nickname,
+			String phone,
+			String contactPhone,
 			OrderDetail orderDetail
 			){
+		if(nickname==null||phone==null||contactPhone==null){
+			return -1;//必传参数
+		}
+		//如果有升级订单还没完成
+		List<Order> oool = orderService.browsePagingOrder(type, payType, accountId, 1, null, null, 1, 1, "order_id", "asc");
+		if(oool.size()>0){
+			return -1;
+		}
 		Double money=orderDetail.getTotalPrice();
 		boolean b=true;//默认true
 		//该业务id是否包含在可选中
@@ -432,8 +466,9 @@ public class FinanceBusiness {
 					if(!b){
 						return -1;
 					}
+
 					//创建订单
-					Order order = paymentBusiness.getOrder(type, payType, accountId, orderDetail);
+					Order order = paymentBusiness.getOrder(type, payType, accountId,orderNumber, orderDetail);
 					//拆分表创建
 					Split split=new Split();
 					split.setOrderId(order.getOrderId());
@@ -444,8 +479,9 @@ public class FinanceBusiness {
 					split.setCreateDate(new Date());
 					split.setNumber(currentAccountLevel.getNumber());
 					split.setPrice(money);
-					Account account = accountService.loadAccount(accountId);
-					split.setRealname(account.getRealname());
+					split.setNickname(nickname);
+					split.setPhone(phone);
+					split.setContactPhone(contactPhone);
 					split.setSplitDate(null);
 					split.setStatus(0);//0是已申请
 					split.setUpdateDate(new Date());
@@ -481,6 +517,86 @@ public class FinanceBusiness {
 					}
 				return -1;
 		}
+	/**
+	 * 验证第三方支付条件是否满足
+	 * @param type 类型，1VIP购买，2团购卡团购，3付费课程
+	 * @param payType 支付类型，默认1支付宝支付，2微信支付，3余额支付,4ios内购支付
+	 * @param accountId 账户id
+	 * @param businessId 业务id
+	 * @param nickname 昵称
+	 * @param phone 会员账号 手机号
+	 * @param contactPhone 联系手机
+	 * return false 不满足， true满足
+	 */
+	public boolean canThirdPay(
+			Integer type,
+			Integer payType,
+			Integer accountId,
+			Integer businessId,
+			String nickname,
+			String phone,
+			String contactPhone
+			){
+		boolean b=true;
+		//获取订单详情
+		OrderDetail orderDetail = paymentBusiness.getPaymentType(type, payType, accountId, businessId);
+		if(orderDetail==null){
+			b=false;
+			return b;
+		}
+		if(type==1){
+		//账户上级表
+		List<AccountParent> apl = accountParentService.browsePagingAccountParent(null, null, accountId, null, null, null, null, 1, 1, "account_parent_id", "asc");
+				AccountParent ap = apl.get(0);
+				Integer aprmid = ap.getRealMasterId();//真实上级id
+				List<TeamPurchaseInfo> stpil = teamPurchaseInfoService.browsePagingTeamPurchaseInfo(aprmid, null, null, 1, 1, "team_purchase_info_id", "asc");
+					//上级团购信息表
+					TeamPurchaseInfo stpi = stpil.get(0);
+					if(stpi.getTeamPurchaseCardAllowance()<10){//小于10张报警
+						b=buzuNotice(aprmid,stpi.getTeamPurchaseCardAllowance());
+					}
+					//没有团购卡，直接失败，记录次数
+					if(stpi.getTeamPurchaseCardAllowance()<1){
+						List<VipNumber> vnl = vipNumberService.browsePagingVipNumber(null, accountId, aprmid, null, null, null, 1, 1, "vip_number_id", "desc");
+							VipNumber vn = vnl.get(0);
+						//相同一天，不能执行
+						if(DateUtil.isSameDate(vn.getUpdateDate(), new Date())){
+							b=false;
+							return b;
+						}
+						if(vnl.size()<=0){
+							VipNumber vipNumber=new VipNumber();
+							vipNumber.setNumber(1);
+							vipNumber.setAccountId(accountId);
+							vipNumber.setRealMasterId(aprmid);
+							vipNumber.setStatus(1);//待处理
+							vipNumberService.addVipNumber(vipNumber);
+						}else{
+							vn.setNumber(vn.getNumber()+1);
+							if(vn.getNumber()>=3){
+								vn.setStatus(3);//已超次
+							}
+							vipNumberService.updateVipNumber(vn);
+						}
+						return false;//让部分执行
+					}	
+		}else if(type==2){
+			if(nickname==null||phone==null||contactPhone==null){
+				b=false;
+				return b;//必传参数
+			}
+			//如果有升级订单还没完成
+			List<Order> oool = orderService.browsePagingOrder(type, payType, accountId, 1, null, null, 1, 1, "order_id", "asc");
+			if(oool.size()>0){
+				b=false;
+				return b;
+			}
+			//该业务id是否包含在可选中
+			b = accountLevelBusiness.isContain(accountId, businessId);
+				return b;
+		}
+		return b;
+	}
 	/**
 	 * 团购卡余额不足通知
 	 */

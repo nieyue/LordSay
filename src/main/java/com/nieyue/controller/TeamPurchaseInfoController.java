@@ -130,7 +130,7 @@ public class TeamPurchaseInfoController {
 	 */
 	@ApiOperation(value = "团购信息单个加载", notes = "团购信息单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="teamPurchaseInfoId",value="团购信息ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="teamPurchaseInfoId",value="团购信息ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{teamPurchaseInfoId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadTeamPurchaseInfo(@PathVariable("teamPurchaseInfoId") Integer teamPurchaseInfoId,HttpSession session)  {

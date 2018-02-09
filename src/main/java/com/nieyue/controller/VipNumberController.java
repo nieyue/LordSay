@@ -142,7 +142,7 @@ public class VipNumberController {
 	 */
 	@ApiOperation(value = "vip购买次数单个加载", notes = "vip购买次数单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="vipNumberId",value="vip购买次数ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="vipNumberId",value="vip购买次数ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{vipNumberId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadVipNumber(@PathVariable("vipNumberId") Integer vipNumberId,HttpSession session)  {

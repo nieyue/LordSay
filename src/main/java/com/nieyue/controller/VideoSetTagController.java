@@ -121,7 +121,7 @@ public class VideoSetTagController {
 	 */
 	@ApiOperation(value = "视频集标签单个加载", notes = "视频集标签单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="videoSetTagId",value="视频集标签ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="videoSetTagId",value="视频集标签ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{videoSetTagId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadVideoSetTag(@PathVariable("VideoSetTagId") Integer videoSetTagId,HttpSession session)  {

@@ -34,7 +34,6 @@ public class AccountLevelBusiness {
 			Integer rmid = ap.getRealMasterId();//真实上级id
 			AccountLevel selfal = accountLevelService.loadAccountLevel(ap.getAccountLevelId());
 			Integer selfallevel=selfal.getLevel();//自身等级
-			
 			List<AccountParent> rmpl = accountParentService.browsePagingAccountParent(null, null, rmid, null, null, null, null, 1, 1, "account_parent_id", "asc");
 			if(rmpl.size()==1){
 				AccountParent rmp = rmpl.get(0);//真实上级的
@@ -45,7 +44,6 @@ public class AccountLevelBusiness {
 				AccountLevel al = all.get(i);
 				if(al.getLevel()>selfallevel && al.getLevel()<=rmalevel){//大于自身等级，小于等于真实上级等级
 					alist.add(al);
-					return alist;
 				}
 			}
 			}

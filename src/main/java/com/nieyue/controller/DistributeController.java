@@ -142,7 +142,7 @@ public class DistributeController {
 	 */
 	@ApiOperation(value = "分发单个加载", notes = "分发单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="distributeId",value="分发ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="distributeId",value="分发ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{distributeId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadDistribute(@PathVariable("distributeId") Integer distributeId,HttpSession session)  {

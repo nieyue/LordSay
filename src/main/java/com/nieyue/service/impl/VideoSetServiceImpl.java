@@ -52,6 +52,14 @@ public class VideoSetServiceImpl implements VideoSetService{
 	@Override
 	public boolean delVideoSet(Integer videoSetId) {
 		boolean b = videoSetDao.delVideoSet(videoSetId);
+		List<Video> videolist = videoService.browsePagingVideo(videoSetId, null, null, null, 1, Integer.MAX_VALUE, "video_id", "asc");
+		videolist.forEach((video)->{
+			videoService.delVideo(video.getVideoId());
+		});
+		List<VideoSetTag> vstl = videoSetTagService.browsePagingVideoSetTag(videoSetId,1, Integer.MAX_VALUE, "video_set_tag_id", "asc");
+		vstl.forEach((videoSetTag)->{
+			videoSetTagService.delVideoSetTag(videoSetTag.getVideoSetTagId());
+		});
 		return b;
 	}
 	@Transactional(propagation=Propagation.REQUIRED)

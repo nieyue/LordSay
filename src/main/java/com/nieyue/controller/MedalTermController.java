@@ -114,7 +114,7 @@ public class MedalTermController {
 	 */
 	@ApiOperation(value = "勋章项单个加载", notes = "勋章项单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="medalTermId",value="勋章项ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="medalTermId",value="勋章项ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{medalTermId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadMedalTerm(@PathVariable("medalTermId") Integer medalTermId,HttpSession session)  {

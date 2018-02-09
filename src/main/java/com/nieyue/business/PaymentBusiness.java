@@ -17,7 +17,6 @@ import com.nieyue.service.AccountLevelService;
 import com.nieyue.service.OrderDetailService;
 import com.nieyue.service.OrderService;
 import com.nieyue.service.VideoSetService;
-import com.nieyue.util.DateUtil;
 
 /**
  * 支付业务
@@ -90,6 +89,7 @@ public class PaymentBusiness {
 			Integer type,
 			Integer payType,
 			Integer accountId,
+			String orderNumber,
 			OrderDetail orderDetail){
 		boolean b=false;
 		Order order=new Order();
@@ -103,7 +103,6 @@ public class PaymentBusiness {
 		}
 		order.setType(type);
 		order.setPayType(payType);
-		String orderNumber=((int) (Math.random()*9000)+1000)+DateUtil.getOrdersTime()+((int)(Math.random()*9000)+10000);
 		order.setOrderNumber(orderNumber);
 		 b = orderService.addOrder(order);
 		if(b){

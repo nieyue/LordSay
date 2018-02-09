@@ -125,7 +125,7 @@ public class VideoCacheController {
 	 */
 	@ApiOperation(value = "视频缓存单个加载", notes = "视频缓存单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="VideoCacheId",value="视频缓存ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="VideoCacheId",value="视频缓存ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{videoCacheId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadVideoCache(@PathVariable("videoCacheId") Integer videoCacheId,HttpSession session)  {

@@ -153,7 +153,7 @@ public class FinanceRecordController {
 	 */
 	@ApiOperation(value = "财务记录单个加载", notes = "财务记录单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="financeRecordId",value="财务记录ID",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="financeRecordId",value="财务记录ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{financeRecordId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadFinanceRecord(@PathVariable("financeRecordId") Integer financeRecordId,HttpSession session)  {

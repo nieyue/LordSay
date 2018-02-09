@@ -25,10 +25,20 @@ public class Split implements Serializable{
 	private Integer splitId;
 	
 	/**
-	 * 购买人
+	 * 昵称
 	 */
-	@ApiModelProperty(value="购买人",example="购买人")
-	private String realname;
+	@ApiModelProperty(value="昵称",example="昵称")
+	private String nickname;
+	/**
+	 *会员账号
+	 */
+	@ApiModelProperty(value="会员账号",example="会员账号")
+	private String phone;
+	/**
+	 * 联系电话
+	 */
+	@ApiModelProperty(value="联系电话",example="联系电话")
+	private String contactPhone;
 	/**
 	 *备注
 	 */
@@ -94,12 +104,6 @@ public class Split implements Serializable{
 	}
 	public void setSplitId(Integer splitId) {
 		this.splitId = splitId;
-	}
-	public String getRealname() {
-		return realname;
-	}
-	public void setRealname(String realname) {
-		this.realname = realname;
 	}
 	public Integer getNumber() {
 		return number;
@@ -175,6 +179,24 @@ public class Split implements Serializable{
 	}
 	public void setOrderId(Integer orderId) {
 		this.orderId = orderId;
+	}
+	public String getNickname() {
+		return nickname;
+	}
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getContactPhone() {
+		return contactPhone;
+	}
+	public void setContactPhone(String contactPhone) {
+		this.contactPhone = contactPhone;
 	}
 	
 }
