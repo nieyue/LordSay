@@ -1,6 +1,5 @@
 package com.nieyue.controller;
 
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -22,7 +21,6 @@ import com.nieyue.bean.Account;
 import com.nieyue.bean.Finance;
 import com.nieyue.bean.FinanceRecord;
 import com.nieyue.bean.Payment;
-import com.nieyue.exception.PayException;
 import com.nieyue.exception.VerifyCodeErrorException;
 import com.nieyue.pay.AlipayUtil;
 import com.nieyue.service.AccountService;
@@ -206,13 +204,33 @@ public class FinanceController {
 		
 		if(method==1){//支付宝
 			payment.setNotifyUrl(lordSayProjectDomainUrl+"/finance/alipayRechargeNotifyUrl");
-			try {
+			//真实环境
+			/*try {
 				result=alipayUtil.getAppPayment(payment);
 			} catch (UnsupportedEncodingException e) {
 				throw new PayException();//回滚
 			}
-			list.add(result);
-			return ResultUtil.getSlefSRFailList(list);
+			list.add(result);*/
+			//测试环境
+			FinanceRecord fr=new FinanceRecord();
+			fr.setAccountId(payment.getAccountId());
+			fr.setMethod(payment.getType());//支付类型
+			fr.setMoney(payment.getMoney());//金额
+			fr.setTransactionNumber(payment.getOrderNumber());//订单号
+			fr.setType(1);//1是账户充值
+			fr.setStatus(2);//充值直接成功
+			boolean b = financeRecordService.addFinanceRecord(fr);
+			if(b){
+				List<Finance> fl = financeService.browsePagingFinance(null, payment.getAccountId(), 1, 1, "finance_id", "asc");
+				if(fl.size()==1){
+					Finance f = fl.get(0);
+					f.setMoney(f.getMoney()+payment.getMoney());
+					f.setRecharge(f.getRecharge()+payment.getMoney());
+					b= financeService.updateFinance(f);
+					list.add(f);
+					return ResultUtil.getSlefSRSuccessList(list);
+				}
+			}
 		}else if(method==2){//微信
 			list.add("暂未开通");
 			return ResultUtil.getSlefSRFailList(list);

@@ -32,7 +32,7 @@ import io.swagger.annotations.ApiOperation;
  * @author yy
  *
  */
-@Api(tags={"Vip成长记录"},value="Vip成长记录",description="Vip成长记录管理")
+@Api(tags={"vipGrowthRecord"},value="Vip成长记录",description="Vip成长记录管理")
 @RestController
 @RequestMapping("/vipGrowthRecord")
 public class VipGrowthRecordController {

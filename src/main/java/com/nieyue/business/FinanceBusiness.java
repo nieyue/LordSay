@@ -322,8 +322,8 @@ public class FinanceBusiness {
 					}
 					//创建vip成长表
 					VipGrowthRecord vipGrowthRecord=new VipGrowthRecord();
-					vipGrowthRecord.setName(al.getName());
-					vipGrowthRecord.setLevel(1);
+					vipGrowthRecord.setName(nal.getName());
+					vipGrowthRecord.setLevel(nal.getLevel());
 					vipGrowthRecord.setCreateDate(new Date());
 					vipGrowthRecord.setAccountId(accountId);
 					vipGrowthRecord.setPrice(money);
