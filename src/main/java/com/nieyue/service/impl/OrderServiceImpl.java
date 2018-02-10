@@ -5,20 +5,15 @@ import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.nieyue.bean.AccountParent;
-import com.nieyue.bean.Finance;
 import com.nieyue.bean.Order;
 import com.nieyue.bean.OrderDetail;
 import com.nieyue.bean.Payment;
-import com.nieyue.bean.TeamPurchaseInfo;
-import com.nieyue.bean.VipNumber;
 import com.nieyue.business.FinanceBusiness;
 import com.nieyue.business.PaymentBusiness;
 import com.nieyue.dao.OrderDao;

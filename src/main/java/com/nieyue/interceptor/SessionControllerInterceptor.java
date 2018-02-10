@@ -81,6 +81,7 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         		||request.getRequestURI().indexOf("account/updatePassword")>-1
         		//财务
         		||request.getRequestURI().indexOf("finance/count")>-1
+        		||request.getRequestURI().indexOf("finance/alipayRechargeNotifyUrl")>-1
         		//账户记录
         		||request.getRequestURI().indexOf("financeRecord/count")>-1
         		//积分
@@ -271,9 +272,14 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         				|| request.getRequestURI().indexOf("/account/add")>-1
         				|| request.getRequestURI().equals("/account/list")
         				|| request.getRequestURI().indexOf("/account/update")>-1
+        				|| request.getRequestURI().indexOf("/account/updatePasswordByFinanceId")>-1
         				|| request.getRequestURI().indexOf("/account/auth")>-1
         				||method.getName().equals("loadAccount")
         				){
+        			//只能管理员使用
+        			if(request.getRequestURI().equals("/account/updatePasswordByFinanceId")){
+        				throw new MySessionException();
+        			}
         			//加载自身账户
         			if((	method.getName().equals("loadAccount")
         					|| request.getRequestURI().indexOf("/account/list")>-1

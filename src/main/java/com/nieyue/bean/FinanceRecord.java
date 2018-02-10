@@ -38,9 +38,9 @@ public class FinanceRecord implements Serializable {
 	@ApiModelProperty(value="交易单号",example="交易单号")
 	private String transactionNumber;
 	/**
-	 * 余额
+	 * 金额
 	 */
-	@ApiModelProperty(value="余额",example="余额")
+	@ApiModelProperty(value="金额",example="金额")
 	private Double money;
 	/**
 	 * 状态，默认1待处理，2成功，3已拒绝

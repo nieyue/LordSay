@@ -47,7 +47,7 @@ public class Payment implements Serializable{
 	 */
 	private Integer status;
 	/**
-	 *业务类型默认1
+	 *业务类型默认1VIP购买，2团购卡团购，3付费课程,4充值
 	 */
 	private Integer businessType;
 	/**

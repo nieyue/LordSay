@@ -17,6 +17,7 @@ import com.nieyue.bean.FinanceRecord;
 import com.nieyue.bean.Notice;
 import com.nieyue.bean.Order;
 import com.nieyue.bean.OrderDetail;
+import com.nieyue.bean.Payment;
 import com.nieyue.bean.Split;
 import com.nieyue.bean.TeamPurchaseInfo;
 import com.nieyue.bean.Vip;
@@ -155,8 +156,7 @@ public class FinanceBusiness {
 						return 1;
 					}
 				}
-				
-			}
+				}
 		return -1;
 	}
 	/**
@@ -192,11 +192,6 @@ public class FinanceBusiness {
 					//没有团购卡，直接失败，记录次数
 					if(stpi.getTeamPurchaseCardAllowance()<1){
 						List<VipNumber> vnl = vipNumberService.browsePagingVipNumber(null, accountId, aprmid, null, null, null, 1, 1, "vip_number_id", "desc");
-							VipNumber vn = vnl.get(0);
-						//相同一天，不能执行
-						if(DateUtil.isSameDate(vn.getUpdateDate(), new Date())){
-							return -1;
-						}
 						if(vnl.size()<=0){
 							VipNumber vipNumber=new VipNumber();
 							vipNumber.setNumber(1);
@@ -205,6 +200,11 @@ public class FinanceBusiness {
 							vipNumber.setStatus(1);//待处理
 							vipNumberService.addVipNumber(vipNumber);
 						}else{
+							VipNumber vn = vnl.get(0);
+							//相同一天，不能执行
+							if(DateUtil.isSameDate(vn.getUpdateDate(), new Date())){
+								return -1;
+							}
 							vn.setNumber(vn.getNumber()+1);
 							if(vn.getNumber()>=3){
 								vn.setStatus(3);//已超次
@@ -558,12 +558,6 @@ public class FinanceBusiness {
 					//没有团购卡，直接失败，记录次数
 					if(stpi.getTeamPurchaseCardAllowance()<1){
 						List<VipNumber> vnl = vipNumberService.browsePagingVipNumber(null, accountId, aprmid, null, null, null, 1, 1, "vip_number_id", "desc");
-							VipNumber vn = vnl.get(0);
-						//相同一天，不能执行
-						if(DateUtil.isSameDate(vn.getUpdateDate(), new Date())){
-							b=false;
-							return b;
-						}
 						if(vnl.size()<=0){
 							VipNumber vipNumber=new VipNumber();
 							vipNumber.setNumber(1);
@@ -572,6 +566,12 @@ public class FinanceBusiness {
 							vipNumber.setStatus(1);//待处理
 							vipNumberService.addVipNumber(vipNumber);
 						}else{
+							VipNumber vn = vnl.get(0);
+							//相同一天，不能执行
+							if(DateUtil.isSameDate(vn.getUpdateDate(), new Date())){
+								b=false;
+								return b;
+							}
 							vn.setNumber(vn.getNumber()+1);
 							if(vn.getNumber()>=3){
 								vn.setStatus(3);//已超次
@@ -594,6 +594,31 @@ public class FinanceBusiness {
 			//该业务id是否包含在可选中
 			b = accountLevelBusiness.isContain(accountId, businessId);
 				return b;
+		}
+		return b;
+	}
+	/**
+	 * 充值回调财务变更
+	 */
+	public boolean rechargeFinance(Payment payment){
+		boolean b=false;
+		FinanceRecord fr=new FinanceRecord();
+		fr.setAccountId(payment.getAccountId());
+		fr.setMethod(payment.getType());//支付类型
+		fr.setMoney(payment.getMoney());//金额
+		fr.setTransactionNumber(payment.getOrderNumber());//订单号
+		fr.setType(1);//1是账户充值
+		fr.setStatus(2);//充值直接成功
+		b = financeRecordService.addFinanceRecord(fr);
+		if(b){
+			List<Finance> fl = financeService.browsePagingFinance(null, payment.getAccountId(), 1, 1, "finance_id", "asc");
+			if(fl.size()==1){
+				Finance f = fl.get(0);
+				f.setMoney(f.getMoney()+payment.getMoney());
+				f.setRecharge(f.getRecharge()+payment.getMoney());
+				b= financeService.updateFinance(f);
+				return b;
+			}
 		}
 		return b;
 	}

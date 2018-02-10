@@ -1,11 +1,15 @@
 package com.nieyue.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +21,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.nieyue.bean.Account;
 import com.nieyue.bean.Finance;
 import com.nieyue.bean.FinanceRecord;
+import com.nieyue.bean.Payment;
+import com.nieyue.exception.PayException;
 import com.nieyue.exception.VerifyCodeErrorException;
+import com.nieyue.pay.AlipayUtil;
 import com.nieyue.service.AccountService;
 import com.nieyue.service.FinanceRecordService;
 import com.nieyue.service.FinanceService;
@@ -48,6 +55,10 @@ public class FinanceController {
 	private FinanceRecordService financeRecordService;
 	@Resource
 	private AccountService accountService;
+	@Resource
+	private AlipayUtil alipayUtil;
+	@Value("${myPugin.lordSayProjectDomainUrl}")
+	private String lordSayProjectDomainUrl;
 	
 	/**
 	 * 财务分页浏览
@@ -92,6 +103,25 @@ public class FinanceController {
 		return ResultUtil.getSR(um);
 	}
 	/**
+	 * 管理员修改或增加交易密码
+	 * @return
+	 */
+	@ApiOperation(value = "管理员修改或增加交易密码", notes = "管理员修改或增加交易密码")
+	@ApiImplicitParams({
+		  @ApiImplicitParam(name="financeId",value="财务ID",dataType="int", paramType = "query",required=true),
+		  @ApiImplicitParam(name="password",value="交易密码",dataType="string", paramType = "query",required=true)
+		  })
+	@RequestMapping(value = "/updatePasswordByFinanceId", method = {RequestMethod.GET,RequestMethod.POST})
+	public @ResponseBody StateResult adminUpdatePassword(
+			@RequestParam(value="financeId")Integer financeId,
+			@RequestParam(value="password")String password,
+			HttpSession session)  {
+		Finance f = financeService.loadFinance(financeId);
+		f.setPassword(MyDESutil.getMD5(password));
+		boolean um = financeService.updateFinance(f);
+		return ResultUtil.getSR(um);
+	}
+	/**
 	 * 修改或增加交易密码
 	 * @return
 	 */
@@ -126,6 +156,17 @@ public class FinanceController {
 		return ResultUtil.getSlefSRFailList(list);
 	}
 	/**
+	 *  支付宝充值回调
+	 * @return
+	 */
+	@ApiOperation(value = "充值回调", notes = "充值回调")
+	@RequestMapping(value = "/alipayRechargeNotifyUrl", method = {RequestMethod.GET,RequestMethod.POST})
+	public @ResponseBody String alipayRechargeNotifyUrl(
+			HttpServletRequest request,HttpSession session)  {
+		String s = alipayUtil.getRechargeNotifyUrl(request);
+		return s;
+	}
+	/**
 	 * 充值
 	 * @return 
 	 */
@@ -142,34 +183,42 @@ public class FinanceController {
 			@RequestParam(value="money")Double money,
 			HttpSession session) {
 		Account a = accountService.loadAccount(accountId);
-		List<Finance> list=new ArrayList<Finance>();
+		List<Object> list=new ArrayList<Object>();
 		if(a==null){
 			return ResultUtil.getSlefSRFailList(list);		
 		}
 		if(a.getAuth()!=2){//没认证
 			return ResultUtil.getSlefSRList("40000", "没认证", list);
 		}
-		FinanceRecord fr=new FinanceRecord();
-		fr.setAccountId(accountId);
-		fr.setMethod(method);
-		fr.setMoney(money);
+		String result="";
 		String transactionNumber = ((int) (Math.random()*9000)+1000)+DateUtil.getOrdersTime()+(accountId+10000);
-		fr.setTransactionNumber(transactionNumber);
-		fr.setType(1);//1是账户充值
-		fr.setStatus(2);//充值直接成功
-		boolean b = financeRecordService.addFinanceRecord(fr);
-		if(b){
-			List<Finance> fl = financeService.browsePagingFinance(null, accountId, 1, 1, "finance_id", "asc");
-			if(fl.size()==1){
-				Finance f = fl.get(0);
-				f.setMoney(f.getMoney()+money);
-				f.setRecharge(f.getRecharge()+money);
-				b= financeService.updateFinance(f);
-				if(b){
-					list.add(f);
-					return ResultUtil.getSlefSRSuccessList(list);
-				}
+		Payment payment=new Payment();
+		payment.setAccountId(accountId);
+		payment.setBusinessType(4);//充值
+		payment.setCreateDate(new Date());
+		payment.setMoney(money);
+		payment.setOrderNumber(transactionNumber);
+		payment.setStatus(1);//默认已下单
+		payment.setType(method);
+		payment.setUpdateDate(new Date());
+		payment.setSubject("充值");
+		payment.setBody("充值");
+		
+		if(method==1){//支付宝
+			payment.setNotifyUrl(lordSayProjectDomainUrl+"/finance/alipayRechargeNotifyUrl");
+			try {
+				result=alipayUtil.getAppPayment(payment);
+			} catch (UnsupportedEncodingException e) {
+				throw new PayException();//回滚
 			}
+			list.add(result);
+			return ResultUtil.getSlefSRFailList(list);
+		}else if(method==2){//微信
+			list.add("暂未开通");
+			return ResultUtil.getSlefSRFailList(list);
+		}else if(method==4){//ios内购
+			list.add("暂未开通");
+			return ResultUtil.getSlefSRFailList(list);
 		}
 		return ResultUtil.getSlefSRFailList(list);
 	}

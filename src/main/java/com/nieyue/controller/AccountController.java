@@ -649,6 +649,9 @@ public class AccountController {
 		}
 			//新用户注册登录
 				Account account=new Account();
+				if(masterId==null){
+					throw new MySessionException();
+				}
 				//获取masterId
 				if(masterId!=null&&!masterId.equals("")){
 					Account masterAcount = accountService.loadAccount(masterId);
