@@ -76,6 +76,7 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         		||request.getRequestURI().indexOf("accountParent/count")>-1
         		//登陆、登出、增加师傅徒弟关系、账户
         		||request.getRequestURI().indexOf("account/count")>-1
+        		||request.getRequestURI().indexOf("account/phoneIsExist")>-1
         		||request.getRequestURI().indexOf("register")>-1
         		||request.getRequestURI().indexOf("login")>-1
         		||request.getRequestURI().indexOf("account/updatePassword")>-1

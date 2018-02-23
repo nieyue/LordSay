@@ -255,7 +255,7 @@ public class SplitServiceImpl implements SplitService{
 		 * 成功之后，团购人
 		 */
 		//vip等级修改上升
-		List<Vip> vipl = vipService.browsePagingVip(split.getBuyAccountId(), 0, null, 1, 1, "vip_id", "asc");
+		List<Vip> vipl = vipService.browsePagingVip(split.getBuyAccountId(), null, null, 1, 1, "vip_id", "asc");
 		Vip vip = vipl.get(0);
 		vip.setExpireDate(DateUtil.nextYear(new Date(), 1));//一年
 		vip.setLevel(accountLevel.getLevel());
@@ -370,6 +370,7 @@ public class SplitServiceImpl implements SplitService{
 	List<AccountParent> ssapl = accountParentService.browsePagingAccountParent(null, null, accountId, null, null, null, null, 1, 1, "account_parent_id", "asc");
 	AccountParent ssap = ssapl.get(0);
 	Integer ssacountId = ssap.getRealMasterId();//真实上级id	
+	if(ssacountId!=null&&!ssacountId.equals("")){//
 	//拆分人上级的财务信息
 	List<Finance> ssfl = financeService.browsePagingFinance(null, ssacountId, 1, 1, "finance_id", "asc");
 	Finance ssf = ssfl.get(0);
@@ -393,6 +394,7 @@ public class SplitServiceImpl implements SplitService{
 	b=financeRecordService.addFinanceRecord(ssfr);
 	if(!b){
 		throw new PayException();
+	}
 	}
 	//拆分人上级的团购信息无需修改
 	/**

@@ -510,8 +510,8 @@ public class AccountController {
 			session.setAttribute("validCodeDate", new Date());
 		}else{
 		Date validCodeDate= (Date) session.getAttribute("validCodeDate");
-		if(validCodeDate.after(new Date(new Date().getTime()-1000*60))){
-			throw new RequestLimitException();//请求过快1分钟
+		if(validCodeDate.after(new Date(new Date().getTime()-1000*30))){
+			throw new RequestLimitException();//请求过快30s
 		}else{
 			session.setAttribute("validCodeDate", new Date());
 		}
@@ -723,6 +723,29 @@ public class AccountController {
 				}	
 	}
 
+	/**
+	 * 手机号账户是否存在
+	 * @return
+	 */
+	@ApiOperation(value = "手机号账户是否存在", notes = "手机号账户是否存在")
+	@ApiImplicitParams({
+		  @ApiImplicitParam(name="phone",value="手机号",dataType="string", paramType = "query",required=true)
+		  })
+	@RequestMapping(value = "/phoneIsExist", method = {RequestMethod.GET,RequestMethod.POST})
+	public @ResponseBody StateResultList accountIsExist(
+			@RequestParam("phone") String phone,
+			HttpSession session)  {
+		List<String> list = new ArrayList<>();
+		//判断是否存在
+		Account ac = accountService.loginAccount(phone, null, null);
+		if(ac!=null&&ac.getAccountId()!=null){
+		   list.add("已经存在");
+		   return ResultUtil.getSlefSRFailList(list);
+		 }else{
+		   list.add("不存在");			 
+		 }
+		return ResultUtil.getSlefSRSuccessList(list);
+	}
 	/**
 	 * 登录
 	 * @return
