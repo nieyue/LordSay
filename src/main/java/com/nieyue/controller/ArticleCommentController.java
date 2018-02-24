@@ -155,6 +155,7 @@ public class ArticleCommentController {
 			HttpSession session)  {
 		List<JSONObject> list = new ArrayList<JSONObject>();
 		ArticleComment articleComment = articleCommentService.loadArticleComment(articleCommentId);
+		//session.setAttribute("pointaid"+accountId+"acid"+articleCommentId+, value);
 		JSONObject json = new JSONObject();
 			articleComment.setPointNumber(articleComment.getPointNumber()+1);
 			articleCommentService.updateArticleComment(articleComment);

@@ -270,6 +270,11 @@ public class SplitServiceImpl implements SplitService{
 		AccountParent buyap = buyapl.get(0);
 		buyap.setAccountLevelId(accountLevel.getAccountLevelId());
 		buyap.setName(accountLevel.getName());
+		buyap.setRealMasterId(accountId);//真实上级改为拆分的
+		b=accountParentService.updateAccountParent(buyap);
+		if(!b){
+			throw new PayException();
+		}
 		//vipgroup增加记录
 		VipGrowthRecord vipGrowthRecord=new VipGrowthRecord();
 		vipGrowthRecord.setName(accountLevel.getName());

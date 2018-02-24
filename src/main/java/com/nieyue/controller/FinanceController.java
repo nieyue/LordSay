@@ -1,5 +1,6 @@
 package com.nieyue.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -21,6 +22,7 @@ import com.nieyue.bean.Account;
 import com.nieyue.bean.Finance;
 import com.nieyue.bean.FinanceRecord;
 import com.nieyue.bean.Payment;
+import com.nieyue.exception.PayException;
 import com.nieyue.exception.VerifyCodeErrorException;
 import com.nieyue.pay.AlipayUtil;
 import com.nieyue.service.AccountService;
@@ -205,14 +207,15 @@ public class FinanceController {
 		if(method==1){//支付宝
 			payment.setNotifyUrl(lordSayProjectDomainUrl+"/finance/alipayRechargeNotifyUrl");
 			//真实环境
-			/*try {
+			try {
 				result=alipayUtil.getAppPayment(payment);
 			} catch (UnsupportedEncodingException e) {
 				throw new PayException();//回滚
 			}
-			list.add(result);*/
+			list.add(result);
+			
 			//测试环境
-			FinanceRecord fr=new FinanceRecord();
+		/*	FinanceRecord fr=new FinanceRecord();
 			fr.setAccountId(payment.getAccountId());
 			fr.setMethod(payment.getType());//支付类型
 			fr.setMoney(payment.getMoney());//金额
@@ -230,7 +233,7 @@ public class FinanceController {
 					list.add(f);
 					return ResultUtil.getSlefSRSuccessList(list);
 				}
-			}
+			}*/
 		}else if(method==2){//微信
 			list.add("暂未开通");
 			return ResultUtil.getSlefSRFailList(list);

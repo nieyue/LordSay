@@ -110,24 +110,24 @@ public class OrderController {
 			@RequestParam(value="contactPhone",required=false)String contactPhone,
 			 HttpSession session) {
 		List<Map<Object,Object>> list=new ArrayList<>();
-//		if(payType==3){//余额支付
-//			boolean b= orderService.balancePaymentOrder(type, payType, accountId, businessId,nickname,phone,contactPhone);
-//			if(b){
-//				return ResultUtil.getSlefSRSuccessList(list);
-//			}
-//		}else{//微信、支付宝、ios内购支付
-//			String str = orderService.thirdPartyPaymentOrder(type,payType,accountId,businessId,nickname,phone,contactPhone);
-//			if(str!=null && !str.equals("")){
-//			Map<Object,Object> map=new HashMap<Object,Object>();
-//			map.put("result", str);
-//			list.add(map);
-//			return ResultUtil.getSlefSRSuccessList(list);
-//			}
-//		}
-		boolean b = orderService.balancePaymentOrder(type, payType, accountId, businessId,nickname,phone,contactPhone);
-		if(b){
+		if(payType==3){//余额支付
+			boolean b= orderService.balancePaymentOrder(type, payType, accountId, businessId,nickname,phone,contactPhone);
+			if(b){
+				return ResultUtil.getSlefSRSuccessList(list);
+			}
+		}else{//微信、支付宝、ios内购支付
+			String str = orderService.thirdPartyPaymentOrder(type,payType,accountId,businessId,nickname,phone,contactPhone);
+			if(str!=null && !str.equals("")){
+			Map<Object,Object> map=new HashMap<Object,Object>();
+			map.put("result", str);
+			list.add(map);
 			return ResultUtil.getSlefSRSuccessList(list);
+			}
 		}
+//		boolean b = orderService.balancePaymentOrder(type, payType, accountId, businessId,nickname,phone,contactPhone);
+//		if(b){
+//			return ResultUtil.getSlefSRSuccessList(list);
+//		}
 		return ResultUtil.getSlefSRFailList(list);
 	}
 	/**
