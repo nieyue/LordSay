@@ -151,7 +151,7 @@ public class OrderController {
 			Order o0 = o0l.get(i);
 			Integer o0Id = o0.getOrderId();
 			List<OrderDetail> o0dl = orderDetailService.browsePagingOrderDetail(o0Id, null, null, 1, 1, "order_detail_id", "asc");
-				if(o0dl.size()==1 &&o0dl.get(i).getBusinessId().equals(videoSetId)){
+				if(o0dl.size()==1 &&o0dl.get(0).getBusinessId().equals(videoSetId)){
 					videoSetIsOrder=1;
 				}
 		}
@@ -161,7 +161,7 @@ public class OrderController {
 			Order o2 = o2l.get(j);
 			Integer o2Id = o2.getOrderId();
 			List<OrderDetail> o2dl = orderDetailService.browsePagingOrderDetail(o2Id, null, null, 1, 1, "order_detail_id", "asc");
-				if(o2dl.size()==1 &&o2dl.get(j).getBusinessId().equals(videoSetId)){
+				if(o2dl.size()==1 &&o2dl.get(0).getBusinessId().equals(videoSetId)){
 					videoSetIsOrder=1;
 				}
 		}

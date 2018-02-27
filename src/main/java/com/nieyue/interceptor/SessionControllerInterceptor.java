@@ -49,11 +49,11 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         sessionRole = (Role) request.getSession().getAttribute("role");
         sessionFinance = (Finance) request.getSession().getAttribute("finance");
         }
-//        Integer i=1;
-//        Integer j=1;
-//        if(i.equals(j)){
-//        	return true;
-//        }
+        Integer i=1;
+        Integer j=1;
+        if(i.equals(j)){
+        	return true;
+        }
         if(
         		request.getServletPath().equals("/")
         		||request.getRequestURI().indexOf("swagger")>-1
@@ -450,6 +450,7 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         					request.getRequestURI().indexOf("/videoSetCollect/delete")>-1
         					||request.getRequestURI().indexOf("/videoSetCollect/list")>-1
         					|| request.getRequestURI().indexOf("/videoSetCollect/add")>-1
+        					|| request.getRequestURI().indexOf("/videoSetCollect/deleteBatch")>-1
         					||method.getName().equals("loadVideoSetCollect")
         					)
         					&& request.getParameter("accountId").equals(sessionAccount.getAccountId().toString())){

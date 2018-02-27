@@ -141,4 +141,23 @@ public class VideoSetCollectController {
 			}
 	}
 	
+	/**
+	 * 视频集收藏批量删除
+	 * @return
+	 */
+	@ApiOperation(value = "视频集收藏批量删除videoSetCollectId=1&videoSetCollectId=2", notes = "视频集收藏批量删除")
+	@ApiImplicitParams({
+		@ApiImplicitParam(name="videoSetCollectId",value="视频集收藏ID列表",dataType="array", paramType = "query",required=true)
+	})
+	@RequestMapping(value = "/deleteBatch", method = {RequestMethod.GET,RequestMethod.POST})
+	public @ResponseBody StateResult delVideoSetCollectList(
+		 @RequestParam(value = "videoSetCollectId") Integer[] videoSetCollectId,
+			HttpSession session)  {
+		 boolean dm=false;
+		for(int i=0;i<videoSetCollectId.length;i++){
+		    dm = videoSetCollectService.delVideoSetCollect(videoSetCollectId[i]);
+		  }
+		return ResultUtil.getSR(dm);
+	}
+	
 }
