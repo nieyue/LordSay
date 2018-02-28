@@ -49,11 +49,11 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         sessionRole = (Role) request.getSession().getAttribute("role");
         sessionFinance = (Finance) request.getSession().getAttribute("finance");
         }
-        Integer i=1;
-        Integer j=1;
-        if(i.equals(j)){
-        	return true;
-        }
+//        Integer i=1;
+//        Integer j=1;
+//        if(i.equals(j)){
+//        	return true;
+//        }
         if(
         		request.getServletPath().equals("/")
         		||request.getRequestURI().indexOf("swagger")>-1
