@@ -241,7 +241,7 @@ public class FinanceController {
 			list.add("暂未开通");
 			return ResultUtil.getSlefSRFailList(list);
 		}
-		return ResultUtil.getSlefSRFailList(list);
+		return ResultUtil.getSlefSRSuccessList(list);
 	}
 	/**
 	 * 提现
