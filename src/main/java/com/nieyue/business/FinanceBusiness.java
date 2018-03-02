@@ -78,6 +78,8 @@ public class FinanceBusiness {
 	SplitService splitService;
 	@Resource
 	PaymentBusiness paymentBusiness;
+	@Resource
+	OrderBusiness orderBusiness;
 	/**
 	 *  根据订单类型，支付方式、账户id、金额，财务业务执行
 	 *  （余额支付，首先执行财务业务，再执行订单与订单详情）
@@ -145,7 +147,7 @@ public class FinanceBusiness {
 					fr.setAccountId(accountId);//账户id
 					fr.setMethod(payType);//支付方式
 					fr.setType(11);//付费课程购买
-					String transactionNumber=((int) (Math.random()*9000)+1000)+DateUtil.getOrdersTime()+((int)(Math.random()*9000)+10000);
+					String transactionNumber=orderBusiness.getOrderNumber(accountId);
 					fr.setTransactionNumber(transactionNumber);//交易单号
 					fr.setStatus(2);//1是待处理，2成功，3已拒绝
 					fr.setMoney(money);
@@ -243,7 +245,7 @@ public class FinanceBusiness {
 						fr.setAccountId(accountId);//账户id
 						fr.setMethod(payType);//支付方式
 						fr.setType(8);//vip购买
-						String transactionNumber=((int) (Math.random()*9000)+1000)+DateUtil.getOrdersTime()+((int)(Math.random()*9000)+10000);
+						String transactionNumber=orderBusiness.getOrderNumber(accountId);
 						fr.setTransactionNumber(transactionNumber);//交易单号
 						fr.setStatus(2);//1是待处理，2成功，3已拒绝
 						fr.setMoney(money);
@@ -268,7 +270,7 @@ public class FinanceBusiness {
 					sfr.setAccountId(sfinance.getAccountId());//上级账户id
 					sfr.setMethod(payType);//支付方式
 					sfr.setType(9);//分发奖励
-					String stransactionNumber=((int) (Math.random()*9000)+1000)+DateUtil.getOrdersTime()+((int)(Math.random()*9000)+10000);
+					String stransactionNumber=orderBusiness.getOrderNumber(sfinance.getAccountId());
 					sfr.setTransactionNumber(stransactionNumber);//交易单号
 					sfr.setStatus(2);//1是待处理，2成功，3已拒绝
 					sfr.setMoney(splitReward);
@@ -295,10 +297,10 @@ public class FinanceBusiness {
 					}
 					//上上级财务记录
 					FinanceRecord ssfr=new FinanceRecord();
-					ssfr.setAccountId(ssfinance.getAccountId());//上级账户id
+					ssfr.setAccountId(ssfinance.getAccountId());//上上级账户id
 					ssfr.setMethod(payType);//支付方式
 					ssfr.setType(10);//二级购买vip奖励
-					String sstransactionNumber=((int) (Math.random()*9000)+1000)+DateUtil.getOrdersTime()+((int)(Math.random()*9000)+10000);
+					String sstransactionNumber=orderBusiness.getOrderNumber(ssfinance.getAccountId());
 					ssfr.setTransactionNumber(sstransactionNumber);//交易单号
 					ssfr.setStatus(2);//1是待处理，2成功，3已拒绝
 					ssfr.setMoney(splitParentReward);
@@ -457,7 +459,7 @@ public class FinanceBusiness {
 						fr.setAccountId(accountId);//账户id
 						fr.setMethod(payType);//支付方式
 						fr.setType(5);//团购账单
-						String transactionNumber=((int) (Math.random()*9000)+1000)+DateUtil.getOrdersTime()+((int)(Math.random()*9000)+10000);
+						String transactionNumber=orderBusiness.getOrderNumber(accountId);
 						fr.setTransactionNumber(transactionNumber);//交易单号
 						fr.setStatus(2);//1是待处理，2成功，3已拒绝
 						fr.setMoney(money);

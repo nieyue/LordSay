@@ -22,6 +22,7 @@ import com.nieyue.bean.Account;
 import com.nieyue.bean.Finance;
 import com.nieyue.bean.FinanceRecord;
 import com.nieyue.bean.Payment;
+import com.nieyue.business.OrderBusiness;
 import com.nieyue.exception.PayException;
 import com.nieyue.exception.VerifyCodeErrorException;
 import com.nieyue.pay.AlipayUtil;
@@ -55,6 +56,8 @@ public class FinanceController {
 	private FinanceRecordService financeRecordService;
 	@Resource
 	private AccountService accountService;
+	@Resource
+	private OrderBusiness orderBusiness;
 	@Resource
 	private AlipayUtil alipayUtil;
 	@Value("${myPugin.lordSayProjectDomainUrl}")
@@ -187,11 +190,11 @@ public class FinanceController {
 		if(a==null){
 			return ResultUtil.getSlefSRFailList(list);		
 		}
-		if(a.getAuth()!=2){//没认证
+		if(a.getAuth()==null||a.getAuth()!=2){//没认证
 			return ResultUtil.getSlefSRList("40000", "没认证", list);
 		}
 		String result="";
-		String transactionNumber = ((int) (Math.random()*9000)+1000)+DateUtil.getOrdersTime()+(accountId+10000);
+		String transactionNumber = orderBusiness.getOrderNumber(accountId);
 		Payment payment=new Payment();
 		payment.setAccountId(accountId);
 		payment.setBusinessType(4);//充值
@@ -282,7 +285,7 @@ public class FinanceController {
 				fr.setAccountId(accountId);
 				fr.setMethod(method);
 				fr.setMoney(money);
-				String transactionNumber = ((int) (Math.random()*9000)+1000)+DateUtil.getOrdersTime()+(accountId+10000);
+				String transactionNumber = orderBusiness.getOrderNumber(accountId);
 				fr.setTransactionNumber(transactionNumber);
 				fr.setType(2);//2是账户提现
 				fr.setStatus(1);//提现待处理，后台显示操作成功

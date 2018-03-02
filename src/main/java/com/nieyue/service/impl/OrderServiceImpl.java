@@ -15,6 +15,7 @@ import com.nieyue.bean.Order;
 import com.nieyue.bean.OrderDetail;
 import com.nieyue.bean.Payment;
 import com.nieyue.business.FinanceBusiness;
+import com.nieyue.business.OrderBusiness;
 import com.nieyue.business.PaymentBusiness;
 import com.nieyue.dao.OrderDao;
 import com.nieyue.exception.PayException;
@@ -41,6 +42,8 @@ public class OrderServiceImpl implements OrderService{
 	@Resource
 	PaymentBusiness paymentBusiness;
 	@Resource
+	OrderBusiness orderBusiness;
+	@Resource
 	AlipayUtil alipayUtil;
 	@Value("${myPugin.lordSayProjectDomainUrl}")
 	String lordSayProjectDomainUrl;
@@ -65,7 +68,7 @@ public class OrderServiceImpl implements OrderService{
 			return result;//不满足验证直接失败
 		}
 		//2.生成订单号
-		String orderNumber=((int) (Math.random()*9000)+1000)+DateUtil.getOrdersTime()+((int)(Math.random()*9000)+10000);
+		String orderNumber=orderBusiness.getOrderNumber(accountId);
 		OrderDetail orderDetail = paymentBusiness.getPaymentType(type, payType, accountId, businessId);
 		//3.支付存储类
 		Payment payment=new Payment();
@@ -123,7 +126,7 @@ public class OrderServiceImpl implements OrderService{
 			String phone,
 			String contactPhone) {
 		//1.生成订单号
-		String orderNumber=((int) (Math.random()*9000)+1000)+DateUtil.getOrdersTime()+((int)(Math.random()*9000)+10000);
+		String orderNumber=orderBusiness.getOrderNumber(accountId);
 		//2.财务执行
 		int r = financeBusiness.financeExcute(type, payType, accountId,businessId,orderNumber,nickname,phone,contactPhone);
 		if(r==-1){
