@@ -48,6 +48,7 @@ import com.nieyue.thirdparty.yun.YunSms;
 import com.nieyue.util.MyDESutil;
 import com.nieyue.util.MyValidator;
 import com.nieyue.util.ResultUtil;
+import com.nieyue.util.SingletonHashMap;
 import com.nieyue.util.StateResult;
 import com.nieyue.util.StateResultList;
 
@@ -565,6 +566,16 @@ public class AccountController {
 			Integer roleId = account.getRoleId();
 			Role r = roleService.loadRole(roleId);
 			session.setAttribute("role", r);
+			//当前sessionId放入单例map
+			if(r.getName().equals("用户")){
+				HashMap<String,Object> smap=  SingletonHashMap.getInstance(); 
+				smap.put("accountId"+account.getAccountId(), session.getId());
+//				if(smap.get("accountId"+account.getAccountId())!=null&&smap.get("accountId"+account.getAccountId()).equals("")){
+//					
+//				}
+				
+			 }
+			
 			List<Finance> f = financeService.browsePagingFinance(null,account.getAccountId(), 1, 1, "finance_id", "asc");
 			session.setAttribute("finance", f.get(0));
 			Map<Object,Object> map=new HashMap<>();
@@ -678,6 +689,15 @@ public class AccountController {
 				
 				session.setAttribute("account", account);
 				Role role = roleService.loadRole(account.getRoleId());
+				//当前sessionId放入单例map
+				if(role.getName().equals("用户")){
+					HashMap<String,Object> smap=  SingletonHashMap.getInstance(); 
+					smap.put("accountId"+account.getAccountId(), session.getId());
+	//				if(smap.get("accountId"+account.getAccountId())!=null&&smap.get("accountId"+account.getAccountId()).equals("")){
+	//					
+	//				}
+					
+				 }
 				session.setAttribute("role", role);
 				List<Finance> f = financeService.browsePagingFinance(null,account.getAccountId(), 1, 1, "finance_id", "asc");
 				//System.out.println(f.get(0).toString());

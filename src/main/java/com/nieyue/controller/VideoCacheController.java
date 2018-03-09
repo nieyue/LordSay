@@ -86,6 +86,9 @@ public class VideoCacheController {
 	@ApiOperation(value = "视频缓存增加", notes = "视频缓存增加")
 	@RequestMapping(value = "/add", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResult addVideoCache(@ModelAttribute VideoCache videoCache, HttpSession session) {
+		if(videoCache.getAccountId()==null||videoCache.getVideoId()==null){
+			return ResultUtil.getSlefSR(50000, "缺少参数");
+		}
 		boolean am = videoCacheService.addVideoCache(videoCache);
 		return ResultUtil.getSR(am);
 	}
@@ -125,7 +128,7 @@ public class VideoCacheController {
 	 */
 	@ApiOperation(value = "视频缓存单个加载", notes = "视频缓存单个加载")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="VideoCacheId",value="视频缓存ID",dataType="int", paramType = "path",required=true)
+		  @ApiImplicitParam(name="videoCacheId",value="视频缓存ID",dataType="int", paramType = "path",required=true)
 		  })
 	@RequestMapping(value = "/{videoCacheId}", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList loadVideoCache(@PathVariable("videoCacheId") Integer videoCacheId,HttpSession session)  {

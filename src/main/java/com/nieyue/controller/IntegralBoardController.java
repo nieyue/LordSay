@@ -116,16 +116,15 @@ public class IntegralBoardController {
 		}
 		//榜单
 		List<IntegralBoard> ibl = integralBoardService.browsePagingIntegralBoard(type, timeType, null, recordTime, null, null, pageNum, pageSize, orderName, orderWay);
-		if(ibl.size()>0){
-			
+		if(ibl.size()<=0){
+			ibl=new ArrayList<IntegralBoard>();
+		}	
 		Map<Object,Object> map=new HashMap<Object,Object>();
 		map.put("integralBoardList",ibl);
 		Integer level = integralBoardService.getLevel(type, timeType, accountId, recordTime);
 		map.put("level",level);
 		list.add(map);
 		return ResultUtil.getSlefSRSuccessList(list);
-		}
-		return ResultUtil.getSlefSRFailList(list);
 	}
 	/**
 	 * 积分榜修改

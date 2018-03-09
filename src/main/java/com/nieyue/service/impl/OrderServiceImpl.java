@@ -100,6 +100,7 @@ public class OrderServiceImpl implements OrderService{
 			payment.setNotifyUrl(lordSayProjectDomainUrl+"/payment/alipayNotifyUrl");
 			try {
 				result=alipayUtil.getAppPayment(payment);
+				//result=alipayUtil.getPcWebPayment(payment);
 			} catch (UnsupportedEncodingException e) {
 				throw new PayException();//回滚
 			}

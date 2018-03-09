@@ -1,6 +1,7 @@
 package com.nieyue.interceptor;
 
 import java.lang.reflect.Method;
+import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,7 +14,9 @@ import org.springframework.web.servlet.ModelAndView;
 import com.nieyue.bean.Account;
 import com.nieyue.bean.Finance;
 import com.nieyue.bean.Role;
+import com.nieyue.exception.AccountIsLoginException;
 import com.nieyue.exception.MySessionException;
+import com.nieyue.util.SingletonHashMap;
 
 /**
  * 用户session控制拦截器
@@ -34,7 +37,7 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         }
         HandlerMethod handlerMethod = (HandlerMethod) handler;
         Method method = handlerMethod.getMethod();
-       System.out.println(method.getDefaultValue());
+      // System.out.println(method.getDefaultValue());
         
        
         Account sessionAccount = null;
@@ -48,6 +51,7 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         sessionAccount = (Account) request.getSession().getAttribute("account");
         sessionRole = (Role) request.getSession().getAttribute("role");
         sessionFinance = (Finance) request.getSession().getAttribute("finance");
+   
         }
 //        Integer i=1;
 //        Integer j=1;
@@ -188,6 +192,16 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         	System.out.println(3);
         	//admin中只许修改自己的值
         	if(sessionRole.getName().equals("用户")){
+        		   //当前sessionId放入单例map
+        			HashMap<String,Object> smap=  SingletonHashMap.getInstance(); 
+        			if(smap.get("accountId"+sessionAccount.getAccountId())==null
+        					||smap.get("accountId"+sessionAccount.getAccountId()).equals("")
+        					//非最后一个登陆的用户不能调用
+        					||!smap.get("accountId"+sessionAccount.getAccountId()).equals(request.getSession().getId())){
+        				//账户已经登陆
+        				throw new AccountIsLoginException();
+        			}
+        			
         		//角色全不许
         		if( request.getRequestURI().indexOf("/role")>-1 ){
         			throw new MySessionException();

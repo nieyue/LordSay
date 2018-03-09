@@ -31,6 +31,11 @@ public class MyExceptionAdvice {
 	public StateResult acountIsExistErrorHandler( Exception e) throws Exception {
 		return ResultUtil.getSlefSR(40001, "账户已存在");
 	}
+	@ExceptionHandler(value=AccountIsLoginException.class)
+	@ResponseBody
+	public StateResult acountIsLoginErrorHandler( Exception e) throws Exception {
+		return ResultUtil.getSlefSR(40003, "账户已登陆");
+	}
 	@ExceptionHandler(value=VerifyCodeErrorException.class)
 	@ResponseBody
 	public StateResult verifyCodeErrorErrorHandler( Exception e) throws Exception {
