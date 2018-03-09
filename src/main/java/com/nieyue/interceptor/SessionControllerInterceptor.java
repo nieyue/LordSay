@@ -186,10 +186,8 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         	//超级管理员
         	if(sessionRole.getName().equals("超级管理员")
         			){
-        		System.out.println(2);
         		return true;
         	}
-        	System.out.println(3);
         	//admin中只许修改自己的值
         	if(sessionRole.getName().equals("用户")){
         		   //当前sessionId放入单例map
