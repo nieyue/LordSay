@@ -15,7 +15,7 @@ spring:
    datasource:
      name: master
      driver-class-name: com.mysql.jdbc.Driver
-     url: jdbc:mysql://118.190.133.146:3306/lord_say_db
+     url: jdbc:mysql://118.31.44.127:3306/lord_say_db
      username: root
      password: liliu
 myPugin: 
@@ -23,8 +23,7 @@ myPugin:
     myDomainName: laoyeshuo.cn
   projectName: LordSay
   requestAuth: requestAuthProd
-  #lordSayProjectDomainUrl: http://www.laoyeshuo.cn
-  lordSayProjectDomainUrl: http://app.jiehao9.com
+  lordSayProjectDomainUrl: http://server.laoyeshuo.cn
   yunSmsUID: 150241
   yunSmsPWD: rmfbj9
   yunSmsSignName: 【老爷说】
