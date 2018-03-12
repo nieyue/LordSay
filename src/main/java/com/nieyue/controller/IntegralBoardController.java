@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.nieyue.bean.IntegralBoard;
+import com.nieyue.exception.NotAnymoreException;
+import com.nieyue.exception.NotIsNotExistException;
 import com.nieyue.service.IntegralBoardService;
 import com.nieyue.util.DateUtil;
 import com.nieyue.util.ResultUtil;
@@ -78,7 +80,7 @@ public class IntegralBoardController {
 			if(list.size()>0){
 				return ResultUtil.getSlefSRSuccessList(list);
 			}else{
-				return ResultUtil.getSlefSRFailList(list);
+				throw new NotAnymoreException();//没有更多
 			}
 	}
 	/**
@@ -200,7 +202,7 @@ public class IntegralBoardController {
 				list.add(integralBoard);
 				return ResultUtil.getSlefSRSuccessList(list);
 			}else{
-				return ResultUtil.getSlefSRFailList(list);
+				throw new NotIsNotExistException("积分榜");//不存在
 			}
 	}
 	

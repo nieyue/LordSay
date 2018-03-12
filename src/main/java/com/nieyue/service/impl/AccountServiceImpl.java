@@ -21,7 +21,6 @@ import com.nieyue.dao.AccountParentDao;
 import com.nieyue.dao.FinanceDao;
 import com.nieyue.dao.IntegralDao;
 import com.nieyue.dao.VipDao;
-import com.nieyue.exception.MySessionException;
 import com.nieyue.service.AccountService;
 @Service
 public class AccountServiceImpl implements AccountService{
@@ -111,9 +110,6 @@ public class AccountServiceImpl implements AccountService{
 			AccountParent ap = accountl.get(0);
 			ap.setSubordinateNumber(ap.getSubordinateNumber()+1);
 			b=accountParentDao.updateAccountParent(ap);
-		}
-		if(!b){
-			throw new MySessionException();			
 		}
 		return b;
 	}

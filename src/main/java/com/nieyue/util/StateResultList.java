@@ -16,7 +16,7 @@ public class StateResultList {
 	private Integer code;
 	@ApiModelProperty(value="返回信息",example="返回信息")
 	private String msg;
-	@ApiModelProperty(value="返回列表",example="返回列表")
+	@ApiModelProperty(value="返回列表")
 	private List<?> list;
 	public StateResultList() {
 		super();

@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.nieyue.bean.Account;
 import com.nieyue.bean.AccountLevel;
 import com.nieyue.bean.AccountParent;
 import com.nieyue.bean.Finance;
@@ -25,7 +24,6 @@ import com.nieyue.business.FinanceBusiness;
 import com.nieyue.dao.SplitDao;
 import com.nieyue.exception.PayException;
 import com.nieyue.service.AccountParentService;
-import com.nieyue.service.AccountService;
 import com.nieyue.service.FinanceRecordService;
 import com.nieyue.service.FinanceService;
 import com.nieyue.service.OrderService;

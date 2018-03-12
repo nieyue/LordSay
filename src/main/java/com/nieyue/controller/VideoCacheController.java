@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.nieyue.bean.VideoCache;
+import com.nieyue.exception.NotAnymoreException;
+import com.nieyue.exception.NotIsNotExistException;
 import com.nieyue.service.VideoCacheService;
 import com.nieyue.util.ResultUtil;
 import com.nieyue.util.StateResult;
@@ -66,7 +68,7 @@ public class VideoCacheController {
 			if(list.size()>0){
 				return ResultUtil.getSlefSRSuccessList(list);
 			}else{
-				return ResultUtil.getSlefSRFailList(list);
+				throw new NotAnymoreException();//没有更多
 			}
 	}
 	/**
@@ -138,7 +140,7 @@ public class VideoCacheController {
 				list.add(VideoCache);
 				return ResultUtil.getSlefSRSuccessList(list);
 			}else{
-				return ResultUtil.getSlefSRFailList(list);
+				throw new NotIsNotExistException("视频缓存");//不存在
 			}
 	}
 	

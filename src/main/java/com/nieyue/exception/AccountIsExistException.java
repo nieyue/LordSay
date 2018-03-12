@@ -1,7 +1,6 @@
 package com.nieyue.exception;
 
 
-
 /**
  * 账户已经存在异常
  * @author 聂跃
@@ -16,3 +15,5 @@ public class AccountIsExistException extends RuntimeException {
 
 	
 }
+
+

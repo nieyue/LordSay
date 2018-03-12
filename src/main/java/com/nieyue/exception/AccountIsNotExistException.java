@@ -1,16 +1,15 @@
 package com.nieyue.exception;
-
 /**
- * 账户已经登录异常
+ * 账户不存在异常
  * @author 聂跃
- * @date 2017年8月8日
+ * @date 2018年3月12日
  */
-public class AccountIsLoginException extends RuntimeException {
-
+public class AccountIsNotExistException extends RuntimeException {
+	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	
 	
 }

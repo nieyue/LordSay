@@ -1,11 +1,12 @@
 package com.nieyue.exception;
 
+
 /**
- * 账户已经登录异常
+ * 账户手机号已存在异常
  * @author 聂跃
  * @date 2017年8月8日
  */
-public class AccountIsLoginException extends RuntimeException {
+public class AccountPhoneIsExistException extends RuntimeException {
 
 	/**
 	 * 
@@ -14,3 +15,5 @@ public class AccountIsLoginException extends RuntimeException {
 
 	
 }
+
+
