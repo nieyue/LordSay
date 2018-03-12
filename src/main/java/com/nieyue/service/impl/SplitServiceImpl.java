@@ -22,6 +22,7 @@ import com.nieyue.bean.VipNumber;
 import com.nieyue.business.AccountLevelBusiness;
 import com.nieyue.business.FinanceBusiness;
 import com.nieyue.dao.SplitDao;
+import com.nieyue.exception.CommonNotRollbackException;
 import com.nieyue.exception.PayException;
 import com.nieyue.service.AccountParentService;
 import com.nieyue.service.FinanceRecordService;
@@ -209,7 +210,7 @@ public class SplitServiceImpl implements SplitService{
 		return b;
 	}
 	@Override
-	public boolean immediatelySplit(Integer splitId, Integer accountId) {
+	public boolean immediatelySplit(Integer splitId, Integer accountId) throws CommonNotRollbackException {
 		boolean b=false;
 		//获取拆分表
 		Split split =splitDao.loadSplit(splitId);
@@ -241,7 +242,8 @@ public class SplitServiceImpl implements SplitService{
 							}
 							vipNumberService.updateVipNumber(vn);
 						}
-						return false;//让部分执行
+						throw new CommonNotRollbackException("团购卡不足");
+						//return false;//让部分执行
 					}
 		//获取订单
 		Order order = orderService.loadOrder(split.getOrderId());

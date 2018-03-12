@@ -18,13 +18,13 @@ import com.nieyue.business.FinanceBusiness;
 import com.nieyue.business.OrderBusiness;
 import com.nieyue.business.PaymentBusiness;
 import com.nieyue.dao.OrderDao;
+import com.nieyue.exception.CommonNotRollbackException;
 import com.nieyue.exception.PayException;
 import com.nieyue.pay.AlipayUtil;
 import com.nieyue.service.AccountService;
 import com.nieyue.service.FinanceService;
 import com.nieyue.service.OrderDetailService;
 import com.nieyue.service.OrderService;
-import com.nieyue.util.DateUtil;
 
 import net.sf.json.JSONObject;
 @Service
@@ -49,6 +49,7 @@ public class OrderServiceImpl implements OrderService{
 	String lordSayProjectDomainUrl;
 	/**
 	 * 第三方支付
+	 * @throws CommonNotRollbackException 
 	 */
 	@Transactional(propagation=Propagation.REQUIRED)
 	@Override
@@ -60,7 +61,7 @@ public class OrderServiceImpl implements OrderService{
 			String nickname,
 			String phone,
 			String contactPhone
-			) {
+			) throws CommonNotRollbackException {
 		String result=null;
 		//1.验证支付条件
 		boolean b = financeBusiness.canThirdPay(type, payType, accountId, businessId, nickname, phone, contactPhone);
@@ -116,6 +117,8 @@ public class OrderServiceImpl implements OrderService{
 	}
 	/**
 	 * 余额支付
+	 * @throws CommonNotRollbackException 
+	 * @throws CommonException 
 	 */
 	@Transactional(propagation=Propagation.REQUIRED)
 	@Override
@@ -125,7 +128,7 @@ public class OrderServiceImpl implements OrderService{
 			Integer businessId,
 			String nickname,
 			String phone,
-			String contactPhone) {
+			String contactPhone) throws CommonNotRollbackException   {
 		//1.生成订单号
 		String orderNumber=orderBusiness.getOrderNumber(accountId);
 		//2.财务执行
@@ -133,7 +136,8 @@ public class OrderServiceImpl implements OrderService{
 		if(r==-1){
 			throw new PayException();
 		}else if(r==0){//部分成功
-			return false;
+			//return false;
+			throw new CommonNotRollbackException("上级团购卡不足");
 		}	
 		return true;
 	}
