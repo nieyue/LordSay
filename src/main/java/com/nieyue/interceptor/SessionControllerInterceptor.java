@@ -322,9 +322,15 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         				|| request.getRequestURI().indexOf("/finance/update")>-1 
         				|| request.getRequestURI().indexOf("/finance/list")>-1 
         				|| request.getRequestURI().indexOf("/finance/add")>-1 
+        				|| request.getRequestURI().indexOf("/finance/passwordValid")>-1 
         				||method.getName().equals("loadFinance")){
         			//修改交易密码
         			if((request.getRequestURI().indexOf("/finance/updatePassword")>-1)
+        					&& request.getParameter("accountId").equals(sessionAccount.getAccountId().toString())){
+        				return true;
+        			}
+        			//交易密码验证
+        			if((request.getRequestURI().indexOf("/finance/passwordValid")>-1)
         					&& request.getParameter("accountId").equals(sessionAccount.getAccountId().toString())){
         				return true;
         			}

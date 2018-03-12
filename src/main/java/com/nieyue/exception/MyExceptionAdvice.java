@@ -111,6 +111,11 @@ public class MyExceptionAdvice {
 	public StateResult financeMoneyNotEnoughExceptionHandler( Exception e) throws Exception {
 		return ResultUtil.getSlefSR(41000, "余额不足");
 	}
+	@ExceptionHandler(value=FinancePasswordException.class)
+	@ResponseBody
+	public StateResult financePasswordExceptionHandler( Exception e) throws Exception {
+		return ResultUtil.getSlefSR(41001, "交易密码错误");
+	}
 	@ExceptionHandler(value=BindException.class)
 	@ResponseBody
 	public StateResult paramsExceptionHandler( Exception e) throws Exception {
