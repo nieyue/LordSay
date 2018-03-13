@@ -1,5 +1,6 @@
 package com.nieyue.util;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -80,6 +81,11 @@ public class ResultUtil {
 			StateResultList srl = new StateResultList(Integer.valueOf(code),msg,list);
 			return srl;
 		}
-		
+		public static void main(String[] args) {
+			List<String> list=new LinkedList<String>();
+			System.out.println(ResultUtil.getSlefSRFailList(list).toString());
+			System.out.println(ResultUtil.getSlefSRFailList(list).equals(ResultUtil.getSlefSRFailList(list)));
+			System.out.println(ResultUtil.getSlefSRFailList(list)==ResultUtil.getSlefSRFailList(list));
+		}
 	}
 
