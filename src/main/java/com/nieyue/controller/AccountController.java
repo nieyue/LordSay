@@ -536,7 +536,10 @@ public class AccountController {
 		session.setAttribute("validCode", userValidCode.toString());
 		 
 			try {
-				yunSms.sendMsg(adminName,templateCode,String.valueOf(userValidCode));
+				String result = yunSms.sendMsg(adminName,templateCode,String.valueOf(userValidCode));
+				if(!result.equals("100")){
+					throw new AccountMessageException();//短信发送异常
+				}
 			} catch (IOException e) {
 				throw new AccountMessageException();//短信发送异常
 			}

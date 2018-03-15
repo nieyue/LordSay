@@ -57,6 +57,11 @@ public class ArticleComment implements Serializable {
 	 */
 	@ApiModelProperty(value="图像",example="图像")
 	private String icon;
+	/**
+	 * 用户
+	 */
+	@ApiModelProperty(value="用户",example="用户")
+	private Account account;
 	public Integer getArticleCommentId() {
 		return articleCommentId;
 	}
@@ -107,6 +112,12 @@ public class ArticleComment implements Serializable {
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	public Account getAccount() {
+		return account;
+	}
+	public void setAccount(Account account) {
+		this.account = account;
 	}
 	
 }

@@ -574,6 +574,8 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         				|| request.getRequestURI().indexOf("/articleComment/add")>-1){
         			//自身
         			if((request.getRequestURI().indexOf("/articleComment/add")>-1
+        					||request.getRequestURI().indexOf("/articleComment/delete")>-1 
+            				|| request.getRequestURI().indexOf("/articleComment/update")>-1 
         					|| request.getRequestURI().indexOf("/articleComment/point")>-1 
         					)
         					&& request.getParameter("accountId").equals(sessionAccount.getAccountId().toString())){
