@@ -26,6 +26,7 @@ public class VideoPlayRecordServiceImpl implements VideoPlayRecordService{
 			b = videoPlayRecordDao.addVideoPlayRecord(videoPlayRecord);			
 		}else{
 			b=videoPlayRecordDao.updateVideoPlayRecord(vprl.get(0));
+			b=false;
 		}
 		return b;
 	}

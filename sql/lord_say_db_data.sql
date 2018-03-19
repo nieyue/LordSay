@@ -728,7 +728,7 @@ CREATE TABLE `order_detail_tb` (
   `name` varchar(255) DEFAULT NULL COMMENT '名称',
   `img_address` varchar(255) DEFAULT NULL COMMENT '封面',
   `total_price` decimal(11,2) DEFAULT NULL COMMENT '总价',
-  `number` decimal(11,2) DEFAULT NULL COMMENT '数量/集数',
+  `number` number(11) DEFAULT NULL COMMENT '数量/集数',
   `create_date` datetime DEFAULT NULL COMMENT '创建时间',
   `update_date` datetime DEFAULT NULL COMMENT '更新时间',
   `business_id` int(11) DEFAULT NULL COMMENT '业务id',
