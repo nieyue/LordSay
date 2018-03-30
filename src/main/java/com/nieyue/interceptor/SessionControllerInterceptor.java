@@ -159,6 +159,10 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         		||request.getRequestURI().indexOf("appVersion/count")>-1
         		||request.getRequestURI().indexOf("appVersion/list")>-1
         		||method.getName().equals("loadAppVersion")
+        		//banner
+        		||request.getRequestURI().indexOf("banner/count")>-1
+        		||request.getRequestURI().indexOf("banner/list")>-1
+        		||method.getName().equals("loadBanner")
         		//勋章项
         		||request.getRequestURI().indexOf("medalTerm/count")>-1
         		||request.getRequestURI().indexOf("medalTerm/list")>-1
@@ -674,6 +678,12 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         		if( request.getRequestURI().indexOf("/appVersion/delete")>-1 
         				|| request.getRequestURI().indexOf("/appVersion/update")>-1 
         				|| request.getRequestURI().indexOf("/appVersion/add")>-1){
+        			throw new MySessionException();
+        		}
+        		//banner不许删除/修改/增加
+        		if( request.getRequestURI().indexOf("/banner/delete")>-1 
+        				|| request.getRequestURI().indexOf("/banner/update")>-1 
+        				|| request.getRequestURI().indexOf("/banner/add")>-1){
         			throw new MySessionException();
         		}
         		//勋章项

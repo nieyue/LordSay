@@ -599,6 +599,21 @@ INDEX INDEX_PLATFORM (platform) USING BTREE,
 INDEX INDEX_STATUS (status) USING BTREE
 )ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='app版本表';
 
+#创建banner表 
+CREATE TABLE banner_tb(
+banner_id int(11) NOT NULL AUTO_INCREMENT COMMENT 'bannerid',
+name varchar(255)  COMMENT '名称',
+type tinyint(4) DEFAULT 0 COMMENT '类型，默认1首页轮播，2视频，3文章',
+img_address varchar(255)  COMMENT '图片',
+content varchar(255)  COMMENT '内容',
+link varchar(255)  COMMENT '链接',
+update_date datetime COMMENT '更新时间',
+status tinyint(4)  COMMENT '状态，默认0下架，1上架',
+PRIMARY KEY (banner_id),
+INDEX INDEX_TYPE (type) USING BTREE,
+INDEX INDEX_STATUS (status) USING BTREE
+)ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='banner表';
+
 #创建勋章项表 
 CREATE TABLE medal_term_tb(
 medal_term_id int(11) NOT NULL AUTO_INCREMENT COMMENT '勋章项id',

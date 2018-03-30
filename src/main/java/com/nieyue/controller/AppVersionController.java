@@ -52,8 +52,6 @@ public class AppVersionController {
 	@ApiImplicitParams({
 	  @ApiImplicitParam(name="platform",value="app平台，0安卓，1为IOS",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="status",value="app状态，0上线，1为未上线",dataType="int", paramType = "query"),
-	  @ApiImplicitParam(name="createDate",value="创建时间",dataType="date-time", paramType = "query"),
-	  @ApiImplicitParam(name="loginDate",value="最后登陆时间",dataType="date-time", paramType = "query"),
 	  @ApiImplicitParam(name="pageNum",value="页头数位",dataType="int", paramType = "query",defaultValue="1"),
 	  @ApiImplicitParam(name="pageSize",value="每页数目",dataType="int", paramType = "query",defaultValue="10"),
 	  @ApiImplicitParam(name="orderName",value="排序字段",dataType="string", paramType = "query",defaultValue="app_version_id"),
