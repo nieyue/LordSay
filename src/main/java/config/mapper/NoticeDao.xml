@@ -38,7 +38,7 @@
     	update_date=#{updateDate},
     	 </if>
     <if test="accountId!=null">
-    	account_id=#{accountId}
+    	account_id=#{accountId},
     	 </if>
     <if test="parentId!=null">
     	parent_id=#{parentId}
