@@ -57,6 +57,7 @@ public class NoticeBusiness {
 	public Notice getNoticeByXitong(
 			String content){
 			Notice notice=new Notice();
+			notice.setRegion(1);//系统通知为全局
 			notice.setTitle(noticeXitongTitle);
 			notice.setImgAddress(noticeXitongImgUrl);
 			notice.setStatus(0);//未读
@@ -72,6 +73,7 @@ public class NoticeBusiness {
 			Integer accountId,
 			Double money){
 		Notice notice=new Notice();
+		notice.setRegion(2);
 		notice.setTitle(noticeTuangouTitle);
 		notice.setAccountId(accountId);
 		notice.setImgAddress(noticeTuangouImgUrl);
@@ -91,6 +93,7 @@ public class NoticeBusiness {
 			Double money){
 		//提现到账通知
 		Notice notice=new Notice();
+		notice.setRegion(2);
 		notice.setTitle(noticeDaozhangTitle);
 		notice.setAccountId(accountId);
 		notice.setImgAddress(noticeDaozhangImgUrl);
@@ -107,6 +110,7 @@ public class NoticeBusiness {
 			Integer accountId,
 			Integer number){
 		Notice notice=new Notice();
+		notice.setRegion(2);
 		notice.setTitle(noticeBuzuTitle);
 		notice.setAccountId(accountId);
 		notice.setImgAddress(noticeBuzuImgUrl);
@@ -125,6 +129,7 @@ public class NoticeBusiness {
 			String realname,
 			Double money){
 		Notice notice=new Notice();
+		notice.setRegion(2);
 		notice.setTitle(noticeShenqingTitle);
 		notice.setAccountId(accountId);
 		notice.setImgAddress(noticeShenqingImgUrl);

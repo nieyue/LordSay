@@ -10,12 +10,16 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.nieyue.bean.FinanceRecord;
+import com.nieyue.bean.Withdrawals;
 import com.nieyue.dao.FinanceRecordDao;
 import com.nieyue.service.FinanceRecordService;
+import com.nieyue.service.WithdrawalsService;
 @Service
 public class FinanceRecordServiceImpl implements FinanceRecordService{
 	@Resource
 	FinanceRecordDao financeRecordDao;
+	@Resource
+	WithdrawalsService withdrawalsService;
 	@Transactional(propagation=Propagation.REQUIRED)
 	@Override
 	public boolean addFinanceRecord(FinanceRecord financeRecord) {
@@ -40,8 +44,15 @@ public class FinanceRecordServiceImpl implements FinanceRecordService{
 
 	@Override
 	public FinanceRecord loadFinanceRecord(Integer financeRecordId) {
-		FinanceRecord r = financeRecordDao.loadFinanceRecord(financeRecordId);
-		return r;
+		FinanceRecord f = financeRecordDao.loadFinanceRecord(financeRecordId);
+				if(f.getType().equals(2))//提现
+				{
+					List<Withdrawals> wl = withdrawalsService.browsePagingWithdrawals(f.getFinanceRecordId(), 1, 1, "withdrawals_id", "asc");
+					if(wl.size()==1){
+						f.setWithdrawalsList(wl);
+					}
+				}
+		return f;
 	}
 
 	@Override
@@ -75,6 +86,19 @@ public class FinanceRecordServiceImpl implements FinanceRecordService{
 			pageSize=0;//没有数据
 		}
 		List<FinanceRecord> l = financeRecordDao.browsePagingFinanceRecord(accountId,status,method,type,transactionNumber,createDate,updateDate,pageNum-1, pageSize, orderName, orderWay);
+		if(l.size()>0){
+			
+		for (int i = 0; i < l.size(); i++) {
+			FinanceRecord f = l.get(i);
+			if(f.getType().equals(2))//提现
+			{
+				List<Withdrawals> wl = withdrawalsService.browsePagingWithdrawals(f.getFinanceRecordId(), 1, 1, "withdrawals_id", "asc");
+				if(wl.size()==1){
+					f.setWithdrawalsList(wl);
+				}
+			}
+		}
+		}
 		return l;
 	}
 

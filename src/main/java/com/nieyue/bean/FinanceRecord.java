@@ -2,6 +2,7 @@ package com.nieyue.bean;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -62,6 +63,11 @@ public class FinanceRecord implements Serializable {
 	 */
 	@ApiModelProperty(value="账户id外键",example="账户id外键")
 	private Integer accountId;
+	/**
+	 * 提现信息列表
+	 */
+	@ApiModelProperty(value="提现信息列表",example="提现信息列表")
+	private List<Withdrawals> withdrawalsList;
 	public Integer getFinanceRecordId() {
 		return financeRecordId;
 	}
@@ -118,6 +124,12 @@ public class FinanceRecord implements Serializable {
 	}
 	public void setStatus(Integer status) {
 		this.status = status;
+	}
+	public List<Withdrawals> getWithdrawalsList() {
+		return withdrawalsList;
+	}
+	public void setWithdrawalsList(List<Withdrawals> withdrawalsList) {
+		this.withdrawalsList = withdrawalsList;
 	}
 	
 }

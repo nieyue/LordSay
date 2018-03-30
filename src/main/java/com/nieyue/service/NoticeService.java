@@ -19,7 +19,7 @@ public interface NoticeService {
 	/** 装载通知 */	
 	public Notice loadNotice(Integer noticeId);	
 	/** 通知总共数目 */	
-	public int countAll(String title,Integer status,Integer accountId);
+	public int countAll(Integer region,String title,Integer status,Integer accountId,Integer parentId);
 	/** 分页通知信息 */
-	public List<Notice> browsePagingNotice(String title,Integer status,Integer accountId,int pageNum,int pageSize,String orderName,String orderWay) ;
+	public List<Notice> browsePagingNotice(Integer region,String title,Integer status,Integer accountId,Integer parentId,int pageNum,int pageSize,String orderName,String orderWay) ;
 }

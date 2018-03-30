@@ -23,6 +23,11 @@ public class Notice  implements Serializable{
 	@ApiModelProperty(value="通知id",example="通知id")
 	private Integer noticeId;
 	/**
+	 * 范围，1全局，2个人
+	 */
+	@ApiModelProperty(value="范围，1全局，2个人",example="范围，1全局，2个人")
+	private Integer region;
+	/**
 	 * 标题，比如：系统通知
 	 */
 	@ApiModelProperty(value="标题，比如：系统通知",example="标题，比如：系统通知")
@@ -57,6 +62,11 @@ public class Notice  implements Serializable{
 	 */
 	@ApiModelProperty(value="通知人Id",example="通知人Id")
 	private Integer accountId;
+	/**
+	 * 父Id
+	 */
+	@ApiModelProperty(value="父Id",example="父Id")
+	private Integer parentId;
 	public Integer getNoticeId() {
 		return noticeId;
 	}
@@ -108,4 +118,17 @@ public class Notice  implements Serializable{
 	public void setStatus(Integer status) {
 		this.status = status;
 	}
+	public Integer getRegion() {
+		return region;
+	}
+	public void setRegion(Integer region) {
+		this.region = region;
+	}
+	public Integer getParentId() {
+		return parentId;
+	}
+	public void setParentId(Integer parentId) {
+		this.parentId = parentId;
+	}
+	
 }

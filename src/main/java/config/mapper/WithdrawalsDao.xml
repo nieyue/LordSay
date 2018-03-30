@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.nieyue.dao.WithdrawalsDao">
+<!-- 添加提现信息 -->
+<insert id="addWithdrawals" parameterType="Withdrawals" keyProperty="withdrawalsId" flushCache="true"  >  
+   INSERT IGNORE INTO
+   		  withdrawals_tb 
+   		 (realname,accountname,finance_record_id)
+   VALUES
+    	 (#{realname},#{accountname},#{financeRecordId})  
+</insert>  
+<!-- 更新提现信息 -->
+<update id="updateWithdrawals" parameterType="Withdrawals" >  
+    UPDATE 
+    	withdrawals_tb 
+    <set>
+    <if test="realname!=null">
+    	realname=#{realname},
+    </if>
+    <if test="accountname!=null">
+    	accountname=#{accountname},
+    	 </if>
+    <if test="financeRecordId!=null">
+    	finance_record_id=#{financeRecordId},
+    	 </if>
+    </set>
+    WHERE
+    	 withdrawals_id=#{withdrawalsId} 
+</update> 
+<!-- 删除提现信息-->
+<delete id="delWithdrawals"  parameterType="Integer" >  
+    DELETE FROM
+    	 withdrawals_tb 
+    	 WHERE withdrawals_id=#{withdrawalsId}
+</delete>  
+<!-- 加载提现信息-->
+<select id="loadWithdrawals" parameterType="Integer" resultType="Withdrawals" >
+SELECT 
+		withdrawals_id,
+		realname,
+		accountname,
+		finance_record_id
+FROM withdrawals_tb 
+WHERE withdrawals_id=#{withdrawalsId}
+</select>
+
+<!-- 分页查询提现信息-->
+<select id="browsePagingWithdrawals" resultType="Withdrawals">  
+ SELECT
+	    withdrawals_id,
+	    realname,
+		accountname,
+		finance_record_id
+	FROM withdrawals_tb
+	<where>
+	<if test="financeRecordId!=null">
+		AND  finance_record_id=#{financeRecordId}
+		</if>
+	AND ${orderName} 
+	<if test="orderWay=='asc'">
+	<![CDATA[>=]]> 
+	</if>
+	<if test="orderWay=='desc'">
+	  <![CDATA[<= ]]>
+	</if>
+	(SELECT ${orderName} FROM withdrawals_tb 
+	<where>
+	<if test="financeRecordId!=null">
+		AND  finance_record_id=#{financeRecordId}
+		</if>
+	</where>
+		ORDER BY 
+			${orderName}  ${orderWay}
+		LIMIT #{pageNum}, 1
+		) 
+	</where>
+	ORDER BY
+		${orderName}  ${orderWay}
+	LIMIT
+		#{pageSize}
+</select> 
+
+<!-- 统计记录条数 -->
+<select id="countAll"  resultType="int">  
+	SELECT
+	 	count(withdrawals_id)
+	FROM withdrawals_tb
+	<where>
+	<if test="financeRecordId!=null">
+		AND  finance_record_id=#{financeRecordId}
+		</if>
+	</where>
+</select>   
+   
+ 
+</mapper>

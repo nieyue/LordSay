@@ -29,7 +29,7 @@ public class YunSms {
   	@Value("${myPugin.yunSmsSignName}")
   	String yunSmsSignName;
   	/**
-  	 * @param stc  模板码 1用户注册，2修改密码，3修改交易密码
+  	 * @param stc  模板码 1用户注册，2修改密码，3修改交易密码,4身份验证
   	 * @param number  验证码
   	 * @return
   	 * @throws ClientException
@@ -44,6 +44,9 @@ public class YunSms {
     				
     			}else if(stc.equals(3)){
     				content+="，您交易密码的验证码：";
+    				
+    			}else if(stc.equals(3)){
+    				content+="，您身份验证的验证码：";
     				
     			}else{//错误
     				return "101";
@@ -73,7 +76,6 @@ public class YunSms {
 
     			// 设置url请求方式 ‘get’ 或者 ‘post’
     			connection.setRequestMethod("POST");
-
     			// 发送
     			BufferedReader in = new BufferedReader(new InputStreamReader(
     					url.openStream()));

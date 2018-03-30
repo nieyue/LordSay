@@ -185,6 +185,16 @@ INDEX INDEX_CREATEDATE (create_date) USING BTREE,
 INDEX INDEX_UPDATEDATE (update_date) USING BTREE
 )ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='财务记录表 ';
 
+#创建提现信息表 
+CREATE TABLE withdrawals_tb(
+withdrawals_id int(11) NOT NULL AUTO_INCREMENT COMMENT '提现信息id',
+realname varchar(255) COMMENT '真实姓名',
+accountname varchar(255) COMMENT '账号名称',
+finance_record_id int(11) COMMENT '财务记录id外键',
+PRIMARY KEY (withdrawals_id),
+INDEX INDEX_FINANCERECORDID (finance_record_id) USING BTREE
+)ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='提现信息表';
+
 #创建积分表 
 CREATE TABLE integral_tb(
 integral_id int(11) NOT NULL AUTO_INCREMENT COMMENT '积分id',
@@ -464,6 +474,7 @@ INDEX INDEX_ACCOUNTID (account_id) USING BTREE
 #创建通知表 
 CREATE TABLE notice_tb(
 notice_id int(11) NOT NULL AUTO_INCREMENT COMMENT '通知id',
+region tinyint(4) COMMENT '范围，1全局，2个人',
 title varchar(255) COMMENT '标题，比如：系统通知',
 img_address varchar(255) COMMENT '图片地址',
 content longtext COMMENT '内容',
@@ -471,10 +482,13 @@ status tinyint(4) COMMENT '状态，默认为0未读，1已读',
 create_date datetime COMMENT '创建时间',
 update_date datetime COMMENT '更新时间',
 account_id int(11) COMMENT '通知人id外键',
+parent_id int(11) COMMENT '父id',
 PRIMARY KEY (notice_id),
+INDEX INDEX_REGION (region) USING BTREE,
 INDEX INDEX_TITLE (title) USING BTREE,
 INDEX INDEX_STATUS (status) USING BTREE,
-INDEX INDEX_ACCOUNTID (account_id) USING BTREE
+INDEX INDEX_ACCOUNTID (account_id) USING BTREE,
+INDEX INDEX_PARENTID (parent_id) USING BTREE
 )ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='通知表';
 
 #创建收货信息表 

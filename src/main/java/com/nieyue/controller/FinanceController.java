@@ -4,6 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -22,6 +23,7 @@ import com.nieyue.bean.Account;
 import com.nieyue.bean.Finance;
 import com.nieyue.bean.FinanceRecord;
 import com.nieyue.bean.Payment;
+import com.nieyue.bean.Withdrawals;
 import com.nieyue.business.OrderBusiness;
 import com.nieyue.exception.AccountAuthAuditException;
 import com.nieyue.exception.AccountIsNotExistException;
@@ -36,6 +38,7 @@ import com.nieyue.pay.AlipayUtil;
 import com.nieyue.service.AccountService;
 import com.nieyue.service.FinanceRecordService;
 import com.nieyue.service.FinanceService;
+import com.nieyue.service.WithdrawalsService;
 import com.nieyue.util.Arith;
 import com.nieyue.util.MyDESutil;
 import com.nieyue.util.ResultUtil;
@@ -61,6 +64,8 @@ public class FinanceController {
 	private FinanceService financeService;
 	@Resource
 	private FinanceRecordService financeRecordService;
+	@Resource
+	private WithdrawalsService withdrawalsService;
 	@Resource
 	private AccountService accountService;
 	@Resource
@@ -283,16 +288,27 @@ public class FinanceController {
 	 */
 	@ApiOperation(value = "提现", notes = "提现")
 	@ApiImplicitParams({
-		  @ApiImplicitParam(name="accountId",value="账户ID",dataType="int", paramType = "query"),
-		  @ApiImplicitParam(name="method",value="方式，1支付宝，2微信,3ios内购",dataType="int", paramType = "query"),
-		  @ApiImplicitParam(name="money",value="金额",dataType="double", paramType = "query")
+		  @ApiImplicitParam(name="accountId",value="账户ID",dataType="int", paramType = "query",required=true),
+		  @ApiImplicitParam(name="method",value="方式，1支付宝，2微信,3ios内购",dataType="int", paramType = "query",required=true),
+		  @ApiImplicitParam(name="money",value="金额",dataType="double", paramType = "query",required=true),
+		  @ApiImplicitParam(name="realname",value="真实姓名",dataType="string", paramType = "query",required=true),
+		  @ApiImplicitParam(name="accountname",value="账户名称",dataType="string", paramType = "query",required=true),
+		  @ApiImplicitParam(name="validCode",value="验证码",dataType="string", paramType = "query",required=true)
 		  })
 	@RequestMapping(value = "/withdrawals", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList withdrawalsFinance(
 			@RequestParam(value="accountId")Integer accountId,
 			@RequestParam(value="method")Integer method,
 			@RequestParam(value="money")Double money,
+			@RequestParam(value="realname")String realname,
+			@RequestParam(value="accountname")String accountname,
+			@RequestParam(value="validCode",required=false) String validCode,
 			HttpSession session) {
+		//手机验证码
+		String vc = (String) session.getAttribute("validCode");
+		if(!vc.equals(validCode)){
+			throw new VerifyCodeErrorException();//验证码错误
+		}
 		Account a = accountService.loadAccount(accountId);
 		List<Finance> list=new ArrayList<Finance>();
 		if(a==null){
@@ -325,6 +341,11 @@ public class FinanceController {
 				fr.setStatus(1);//提现待处理，后台显示操作成功
 				b = financeRecordService.addFinanceRecord(fr);
 				if(b){
+					Withdrawals withdrawals=new Withdrawals();
+					withdrawals.setRealname(realname);
+					withdrawals.setAccountname(accountname);
+					withdrawals.setFinanceRecordId(fr.getFinanceRecordId());
+					b=withdrawalsService.addWithdrawals(withdrawals);
 					list.add(f);
 					return ResultUtil.getSlefSRSuccessList(list);
 				}

@@ -7,22 +7,43 @@
 <insert id="addNotice" parameterType="Notice" keyProperty="noticeId" flushCache="true"  >  
    INSERT IGNORE INTO
    		  notice_tb 
-   		 (title,img_address,content,status,create_date,update_date,account_id)
+   		 (region,title,img_address,content,status,create_date,update_date,account_id,parent_id)
    VALUES
-    	 (#{title},#{imgAddress},#{content},#{status},#{createDate},#{updateDate},#{accountId})  
+    	 (#{region},#{title},#{imgAddress},#{content},#{status},#{createDate},#{updateDate},#{accountId},#{parentId})  
 </insert>  
 <!-- 更新通知 -->
 <update id="updateNotice" parameterType="Notice" >  
     UPDATE 
     	notice_tb 
-    SET 
+    <set>
+    <if test="region!=null">
+    	region=#{region},
+    </if>
+    <if test="title!=null">
     	title=#{title},
+    	 </if>
+    <if test="imgAddress!=null">
     	img_address=#{imgAddress},
+    	 </if>
+    <if test="content!=null">
     	content=#{content},
+    	 </if>
+    <if test="status!=null">
     	status=#{status},
+    	 </if>
+    <if test="createDate!=null">
     	create_date=#{createDate},
+    	 </if>
+    <if test="updateDate!=null">
     	update_date=#{updateDate},
+    	 </if>
+    <if test="accountId!=null">
     	account_id=#{accountId}
+    	 </if>
+    <if test="parentId!=null">
+    	parent_id=#{parentId}
+    	 </if>
+    </set>
     WHERE
     	 notice_id=#{noticeId} 
 </update> 
@@ -36,13 +57,15 @@
 <select id="loadNotice" parameterType="Integer" resultType="Notice" >
 SELECT 
 		notice_id,
+		region,
 	 	title,
 	 	img_address,
     	content,
     	status,
     	create_date,
     	update_date,
-    	account_id
+    	account_id,
+    	parent_id
 FROM notice_tb 
 WHERE notice_id=#{noticeId}
 </select>
@@ -51,15 +74,20 @@ WHERE notice_id=#{noticeId}
 <select id="browsePagingNotice" resultType="Notice">  
  SELECT
 	    notice_id,
+	    region,
 	 	title,
 	 	img_address,
     	content,
     	status,
     	create_date,
     	update_date,
-    	account_id
+    	account_id,
+    	parent_id
 	FROM notice_tb
 	<where>
+	<if test="region!=null">
+		AND  region=#{region}
+		</if>
 	<if test="title!=null">
 		AND  title=#{title}
 		</if>
@@ -67,8 +95,10 @@ WHERE notice_id=#{noticeId}
 		AND  status=#{status}
 		</if>
 	<if test="accountId!=null">
-		AND ( account_id=#{accountId}
-		OR ISNULL(account_id))
+		AND account_id=#{accountId}
+		</if>
+	<if test="parentId!=null">
+		AND parent_id=#{parentId}
 		</if>
 	AND ${orderName} 
 	<if test="orderWay=='asc'">
@@ -79,6 +109,9 @@ WHERE notice_id=#{noticeId}
 	</if>
 	(SELECT ${orderName} FROM notice_tb 
 	<where>
+	<if test="region!=null">
+		AND  region=#{region}
+		</if>
 	<if test="title!=null">
 		AND  title=#{title}
 		</if>
@@ -86,8 +119,10 @@ WHERE notice_id=#{noticeId}
 		AND  status=#{status}
 		</if>
 	<if test="accountId!=null">
-		AND ( account_id=#{accountId}
-		OR ISNULL(account_id))
+		AND account_id=#{accountId}
+		</if>
+		<if test="parentId!=null">
+		AND parent_id=#{parentId}
 		</if>
 	</where>
 		ORDER BY 
@@ -107,6 +142,9 @@ WHERE notice_id=#{noticeId}
 	 	count(notice_id)
 	FROM notice_tb
 	<where>
+	<if test="region!=null">
+		AND  region=#{region}
+		</if>
 	<if test="title!=null">
 		AND  title=#{title}
 		</if>
@@ -115,6 +153,9 @@ WHERE notice_id=#{noticeId}
 		</if>
 	<if test="accountId!=null">
 		AND  account_id=#{accountId}
+		</if>
+		<if test="parentId!=null">
+		AND parent_id=#{parentId}
 		</if>
 	</where>
 </select>   

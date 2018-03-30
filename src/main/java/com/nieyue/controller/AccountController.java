@@ -486,7 +486,7 @@ public class AccountController {
 	 * 手机验证码发送
 	 * 
 	 * @param adminName
-	 * @param templateCode 1注册，2修改密码，3修改交易密码
+	 * @param templateCode 1注册，2修改密码，3修改交易密码,4身份验证
 	 * @return
 	 * @throws RequestLimitException 
 	 * @throws AccountIsExistException 
@@ -495,7 +495,7 @@ public class AccountController {
 	@ApiOperation(value = "手机验证码发送", notes = "手机验证码发送")
 	@ApiImplicitParams({
 		  @ApiImplicitParam(name="adminName",value="手机号/电子邮箱",dataType="string", paramType = "query",required=true),
-		  @ApiImplicitParam(name="templateCode",value="模板 默认1注册，2修改密码,3修改交易密码",dataType="int", paramType = "query",required=true)
+		  @ApiImplicitParam(name="templateCode",value="模板 默认1注册，2修改密码,3修改交易密码,4身份验证",dataType="int", paramType = "query",required=true)
 		  })
 	@RequestMapping(value = "/validCode", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody
@@ -516,6 +516,10 @@ public class AccountController {
 		}
 		//修改交易密码
 		if(accountService.loginAccount(adminName, null,null)==null && templateCode==3){
+			throw new  AccountIsNotExistException();//账户不存在
+		}
+		//身份验证
+		if(accountService.loginAccount(adminName, null,null)==null && templateCode==4){
 			throw new  AccountIsNotExistException();//账户不存在
 		}
 		if(!Pattern.matches(MyValidator.REGEX_PHONE,adminName)){
@@ -634,7 +638,7 @@ public class AccountController {
 			int videoSetCollectCount = videoSetCollectService.countAll(null,account.getAccountId());
 			map.put("videoSetCollectCount", videoSetCollectCount);
 			//未读通知数
-			int noticeCount = noticeService.countAll(null, 0, account.getAccountId());
+			int noticeCount = noticeService.countAll(2,null, 0, account.getAccountId(),null);
 			map.put("notice0", noticeCount);
 			list.add(map);
 			//return ResultUtil.getSlefSRSuccessList(list);

@@ -144,7 +144,7 @@ public class MyExceptionAdvice {
 	@ExceptionHandler(value={MethodArgumentTypeMismatchException.class,NumberFormatException.class})
 	@ResponseBody
 	public StateResult paramsFormatExceptionHandler( Exception e) throws Exception {
-		return ResultUtil.getSlefSR(50002, "参数格式错误");
+		return ResultUtil.getSlefSR(50002, "填项不匹配");
 	}
 	@ExceptionHandler(value={UndeclaredThrowableException.class,RequestLimitException.class})
 	@ResponseBody
