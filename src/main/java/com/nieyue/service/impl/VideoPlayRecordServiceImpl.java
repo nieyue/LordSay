@@ -23,9 +23,9 @@ public class VideoPlayRecordServiceImpl implements VideoPlayRecordService{
 		List<VideoPlayRecord> vprl = videoPlayRecordDao.browsePagingVideoPlayRecord(videoPlayRecord.getVideoId(), videoPlayRecord.getAccountId(), 0, 1, "video_play_record_id", "asc");
 		boolean b=false;
 		if(vprl.size()==0){
-			b = videoPlayRecordDao.addVideoPlayRecord(videoPlayRecord);			
+			b = videoPlayRecordDao.addVideoPlayRecord(videoPlayRecord);	
 		}else{
-			b=videoPlayRecordDao.updateVideoPlayRecord(vprl.get(0));
+			b=updateVideoPlayRecord(vprl.get(0));
 			b=false;
 		}
 		return b;
@@ -39,6 +39,7 @@ public class VideoPlayRecordServiceImpl implements VideoPlayRecordService{
 	@Transactional(propagation=Propagation.REQUIRED)
 	@Override
 	public boolean updateVideoPlayRecord(VideoPlayRecord videoPlayRecord) {
+		videoPlayRecord.setCreateDate(new Date());
 		boolean b = videoPlayRecordDao.updateVideoPlayRecord(videoPlayRecord);
 		return b;
 	}
