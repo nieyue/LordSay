@@ -692,6 +692,8 @@ INDEX INDEX_UPDATEDATE (update_date) USING BTREE
 INSERT IGNORE INTO role_tb (name,duty,update_date) 
 VALUES ("超级管理员","超级管理员",now());
 INSERT IGNORE INTO role_tb (name,duty,update_date) 
+VALUES ("普通管理员","普通管理员",now());
+INSERT IGNORE INTO role_tb (name,duty,update_date) 
 VALUES ("用户","用户",now());
 
 #初始化账户等级

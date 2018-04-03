@@ -20,6 +20,9 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
+import io.swagger.models.Path;
+import io.swagger.models.Swagger;
+import io.swagger.models.Tag;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -64,6 +67,32 @@ public class HttpClientUtil {
 	    map.put("body", body);
 	    //String ret = doPostForm(url,map);
 	   // System.err.println(ret);
+	    String s = HttpClientUtil.doGet("http://server.laoyeshuo.cn/v2/api-docs");
+
+        JSONObject json = JSONObject.fromObject(s);
+        Map<String, Class> classMap = new HashMap<String, Class>();
+        classMap.put("tags", Tag.class);
+        Map<String,Class> pathMap = new HashMap<String, Class>();
+        classMap.put("paths",pathMap.getClass());
+        Swagger swagger= (Swagger) JSONObject.toBean(json, Swagger.class,classMap);
+        List<Tag> tagslist=swagger.getTags();
+        Map<String,Path> pathsMap=swagger.getPaths();
+        for (Map.Entry<String, Path>  entry: pathsMap.entrySet()) {
+            System.out.println(entry.getKey());
+            // System.out.println(entry.getValue());
+            JSONObject js=JSONObject.fromObject(entry.getValue());
+            //System.out.println(js.get("post"));
+            JSONObject ss=JSONObject.fromObject(js.get("post"));
+            System.out.println(ss.get("summary"));
+            JSONArray sss=JSONArray.fromObject(ss.get("tags"));
+            for (int i = 0; i < tagslist.size(); i++) {
+                if(sss.get(0).equals(tagslist.get(i).getName())){
+                	System.out.println(sss.get(0));
+                    System.out.println(tagslist.get(i).getDescription());
+                    System.out.println("---------------------");
+                }
+            }
+        }
 	  }
 	
 	  /**

@@ -166,9 +166,9 @@ public class AccountController {
 				){
 			throw new AccountIsExistException();//
 		}
-		if(account.getPassword()!=null){
-			account.setPassword(MyDESutil.getMD5(account.getPassword()));
-		}
+//		if(account.getPassword()!=null){
+//			account.setPassword(MyDESutil.getMD5(account.getPassword()));
+//		}
 		boolean um = accountService.updateAccount(account);
 		if(um){
 		session.setAttribute("account", account);

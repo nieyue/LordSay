@@ -68,7 +68,7 @@ public class VideoServiceImpl implements VideoService{
 	public boolean delVideo(Integer videoId) {
 		Video video = videoDao.loadVideo(videoId);
 		boolean b = videoDao.delVideo(videoId);
-		if(b==true &&video.getVideoSetId()!=null){
+		if(b==true &&video!=null&& video.getVideoSetId()!=null){
 			VideoSet videoSet = videoSetService.loadVideoSet(video.getVideoSetId());
 			int vc = videoDao.countAll(video.getVideoSetId(), null, null, null);
 			videoSet.setNumber(vc);

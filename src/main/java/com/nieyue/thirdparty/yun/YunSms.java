@@ -45,7 +45,7 @@ public class YunSms {
     			}else if(stc.equals(3)){
     				content+="，您交易密码的验证码：";
     				
-    			}else if(stc.equals(3)){
+    			}else if(stc.equals(4)){
     				content+="，您身份验证的验证码：";
     				
     			}else{//错误
