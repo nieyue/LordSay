@@ -1,5 +1,6 @@
 package com.nieyue.controller;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -148,7 +149,10 @@ public class NoticeController {
 		Notice	notice = noticeService.loadNotice(noticeId);
 			if(notice!=null &&!notice.equals("")){
 				notice.setStatus(1);//已读
-				list.add(notice);
+				boolean b=noticeService.updateNotice(notice);
+				if(b){
+					list.add(notice);
+				}
 				return ResultUtil.getSlefSRSuccessList(list);
 			}else{
 				throw new NotIsNotExistException("通知");//不存在
