@@ -18,6 +18,13 @@ public interface FinanceService {
 	public boolean updateFinance(Finance finance);
 	/** 装载财务 */	
 	public Finance loadFinance(Integer financeId);	
+	/** 提现*/	
+	public Finance withdrawals(
+			Integer accountId,
+			Integer method,
+			Double money,
+			String realname,
+			String accountname);
 	/** 财务总共数目 */	
 	public int countAll(
 			Double money,
