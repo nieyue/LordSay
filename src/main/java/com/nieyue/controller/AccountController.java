@@ -40,6 +40,8 @@ import com.nieyue.exception.AccountMessageException;
 import com.nieyue.exception.AccountNotMasterIdException;
 import com.nieyue.exception.AccountPhoneException;
 import com.nieyue.exception.AccountPhoneIsExistException;
+import com.nieyue.exception.AccountPhoneIsNotExistException;
+import com.nieyue.exception.CommonRollbackException;
 import com.nieyue.exception.MySessionException;
 import com.nieyue.exception.NotAnymoreException;
 import com.nieyue.exception.RequestLimitException;
@@ -512,15 +514,15 @@ public class AccountController {
 		}
 		//修改密码
 		if(accountService.loginAccount(adminName, null,null)==null && templateCode==2){
-			throw new  AccountIsNotExistException();//账户不存在
+			throw new  AccountPhoneIsNotExistException();//手机号不存在
 		}
 		//修改交易密码
 		if(accountService.loginAccount(adminName, null,null)==null && templateCode==3){
-			throw new  AccountIsNotExistException();//账户不存在
+			throw new  AccountPhoneIsNotExistException();//账户不存在
 		}
 		//身份验证
 		if(accountService.loginAccount(adminName, null,null)==null && templateCode==4){
-			throw new  AccountIsNotExistException();//账户不存在
+			throw new  AccountPhoneIsNotExistException();//账户不存在
 		}
 		if(!Pattern.matches(MyValidator.REGEX_PHONE,adminName)){
 			throw new  AccountPhoneException();//账户手机号错误
@@ -584,6 +586,13 @@ public class AccountController {
 			throw new AccountLoginException();//账户或密码错误
 		}
 		if(account.getStatus().equals(0)||account.getStatus().equals(2)){
+			//判断当前账户是否已经登录
+			HashMap<String,Object> smap=  SingletonHashMap.getInstance();
+			if(smap.get("accountId"+account.getAccountId())==null){
+				smap.put("accountId"+account.getAccountId(), session.getId());
+			}else{
+				throw new CommonRollbackException("该账户已登录其他设备，请退出其他设备后再试");
+			}
 			account.setLoginDate(new Date());
 			boolean b = accountService.updateAccount(account);
 			if(b){
@@ -592,14 +601,11 @@ public class AccountController {
 			Role r = roleService.loadRole(roleId);
 			session.setAttribute("role", r);
 			//当前sessionId放入单例map
-			if(r.getName().equals("用户")){
+			/*if(r.getName().equals("用户")){
 				HashMap<String,Object> smap=  SingletonHashMap.getInstance(); 
 				smap.put("accountId"+account.getAccountId(), session.getId());
-//				if(smap.get("accountId"+account.getAccountId())!=null&&smap.get("accountId"+account.getAccountId()).equals("")){
-//					
-//				}
 				
-			 }
+			 }*/
 			
 			List<Finance> f = financeService.browsePagingFinance(null,account.getAccountId(), 1, 1, "finance_id", "asc");
 			session.setAttribute("finance", f.get(0));
@@ -713,14 +719,11 @@ public class AccountController {
 				session.setAttribute("account", account);
 				Role role = roleService.loadRole(account.getRoleId());
 				//当前sessionId放入单例map
-				if(role.getName().equals("用户")){
+				/*if(role.getName().equals("用户")){
 					HashMap<String,Object> smap=  SingletonHashMap.getInstance(); 
 					smap.put("accountId"+account.getAccountId(), session.getId());
-	//				if(smap.get("accountId"+account.getAccountId())!=null&&smap.get("accountId"+account.getAccountId()).equals("")){
-	//					
-	//				}
 					
-				 }
+				 }*/
 				session.setAttribute("role", role);
 				List<Finance> f = financeService.browsePagingFinance(null,account.getAccountId(), 1, 1, "finance_id", "asc");
 				//System.out.println(f.get(0).toString());

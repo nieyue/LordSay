@@ -196,14 +196,14 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         	//admin中只许修改自己的值
         	if(sessionRole.getName().equals("用户")){
         		   //当前sessionId放入单例map
-        			HashMap<String,Object> smap=  SingletonHashMap.getInstance(); 
+        			/*HashMap<String,Object> smap=  SingletonHashMap.getInstance(); 
         			if(smap.get("accountId"+sessionAccount.getAccountId())==null
         					||smap.get("accountId"+sessionAccount.getAccountId()).equals("")
         					//非最后一个登陆的用户不能调用
         					||!smap.get("accountId"+sessionAccount.getAccountId()).equals(request.getSession().getId())){
         				//账户已经登陆
         				throw new AccountIsLoginException();
-        			}
+        			}*/
         			
         		//角色全不许
         		if( request.getRequestURI().indexOf("/role")>-1 ){

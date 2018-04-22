@@ -26,6 +26,7 @@ import com.nieyue.business.OrderBusiness;
 import com.nieyue.exception.AccountAuthAuditException;
 import com.nieyue.exception.AccountIsNotExistException;
 import com.nieyue.exception.AccountNotAuthException;
+import com.nieyue.exception.CommonRollbackException;
 import com.nieyue.exception.FinancePasswordException;
 import com.nieyue.exception.NotAnymoreException;
 import com.nieyue.exception.NotIsNotExistException;
@@ -161,6 +162,9 @@ public class FinanceController {
 			boolean um = financeService.updateFinance(finance);
 			if(um){
 				list.add(finance);
+				//修改交易密码后，错误次数清空
+				session.removeAttribute("passwordValidDate");
+				session.removeAttribute("passwordValidNumber");
 				return ResultUtil.getSlefSRSuccessList(list);
 			}
 		}
@@ -183,6 +187,23 @@ public class FinanceController {
 			if(finance!=null &&finance.getPassword().equals(MyDESutil.getMD5(password))){
 				return ResultUtil.getSlefSRSuccessList(list);
 			}
+			//错误之后记录错误时间和错误次数
+			if(session.getAttribute("passwordValidDate")==null){//验证时间
+				session.setAttribute("passwordValidDate", new Date());
+				session.setAttribute("passwordValidNumber", 1);
+			}else{
+				Date passwordValidDate= (Date) session.getAttribute("passwordValidDate");
+				Integer passwordValidNumber= (Integer) session.getAttribute("passwordValidNumber");
+				session.setAttribute("passwordValidNumber", passwordValidNumber+1);
+				if(passwordValidNumber>5&&passwordValidDate.after(new Date(new Date().getTime()-1000*30*60))){
+					throw new CommonRollbackException("错误超过5次，请30分钟后重试或修改密码重试");//请求过快30分钟
+				}else{
+					//超过30分钟后再次错误
+					session.setAttribute("passwordValidDate", new Date());
+					session.setAttribute("passwordValidNumber", 1);
+				}
+			}
+			
 			throw new FinancePasswordException();//交易密码错误
 		}
 		return ResultUtil.getSlefSRFailList(list);
