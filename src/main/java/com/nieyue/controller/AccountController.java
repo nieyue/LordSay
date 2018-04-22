@@ -586,20 +586,22 @@ public class AccountController {
 			throw new AccountLoginException();//账户或密码错误
 		}
 		if(account.getStatus().equals(0)||account.getStatus().equals(2)){
-			//判断当前账户是否已经登录
-			HashMap<String,Object> smap=  SingletonHashMap.getInstance();
-			if(smap.get("accountId"+account.getAccountId())==null){
-				smap.put("accountId"+account.getAccountId(), session.getId());
-			}else{
-				throw new CommonRollbackException("该账户已登录其他设备，请退出其他设备后再试");
-			}
 			account.setLoginDate(new Date());
 			boolean b = accountService.updateAccount(account);
 			if(b){
-			session.setAttribute("account", account);
 			Integer roleId = account.getRoleId();
 			Role r = roleService.loadRole(roleId);
+			//判断当前账户是否已经登录
+			if(r.getName().equals("用户")){
+				HashMap<String,Object> smap=  SingletonHashMap.getInstance();
+				if(smap.get("accountId"+account.getAccountId())==null){
+					smap.put("accountId"+account.getAccountId(), session.getId());
+				}else{
+					throw new CommonRollbackException("该账户已登录其他设备，请退出其他设备后再试");
+				}
+			}
 			session.setAttribute("role", r);
+			session.setAttribute("account", account);
 			//当前sessionId放入单例map
 			/*if(r.getName().equals("用户")){
 				HashMap<String,Object> smap=  SingletonHashMap.getInstance(); 
