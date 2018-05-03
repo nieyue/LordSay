@@ -607,7 +607,7 @@ public class AccountController {
 			if(r.getName().equals("用户")){
 				HashMap<String,Object> smap=  SingletonHashMap.getInstance();
 				if(smap.get("accountId"+account.getAccountId())==null){
-					smap.put("accountId"+account.getAccountId(), session.getId());
+					smap.put("accountId"+account.getAccountId(), account.getAccountId());
 				}else{
 					throw new CommonRollbackException("该账户已登录其他设备，请退出其他设备后再试");
 				}
@@ -743,6 +743,14 @@ public class AccountController {
 					smap.put("accountId"+account.getAccountId(), session.getId());
 					
 				 }*/
+				//判断当前账户是否已经登录
+				if(role.getName().equals("用户")){
+					if(smap.get("accountId"+account.getAccountId())==null){
+						smap.put("accountId"+account.getAccountId(), account.getAccountId());
+					}else{
+						throw new CommonRollbackException("该账户已登录其他设备，请退出其他设备后再试");
+					}
+				}
 				session.setAttribute("role", role);
 				List<Finance> f = financeService.browsePagingFinance(null,account.getAccountId(), 1, 1, "finance_id", "asc");
 				//System.out.println(f.get(0).toString());

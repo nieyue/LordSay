@@ -208,7 +208,7 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         			//未登陆
     				HashMap<String,Object> smap=  SingletonHashMap.getInstance();
     				if(smap.get("accountId"+sessionAccount.getAccountId())==null){
-    					throw new CommonRollbackException("该账户已登录其他设备，请退出其他设备后再试");
+    					throw new CommonRollbackException("该账户未登录");
     				}
         			
         		//角色全不许
