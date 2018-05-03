@@ -15,6 +15,7 @@ import com.nieyue.bean.Account;
 import com.nieyue.bean.Finance;
 import com.nieyue.bean.Role;
 import com.nieyue.exception.AccountIsLoginException;
+import com.nieyue.exception.CommonRollbackException;
 import com.nieyue.exception.MySessionException;
 import com.nieyue.util.SingletonHashMap;
 
@@ -204,6 +205,11 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         				//账户已经登陆
         				throw new AccountIsLoginException();
         			}*/
+        			//未登陆
+    				HashMap<String,Object> smap=  SingletonHashMap.getInstance();
+    				if(smap.get("accountId"+sessionAccount.getAccountId())==null){
+    					throw new CommonRollbackException("该账户已登录其他设备，请退出其他设备后再试");
+    				}
         			
         		//角色全不许
         		if( request.getRequestURI().indexOf("/role")>-1 ){

@@ -812,10 +812,18 @@ public class AccountController {
 	 * @return
 	 */
 	@ApiOperation(value = "登出", notes = "登出")
+	@ApiImplicitParams({
+		  @ApiImplicitParam(name="accountId",value="账户Id",dataType="int", paramType = "query",required=true)
+		  })
 	@RequestMapping(value = "/loginout", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList loginoutAccount(
+			@RequestParam("accountId") Integer accountId,
 			HttpSession session)  {
 		session.invalidate();
+			HashMap<String,Object> smap=  SingletonHashMap.getInstance();
+			if(smap.get("accountId"+accountId)!=null){
+				smap.remove("accountId"+accountId);
+			}
 		return ResultUtil.getSlefSRSuccessList(null);
 	}
 	
