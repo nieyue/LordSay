@@ -528,7 +528,19 @@ public class AccountController {
 			throw new  AccountPhoneException();//账户手机号错误
 		}
 		Integer userValidCode=(int) (Math.random()*9000)+1000;
-		if(session.getAttribute("validCodeDate")==null){//验证时间
+		HashMap<String,Object> smap=  SingletonHashMap.getInstance();
+		if(smap.get("validCodeDate"+adminName)==null){//验证时间
+			smap.put("validCodeDate"+adminName, new Date());
+		}else{
+			Date validCodeDate= (Date) smap.get("validCodeDate"+adminName);
+			if(validCodeDate.after(new Date(new Date().getTime()-1000*30))){
+				throw new RequestLimitException();//请求过快30s
+			}else{
+				smap.put("validCodeDate"+adminName, new Date());
+			}
+		}
+		smap.put("validCode"+adminName, userValidCode.toString());
+		/*if(session.getAttribute("validCodeDate")==null){//验证时间
 			session.setAttribute("validCodeDate", new Date());
 		}else{
 		Date validCodeDate= (Date) session.getAttribute("validCodeDate");
@@ -539,7 +551,7 @@ public class AccountController {
 		}
 		}
 		
-		session.setAttribute("validCode", userValidCode.toString());
+		session.setAttribute("validCode", userValidCode.toString());*/
 		 
 			try {
 				String result = yunSms.sendMsg(adminName,templateCode,String.valueOf(userValidCode));
@@ -678,11 +690,16 @@ public class AccountController {
 			@RequestParam(value="masterId",required=false) Integer masterId,
 			@RequestParam(value="validCode",required=false) String validCode,
 			HttpSession session) throws AccountIsExistException, VerifyCodeErrorException  {
-		//手机验证码
-		String vc = (String) session.getAttribute("validCode");
 		List<Map<Object,Object>> list = new ArrayList<>();
+		HashMap<String,Object> smap=  SingletonHashMap.getInstance();
+		if(smap.get("validCode"+adminName)==null){
+			smap.put("validCodeDate"+adminName, new Date());
+			String vc = (String) smap.get("validCode"+adminName);
+		//手机验证码
+		//String vc = (String) session.getAttribute("validCode");
 		if(!vc.equals(validCode)){
 			throw new VerifyCodeErrorException();//验证码错误
+		}
 		}
 		//判断是否存在
 		Account ac = accountService.loginAccount(adminName, null, null);
