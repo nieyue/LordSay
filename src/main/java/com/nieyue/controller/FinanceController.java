@@ -188,6 +188,13 @@ public class FinanceController {
 			if(StringUtils.isEmpty(finance.getPassword())){
 				throw new CommonRollbackException("请设置交易密码");
 			}
+			//超次数不能使用
+			if(session.getAttribute("passwordValidNumber")!=null
+					&&(Integer) session.getAttribute("passwordValidNumber")>=5
+					&&((Date) session.getAttribute("passwordValidDate")).after(new Date(new Date().getTime()-1000*30*60))
+					){
+				throw new CommonRollbackException("错误超过5次，请30分钟后重试或修改密码重试");//请求过快30分钟
+			}
 			if(finance.getPassword().equals(MyDESutil.getMD5(password))){
 				return ResultUtil.getSlefSRSuccessList(list);
 			}
@@ -196,12 +203,9 @@ public class FinanceController {
 				session.setAttribute("passwordValidDate", new Date());
 				session.setAttribute("passwordValidNumber", 1);
 			}else{
-				Date passwordValidDate= (Date) session.getAttribute("passwordValidDate");
 				Integer passwordValidNumber= (Integer) session.getAttribute("passwordValidNumber");
 				session.setAttribute("passwordValidNumber", passwordValidNumber+1);
-				if(passwordValidNumber>5&&passwordValidDate.after(new Date(new Date().getTime()-1000*30*60))){
-					throw new CommonRollbackException("错误超过5次，请30分钟后重试或修改密码重试");//请求过快30分钟
-				}else if(passwordValidNumber>5){
+				if(passwordValidNumber>=5){
 					//超过30分钟后再次错误
 					session.setAttribute("passwordValidDate", new Date());
 					session.setAttribute("passwordValidNumber", 1);
