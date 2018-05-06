@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.util.ObjectUtils;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -184,7 +185,10 @@ public class FinanceController {
 		List<Finance> fl = financeService.browsePagingFinance(null, accountId, 1, 1, "finance_id", "asc");
 		if(fl.size()==1){
 			Finance finance = fl.get(0);
-			if(finance!=null &&finance.getPassword().equals(MyDESutil.getMD5(password))){
+			if(StringUtils.isEmpty(finance.getPassword())){
+				throw new CommonRollbackException("请设置交易密码");
+			}
+			if(finance.getPassword().equals(MyDESutil.getMD5(password))){
 				return ResultUtil.getSlefSRSuccessList(list);
 			}
 			//错误之后记录错误时间和错误次数
@@ -197,7 +201,7 @@ public class FinanceController {
 				session.setAttribute("passwordValidNumber", passwordValidNumber+1);
 				if(passwordValidNumber>5&&passwordValidDate.after(new Date(new Date().getTime()-1000*30*60))){
 					throw new CommonRollbackException("错误超过5次，请30分钟后重试或修改密码重试");//请求过快30分钟
-				}else{
+				}else if(passwordValidNumber>5){
 					//超过30分钟后再次错误
 					session.setAttribute("passwordValidDate", new Date());
 					session.setAttribute("passwordValidNumber", 1);
