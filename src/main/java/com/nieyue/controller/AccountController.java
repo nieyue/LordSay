@@ -173,7 +173,7 @@ public class AccountController {
 //		}
 		boolean um = accountService.updateAccount(account);
 		if(um){
-		session.setAttribute("account", account);
+		//session.setAttribute("account", account);
 		list.add(account);
 		return ResultUtil.getSlefSRSuccessList(list);
 		}
@@ -293,7 +293,7 @@ public class AccountController {
 		}
 		boolean um = accountService.updateAccount(newa);
 		if(um){
-			session.setAttribute("account", newa);
+			//session.setAttribute("account", newa);
 			list.add(newa);
 			return ResultUtil.getSlefSRSuccessList(list);
 		}

@@ -87,9 +87,15 @@ public class VideoSetCollectController {
 	 */
 	@ApiOperation(value = "视频集收藏增加", notes = "视频集收藏增加")
 	@RequestMapping(value = "/add", method = {RequestMethod.GET,RequestMethod.POST})
-	public @ResponseBody StateResult addVideoSetCollect(@ModelAttribute VideoSetCollect videoSetCollect, HttpSession session) {
+	public @ResponseBody StateResultList addVideoSetCollect(@ModelAttribute VideoSetCollect videoSetCollect, HttpSession session) {
 		boolean am = videoSetCollectService.addVideoSetCollect(videoSetCollect);
-		return ResultUtil.getSR(am);
+		List<VideoSetCollect> l=new ArrayList<>();
+		if(am){
+			l.add(videoSetCollect);
+			return ResultUtil.getSlefSRSuccessList(l);
+		}else{
+			return ResultUtil.getSlefSRFailList(l);
+		}
 	}
 	/**
 	 * 视频集收藏删除
