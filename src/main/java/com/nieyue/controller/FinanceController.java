@@ -3,6 +3,7 @@ package com.nieyue.controller;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -40,6 +41,7 @@ import com.nieyue.service.FinanceService;
 import com.nieyue.service.WithdrawalsService;
 import com.nieyue.util.MyDESutil;
 import com.nieyue.util.ResultUtil;
+import com.nieyue.util.SingletonHashMap;
 import com.nieyue.util.StateResult;
 import com.nieyue.util.StateResultList;
 
@@ -150,12 +152,17 @@ public class FinanceController {
 			@RequestParam(value="password")String password,
 			@RequestParam(value="validCode") String validCode,
 			HttpSession session)  {
+		List<Finance> list=new ArrayList<>();
+		Account account = accountService.loadAccount(accountId);
+		if(account==null){
+			throw new AccountIsNotExistException();
+		}
 		//手机验证码
-		String vc=(String) session.getAttribute("validCode");
-		if(!vc.equals(validCode)){
+		HashMap<String,Object> smap=  SingletonHashMap.getInstance();
+		String vc = (String) smap.get("validCode"+account.getPhone());
+		if(vc==null||!vc.equals(validCode)){
 			throw new VerifyCodeErrorException();//验证码错误
 		}
-		List<Finance> list=new ArrayList<>();
 		List<Finance> fl = financeService.browsePagingFinance(null, accountId, 1, 1, "finance_id", "asc");
 		if(fl.size()==1){
 			Finance finance = fl.get(0);
@@ -327,17 +334,18 @@ public class FinanceController {
 			@RequestParam(value="money")Double money,
 			@RequestParam(value="realname")String realname,
 			@RequestParam(value="accountname")String accountname,
-			@RequestParam(value="validCode",required=false) String validCode,
+			@RequestParam(value="validCode") String validCode,
 			HttpSession session) {
-		//手机验证码
-		String vc = (String) session.getAttribute("validCode");
-		if(!vc.equals(validCode)){
-			throw new VerifyCodeErrorException();//验证码错误
-		}
 		Account a = accountService.loadAccount(accountId);
 		List<Finance> list=new ArrayList<Finance>();
 		if(a==null){
 			throw new AccountIsNotExistException();	//账户不存在
+		}
+		//手机验证码
+		HashMap<String,Object> smap=  SingletonHashMap.getInstance();
+		String vc = (String) smap.get("validCode"+a.getPhone());
+		if(vc==null||!vc.equals(validCode)){
+			throw new VerifyCodeErrorException();//验证码错误
 		}
 		if(a.getAuth()==null||a.getAuth()==0){//没认证
 			throw new AccountNotAuthException();//账户未认证

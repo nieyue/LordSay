@@ -206,8 +206,9 @@ public class AccountController {
 			throw new AccountIsNotExistException();//账户不存在
 		}
 		//手机验证码
-		String vc=(String) session.getAttribute("validCode");
-		if(!vc.equals(validCode)){
+		HashMap<String,Object> smap=  SingletonHashMap.getInstance();
+		String vc=(String) smap.get("validCode"+adminName);
+		if(vc==null||!vc.equals(validCode)){
 			throw new VerifyCodeErrorException();//验证码错误
 		}
 		ac.setPassword(MyDESutil.getMD5(password));
@@ -697,7 +698,7 @@ public class AccountController {
 			String vc = (String) smap.get("validCode"+adminName);
 		//手机验证码
 		//String vc = (String) session.getAttribute("validCode");
-		if(!vc.equals(validCode)){
+		if(vc==null||!vc.equals(validCode)){
 			throw new VerifyCodeErrorException();//验证码错误
 		}
 		}
