@@ -194,6 +194,9 @@ public class FinanceBusiness {
 				AccountParent ap = apl.get(0);
 				Integer aprmid = ap.getRealMasterId();//真实上级id
 				List<TeamPurchaseInfo> stpil = teamPurchaseInfoService.browsePagingTeamPurchaseInfo(aprmid, null, null, 1, 1, "team_purchase_info_id", "asc");
+					if(stpil.size()<=0){
+						throw new CommonRollbackException("上级等级不够");						
+					}
 					//上级团购信息表
 					TeamPurchaseInfo stpi = stpil.get(0);
 					if(stpi.getTeamPurchaseCardAllowance()<10){//小于10张报警
@@ -231,7 +234,7 @@ public class FinanceBusiness {
 				AccountLevel nal = accountLevelService.loadAccountLevel(ap.getAccountLevelId()+1);
 				//成功后的accountParent
 				ap.setAccountLevelId(nal.getAccountLevelId());
-				ap.setRealname(nal.getName());
+				ap.setName(nal.getName());
 				b=accountParentService.updateAccountParent(ap);
 				if(!b){
 					return -1;
@@ -449,6 +452,9 @@ public class FinanceBusiness {
 				AccountParent ap = apl.get(0);
 				Integer aprmid = ap.getRealMasterId();//真实上级id
 				List<TeamPurchaseInfo> stpil = teamPurchaseInfoService.browsePagingTeamPurchaseInfo(aprmid, null, null, 1, 1, "team_purchase_info_id", "asc");
+					if(stpil.size()<=0){
+						throw new CommonRollbackException("上级等级不够");						
+					}
 					//上级团购信息表
 					TeamPurchaseInfo stpi = stpil.get(0);
 					if(stpi.getTeamPurchaseCardAllowance()<10){//小于10张报警
@@ -569,6 +575,9 @@ public class FinanceBusiness {
 				AccountParent ap = apl.get(0);
 				Integer aprmid = ap.getRealMasterId();//真实上级id
 				List<TeamPurchaseInfo> stpil = teamPurchaseInfoService.browsePagingTeamPurchaseInfo(aprmid, null, null, 1, 1, "team_purchase_info_id", "asc");
+				if(stpil.size()<=0){
+					throw new CommonRollbackException("上级等级不够");						
+				}
 					//上级团购信息表
 					TeamPurchaseInfo stpi = stpil.get(0);
 					if(stpi.getTeamPurchaseCardAllowance()<10){//小于10张报警
