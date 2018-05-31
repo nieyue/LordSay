@@ -422,6 +422,65 @@ public class AccountController {
 	 * 账户单个加载
 	 * @return
 	 */
+	@ApiOperation(value = "账户单个加载,复合数据", notes = "账户单个加载,复合数据")
+	@ApiImplicitParams({
+		@ApiImplicitParam(name="accountId",value="账户ID",dataType="int", paramType="query",required=true)
+	})
+	@RequestMapping(value = "/load", method = {RequestMethod.GET,RequestMethod.POST})
+	public @ResponseBody StateResultList realLoadAccount(@RequestParam("accountId") Integer accountId,HttpSession session)  {
+		List<Map<String,Object>> list = new ArrayList<>();
+		Account account = accountService.loadAccount(accountId);
+		if(account!=null &&!account.equals("")){
+			List<Finance> f = financeService.browsePagingFinance(null,account.getAccountId(), 1, 1, "finance_id", "asc");
+			session.setAttribute("finance", f.get(0));
+			Map<String,Object> map=new HashMap<>();
+			//账户
+			map.put("account", account);
+			//财务
+			map.put("finance",  f.get(0));
+			//账户等级
+			List<AccountLevel> all = accountLevelService.browsePagingAccountLevel(null, null, 1, Integer.MAX_VALUE, "account_level_id", "desc");
+			if(all.size()>0){
+				map.put("accountLevelList",  all);
+				}else{
+				map.put("accountLevelList",  new ArrayList<AccountLevel>());
+				}
+			//账户上级
+			List<AccountParent> accountParentl = accountParentService.browsePagingAccountParent(null,null, account.getAccountId(), null, null, null, null, 1, 1, "account_parent_id", "asc");
+			if(accountParentl.size()>0){
+				map.put("accountParent",  accountParentl.get(0));
+				}else{
+				map.put("accountParent",  new Object());
+				}
+			//vip
+			List<Vip> vipl = vipService.browsePagingVip(account.getAccountId(), null, null, 1, 1, "vip_id", "asc");
+			map.put("vip",  vipl.get(0));
+			//积分
+			List<Integral> integrall = integralService.browsePagingIntegral(account.getAccountId(), null, null, 1, 1, "integral_id", "asc");
+			map.put("integrall",  integrall.get(0));
+			//视频播放记录数
+			int videoPlayRecordCount = videoPlayRecordService.countAll(null,account.getAccountId());
+			map.put("videoPlayRecordCount", videoPlayRecordCount);
+			//视频缓存数
+			int videoCacheCount = videoCacheService.countAll(null,account.getAccountId());
+			map.put("videoCacheCount", videoCacheCount);
+			//视频集收藏数
+			int videoSetCollectCount = videoSetCollectService.countAll(null,account.getAccountId());
+			map.put("videoSetCollectCount", videoSetCollectCount);
+			//未读通知数
+			int noticeCount = noticeService.countAll(2,null, 0, account.getAccountId(),null);
+			map.put("notice0", noticeCount);
+			list.add(map);
+			//return ResultUtil.getSlefSRSuccessList(list);
+			return ResultUtil.getSlefSRSuccessList(list);
+		}else{
+			throw new AccountIsNotExistException();//账户不存在
+		}
+	}
+	/**
+	 * 账户单个加载
+	 * @return
+	 */
 	@ApiOperation(value = "账户单个加载", notes = "账户单个加载")
 	@ApiImplicitParams({
 	  @ApiImplicitParam(name="accountId",value="账户ID",dataType="int", paramType="path",required=true)

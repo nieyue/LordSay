@@ -298,6 +298,7 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         				|| request.getRequestURI().indexOf("/account/update")>-1
         				|| request.getRequestURI().indexOf("/account/updatePasswordByFinanceId")>-1
         				|| request.getRequestURI().indexOf("/account/auth")>-1
+        				|| request.getRequestURI().indexOf("/account/load")>-1
         				||method.getName().equals("loadAccount")
         				){
         			//只能管理员使用
@@ -307,6 +308,7 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         			//加载自身账户
         			if((	method.getName().equals("loadAccount")
         					|| request.getRequestURI().indexOf("/account/list")>-1
+        					|| request.getRequestURI().indexOf("/account/load")>-1
         					)
         					&& request.getParameter("accountId").equals(sessionAccount.getAccountId().toString())){
         				return true;
