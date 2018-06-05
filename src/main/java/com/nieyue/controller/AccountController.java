@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -896,6 +897,7 @@ public class AccountController {
 	 * 登出
 	 * @return
 	 */
+	@SuppressWarnings("deprecation")
 	@ApiOperation(value = "登出", notes = "登出")
 	@ApiImplicitParams({
 		  @ApiImplicitParam(name="accountId",value="账户Id",dataType="int", paramType = "query",required=true)
@@ -904,7 +906,16 @@ public class AccountController {
 	public @ResponseBody StateResultList loginoutAccount(
 			@RequestParam("accountId") Integer accountId,
 			HttpSession session)  {
-		session.invalidate();
+		//session.invalidate();
+		//遍历所有session。删除当前的人的
+		Enumeration<String> sids = session.getSessionContext().getIds();
+	        while(sids.hasMoreElements()){
+	            String id = sids.nextElement();//调用nextElement方法获得元素
+	            Account account = (Account) session.getSessionContext().getSession(id).getAttribute("account");
+	            if(account.getAccountId()!=null&&account.getAccountId().equals(accountId)){
+	            	session.getSessionContext().getSession(id).invalidate();
+	            }
+	        }
 			HashMap<String,Object> smap=  SingletonHashMap.getInstance();
 			if(smap.get("accountId"+accountId)!=null){
 				smap.remove("accountId"+accountId);
