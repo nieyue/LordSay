@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,6 +29,8 @@ import com.nieyue.bean.Finance;
 import com.nieyue.bean.Integral;
 import com.nieyue.bean.Role;
 import com.nieyue.bean.Vip;
+import com.nieyue.business.AccountBusiness;
+import com.nieyue.comments.MySessionContext;
 import com.nieyue.exception.AccountAlreadyAuthException;
 import com.nieyue.exception.AccountAuthAuditException;
 import com.nieyue.exception.AccountIsExistException;
@@ -42,7 +43,6 @@ import com.nieyue.exception.AccountNotMasterIdException;
 import com.nieyue.exception.AccountPhoneException;
 import com.nieyue.exception.AccountPhoneIsExistException;
 import com.nieyue.exception.AccountPhoneIsNotExistException;
-import com.nieyue.exception.CommonRollbackException;
 import com.nieyue.exception.MySessionException;
 import com.nieyue.exception.NotAnymoreException;
 import com.nieyue.exception.RequestLimitException;
@@ -81,6 +81,8 @@ import io.swagger.annotations.ApiOperation;
 @RestController
 @RequestMapping("/account")
 public class AccountController {
+	@Resource
+	private AccountBusiness accountBusiness;
 	@Resource
 	private AccountService accountService;
 	@Resource
@@ -540,6 +542,8 @@ public class AccountController {
 		List<Finance> f = financeService.browsePagingFinance(null,account.getAccountId(), 1, 1, "finance_id", "asc");
 		session.setAttribute("finance", f.get(0));
 		list.add(account);
+		//登录的时候放入
+		MySessionContext.AddSession(session);
 		return ResultUtil.getSlefSRSuccessList(list);
 		}
 		return ResultUtil.getSlefSRFailList(list);
@@ -666,21 +670,16 @@ public class AccountController {
 			Role r = roleService.loadRole(roleId);
 			//判断当前账户是否已经登录
 			if(r.getName().equals("用户")){
-				HashMap<String,Object> smap=  SingletonHashMap.getInstance();
+				accountBusiness.islogin(account.getAccountId());
+				/*HashMap<String,Object> smap=  SingletonHashMap.getInstance();
 				if(smap.get("accountId"+account.getAccountId())==null){
 					smap.put("accountId"+account.getAccountId(), account.getAccountId());
 				}else{
 					throw new CommonRollbackException("该账户已登录其他设备，请退出其他设备后再试");
-				}
+				}*/
 			}
 			session.setAttribute("role", r);
 			session.setAttribute("account", account);
-			//当前sessionId放入单例map
-			/*if(r.getName().equals("用户")){
-				HashMap<String,Object> smap=  SingletonHashMap.getInstance(); 
-				smap.put("accountId"+account.getAccountId(), session.getId());
-				
-			 }*/
 			
 			List<Finance> f = financeService.browsePagingFinance(null,account.getAccountId(), 1, 1, "finance_id", "asc");
 			session.setAttribute("finance", f.get(0));
@@ -723,6 +722,8 @@ public class AccountController {
 			map.put("notice0", noticeCount);
 			list.add(map);
 			//return ResultUtil.getSlefSRSuccessList(list);
+			//登录的时候放入
+			MySessionContext.AddSession(session);
 			return ResultUtil.getSlefSRSuccessList(list);
 			}
 		}else if(account.getStatus().equals(1)){
@@ -798,20 +799,6 @@ public class AccountController {
 				
 				session.setAttribute("account", account);
 				Role role = roleService.loadRole(account.getRoleId());
-				//当前sessionId放入单例map
-				/*if(role.getName().equals("用户")){
-					HashMap<String,Object> smap=  SingletonHashMap.getInstance(); 
-					smap.put("accountId"+account.getAccountId(), session.getId());
-					
-				 }*/
-				//判断当前账户是否已经登录
-				if(role.getName().equals("用户")){
-					if(smap.get("accountId"+account.getAccountId())==null){
-						smap.put("accountId"+account.getAccountId(), account.getAccountId());
-					}else{
-						throw new CommonRollbackException("该账户已登录其他设备，请退出其他设备后再试");
-					}
-				}
 				session.setAttribute("role", role);
 				List<Finance> f = financeService.browsePagingFinance(null,account.getAccountId(), 1, 1, "finance_id", "asc");
 				//System.out.println(f.get(0).toString());
@@ -850,6 +837,8 @@ public class AccountController {
 				//未读
 				map.put("notice0", 0);
 				list.add(map);
+				//注册的时候放入
+				MySessionContext.AddSession(session);
 				return ResultUtil.getSlefSRSuccessList(list);
 				}else{
 					return ResultUtil.getSlefSRFailList(list);
@@ -885,7 +874,12 @@ public class AccountController {
 	@RequestMapping(value = "/islogin", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList isLoginAccount(
 			HttpSession session)  {
-		Account account = (Account) session.getAttribute("account");
+		//验证
+		HttpSession sessiontemp = MySessionContext.getSession(session.getId());
+		if(sessiontemp==null){
+			throw new AccountIsNotLoginException();//没有登录
+		}
+		Account account = (Account) sessiontemp.getAttribute("account");
 		List<Account> list = new ArrayList<Account>();
 		if(account!=null && !account.equals("")){
 			list.add(account);
@@ -897,7 +891,6 @@ public class AccountController {
 	 * 登出
 	 * @return
 	 */
-	@SuppressWarnings("deprecation")
 	@ApiOperation(value = "登出", notes = "登出")
 	@ApiImplicitParams({
 		  @ApiImplicitParam(name="accountId",value="账户Id",dataType="int", paramType = "query",required=true)
@@ -908,18 +901,11 @@ public class AccountController {
 			HttpSession session)  {
 		//session.invalidate();
 		//遍历所有session。删除当前的人的
-		Enumeration<String> sids = session.getSessionContext().getIds();
-	        while(sids.hasMoreElements()){
-	            String id = sids.nextElement();//调用nextElement方法获得元素
-	            Account account = (Account) session.getSessionContext().getSession(id).getAttribute("account");
-	            if(account.getAccountId()!=null&&account.getAccountId().equals(accountId)){
-	            	session.getSessionContext().getSession(id).invalidate();
-	            }
-	        }
-			HashMap<String,Object> smap=  SingletonHashMap.getInstance();
+		accountBusiness.delSession(accountId);
+			/*HashMap<String,Object> smap=  SingletonHashMap.getInstance();
 			if(smap.get("accountId"+accountId)!=null){
 				smap.remove("accountId"+accountId);
-			}
+			}*/
 		return ResultUtil.getSlefSRSuccessList(null);
 	}
 	

@@ -14,7 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.nieyue.bean.Account;
 import com.nieyue.bean.Finance;
 import com.nieyue.bean.Role;
-import com.nieyue.exception.AccountIsLoginException;
 import com.nieyue.exception.CommonRollbackException;
 import com.nieyue.exception.MySessionException;
 import com.nieyue.util.SingletonHashMap;
@@ -178,6 +177,7 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         		||method.getName().equals("loadFeedback")
         		//配置
         		||request.getRequestURI().indexOf("config/count")>-1
+        		||request.getRequestURI().indexOf("config/list")>-1
         		//第三方支付
         		||request.getRequestURI().indexOf("payment/count")>-1
         		||request.getRequestURI().indexOf("payment/alipayTradeQuery")>-1

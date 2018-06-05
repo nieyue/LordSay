@@ -3,6 +3,8 @@ package com.nieyue.controller;
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map.Entry;
+import java.util.Set;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -16,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.view.RedirectView;
 
+import com.nieyue.bean.Account;
+import com.nieyue.comments.MySessionContext;
 import com.nieyue.comments.RequestToMethdoItemUtils;
 import com.nieyue.thirdparty.qiniu.QiniuUtil;
 import com.nieyue.util.ResultUtil;
@@ -81,6 +85,25 @@ public class ToolController {
 		System.err.println(session.getAttribute("role"));
 		System.err.println(session.getAttribute("finance"));
 		return session.getId();
+		
+	}
+	/**
+	 * 获取SessionIds
+	 * @return
+	 */
+	@RequestMapping(value={"/tool/getSessionIds"}, method = {RequestMethod.GET,RequestMethod.POST})
+	public List<String> getSessionIds(
+			HttpSession	 session
+			){
+		List<String> list=new ArrayList<>();
+		 Set<Entry<String, HttpSession>> se = MySessionContext.getSessionList().entrySet();
+	       for (Entry<String, HttpSession> entry : se) {
+  		  //HttpSession sessiontemp = entry.getValue();
+  		  //Account account = (Account) sessiontemp.getAttribute("account");
+  		  //System.out.println(account.getAccountId());
+  		list.add(entry.getKey());
+	       }
+		return list;
 		
 	}
 	/**
