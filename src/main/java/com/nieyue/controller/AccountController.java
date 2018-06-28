@@ -526,7 +526,6 @@ public class AccountController {
 		if(account==null||account.equals("")){
 			throw new AccountLoginException();//账户或密码错误
 		}
-		accountBusiness.islogin(account.getAccountId());
 		if(account.getStatus().equals(1)){
 			throw new AccountLockException();//账户锁定
 		}
@@ -892,13 +891,12 @@ public class AccountController {
 	public @ResponseBody StateResultList loginoutAccount(
 			@RequestParam("accountId") Integer accountId,
 			HttpSession session)  {
-		//session.invalidate();
-		//遍历所有session。删除当前的人的
-		accountBusiness.delSession(accountId);
+			//遍历所有session。删除当前的人的
+			accountBusiness.delSession(accountId);
 			/*HashMap<String,Object> smap=  SingletonHashMap.getInstance();
 			if(smap.get("accountId"+accountId)!=null){
 				smap.remove("accountId"+accountId);
-			}*/
+			}*/		
 		return ResultUtil.getSlefSRSuccessList(null);
 	}
 	

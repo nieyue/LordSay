@@ -1,5 +1,7 @@
 package com.nieyue.business;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
 
@@ -25,6 +27,7 @@ public class AccountBusiness {
 	public void delSession(Integer accountId){
 		//遍历所有session。删除当前的人的
 	       Set<Entry<String, HttpSession>> se = MySessionContext.getSessionList().entrySet();
+	       List<HttpSession> list=new ArrayList<>();
 	       for (Entry<String, HttpSession> entry : se) {
  		  HttpSession sessiontemp = entry.getValue();
  		   Object accountobj = sessiontemp.getAttribute("account");
@@ -33,9 +36,15 @@ public class AccountBusiness {
  		  }else{ 			  
  		   Account account = (Account)accountobj;
 	 		  if(account!=null&&account.getAccountId().equals(accountId)){
-	 			  MySessionContext.DelSession(sessiontemp);
+	 			 list.add(sessiontemp);
+	 			  //MySessionContext.DelSession(sessiontemp);
 	 		  }
  		  }
+	       }
+	       if(list.size()>0){
+	    	   for (HttpSession httpSession : list) {
+	    		   MySessionContext.DelSession(httpSession);				
+	    	   }
 	       }
 	}
 	/**
