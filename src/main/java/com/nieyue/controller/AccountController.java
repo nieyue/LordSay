@@ -526,6 +526,7 @@ public class AccountController {
 		if(account==null||account.equals("")){
 			throw new AccountLoginException();//账户或密码错误
 		}
+		accountBusiness.islogin(account.getAccountId());
 		if(account.getStatus().equals(1)){
 			throw new AccountLockException();//账户锁定
 		}
@@ -669,15 +670,7 @@ public class AccountController {
 			Integer roleId = account.getRoleId();
 			Role r = roleService.loadRole(roleId);
 			//判断当前账户是否已经登录
-			if(r.getName().equals("用户")){
-				accountBusiness.islogin(account.getAccountId());
-				/*HashMap<String,Object> smap=  SingletonHashMap.getInstance();
-				if(smap.get("accountId"+account.getAccountId())==null){
-					smap.put("accountId"+account.getAccountId(), account.getAccountId());
-				}else{
-					throw new CommonRollbackException("该账户已登录其他设备，请退出其他设备后再试");
-				}*/
-			}
+			accountBusiness.islogin(account.getAccountId());
 			session.setAttribute("role", r);
 			session.setAttribute("account", account);
 			

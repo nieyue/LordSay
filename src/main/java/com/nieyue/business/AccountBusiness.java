@@ -27,9 +27,14 @@ public class AccountBusiness {
 	       Set<Entry<String, HttpSession>> se = MySessionContext.getSessionList().entrySet();
 	       for (Entry<String, HttpSession> entry : se) {
  		  HttpSession sessiontemp = entry.getValue();
- 		  Account account = (Account) sessiontemp.getAttribute("account");
- 		  if(account!=null&&account.getAccountId().equals(accountId)){
- 			  MySessionContext.DelSession(sessiontemp);
+ 		   Object accountobj = sessiontemp.getAttribute("account");
+ 		  if(accountobj==null){
+ 			  continue;
+ 		  }else{ 			  
+ 		   Account account = (Account)accountobj;
+	 		  if(account!=null&&account.getAccountId().equals(accountId)){
+	 			  MySessionContext.DelSession(sessiontemp);
+	 		  }
  		  }
 	       }
 	}

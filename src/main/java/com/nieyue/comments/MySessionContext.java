@@ -26,7 +26,8 @@ public class MySessionContext {
 	public synchronized static void DelSession(HttpSession session) {    
 	if (session != null) {    
 	mymap.remove(session.getId());  
-	session.invalidate();
+	//不需要也不能删除，不然有bug
+	//session.invalidate();
 	}    
 	}    
 	    
