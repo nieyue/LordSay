@@ -70,6 +70,12 @@ public class AlipayUtil {
 		 model.setSubject(payment.getSubject());//名称
 		 model.setOutTradeNo(payment.getOrderNumber());//订单号
 		 model.setTimeoutExpress("30m");
+		 //可用渠道，用户只能在指定渠道范围内支付
+		 //当有多个渠道时用“,”分隔
+		 //注：与disable_pay_channels互斥
+		 //此项目只许用余额，余额宝，借记卡快捷
+		 String enablePayChannels="balance,moneyFund,debitCardExpress";
+		 model.setEnablePayChannels(enablePayChannels);
 		 model.setTotalAmount(String.valueOf(payment.getMoney()));//金额
 		 model.setProductCode("QUICK_MSECURITY_PAY");
 		 model.setPassbackParams(payment.getPaymentId().toString());//支付id
