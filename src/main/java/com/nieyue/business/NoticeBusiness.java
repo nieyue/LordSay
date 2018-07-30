@@ -28,6 +28,8 @@ public class NoticeBusiness {
 	
 	@Value("${myPugin.noticeDaozhangTitle}")
 	String noticeDaozhangTitle;
+	@Value("${myPugin.noticeTiXianShiBaiTitle}")
+	String noticeTiXianShiBaiTitle;
 	@Value("${myPugin.noticeDaozhangImgUrl}")
 	String noticeDaozhangImgUrl;
 	
@@ -99,6 +101,26 @@ public class NoticeBusiness {
 		notice.setImgAddress(noticeDaozhangImgUrl);
 		notice.setStatus(0);//未读
 		notice.setContent("您申请的"+money+"元提现已到账，请前往您的"+getMethod(method)+"账号进行查看。");
+		return notice;
+	}
+	/**
+	 *  提现失败
+	 *  accountId 账户id
+	 *  reason  失败理由
+	 *  money 金额
+	 */
+	public Notice getNoticeTiXianShiBaie(
+			Integer accountId,
+			String reason,
+			Double money){
+		//提现到账通知
+		Notice notice=new Notice();
+		notice.setRegion(2);
+		notice.setTitle(noticeTiXianShiBaiTitle);
+		notice.setAccountId(accountId);
+		notice.setImgAddress(noticeBuzuImgUrl);
+		notice.setStatus(0);//未读
+		notice.setContent("您申请的"+money+"元提现失败，理由为："+reason);
 		return notice;
 	}
 	/**

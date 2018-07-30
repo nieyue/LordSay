@@ -349,6 +349,7 @@ public class SessionControllerInterceptor implements HandlerInterceptor {
         		if( request.getRequestURI().indexOf("/financeRecord/delete")>-1 
         				|| request.getRequestURI().indexOf("/financeRecord/update")>-1 
         				|| request.getRequestURI().indexOf("/financeRecord/withdrawals")>-1 
+        				|| request.getRequestURI().indexOf("/financeRecord/withdrawalsFail")>-1 
         				|| request.getRequestURI().indexOf("/financeRecord/list")>-1 
         				|| request.getRequestURI().indexOf("/financeRecord/add")>-1 
         				||method.getName().equals("loadFinanceRecord")){

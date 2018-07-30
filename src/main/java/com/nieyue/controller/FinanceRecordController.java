@@ -199,5 +199,38 @@ public class FinanceRecordController {
 			return ResultUtil.getSlefSRFailList(list);
 		}
 	}
+	/**
+	 *提现失败
+	 * @return
+	 */
+	@ApiOperation(value = "提现失败", notes = "提现失败")
+	@ApiImplicitParams({
+		@ApiImplicitParam(name="financeRecordId",value="财务记录ID",dataType="int", paramType = "query",required=true),
+		@ApiImplicitParam(name="reason",value="提现失败理由",dataType="string", paramType = "query",required=true)
+	})
+	@RequestMapping(value = "/withdrawalsFail", method = {RequestMethod.GET,RequestMethod.POST})
+	public  StateResultList withdrawalsFailFinanceRecord(
+			@RequestParam("financeRecordId") Integer financeRecordId,
+			@RequestParam("reason") String reason,
+			HttpSession session)  {
+		List<FinanceRecord> list = new ArrayList<FinanceRecord>();
+		FinanceRecord financeRecord = financeRecordService.loadFinanceRecord(financeRecordId);
+		if(financeRecord.getStatus()==1){
+			financeRecord.setStatus(3);//已拒绝
+		}
+		boolean b = financeRecordService.updateFinanceRecord(financeRecord);
+		if(b && financeRecord!=null &&!financeRecord.equals("")){
+			//提现失败通知
+			Notice notice =noticeBusiness.getNoticeTiXianShiBaie(financeRecord.getAccountId(), reason, financeRecord.getMoney());
+			b=noticeService.addNotice(notice);
+			if(b){
+				list.add(financeRecord);
+				return ResultUtil.getSlefSRSuccessList(list);
+			}
+			return ResultUtil.getSlefSRFailList(list);
+		}else{
+			return ResultUtil.getSlefSRFailList(list);
+		}
+	}
 	
 }
