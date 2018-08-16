@@ -56,9 +56,14 @@ public class AccountBusiness {
 		 Set<Entry<String, HttpSession>> se = MySessionContext.getSessionList().entrySet();
 	       for (Entry<String, HttpSession> entry : se) {
 		  HttpSession sessiontemp = entry.getValue();
-		  Account account = (Account) sessiontemp.getAttribute("account");
-		  if(account!=null&&account.getAccountId().equals(accountId)){
-			  throw new CommonRollbackException("该账户已登录其他设备，请退出其他设备后再试");
+		  Object obj =  sessiontemp.getAttribute("account");
+		  if(obj==null){
+			  continue;
+		  }else{
+			  Account account = (Account) obj;
+			  if(account!=null&&account.getAccountId().equals(accountId)){
+				  throw new CommonRollbackException("该账户已登录其他设备，请退出其他设备后再试");
+			  }
 		  }
 	     }
 	}
