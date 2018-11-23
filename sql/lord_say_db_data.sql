@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2018-07-12 18:34:00
+Date: 2018-11-23 17:02:46
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -42,12 +42,12 @@ CREATE TABLE `account_level_tb` (
 -- ----------------------------
 -- Records of account_level_tb
 -- ----------------------------
-INSERT INTO `account_level_tb` VALUES ('1001', '学徒', '0', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5ia0rd21952ll8m74o9h9hr1t.png', '0.00', '0.00', '0.00', '0.00', '0.00', '0', '0.00', '0.00', '学徒，浏览，互动，购买产品，升级vip', '2018-02-05 14:21:36');
-INSERT INTO `account_level_tb` VALUES ('1002', '普通vip', '1', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5i8g62i1d7i5puat0mh99ah14.png', '365.00', '18.25', '146.00', '91.25', '109.50', '0', '0.00', '365.00', '普通vip，团购权限，推广权益，免费看所有视频（不含售卖视频）', '2018-02-05 13:55:13');
-INSERT INTO `account_level_tb` VALUES ('1003', '钻石vip', '2', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5i8j4o210nm1ip459l127t1gt219.png', '4500.00', '225.00', '1800.00', '1125.00', '1350.00', '39', '115.00', '14235.00', '钻石vip,团购权限，推广权益，免费看所有视频（不含售卖视频），分成', '2018-02-05 13:56:36');
-INSERT INTO `account_level_tb` VALUES ('1004', '联合发起人', '3', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5i8jh02bes1eje8d6nm91ei71e.png', '25000.00', '1250.00', '10000.00', '6250.00', '7500.00', '250', '100.00', '91250.00', '联合发起人，团购权限，推广权益，免费看所有视频（不含售卖视频），分成', '2018-02-05 13:56:48');
-INSERT INTO `account_level_tb` VALUES ('1005', '高级合伙人', '4', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5i8k44510dn1sgvr1usb1gcb1j.png', '65000.00', '3250.00', '26000.00', '16250.00', '19500.00', '738', '88.00', '269370.00', '高级合伙人，团购权限，推广权益，免费看所有视频（不含售卖视频），分成，有机会与平台合作红利', '2018-02-05 13:57:09');
-INSERT INTO `account_level_tb` VALUES ('1006', '创始股东', '5', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5i8kd03sljbdd1f5oq9311pf1o.png', '195000.00', '9750.00', '78000.00', '48750.00', '58500.00', '2475', '80.00', '903375.00', '创始股东，团购权限，推广权益，免费看所有视频（不含售卖视频），分成，与平台合作红利。', '2018-02-05 13:57:17');
+INSERT INTO `account_level_tb` VALUES ('1001', '学徒', '0', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5ia0rd21952ll8m74o9h9hr1t.png', '0.00', '0.00', '0.00', '0.00', '0.00', '0', '0.00', '0.00', '学徒，浏览，互动，购买产品，升级vip', '2018-02-05 14:21:36');
+INSERT INTO `account_level_tb` VALUES ('1002', '普通vip', '1', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5i8g62i1d7i5puat0mh99ah14.png', '365.00', '18.25', '146.00', '91.25', '109.50', '0', '0.00', '365.00', '普通vip，团购权限，推广权益，免费看所有视频（不含售卖视频）', '2018-02-05 13:55:13');
+INSERT INTO `account_level_tb` VALUES ('1003', '钻石vip', '2', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5i8j4o210nm1ip459l127t1gt219.png', '4500.00', '225.00', '1800.00', '1125.00', '1350.00', '39', '115.00', '14235.00', '钻石vip,团购权限，推广权益，免费看所有视频（不含售卖视频），分成', '2018-02-05 13:56:36');
+INSERT INTO `account_level_tb` VALUES ('1004', '联合发起人', '3', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5i8jh02bes1eje8d6nm91ei71e.png', '25000.00', '1250.00', '10000.00', '6250.00', '7500.00', '250', '100.00', '91250.00', '联合发起人，团购权限，推广权益，免费看所有视频（不含售卖视频），分成', '2018-02-05 13:56:48');
+INSERT INTO `account_level_tb` VALUES ('1005', '高级合伙人', '4', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5i8k44510dn1sgvr1usb1gcb1j.png', '65000.00', '3250.00', '26000.00', '16250.00', '19500.00', '738', '88.00', '269370.00', '高级合伙人，团购权限，推广权益，免费看所有视频（不含售卖视频），分成，有机会与平台合作红利', '2018-02-05 13:57:09');
+INSERT INTO `account_level_tb` VALUES ('1006', '创始股东', '5', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5i8kd03sljbdd1f5oq9311pf1o.png', '195000.00', '9750.00', '78000.00', '48750.00', '58500.00', '2475', '80.00', '903375.00', '创始股东，团购权限，推广权益，免费看所有视频（不含售卖视频），分成，与平台合作红利。', '2018-02-05 13:57:17');
 
 -- ----------------------------
 -- Table structure for `account_parent_tb`
@@ -72,7 +72,7 @@ CREATE TABLE `account_parent_tb` (
   KEY `INDEX_REALMASTERID` (`real_master_id`) USING BTREE,
   KEY `INDEX_CREATEDATE` (`create_date`) USING BTREE,
   KEY `INDEX_UPDATEDATE` (`update_date`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1033 DEFAULT CHARSET=utf8 COMMENT='账户上级表';
+) ENGINE=InnoDB AUTO_INCREMENT=1034 DEFAULT CHARSET=utf8 COMMENT='账户上级表';
 
 -- ----------------------------
 -- Records of account_parent_tb
@@ -85,9 +85,9 @@ INSERT INTO `account_parent_tb` VALUES ('1006', '1012', '啦啦啦', '1567483090
 INSERT INTO `account_parent_tb` VALUES ('1007', '1014', '普通vip', '18774814879', '0', '1010', '1000', '1002', '学徒', '2018-02-10 13:23:05', '2018-02-10 13:59:05');
 INSERT INTO `account_parent_tb` VALUES ('1008', '1013', '舒靖宇', '17388964490', '0', '1000', '1000', '1001', '学徒', '2018-02-24 13:07:55', '2018-02-24 13:07:55');
 INSERT INTO `account_parent_tb` VALUES ('1009', '1015', null, '17767094985', '0', '1000', '1000', '1001', '学徒', '2018-02-22 16:43:03', '2018-02-22 16:43:03');
-INSERT INTO `account_parent_tb` VALUES ('1010', '1016', '测试', '15068747539', '8', '1000', '1000', '1001', '学徒', '2018-03-05 15:57:08', '2018-03-05 15:57:08');
+INSERT INTO `account_parent_tb` VALUES ('1010', '1016', '测试', '15068747539', '9', '1000', '1000', '1001', '学徒', '2018-03-05 15:57:08', '2018-03-05 15:57:08');
 INSERT INTO `account_parent_tb` VALUES ('1011', '1017', '测试', '18606713507', '0', '1016', '1016', '1001', '学徒', '2018-04-17 16:43:04', '2018-04-17 16:43:04');
-INSERT INTO `account_parent_tb` VALUES ('1012', '1018', null, '13958060769', '0', '1016', '1016', '1001', '学徒', '2018-03-01 13:23:55', '2018-03-01 13:23:55');
+INSERT INTO `account_parent_tb` VALUES ('1012', '1018', null, '13958060769zhuxiao', '0', '1016', '1016', '1001', '学徒', '2018-03-01 13:23:55', '2018-03-01 13:23:55');
 INSERT INTO `account_parent_tb` VALUES ('1013', '1019', '王小明', '18300700235', '2', '1009', '1009', '1002', '普通vip', '2018-03-13 09:51:10', '2018-06-01 11:05:13');
 INSERT INTO `account_parent_tb` VALUES ('1014', '1020', null, '15168318364', '0', '1016', '1016', '1001', '学徒', '2018-03-13 16:20:27', '2018-03-13 16:20:27');
 INSERT INTO `account_parent_tb` VALUES ('1015', '1021', null, '13588328250', '0', '1016', '1016', '1001', '学徒', '2018-03-27 14:27:41', '2018-03-27 14:27:41');
@@ -103,11 +103,12 @@ INSERT INTO `account_parent_tb` VALUES ('1024', '1030', null, '17788563571', '0'
 INSERT INTO `account_parent_tb` VALUES ('1025', '1038', '普通vip', '18367175373', '2', '1000', '1000', '1002', '学徒', '2018-05-31 11:39:30', '2018-05-31 17:11:40');
 INSERT INTO `account_parent_tb` VALUES ('1026', '1039', null, '17376583517', '0', '1000', '1000', '1001', '学徒', '2018-05-31 14:20:08', '2018-05-31 14:20:08');
 INSERT INTO `account_parent_tb` VALUES ('1027', '1040', null, '18300700235', '0', '1038', '1038', '1001', '学徒', '2018-06-01 14:43:35', '2018-06-01 14:43:35');
-INSERT INTO `account_parent_tb` VALUES ('1028', '1041', '刘哥', '18300700235', '0', '1038', '1038', '1001', '学徒', '2018-06-08 13:55:59', '2018-06-08 13:55:59');
+INSERT INTO `account_parent_tb` VALUES ('1028', '1041', '刘哥', '18300700235', '0', '1038', '1009', '1002', '普通vip', '2018-06-08 13:55:59', '2018-07-20 15:38:46');
 INSERT INTO `account_parent_tb` VALUES ('1029', '1042', null, '13033604013', '0', '1009', '1009', '1002', '普通vip', '2018-06-01 16:35:05', '2018-06-01 17:46:32');
 INSERT INTO `account_parent_tb` VALUES ('1030', '1043', '这是测试', '17376568179', '0', '1016', '1016', '1001', '学徒', '2018-06-04 13:42:22', '2018-06-04 13:42:22');
-INSERT INTO `account_parent_tb` VALUES ('1031', '1044', '杰杰杰', '13958060769', '0', '1000', '1000', '1001', '学徒', '2018-06-13 14:16:10', '2018-06-13 14:16:10');
+INSERT INTO `account_parent_tb` VALUES ('1031', '1044', '杰杰杰', '13958060769zhuxiao', '0', '1000', '1000', '1001', '学徒', '2018-06-13 14:16:10', '2018-06-13 14:16:10');
 INSERT INTO `account_parent_tb` VALUES ('1032', '1052', null, '18137137010', '0', '1009', '1009', '1002', '普通vip', '2018-06-26 17:34:51', '2018-06-27 10:18:52');
+INSERT INTO `account_parent_tb` VALUES ('1033', '1055', '111', '13958060769', '0', '1016', '1016', '1001', '学徒', '2018-11-23 10:56:03', '2018-11-23 10:56:03');
 
 -- ----------------------------
 -- Table structure for `account_tb`
@@ -148,30 +149,30 @@ CREATE TABLE `account_tb` (
   KEY `INDEX_LOGINDATE` (`login_date`) USING BTREE,
   KEY `INDEX_ROLEID` (`role_id`) USING BTREE,
   KEY `INDEX_STATUS` (`status`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1055 DEFAULT CHARSET=utf8 COMMENT='账户表';
+) ENGINE=InnoDB AUTO_INCREMENT=1056 DEFAULT CHARSET=utf8 COMMENT='账户表';
 
 -- ----------------------------
 -- Records of account_tb
 -- ----------------------------
-INSERT INTO `account_tb` VALUES ('1000', '路路通', '15111336587', '11874bb6149dd45428da628c9766b252', null, '聂跃2', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180327135737', '1', '14', null, '湖南省', '长沙市', null, '278076304@qq.com', null, null, null, null, '123456', '考虑', '2018-01-19 15:46:08', '2018-07-09 14:26:55', '0', null, '1000', '超级管理员');
-INSERT INTO `account_tb` VALUES ('1009', '她问我看实物图天', '17702183918', '11874bb6149dd45428da628c9766b252', '', '路路通', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180401153106', '1', '25', '', '湖南省', '湘西土家族苗族自治州', '谢威', '', '2', '136494946469476', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180204154022', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180204154038', '', '', '2018-01-27 18:21:05', '2018-07-05 14:30:31', '0', '1000', '1001', '用户');
-INSERT INTO `account_tb` VALUES ('1010', '-/:;()', '15211547807', '11874bb6149dd45428da628c9766b252', null, '12345', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1520863161.png', '2', '25', null, '湖北省', '武汉市', '舒靖宇', null, '2', '123456', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1517747286.png', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1517747301.png', '147852369', 'gmjgdpg123', '2018-01-27 20:23:22', '2018-05-15 13:02:12', '0', '1000', '1001', '用户');
-INSERT INTO `account_tb` VALUES ('1011', 'safsdafdsf', '15111336586', '11874bb6149dd45428da628c9766b252', '15111336586', '搞事情', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5l472v92qo1849k1h1jec1d6g7v.png', '1', '10', '中国', '湖南省', '长沙市', 'sfdsf', '232@gfdgf.bg', '2', '123123123213123', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5l495bc2eqsgf1l6g1l2e1b1d84.png', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5l49rul2nc1gtb1m1m1k861peo89.png', 'dsf', 'sdfsdf', '2018-02-06 16:39:35', '2018-06-28 12:36:40', '0', '1000', '1002', '普通管理员');
-INSERT INTO `account_tb` VALUES ('1012', '签名？不存在的。', '15674830902', '11874bb6149dd45428da628c9766b252', '', '太上皇', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180507120009', '1', '2', '', '天津市', '安徽省-安庆市', '啦啦啦', '', '1', '125466464664647', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180312102954', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180312103028', '', '', '2018-02-07 01:15:45', '2018-06-12 15:01:40', '0', '1009', '1001', '用户');
-INSERT INTO `account_tb` VALUES ('1013', '1111', '17388964490', '11874bb6149dd45428da628c9766b252', '17388964490', null, null, null, null, null, null, null, '舒靖宇', null, '1', '431224199204051234', 'http://p2bhwwngu.bkt.clouddn.com/ios_1013_1519448824.png', 'http://p2bhwwngu.bkt.clouddn.com/ios_1013_1519448838.png', null, null, '2018-02-10 13:13:19', '2018-05-13 20:37:03', '0', '1000', '1001', '用户');
-INSERT INTO `account_tb` VALUES ('1014', '', '18774814879', '11874bb6149dd45428da628c9766b252', '18774814879', 'vvcc', '', null, null, '', '', '', '小胖子', '', '2', '987654321', 'http://p2bhwwngu.bkt.clouddn.com/ios_1014_1518240172.png', 'http://p2bhwwngu.bkt.clouddn.com/ios_1014_1518240182.png', '有点', '154554', '2018-02-10 13:19:45', '2018-07-05 16:24:18', '0', '1010', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1000', '路路通', '15111336587', '11874bb6149dd45428da628c9766b252', null, '聂跃2', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180327135737', '1', '14', null, '湖南省', '长沙市', null, '278076304@qq.com', null, null, null, null, '123456', '考虑', '2018-01-19 15:46:08', '2018-11-23 16:40:53', '0', null, '1000', '超级管理员');
+INSERT INTO `account_tb` VALUES ('1009', '她问我看实物图天', '17702183918', '11874bb6149dd45428da628c9766b252', '', '路路通', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180401153106', '1', '25', '', '湖南省', '湘西土家族苗族自治州', '谢威', '', '2', '136494946469476', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180204154022', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180204154038', '', '', '2018-01-27 18:21:05', '2018-07-30 17:19:22', '0', '1000', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1010', '-/:;()', '15211547807', '11874bb6149dd45428da628c9766b252', null, '12345', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1520863161.png', '2', '25', null, '湖北省', '武汉市', '舒靖宇', null, '2', '123456', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1517747286.png', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1517747301.png', '147852369', 'gmjgdpg123', '2018-01-27 20:23:22', '2018-05-15 13:02:12', '0', '1000', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1011', 'safsdafdsf', '15111336586', '11874bb6149dd45428da628c9766b252', '15111336586', '搞事情', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5l472v92qo1849k1h1jec1d6g7v.png', '1', '10', '中国', '湖南省', '长沙市', 'sfdsf', '232@gfdgf.bg', '2', '123123123213123', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5l495bc2eqsgf1l6g1l2e1b1d84.png', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5l49rul2nc1gtb1m1m1k861peo89.png', 'dsf', 'sdfsdf', '2018-02-06 16:39:35', '2018-06-28 12:36:40', '0', '1000', '1002', '普通管理员');
+INSERT INTO `account_tb` VALUES ('1012', '签名？不存在的。', '15674830902', '11874bb6149dd45428da628c9766b252', '', '太上皇', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180507120009', '1', '2', '', '天津市', '安徽省-安庆市', '啦啦啦', '', '1', '125466464664647', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180312102954', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180312103028', '', '', '2018-02-07 01:15:45', '2018-11-22 15:57:32', '0', '1009', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1013', '1111', '17388964490', '11874bb6149dd45428da628c9766b252', '17388964490', null, null, null, null, null, null, null, '舒靖宇', null, '1', '431224199204051234', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1013_1519448824.png', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1013_1519448838.png', null, null, '2018-02-10 13:13:19', '2018-07-31 17:47:52', '0', '1000', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1014', '', '18774814879', '11874bb6149dd45428da628c9766b252', '18774814879', 'vvcc', '', '0', null, '', '', '', '小胖子', '', '2', '9876543214', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1014_1518240172.png', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1014_1518240182.png', '有点', '154554', '2018-02-10 13:19:45', '2018-10-25 16:00:17', '0', '1010', '1001', '用户');
 INSERT INTO `account_tb` VALUES ('1015', '哈哈法国红酒', '17767094985', '96fa69e75d86e7acdded21448de3a7a3', '17767094985', 'LOKCK', '', '1', '2', '', '', '吉林省-松原市', '', '', '0', '', '', '', '', '', '2018-02-22 16:43:03', '2018-04-18 10:59:55', '0', '1000', '1000', '超级管理员');
-INSERT INTO `account_tb` VALUES ('1016', '测试', '15068747539', 'aac04a65e7b010b21835bae0396acae0', '15068747539', '123', 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1522142869.png', '1', '102', '', '内蒙古自治区', '吉林省-白城市', '测试', '', '2', '1234564899887789663111478889877786668887788', 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1520236614.png', 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1520236622.png', 'yymiancheng', '', '2018-02-23 14:07:13', '2018-07-05 16:47:55', '0', '1000', '1001', '用户');
-INSERT INTO `account_tb` VALUES ('1017', '测试123', '18606713507', '11874bb6149dd45428da628c9766b252', '18606713507', '测试', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180417154011', '1', '101', null, null, '浙江省-杭州市', '测试', null, '1', '36235688979643554', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180417164301', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180417164306', null, null, '2018-02-28 17:54:43', '2018-04-17 17:51:07', '0', '1016', '1001', '用户');
-INSERT INTO `account_tb` VALUES ('1018', null, '13958060769zhuxiao', '11874bb6149dd45428da628c9766b252', '13958060769zhuxiao', null, 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180313162550', null, null, null, null, null, null, null, '0', null, null, null, null, null, '2018-03-01 13:23:55', '2018-03-27 15:23:15', '0', '1016', '1001', '用户');
-INSERT INTO `account_tb` VALUES ('1019', '吉他墙上挂', '18300000000', '11874bb6149dd45428da628c9766b252', '18300700235', '小草帽', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180531174602', null, null, '', '', '', '王小明', '', '2', '410111111111111111', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180313095053', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180313095106', '', '', '2018-03-13 09:49:12', '2018-06-01 11:26:11', '0', '1009', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1016', '测试', '15068747539', 'aac04a65e7b010b21835bae0396acae0', '15068747539', '123', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20181123104446', '1', '23', '', '内蒙古自治区', '安徽省-安庆市', '测试', '', '2', '1234564899887789663111478889877786668887788', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1520236614.png', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1520236622.png', 'yymiancheng', '', '2018-02-23 14:07:13', '2018-11-23 16:44:06', '0', '1000', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1017', '测试123', '18606713507', '931c181d9fe424a87113217ba3e42b93', '18606713507', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180417154011', '1', '101', null, null, '浙江省-杭州市', '测试', null, '1', '36235688979643554', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180417164301', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180417164306', null, null, '2018-02-28 17:54:43', '2018-08-16 13:45:00', '0', '1016', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1018', null, '13958060769zhuxiao', '11874bb6149dd45428da628c9766b252', '13958060769zhuxiao', null, 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180313162550', null, null, null, null, null, null, null, '0', null, null, null, null, null, '2018-03-01 13:23:55', '2018-03-27 15:23:15', '0', '1016', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1019', '吉他墙上挂', '18300000000', '11874bb6149dd45428da628c9766b252', '18300700235', '小草帽', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180531174602', null, null, '', '', '', '王小明', '', '2', '410111111111111111', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180313095053', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180313095106', '', '', '2018-03-13 09:49:12', '2018-06-01 11:26:11', '0', '1009', '1001', '用户');
 INSERT INTO `account_tb` VALUES ('1020', null, '15168318364', '51781fefc1cb8b7bbb0a890e1b6a79cf', '15168318364', null, null, null, null, null, null, null, null, null, '0', null, null, null, null, null, '2018-03-13 16:20:27', '2018-03-13 16:20:27', '0', '1016', '1001', '用户');
-INSERT INTO `account_tb` VALUES ('1021', '123456789', '13588328250', '0522a436cfd6d9fb1fb1b8d84b3e5804', '13588328250', '测试版02', 'http://p2bhwwngu.bkt.clouddn.com/ios_1021_1523946788.png', '1', '10', null, '浙江省', '杭州市', null, null, '0', null, null, null, null, null, '2018-03-27 14:27:41', '2018-04-17 14:30:50', '0', '1016', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1021', '123456789', '13588328250', '0522a436cfd6d9fb1fb1b8d84b3e5804', '13588328250', '测试版02', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1021_1523946788.png', '1', '10', null, '浙江省', '杭州市', null, null, '0', null, null, null, null, null, '2018-03-27 14:27:41', '2018-04-17 14:30:50', '0', '1016', '1001', '用户');
 INSERT INTO `account_tb` VALUES ('1022', null, '18229961030', '11874bb6149dd45428da628c9766b252', '18229961030', null, null, null, null, null, null, null, null, null, '0', null, null, null, null, null, '2018-04-01 23:34:49', '2018-04-01 23:34:49', '0', '1000', '1001', '用户');
-INSERT INTO `account_tb` VALUES ('1023', null, '18357795862', '57004c50da8c04b2d271524acd087925', '18357795862', '偌瑶', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180403091426', '2', '22', null, null, '浙江省-杭州市', null, null, '0', null, null, null, null, null, '2018-04-02 16:53:56', '2018-04-25 15:46:05', '0', '1000', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1023', null, '18357795862', '57004c50da8c04b2d271524acd087925', '18357795862', '偌瑶', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180403091426', '2', '22', null, null, '浙江省-杭州市', null, null, '0', null, null, null, null, null, '2018-04-02 16:53:56', '2018-04-25 15:46:05', '0', '1000', '1001', '用户');
 INSERT INTO `account_tb` VALUES ('1024', null, '17682317316', '11874bb6149dd45428da628c9766b252', '17682317316', null, null, null, null, null, null, null, null, null, '0', null, null, null, null, null, '2018-04-03 11:01:55', '2018-04-17 17:44:41', '0', '1016', '1001', '用户');
-INSERT INTO `account_tb` VALUES ('1025', null, '17764562587', '931c181d9fe424a87113217ba3e42b93', '17764562587', '测试', 'http://p2bhwwngu.bkt.clouddn.com/ios_1025_1523154005.png', null, null, null, null, null, null, null, '0', null, null, null, null, null, '2018-04-08 10:18:52', '2018-04-08 17:54:23', '0', '1016', '1001', '用户');
-INSERT INTO `account_tb` VALUES ('1026', null, '15958134694', '5d2ca53ee160707674627f2705053e53', '15958134694', '陌小研', 'http://p2bhwwngu.bkt.clouddn.com/ios_1026_1523957127.png', '2', '19', null, null, null, null, null, '0', null, null, null, null, null, '2018-04-17 17:25:05', '2018-07-04 15:54:01', '0', '1016', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1025', null, '17764562587', '931c181d9fe424a87113217ba3e42b93', '17764562587', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1025_1523154005.png', null, null, null, null, null, null, null, '0', null, null, null, null, null, '2018-04-08 10:18:52', '2018-04-08 17:54:23', '0', '1016', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1026', null, '15958134694', '5d2ca53ee160707674627f2705053e53', '15958134694', '陌小研', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1026_1523957127.png', '2', '19', null, null, null, null, null, '0', null, null, null, null, null, '2018-04-17 17:25:05', '2018-07-04 15:54:01', '0', '1016', '1001', '用户');
 INSERT INTO `account_tb` VALUES ('1027', null, '17308496139', '11874bb6149dd45428da628c9766b252', '17308496139', null, null, null, null, null, null, null, null, null, '0', null, null, null, null, null, '2018-05-03 22:18:28', '2018-05-06 13:44:52', '0', '1000', '1001', '用户');
 INSERT INTO `account_tb` VALUES ('1029', null, '17130042356', '11874bb6149dd45428da628c9766b252', '17130042356', null, null, null, null, null, null, null, null, null, '0', null, null, null, null, null, '2018-05-30 16:06:28', '2018-05-30 16:08:11', '0', '1000', '1001', '用户');
 INSERT INTO `account_tb` VALUES ('1030', null, '17788563571', '11874bb6149dd45428da628c9766b252', '17788563571', null, null, null, null, null, null, null, null, null, '0', null, null, null, null, null, '2018-05-30 16:10:51', '2018-05-30 16:12:39', '0', '1000', '1001', '用户');
@@ -182,18 +183,19 @@ INSERT INTO `account_tb` VALUES ('1034', null, '13600000000', 'f44f3dd2f74ea4667
 INSERT INTO `account_tb` VALUES ('1035', null, '13500000000', '11874bb6149dd45428da628c9766b252', null, null, '', null, null, null, null, null, null, null, '0', null, '', '', null, null, '2018-05-30 17:10:54', '2018-05-30 17:10:54', '0', null, null, '普通管理员');
 INSERT INTO `account_tb` VALUES ('1036', null, '13400000000', '11874bb6149dd45428da628c9766b252', null, null, null, '0', '18', '中国', null, null, null, null, '0', null, null, null, null, null, '2018-05-30 17:11:46', '2018-05-30 17:11:46', '0', null, '1002', '普通管理员');
 INSERT INTO `account_tb` VALUES ('1037', null, '13300000000', '11874bb6149dd45428da628c9766b252', null, null, '', null, null, null, null, null, null, null, '0', null, '', '', null, null, '2018-05-30 17:12:15', '2018-05-30 17:12:15', '0', null, null, '普通管理员');
-INSERT INTO `account_tb` VALUES ('1038', '就是这个意思。', '18367175373', '11874bb6149dd45428da628c9766b252', '18367175373', '强壮的土豆', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180611102033', '1', null, '', '', '安徽省-安庆市', '刘海歌他哥', '', '2', '666666', '<null>', '<null>', '', '', '2018-05-30 18:31:26', '2018-06-12 16:09:18', '0', '1019', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1038', '就是这个意思。', '18367175373', '11874bb6149dd45428da628c9766b252', '18367175373', '强壮的土豆', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180611102033', '1', null, '', '', '安徽省-安庆市', '刘海歌他哥', '', '2', '666666', '<null>', '<null>', '', '', '2018-05-30 18:31:26', '2018-07-31 16:53:48', '0', '1019', '1001', '用户');
 INSERT INTO `account_tb` VALUES ('1039', null, '17376583517', '11874bb6149dd45428da628c9766b252', '17376583517', null, null, null, null, null, null, null, null, null, '0', null, null, null, null, null, '2018-05-31 14:20:08', '2018-05-31 14:20:08', '0', '1000', '1001', '用户');
 INSERT INTO `account_tb` VALUES ('1040', null, '18300000001', '11874bb6149dd45428da628c9766b252', '18300700235', null, null, null, null, null, null, null, null, null, '0', null, null, null, null, null, '2018-06-01 14:43:35', '2018-06-01 14:47:16', '0', '1038', '1001', '用户');
-INSERT INTO `account_tb` VALUES ('1041', '这是什么鬼啊', '18300700235', '11874bb6149dd45428da628c9766b252', '18300700235', '小财猫', 'http://p2bhwwngu.bkt.clouddn.com/ios_1041_1528437172.png', null, null, '', '内蒙古自治区', '呼和浩特市', '刘哥', '', '2', '410100199900000000', 'http://p2bhwwngu.bkt.clouddn.com/ios_1041_1528437283.png', 'http://p2bhwwngu.bkt.clouddn.com/ios_1041_1528437351.png', '', '', '2018-06-01 16:14:28', '2018-07-09 10:15:20', '0', '1009', '1001', '用户');
-INSERT INTO `account_tb` VALUES ('1042', '', '13033604013', '11874bb6149dd45428da628c9766b252', '13033604013', '小草帽', '', null, null, '', '', '', '没小钱', '', '2', '', '', '', '', '', '2018-06-01 16:35:05', '2018-06-01 17:50:33', '0', '1009', '1001', '用户');
-INSERT INTO `account_tb` VALUES ('1043', '没有签名', '17376568179', '931c181d9fe424a87113217ba3e42b93', '17376568179', '测试', 'http://p2bhwwngu.bkt.clouddn.com/ios_1043_1528090818.png', '2', '23', null, '浙江省', '杭州市', '这是测试', null, '1', '123456789123456789', 'http://p2bhwwngu.bkt.clouddn.com/ios_1043_1528090930.png', 'http://p2bhwwngu.bkt.clouddn.com/ios_1043_1528090937.png', null, null, '2018-06-04 13:39:47', '2018-06-04 13:39:47', '0', '1016', '1001', '用户');
-INSERT INTO `account_tb` VALUES ('1044', '', '13958060769', '11874bb6149dd45428da628c9766b252', '13958060769', '', '', null, null, '', '', '', '杰杰杰', '', '2', '330011445566778899', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180613141606', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180613141610', '', '', '2018-06-13 14:09:14', '2018-07-05 16:31:52', '0', '1000', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1041', '这是什么鬼啊', '18300700235', '11874bb6149dd45428da628c9766b252', '18300700235', '小财猫', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1041_1532076143.png', null, null, '', '内蒙古自治区', '呼和浩特市', '刘哥', '', '2', '410100199900000000', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1041_1528437283.png', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1041_1528437351.png', '', '', '2018-06-01 16:14:28', '2018-11-23 11:09:28', '0', '1009', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1042', '', '13033604013', '11874bb6149dd45428da628c9766b252', '13033604013', '小草帽', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1042_1533024218.png', null, null, '', '', '', '没小钱', '', '2', '', '', '', '', '', '2018-06-01 16:35:05', '2018-07-31 18:12:18', '0', '1009', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1043', '没有签名', '17376568179', '931c181d9fe424a87113217ba3e42b93', '17376568179', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1043_1528090818.png', '2', '23', null, '浙江省', '杭州市', '这是测试', null, '1', '123456789123456789', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1043_1528090930.png', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1043_1528090937.png', null, null, '2018-06-04 13:39:47', '2018-06-04 13:39:47', '0', '1016', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1044', '', '13958060769zhuxiao', '11874bb6149dd45428da628c9766b252', '13958060769', '', '', null, null, '', '', '', '杰杰杰', '', '2', '330011445566778899', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180613141606', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180613141610', '', '', '2018-06-13 14:09:14', '2018-07-31 17:08:57', '0', '1000', '1001', '用户');
 INSERT INTO `account_tb` VALUES ('1049', '', '12345678912', '11874bb6149dd45428da628c9766b252', '', '和规范化', '', null, null, '', '', '', '', '', '0', '', '', '', '', '', '2018-06-25 09:20:53', '2018-06-26 23:14:28', '0', null, '1002', '普通管理员');
-INSERT INTO `account_tb` VALUES ('1051', null, '18300700123', '11874bb6149dd45428da628c9766b252', null, '强壮的土豆', null, null, null, null, null, null, null, null, '0', null, null, null, null, null, '2018-06-25 09:35:22', '2018-06-27 10:09:39', '0', null, '1000', '超级管理员');
-INSERT INTO `account_tb` VALUES ('1052', '', '18137137010', '49ec1ea782913b7cf1f349b155eb762f', '18137137010', '', 'http://p2bhwwngu.bkt.clouddn.com/ios_1052_1530005702.png', null, null, '', '', '', '梁威', '', '2', '', '', '', '', '', '2018-06-26 17:34:51', '2018-06-27 10:27:17', '0', '1009', '1001', '用户');
-INSERT INTO `account_tb` VALUES ('1053', null, '13216180235', '11874bb6149dd45428da628c9766b252', null, '土豆地瓜', null, null, null, null, null, null, null, null, '0', null, null, null, null, null, '2018-07-04 10:54:56', '2018-07-04 10:55:18', '0', null, '1000', '超级管理员');
+INSERT INTO `account_tb` VALUES ('1051', null, '18300700123', '11874bb6149dd45428da628c9766b252', null, '强壮的土豆', null, null, null, null, null, null, null, null, '0', null, null, null, null, null, '2018-06-25 09:35:22', '2018-07-31 14:22:10', '0', null, '1000', '超级管理员');
+INSERT INTO `account_tb` VALUES ('1052', '', '18137137010', 'f46188f4361b4b8426e20f12760a4adf', '18137137010', '123', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1052_1530005702.png', null, null, '', '', '', '梁威', '', '2', '', '', '', '', '', '2018-06-26 17:34:51', '2018-07-31 18:04:51', '0', '1009', '1001', '用户');
+INSERT INTO `account_tb` VALUES ('1053', null, '13216180235', '11874bb6149dd45428da628c9766b252', null, '土豆地瓜', null, null, null, null, null, null, null, null, '0', null, null, null, null, null, '2018-07-04 10:54:56', '2018-09-07 17:47:35', '0', null, '1000', '超级管理员');
 INSERT INTO `account_tb` VALUES ('1054', '', '15068747523', '11874bb6149dd45428da628c9766b252', '', 'admin', '', null, null, '', '', '', '', '', '0', '', '', '', '', '', '2018-07-04 13:54:55', '2018-07-04 13:56:05', '0', null, '1002', '普通管理员');
+INSERT INTO `account_tb` VALUES ('1055', '', '13958060769', 'e10adc3949ba59abbe56e057f20f883e', '13958060769', '', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20181123104555', null, null, '', '', '', '111', '', '2', '111222', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20181123105602', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20181123105608', '', '', '2018-11-23 10:35:15', '2018-11-23 13:13:48', '0', '1016', '1001', '用户');
 
 -- ----------------------------
 -- Table structure for `app_version_tb`
@@ -216,8 +218,8 @@ CREATE TABLE `app_version_tb` (
 -- ----------------------------
 -- Records of app_version_tb
 -- ----------------------------
-INSERT INTO `app_version_tb` VALUES ('1006', '0', '1.0', '0', 'sdf', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5kj83gl1b7kviik4u19mvlish.png', '2018-02-09 14:07:41', '0');
-INSERT INTO `app_version_tb` VALUES ('1007', '0', '1.0', '0', 'sdf', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5kj8tnt5pdf453l8oa61daum.png', '2018-02-09 14:07:35', '0');
+INSERT INTO `app_version_tb` VALUES ('1006', '0', '1.0', '0', 'sdf', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5kj83gl1b7kviik4u19mvlish.png', '2018-02-09 14:07:41', '0');
+INSERT INTO `app_version_tb` VALUES ('1007', '0', '1.0', '0', 'sdf', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5kj8tnt5pdf453l8oa61daum.png', '2018-02-09 14:07:35', '0');
 
 -- ----------------------------
 -- Table structure for `article_cate_tb`
@@ -233,10 +235,9 @@ CREATE TABLE `article_cate_tb` (
 -- ----------------------------
 -- Records of article_cate_tb
 -- ----------------------------
-INSERT INTO `article_cate_tb` VALUES ('1000', '个性推荐', '2018-01-23 14:44:48');
-INSERT INTO `article_cate_tb` VALUES ('1001', '课程', '2018-02-22 17:44:54');
-INSERT INTO `article_cate_tb` VALUES ('1002', '微专业', '2018-02-02 08:59:45');
-INSERT INTO `article_cate_tb` VALUES ('1006', '新闻', '2018-07-05 14:14:20');
+INSERT INTO `article_cate_tb` VALUES ('1000', '课程', '2018-07-20 15:01:48');
+INSERT INTO `article_cate_tb` VALUES ('1002', '微专业', '2018-07-20 15:02:31');
+INSERT INTO `article_cate_tb` VALUES ('1006', '个性推荐', '2018-07-20 15:01:17');
 
 -- ----------------------------
 -- Table structure for `article_comment_tb`
@@ -255,7 +256,7 @@ CREATE TABLE `article_comment_tb` (
   KEY `INDEX_POINTNUMBER` (`point_number`) USING BTREE,
   KEY `INDEX_ARTICLEID` (`article_id`) USING BTREE,
   KEY `INDEX_ACCOUNTID` (`account_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=utf8 COMMENT='文章评论表';
+) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8 COMMENT='文章评论表';
 
 -- ----------------------------
 -- Records of article_comment_tb
@@ -265,50 +266,53 @@ INSERT INTO `article_comment_tb` VALUES ('4', '还能好好玩耍不\n', '4', '2
 INSERT INTO `article_comment_tb` VALUES ('5', '撒旦飞洒地方', '0', '2018-01-29 16:08:18', '3', '1000', '聂跃', '');
 INSERT INTO `article_comment_tb` VALUES ('6', '十大法师的', '1', '2018-01-29 16:08:21', '3', '1000', '聂跃', '');
 INSERT INTO `article_comment_tb` VALUES ('7', '士大夫', '1', '2018-01-29 16:08:35', '2', '1000', '聂跃', '');
-INSERT INTO `article_comment_tb` VALUES ('8', '你以为所以我现在1', '0', '2018-02-02 00:51:47', '3', '1009', '啦啦啦啦', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180127193722');
-INSERT INTO `article_comment_tb` VALUES ('9', '聊几句V53', '0', '2018-02-02 00:54:54', '4', '1009', '啦啦啦啦', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180127193722');
-INSERT INTO `article_comment_tb` VALUES ('10', '你想让我庸人自扰之', '2', '2018-02-02 01:54:55', '2', '1009', '啦啦啦啦', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180127193722');
-INSERT INTO `article_comment_tb` VALUES ('12', 'ggvv记录', '1', '2018-02-07 00:48:20', '4', '1009', '我会注意', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180127193722');
-INSERT INTO `article_comment_tb` VALUES ('13', '呵呵', '2', '2018-02-08 16:43:14', '2', '1009', '我会注意', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180127193722');
+INSERT INTO `article_comment_tb` VALUES ('8', '你以为所以我现在1', '0', '2018-02-02 00:51:47', '3', '1009', '啦啦啦啦', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180127193722');
+INSERT INTO `article_comment_tb` VALUES ('9', '聊几句V53', '0', '2018-02-02 00:54:54', '4', '1009', '啦啦啦啦', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180127193722');
+INSERT INTO `article_comment_tb` VALUES ('10', '你想让我庸人自扰之', '2', '2018-02-02 01:54:55', '2', '1009', '啦啦啦啦', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180127193722');
+INSERT INTO `article_comment_tb` VALUES ('12', 'ggvv记录', '1', '2018-02-07 00:48:20', '4', '1009', '我会注意', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180127193722');
+INSERT INTO `article_comment_tb` VALUES ('13', '呵呵', '2', '2018-02-08 16:43:14', '2', '1009', '我会注意', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180127193722');
 INSERT INTO `article_comment_tb` VALUES ('15', '我的生活就是一个劲在别人看来很大关系人的问题，我的人生就是一个', '2', '2018-02-09 21:12:30', '2', '1010', null, null);
-INSERT INTO `article_comment_tb` VALUES ('16', '我的人生就是一个人和事物的人生态度，我的人生就是一个人和事物的人生态度，我的人生就是一个人和事', '2', '2018-02-09 21:23:16', '2', '1010', '123', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1517055943.png');
-INSERT INTO `article_comment_tb` VALUES ('17', '破给名字呀，你的人生态度就是这样吧。我们都在一起的时候我就不去了。我', '3', '2018-02-09 21:24:03', '2', '1010', '123', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1517055943.png');
-INSERT INTO `article_comment_tb` VALUES ('18', '龙', '2', '2018-02-22 16:33:02', '3', '1000', '聂跃', 'http://p2bhwwngu.bkt.clouddn.com/ios_1000_1519287324.png');
-INSERT INTO `article_comment_tb` VALUES ('19', '啦啦啦', '2', '2018-02-22 20:13:43', '4', '1009', '哦？是吗', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180127193722');
-INSERT INTO `article_comment_tb` VALUES ('20', 'N97一些事一些情庸人自扰之XP密钥嘻嘻嘻嘻一下星期一休息嘻嘻嘻嘻在上自习一心一意一样一样噢你嘻嘻嘻', '2', '2018-02-22 20:14:09', '4', '1009', '哦？是吗', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180127193722');
-INSERT INTO `article_comment_tb` VALUES ('21', '知心', '0', '2018-02-24 10:22:35', '5', '1009', '哦？是吗', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180127193722');
-INSERT INTO `article_comment_tb` VALUES ('23', '狗狗', '5', '2018-02-24 15:40:43', '10', '1000', '聂跃', 'http://p2bhwwngu.bkt.clouddn.com/ios_1000_1519287324.png');
-INSERT INTO `article_comment_tb` VALUES ('24', '好感动……', '2', '2018-02-24 23:48:05', '8', '1000', '聂跃', 'http://p2bhwwngu.bkt.clouddn.com/ios_1000_1519287324.png');
-INSERT INTO `article_comment_tb` VALUES ('25', '可怕', '3', '2018-02-25 12:55:43', '9', '1000', '聂跃', 'http://p2bhwwngu.bkt.clouddn.com/ios_1000_1519287324.png');
-INSERT INTO `article_comment_tb` VALUES ('26', '6666666', '4', '2018-02-27 21:31:15', '9', '1009', '哦？是吗', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180227114533');
-INSERT INTO `article_comment_tb` VALUES ('27', '对的。', '5', '2018-03-01 14:07:36', '10', '1009', '哦？是吗', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180227114533');
-INSERT INTO `article_comment_tb` VALUES ('28', '测试', '2', '2018-03-05 15:52:11', '9', '1009', '哦？是吗', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180227114533');
-INSERT INTO `article_comment_tb` VALUES ('29', '测试', '3', '2018-03-05 15:52:27', '9', '1009', '哦？是吗', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180227114533');
-INSERT INTO `article_comment_tb` VALUES ('30', '测试', '3', '2018-03-05 15:53:44', '5', '1009', '哦？是吗', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180227114533');
-INSERT INTO `article_comment_tb` VALUES ('31', '测试', '12', '2018-03-05 15:54:42', '10', '1016', '大白嗯哼', 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1519366739.png');
-INSERT INTO `article_comment_tb` VALUES ('33', '加急', '3', '2018-03-13 16:56:19', '8', '1000', '聂跃1', 'http://p2bhwwngu.bkt.clouddn.com/ios_1000_1519287324.png');
-INSERT INTO `article_comment_tb` VALUES ('34', '回家睡觉计算机三级见识见识就说你呢实话实说都很好的还不到好的好的比较喜欢加到几点几点回家独具匠心家电家具都好都好简单机械不是的话大好河山你带回家小虎还乡吉祥混沌就觉得不是很熟还打不打还很喜欢小虎还乡回电话都很好的忽上忽下好想好好说好的好好的呢哈哈哈小虎还乡还很喜欢啥时候睡说的很好都好好的', '2', '2018-03-13 16:56:58', '8', '1000', '聂跃1', 'http://p2bhwwngu.bkt.clouddn.com/ios_1000_1519287324.png');
-INSERT INTO `article_comment_tb` VALUES ('35', '123456', '6', '2018-03-13 17:10:53', '10', '1016', '大白嗯哼', 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1520929499.png');
-INSERT INTO `article_comment_tb` VALUES ('36', '转网', '0', '2018-03-15 19:20:00', '10', '1000', '聂跃1', 'http://p2bhwwngu.bkt.clouddn.com/ios_1000_1519287324.png');
-INSERT INTO `article_comment_tb` VALUES ('40', '5卡图图他', '0', '2018-03-16 10:49:08', '10', '1012', 'LOL哦咯', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180207011738');
-INSERT INTO `article_comment_tb` VALUES ('44', '测试', '0', '2018-03-26 16:46:01', '10', '1016', 'ceshi', 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1520929499.png');
-INSERT INTO `article_comment_tb` VALUES ('46', '计算机技术', '0', '2018-03-27 13:58:59', '6', '1000', '聂跃2', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180327135737');
-INSERT INTO `article_comment_tb` VALUES ('47', 'gggg ', '0', '2018-03-27 14:45:07', '6', '1016', '', 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1520929499.png');
+INSERT INTO `article_comment_tb` VALUES ('16', '我的人生就是一个人和事物的人生态度，我的人生就是一个人和事物的人生态度，我的人生就是一个人和事', '2', '2018-02-09 21:23:16', '2', '1010', '123', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1517055943.png');
+INSERT INTO `article_comment_tb` VALUES ('17', '破给名字呀，你的人生态度就是这样吧。我们都在一起的时候我就不去了。我', '3', '2018-02-09 21:24:03', '2', '1010', '123', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1517055943.png');
+INSERT INTO `article_comment_tb` VALUES ('18', '龙', '2', '2018-02-22 16:33:02', '3', '1000', '聂跃', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1000_1519287324.png');
+INSERT INTO `article_comment_tb` VALUES ('19', '啦啦啦', '2', '2018-02-22 20:13:43', '4', '1009', '哦？是吗', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180127193722');
+INSERT INTO `article_comment_tb` VALUES ('20', 'N97一些事一些情庸人自扰之XP密钥嘻嘻嘻嘻一下星期一休息嘻嘻嘻嘻在上自习一心一意一样一样噢你嘻嘻嘻', '2', '2018-02-22 20:14:09', '4', '1009', '哦？是吗', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180127193722');
+INSERT INTO `article_comment_tb` VALUES ('21', '知心', '0', '2018-02-24 10:22:35', '5', '1009', '哦？是吗', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180127193722');
+INSERT INTO `article_comment_tb` VALUES ('23', '狗狗', '5', '2018-02-24 15:40:43', '10', '1000', '聂跃', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1000_1519287324.png');
+INSERT INTO `article_comment_tb` VALUES ('24', '好感动……', '2', '2018-02-24 23:48:05', '8', '1000', '聂跃', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1000_1519287324.png');
+INSERT INTO `article_comment_tb` VALUES ('25', '可怕', '3', '2018-02-25 12:55:43', '9', '1000', '聂跃', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1000_1519287324.png');
+INSERT INTO `article_comment_tb` VALUES ('26', '6666666', '4', '2018-02-27 21:31:15', '9', '1009', '哦？是吗', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180227114533');
+INSERT INTO `article_comment_tb` VALUES ('27', '对的。', '5', '2018-03-01 14:07:36', '10', '1009', '哦？是吗', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180227114533');
+INSERT INTO `article_comment_tb` VALUES ('28', '测试', '2', '2018-03-05 15:52:11', '9', '1009', '哦？是吗', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180227114533');
+INSERT INTO `article_comment_tb` VALUES ('29', '测试', '3', '2018-03-05 15:52:27', '9', '1009', '哦？是吗', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180227114533');
+INSERT INTO `article_comment_tb` VALUES ('30', '测试', '3', '2018-03-05 15:53:44', '5', '1009', '哦？是吗', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180227114533');
+INSERT INTO `article_comment_tb` VALUES ('31', '测试', '12', '2018-03-05 15:54:42', '10', '1016', '大白嗯哼', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1519366739.png');
+INSERT INTO `article_comment_tb` VALUES ('33', '加急', '3', '2018-03-13 16:56:19', '8', '1000', '聂跃1', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1000_1519287324.png');
+INSERT INTO `article_comment_tb` VALUES ('34', '回家睡觉计算机三级见识见识就说你呢实话实说都很好的还不到好的好的比较喜欢加到几点几点回家独具匠心家电家具都好都好简单机械不是的话大好河山你带回家小虎还乡吉祥混沌就觉得不是很熟还打不打还很喜欢小虎还乡回电话都很好的忽上忽下好想好好说好的好好的呢哈哈哈小虎还乡还很喜欢啥时候睡说的很好都好好的', '2', '2018-03-13 16:56:58', '8', '1000', '聂跃1', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1000_1519287324.png');
+INSERT INTO `article_comment_tb` VALUES ('35', '123456', '6', '2018-03-13 17:10:53', '10', '1016', '大白嗯哼', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1520929499.png');
+INSERT INTO `article_comment_tb` VALUES ('36', '转网', '0', '2018-03-15 19:20:00', '10', '1000', '聂跃1', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1000_1519287324.png');
+INSERT INTO `article_comment_tb` VALUES ('40', '5卡图图他', '1', '2018-03-16 10:49:08', '10', '1012', 'LOL哦咯', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180207011738');
+INSERT INTO `article_comment_tb` VALUES ('44', '测试', '1', '2018-03-26 16:46:01', '10', '1016', 'ceshi', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1520929499.png');
+INSERT INTO `article_comment_tb` VALUES ('46', '计算机技术', '0', '2018-03-27 13:58:59', '6', '1000', '聂跃2', 'http://laoyeshuovideo.laoyeshuo.cnm/fitment_20180327135737');
+INSERT INTO `article_comment_tb` VALUES ('47', 'gggg ', '0', '2018-03-27 14:45:07', '6', '1016', '', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1520929499.png');
 INSERT INTO `article_comment_tb` VALUES ('48', 'ddfd', '1', '2018-03-27 15:22:06', '11', '1017', '未命名', '');
 INSERT INTO `article_comment_tb` VALUES ('50', 'dd', '0', '2018-03-27 15:23:27', '6', '1017', '未命名', '');
-INSERT INTO `article_comment_tb` VALUES ('51', 'fdd', '0', '2018-03-27 15:23:39', '6', '1017', '未命名', '');
+INSERT INTO `article_comment_tb` VALUES ('51', 'fdd', '1', '2018-03-27 15:23:39', '6', '1017', '未命名', '');
 INSERT INTO `article_comment_tb` VALUES ('52', 'dffff', '1', '2018-03-27 15:24:04', '11', '1017', '未命名', '');
-INSERT INTO `article_comment_tb` VALUES ('53', 'dddd', '0', '2018-03-27 15:24:25', '6', '1017', '未命名', '');
+INSERT INTO `article_comment_tb` VALUES ('53', 'dddd', '1', '2018-03-27 15:24:25', '6', '1017', '未命名', '');
 INSERT INTO `article_comment_tb` VALUES ('54', 'zxxxd', '0', '2018-03-27 15:26:22', '7', '1017', '未命名', '');
 INSERT INTO `article_comment_tb` VALUES ('55', ' just', '0', '2018-03-27 15:30:35', '8', '1017', '未命名', '');
 INSERT INTO `article_comment_tb` VALUES ('56', 'quick', '0', '2018-03-27 15:34:34', '8', '1017', '未命名', '');
 INSERT INTO `article_comment_tb` VALUES ('57', 'just', '0', '2018-03-27 15:35:38', '5', '1017', '未命名', '');
-INSERT INTO `article_comment_tb` VALUES ('58', '啊旅途', '0', '2018-04-01 13:54:12', '9', '1009', '哦？是吗', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180227114533');
-INSERT INTO `article_comment_tb` VALUES ('59', '我了个去', '0', '2018-05-03 22:34:31', '10', '1027', '173****6139', 'null');
+INSERT INTO `article_comment_tb` VALUES ('58', '啊旅途', '0', '2018-04-01 13:54:12', '9', '1009', '哦？是吗', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180227114533');
+INSERT INTO `article_comment_tb` VALUES ('59', '我了个去', '1', '2018-05-03 22:34:31', '10', '1027', '173****6139', 'null');
 INSERT INTO `article_comment_tb` VALUES ('62', '测试3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333633333333333333333333331331313131313131313131313131313133131313131313131313131313313131313131313131313133131313131313131313133131346467881946466484', '0', '2018-06-13 17:47:11', '9', '1044', '139****0769', 'null');
 INSERT INTO `article_comment_tb` VALUES ('63', '测试', '0', '2018-06-13 17:47:25', '9', '1044', '139****0769', 'null');
 INSERT INTO `article_comment_tb` VALUES ('64', '测试1111111122242421545454548484494994946464646646464646464852234646464548454549464464461194494979764646451516464949449794643131646454243637193173179146169939341971379793913799773673917613197139739179317379197317973191731943173197397197917919719379319133194', '0', '2018-06-13 17:49:13', '9', '1044', '139****0769', 'null');
-INSERT INTO `article_comment_tb` VALUES ('65', '5566', '0', '2018-06-26 17:06:59', '10', '1041', '小财猫', 'http://p2bhwwngu.bkt.clouddn.com/ios_1041_1528437172.png');
+INSERT INTO `article_comment_tb` VALUES ('65', '5566', '1', '2018-06-26 17:06:59', '10', '1041', '小财猫', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1041_1528437172.png');
+INSERT INTO `article_comment_tb` VALUES ('67', '5555', '0', '2018-07-17 13:57:48', '6', '1052', '', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1052_1530005702.png');
+INSERT INTO `article_comment_tb` VALUES ('69', '赶紧看看', '1', '2018-07-30 16:26:33', '10', '1016', '123', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180730162025');
+INSERT INTO `article_comment_tb` VALUES ('70', '测试', '0', '2018-11-23 10:44:11', '15', '1016', '123', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180730162025');
 
 -- ----------------------------
 -- Table structure for `article_tb`
@@ -332,7 +336,7 @@ CREATE TABLE `article_tb` (
   KEY `INDEX_UPDATEDATE` (`update_date`) USING BTREE,
   KEY `INDEX_STATUS` (`status`) USING BTREE,
   KEY `INDEX_COMMENTNUMBER` (`comment_number`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COMMENT='文章表';
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='文章表';
 
 -- ----------------------------
 -- Records of article_tb
@@ -341,12 +345,11 @@ INSERT INTO `article_tb` VALUES ('2', '平昌冬奥会开幕式最全盘点！ �
 INSERT INTO `article_tb` VALUES ('3', '县城手机战的“乡土”营销：买手机送足浴盆', '中新网客户端石家庄2月23日电 题：(新春见闻)县城手机战的“乡土”营销：买手机送足浴盆', 'https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=3425483143,1906034554&fm=173&s=99F24C800E639ADE049D0114030050DA&w=218&h=146&img.JPEG', '', '<div><p>中新网客户端石家庄2月23日电 题：(新春见闻)县城手机战的“乡土”营销：买手机送足浴盆</p><p>记者 吴涛</p><p>移动互联网时代，手机是人们最亲密的“伙伴”。春节期间，记者在河北省无极县走访发现，县城的手机市场和大家的认知差异较大，有些情况甚至颠覆你的想象。</p><div><img width=\"500px\" data-loadfunc=\"0\" src=\"https://t12.baidu.com/it/u=805330091,2380710629&amp;fm=173&amp;s=99F24C800E639ADE049D0114030050DA&amp;w=500&amp;h=333&amp;img.JPEG\" data-loaded=\"0\"></div><p>县城手机专卖店，OPPO和vivo居多。中新网 吴涛 摄</p><p>用什么？</p><p>——OPPO、vivo主导，难见三星、苹果</p><p>无极县有一条主要街道，贯穿东西，主要的商场和门店都集中在这条街上，手机店也不例外。记者走访发现，这条街上有30个左右的手机专卖或通讯店，支撑起这个县城的手机市场。</p><p>通过走访不难发现，在县城，销售最好的是OPPO和vivo，难见苹果、三星身影，华为也只有近两年才开张的一家旗舰店。</p><p>这不只体现在手机专卖店数量上，还有巨大广告横幅和活灵活现的卡通人物营销——这些基本都被OPPO和vivo占领。</p><p>有意思的是，每到OPPO和vivo做营销活动时，场面颇为壮观。放置在路边的音箱都开到最大声音，舞台搭起来，歌舞跳起来。总之，大街上最热闹、音箱声音最大的店面一般就是OPPO或vivo的专卖店。</p><p>其实，这种情况不是个例，据调研机构Quest Mobile安卓终端报告显示，OPPO和vivo的三四线城市及以下用户占比较多，其中OPPO最高，达53.7%。</p><p>这或和很多人的印象存有较大差异：难道用的最多的手机不是苹果、三星吗？据调查机构IDC发布调查数据显示，2017年四季度，全球智能手机出货量达到4.035亿台。手机厂商排名三星、苹果居前二，然后依次为华为、OPPO、小米。</p><p>但在该县城，这么多的手机专卖店，只有极少部分店面有苹果和小米手机出售，基本没有三星。“小米前几年还行，现在很难卖动了；三星原来一直就没有卖。”某手机专卖店服务人员表示。</p><p>另外，除了OPPO和vivo，记者还发现，在县城，一些老年机型也活得比较“滋润”。这类手机按键和音量都很大，普遍售价200元左右。一位70多岁的老婆婆对记者表示，她好几年前就开始用这种手机了，只接打电话，很好用。</p><div><img width=\"500px\" data-loadfunc=\"0\" src=\"https://t10.baidu.com/it/u=950438241,880612904&amp;fm=173&amp;s=1E844D814C1540C8648780DF0300C0B3&amp;w=500&amp;h=375&amp;img.JPEG\" data-loaded=\"0\"></div><p>某手机专卖店展示的老年机型。中新网 吴涛 摄</p><p>为什么？</p><p>——定价策略或是关键</p><p>春节期间，记者走访时眼见一位消费者买下一款OPPO，追上去问“这么多的手机品牌，为什么选择了这款？”</p><p>“周围的人都在用，况且也没有卖其他的。”消费者答。</p><p>记者观察发现，对县城居民来说，尤其是年轻的消费者来说，关键是手机要有他们指定的功能。可以玩《王者荣耀》不？能美化照片吗？能“吃鸡”(逃生射击类游戏)吗？这些都能成为买手机的理由。</p><p>另外，定价策略或是OPPO和vivo“吃得开”的一个原因。虽然官方称线上线下一个价，但是基本所有的vivo和OPPO线下价格都比线上优惠。</p><p>一款vivo X20全面屏4GB+64GB版本，官网售价2998元。但在县城，至少两个手机专卖店给记者表示，售价2798元。真要买，价格还有商量的余地。OPPO也一样，售价不但比线上便宜，还有一些机型送足浴盆、电饭锅等礼品。</p><p>有意思的是，华为线下旗舰店卖的手机价格高于线上或和线上一致。某华为旗舰店服务员对记者透露，“我们利润薄，但他们(vivo和OPPO)利润太大了，赚的多，所以敢于优惠。但经常有上面的人暗查他们，知道他们卖便宜了还会罚款。”</p><p>售后是OPPO和vivo的另一个“杀手锏”。几乎所有的OPPO和vivo专卖店都支持线下维修，但是三星或者苹果，你维修只能邮寄到指定地址，还得自己出邮费，何时拿回手机也是一个问题。</p><div><img width=\"500px\" data-loadfunc=\"0\" src=\"https://t12.baidu.com/it/u=1888857215,706434690&amp;fm=173&amp;s=278069A50813B2D8446940840300D0C2&amp;w=500&amp;h=375&amp;img.JPEG\" data-loaded=\"0\"></div><p>某手机专卖店做活动，买就送电饭锅、足浴盆等。中新网 吴涛 摄</p><p>玩什么？</p><p>——视频类应用最吃香</p><p>和大城市相比，县城居民的手机不一样，安装的应用和大家的印象也存有较大的差异。据中国互联网络信息中心的数据显示，移动互联网快速发展迅速，截至2017年12月底，每10个手机网民中，4个人订网络外卖，3个骑共享单车。</p><p>但县城居民或大都不在这个范围内。“我知道有外卖，县城也有，但太贵了，偶尔会用。” 不止一个人对记者这样表示，“随便点顿饭三四十元，这点钱自己买菜做饭够一家子吃了。”共享单车的使用更无从谈起，压根就没有。</p><p>记者观察发现，大部分人手机上安装的是资讯类和视频类软件，爱奇艺、快手、火山小视频等安装率高，而且很多用户不止安装一个视频类软件。另外，安装美颜相机应用也较多。</p><p>“感觉这些APP够用吗？”某商场服务员接受中新网记者采访时表示，“够用，主要是用来拍照和看视频打发时间。”返回搜狐，查看更多</p></div>', '4', '1', '2018-01-28 16:37:30', '2018-01-28 16:37:30', '1001');
 INSERT INTO `article_tb` VALUES ('4', '威少为了三双遭绝杀？关键时刻又一次让乔治选择变得简单', '与掘金交手，雷霆打出了本赛季最精彩的一场比赛', 'https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=72032686,3494064946&fm=173&s=52C048A44E4E1F5306C0858B03006081&w=218&h=146&img.JPEG', 'https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_10052312347202782283%22%7D&n_type=0&p_from=1', '<div id=\"loginBanner\"><h1></h1><h3></h3><p><span style=\"font-weight: normal;\">与掘金交手，雷霆打出了本赛季最精彩的一场比赛，保罗乔治逆天表现令人感慨万分，掘金队深知乔治手感极佳，却丝毫拿他没办法，篮下得分为所欲为，三分线外兵不血刃，最后时刻飙进三分眼看就要拖进加时赛，然而戏剧性一幕发生在灯亮那一刻。<br></span><span style=\"font-weight: normal;\"><img data-loadfunc=\"0\" src=\"https://t12.baidu.com/it/u=700448189,3118158180&amp;fm=173&amp;s=C2C060A444578BD6004585890300B081&amp;w=640&amp;h=503&amp;img.JPEG\" data-loaded=\"0\"><br></span><span style=\"font-weight: normal;\"><img data-loadfunc=\"0\" src=\"https://t11.baidu.com/it/u=1482253396,4075800873&amp;fm=173&amp;s=DED8698596CB38EC6AA999CD0300F011&amp;w=640&amp;h=362&amp;img.JPEG\" data-loaded=\"0\"><br></span><span style=\"font-weight: normal;\"><img data-loadfunc=\"0\" src=\"https://t12.baidu.com/it/u=2089485761,2969476882&amp;fm=173&amp;s=ADD14083C28319F53180A59A03007011&amp;w=637&amp;h=539&amp;img.JPEG\" data-loaded=\"0\"><br></span><span style=\"font-weight: normal;\">保罗乔治不仅进攻无解，而且防守端同样出色，本场他硬生生跳起抢断莱尔斯，助攻威少暴扣。<br></span><span style=\"font-weight: normal;\">最后1.4秒，威少数据正好定格在20分9篮板21助攻，面对哈里斯投篮，威少从篮下扑过来，显然这一球威少太大意，不少球迷再次质疑威少是为了抢下最后一个篮板达成三双。而在约基奇看来，哈里斯投进这记绝杀是因为威少当时睡着了。约基奇的调侃也许还在为最后时刻威少凶狠犯规而耿耿于怀。<br></span><span style=\"font-weight: normal;\">从客观角度上来看，1.4秒关系到球队胜负，威少想要这记篮板也不太现实，就算哈里斯未能投进比赛时间也到了。<br></span><span style=\"font-weight: normal;\">威少最后时刻防守可谓“进退两难”，首先一方面担心哈里斯篮下空接暴扣，另一方面就是对手投三分；但无论如何从慢镜头显示来看，他防守距离哈里斯太远，威少站在篮下也许是想和格兰特两人限制对手空接。<br></span><span style=\"font-weight: normal;\">而赛后威少也表示，哈里斯这记绝杀他有触到球，但还是进了。<br></span><span style=\"font-weight: normal;\">威少今天的表现也许又一次让乔治今夏选择变得更加简单，上一场乔治0出手，威少主动承认错误，今天末节得到了全队最高的8次出手，威少几乎将所有球权交给了了保罗乔治。</span></p><p></p><p></p></div>', '6', '1', '2018-01-28 17:34:27', '2018-01-28 17:34:27', '1002');
 INSERT INTO `article_tb` VALUES ('5', '2017年谁挣钱最多？京沪人均可支配收入逼近6万元', '2017年谁挣钱最多？京沪人均可支配收入逼近6万元', 'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3521098845,1745252136&fm=173&s=66EAB8568E1051CA4CCF65E50300E03E&w=218&h=146&img.JPEG', '', '<p>中新网客户端北京2月24日电(记者李金磊)国家统计局近日公布了31个省份2017年居民人均可支配收入。数据显示，10省份人均可支配收入超过全国水平。上海、北京2017年居民人均可支配收入逼近6万元大关，上海以58987.96元位居全国首位。</p><div><img width=\"500px\" data-loadfunc=\"0\" src=\"https://t11.baidu.com/it/u=440278906,1714656825&amp;fm=173&amp;s=66EAB8568E1051CA4CCF65E50300E03E&amp;w=500&amp;h=338&amp;img.JPEG\" data-loaded=\"0\"></div><p>人民币。 中新网记者李金磊摄</p><p>10省份人均可支配收入超全国水平</p><p>国家统计局的数据显示，2017年居民人均可支配收入25974元，比上年名义增长9.0%；扣除价格因素实际增长7.3%。</p><p>居民可支配收入，指居民可用于最终消费支出和储蓄的总和，即居民可用于自由支配的收入，既包括现金收入，也包括实物收入。按照收入的来源，可支配收入包括工资性收入、经营净收入、财产净收入和转移净收入。</p><p>中新网记者梳理发现，上海、北京、浙江、天津、江苏、广东、福建、辽宁、山东、内蒙古2017年居民人均可支配收入超过了全国平均水平。</p><div><img width=\"239px\" data-loadfunc=\"0\" src=\"https://t10.baidu.com/it/u=540324936,3845180481&amp;fm=173&amp;s=1AAE742319D149CA5A5571CA000080B1&amp;w=239&amp;h=511&amp;img.JPEG\" data-loaded=\"0\"></div><div><img width=\"238px\" data-loadfunc=\"0\" src=\"https://t11.baidu.com/it/u=78105616,3579114037&amp;fm=173&amp;s=1AAA742319D6C0CA4855F0CA000080B1&amp;w=238&amp;h=416&amp;img.JPEG\" data-loaded=\"0\"></div><p>2017年各地居民人均可支配收入。来源：国家统计局网站</p><p>京沪人均可支配收入逼近6万元大关</p><p>在31个省区市中，上海、北京、浙江2017年居民人均可支配收入位居前三名。其中，上海、北京居民人均可支配收入分别达到58987.96元、57229.83元，逼近6万元大关。</p><p>上海、北京是2017年全国仅有的居民人均可支配收入在“5万元俱乐部”的地区；浙江居民人均可支配收入达到42045.69元，属于“4万元俱乐部”的唯一成员。</p><p>收入水平高，消费水平也高。国家统计局数据显示，上海2017年居民人均消费支出为39791.85元，北京为37425.34元，位居全国前两位。</p><div><img width=\"500px\" data-loadfunc=\"0\" src=\"https://t10.baidu.com/it/u=3849965064,3504479757&amp;fm=173&amp;s=13A042A70812A2CA4EA9913303006041&amp;w=500&amp;h=375&amp;img.JPEG\" data-loaded=\"0\"></div><p>居民在超市里购物。 中新网记者李金磊摄</p><p>多地居民收入增速跑赢GDP增速</p><p>从全国来看，2017年居民收入增长快于经济增长。数据显示，2017年全国居民人均可支配收入比上年实际增长7.3%，实际增速比GDP和人均GDP增长分别快0.4和1.0个百分点。</p><p>在地方层面，多地2017年居民收入增速跑赢了当地的GDP增速。如，北京2017年居民人均可支配收入实际增长6.9%，高于同期GDP增速0.2个百分点。江苏2017年居民人均可支配收入实际增长7.4%，高出GDP增速0.2个百分点。</p><p>中国劳动学会副会长苏海南对中新网记者表示，居民收入增速跑赢GDP增速，首先是因为经济稳定增长，企业效益好转，居民收入有了增长的基础。同时，努力让居民收入增长跟经济增长保持同步，一系列居民增收、深化收入分配制度改革政策也起到了积极的推动作用。(完)</p>', '3', '1', '2018-02-24 09:28:05', '2018-02-24 09:28:05', '1001');
-INSERT INTO `article_tb` VALUES ('6', '宪法宣誓誓词将从70字修改为75字 改了啥？', '宪法宣誓制度将完善！70字誓词将改为75字，改了啥？', 'https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=169260962,1081020469&fm=173&s=4E3003C0DE930BC4669964B40300B012&w=218&h=146&img.JPEG', '', '<p>23日召开的十二届全国人大常委会第三十三次会议，拟对宪法宣誓制度相关规定作出适当修改，明确监察委员会组成人员依法产生后应当进行宪法宣誓、宣誓仪式应当奏唱中华人民共和国国歌。</p><p>宪法宣誓誓词中有关奋斗目标的表述也将修改为“为建设富强民主文明和谐美丽的社会主义现代化强国努力奋斗！”</p><div><img data-loadfunc=\"0\" src=\"https://t11.baidu.com/it/u=1844075206,1555696544&amp;fm=173&amp;s=4E3003C0DE930BC4669964B40300B012&amp;w=639&amp;h=425&amp;img.JPEG\" data-loaded=\"0\"></div><p>2015年7月1日，十二届全国人大常委会第十五次会议通过了《全国人民代表大会常务委员会关于实行宪法宣誓制度的决定》，以立法方式确立了我国宪法宣誓制度。</p><p>此次修改旨在贯彻落实党的十九大和十九届二中全会精神，适应深化国家监察体制改革的需要，完善宪法宣誓制度，进一步弘扬宪法精神、彰显宪法权威。</p><p>全国人大常委会法工委副主任张勇受委员长会议委托作相关修订草案说明时说，党的十九大确立了习近平新时代中国特色社会主义思想的历史地位，确定了我国发展新的奋斗目标，并对深化国家监察体制改革、制定国家监察法提出了新要求。</p><p>党的十九届二中全会通过了《中共中央关于修改宪法部分内容的建议》，提出把党的十九大确定的重大理论观点和重大方针政策载入国家根本法，体现党和国家事业发展的新成就新经验新要求。</p><p>张勇说，在全党全国学习贯彻党的十九大和十九届二中全会精神过程中，一些地方、部门和同志提出，应当根据党的十九大精神和十九届二中全会宪法修改精神，对2015年决定中的宣誓誓词作出适当修改，进一步完善我国宪法宣誓制度。</p><p>此外，随着各地监察委员会陆续成立，由地方各级人大及其常委会选举或者任命的监察委员会主任、副主任、委员，在就职时普遍进行了宪法宣誓。</p><p>许多地方建议，在国家法律层面作出明确规定，监察委员会组成人员依法产生后应当进行宪法宣誓。</p><p>“总的看，根据党的十九大和十九届二中全会精神，适应深化国家监察体制改革的需要，对2015年决定作出适当修改是必要的。”张勇说。</p><p>根据修订草案，宪法宣誓誓词将从70字修改为75字，有关条款中增加了与监察委员会有关的内容。增加的“宣誓仪式应当奏唱中华人民共和国国歌”的规定，也是为了与全国人大常委会2017年9月通过的国歌法有关规定相衔接。返回搜狐，查看更多</p>', '5', '1', '2018-02-24 09:29:15', '2018-02-24 09:29:15', '1001');
+INSERT INTO `article_tb` VALUES ('6', '宪法宣誓誓词将从70字修改为75字 改了啥？', '宪法宣誓制度将完善！70字誓词将改为75字，改了啥？', 'https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=169260962,1081020469&fm=173&s=4E3003C0DE930BC4669964B40300B012&w=218&h=146&img.JPEG', '', '<p>23日召开的十二届全国人大常委会第三十三次会议，拟对宪法宣誓制度相关规定作出适当修改，明确监察委员会组成人员依法产生后应当进行宪法宣誓、宣誓仪式应当奏唱中华人民共和国国歌。</p><p>宪法宣誓誓词中有关奋斗目标的表述也将修改为“为建设富强民主文明和谐美丽的社会主义现代化强国努力奋斗！”</p><div><img data-loadfunc=\"0\" src=\"https://t11.baidu.com/it/u=1844075206,1555696544&amp;fm=173&amp;s=4E3003C0DE930BC4669964B40300B012&amp;w=639&amp;h=425&amp;img.JPEG\" data-loaded=\"0\"></div><p>2015年7月1日，十二届全国人大常委会第十五次会议通过了《全国人民代表大会常务委员会关于实行宪法宣誓制度的决定》，以立法方式确立了我国宪法宣誓制度。</p><p>此次修改旨在贯彻落实党的十九大和十九届二中全会精神，适应深化国家监察体制改革的需要，完善宪法宣誓制度，进一步弘扬宪法精神、彰显宪法权威。</p><p>全国人大常委会法工委副主任张勇受委员长会议委托作相关修订草案说明时说，党的十九大确立了习近平新时代中国特色社会主义思想的历史地位，确定了我国发展新的奋斗目标，并对深化国家监察体制改革、制定国家监察法提出了新要求。</p><p>党的十九届二中全会通过了《中共中央关于修改宪法部分内容的建议》，提出把党的十九大确定的重大理论观点和重大方针政策载入国家根本法，体现党和国家事业发展的新成就新经验新要求。</p><p>张勇说，在全党全国学习贯彻党的十九大和十九届二中全会精神过程中，一些地方、部门和同志提出，应当根据党的十九大精神和十九届二中全会宪法修改精神，对2015年决定中的宣誓誓词作出适当修改，进一步完善我国宪法宣誓制度。</p><p>此外，随着各地监察委员会陆续成立，由地方各级人大及其常委会选举或者任命的监察委员会主任、副主任、委员，在就职时普遍进行了宪法宣誓。</p><p>许多地方建议，在国家法律层面作出明确规定，监察委员会组成人员依法产生后应当进行宪法宣誓。</p><p>“总的看，根据党的十九大和十九届二中全会精神，适应深化国家监察体制改革的需要，对2015年决定作出适当修改是必要的。”张勇说。</p><p>根据修订草案，宪法宣誓誓词将从70字修改为75字，有关条款中增加了与监察委员会有关的内容。增加的“宣誓仪式应当奏唱中华人民共和国国歌”的规定，也是为了与全国人大常委会2017年9月通过的国歌法有关规定相衔接。返回搜狐，查看更多</p>', '6', '1', '2018-02-24 09:29:15', '2018-02-24 09:29:15', '1001');
 INSERT INTO `article_tb` VALUES ('7', '《渴望现场》收官 央视舞台成就平凡人音乐梦想', '大型中国故事主题音乐竞演节目《渴望现场》于大年初二迎来总决赛，9强竞演者经过激烈的比拼，终于决出了节目第一季总冠军', 'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3474194859,3738622053&fm=173&s=B46248A60CE284925909E1320300F013&w=218&h=146&img.JPEG', '', '<div><img data-loadfunc=\"0\" src=\"https://t12.baidu.com/it/u=18949919,3204402929&amp;fm=173&amp;s=4941A3465FE384DC1CEDA09803005093&amp;w=600&amp;h=402&amp;img.JPEG\" data-loaded=\"0\"></div><p></p><div><img data-loadfunc=\"0\" src=\"https://t12.baidu.com/it/u=1262955707,1078610417&amp;fm=173&amp;s=DD7404C68A70AADC46448CAA03001002&amp;w=600&amp;h=400&amp;img.JPEG\" data-loaded=\"0\"></div><p></p><p>大型中国故事主题音乐竞演节目《渴望现场》于大年初二迎来总决赛，9强竞演者经过激烈的比拼，终于决出了节目第一季总冠军。毕业于北京大学的前北大合唱团团长王上，不仅以超强的演唱实力获得人工智能“小渴”评委的高分，更以腹有诗书气自华的独特气质赢得“渴望筑梦团”制作人们的青睐，将总冠军的奖杯收入囊中。</p><p></p><p></p><p></p><p>《渴望现场》总决赛的的竞演愈发激烈，9位从108位竞演者中脱颖而出的决赛竞演者也毫无保留，奉献出自己最好的舞台表演。最终由王上凭借《等待》一举夺冠，亚军和季军分别由演绎了《青藏高原》、《没离开过》的周兴才让和娜日莎夺得。其余六位竞演者也奉献了精彩的演出：杨啟凭借天籁般的声线演绎《后会无期》；王天阳邀请回了自己的最佳搭档黄小幺，为现场观众带来了一首情意绵绵的《有个爱你的人不容易》，田恩琦为决赛重拾舞姿，一曲《超级冠军》，劲歌热舞，掀翻全场；黄诗荑一首《女儿情》装点得舞台宛如梦境；一首《我怀念的》以高度共鸣的抒情歌搭配唯美的舞台设计将观众们带到了竞演者的世界里；《渴望现场》中年龄最小的戴韩安妮在决赛中与父亲合作演绎的一曲《野子》为自己赢得了观众喝彩。</p><p></p><p></p><div><img data-loadfunc=\"0\" src=\"https://t11.baidu.com/it/u=1166069845,591286648&amp;fm=173&amp;s=B66248A604A204B75908E13203006013&amp;w=600&amp;h=400&amp;img.JPEG\" data-loaded=\"0\"></div><p></p><p></p><p></p><p>25岁的总冠军王上毕业于北京大学，本硕连读的7年北大时光，热爱唱歌的王上一直与北大合唱团共同成长。在校期间，作为合唱团的团长，王上曾带领北大合唱团出征有“合唱界的奥林匹克”之称的世界合唱大赛，并用一首中国民族音乐一举战胜了几十个国家的对手，拿到了世界合唱大赛的冠军，让五星红旗在世界的舞台上飘扬。在总决赛中，王上特别邀请到北大合唱团成员们到场助阵，一曲深情满满的《等待》，唱出了90后新时代青年们的豪情与梦想，助力王上一举夺冠。在《渴望现场》一路走来，王上先后演唱的《我爱你中国》、《故乡的云》、《You Raise Me up》等歌曲均获得了人工智能音乐评分系统“小渴”打出的90分以上的高分，表现出色。同时，王上不仅唱功过硬，出身于文艺世家的他，一直在传统文化的浸润和熏陶下成长，在《渴望现场》的舞台上表现得如同谦谦君子一般，充满书生气。兼有学霸属性的他，不仅于在校期间创作了自己的原创作品，还是知乎“声乐问题优秀回答者”，乐于将自己在音乐方面的所学和见解分享出去。而他身上的音乐气质，也如他的性格一样兼具活泼和深沉，期待在王上的个人演唱会中再次听到他诚挚动人的歌声。</p><p></p><p>从节目开播，首次联手中科院推出人工智能音乐评分系统的《渴望现场》就以“音乐+科技”的创新形式备受各方关注，获人民日报（海外版）、工人日报等媒体点赞。用音乐讲述中国故事，用歌声唱响中国声音的108位包括“国系90后”北大90后女学生宋玺、华阴老腔第11代传人张猛等在内的新青年，在《渴望现场》向观众展示了新时代中国青年的精神风貌，单宋玺的视频播放量就突破千万，并引发人民日报等近百家媒体转发点赞，将“国系90后”的概念传遍了中国。第一季节目温情收官，但精彩仍将继续，期待第二季节目带来更多惊喜和感动。</p>', '1', '1', '2018-02-24 09:30:03', '2018-02-24 09:30:03', '1002');
-INSERT INTO `article_tb` VALUES ('8', '【牵妈妈的手】想您了，妈妈', '你多久没牵妈妈的手？', 'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1957512093,1064716064&fm=173&s=AD32E41659B24694124131DE0300E0A0&w=218&h=146&img.JPEG', '', '<div><img width=\"486px\" data-loadfunc=\"0\" src=\"https://t10.baidu.com/it/u=3590317473,3155656438&amp;fm=173&amp;s=B58E377E031073D24964D4FD03005029&amp;w=486&amp;h=353&amp;img.JPEG\" data-loaded=\"0\"></div><div><img data-loadfunc=\"0\" src=\"https://t11.baidu.com/it/u=3276919675,2917811384&amp;fm=173&amp;s=19863C7263A4731503FA4FEE0200E024&amp;w=630&amp;h=555&amp;img.GIF\" data-loaded=\"0\"></div><p>又一次在梦中惊醒，梦到了妈妈，她微笑着，面容依旧那么慈祥，却渐行渐远，我站在小路的这一端，看着她消失在小路转弯的地方，怎么喊也喊不回来……</p><p>再过几个月，妈妈去世就十周年了。永远忘不了大学毕业后参加工作的第一天，姐姐打来电话那头传来妈妈不在了的噩耗。苦日子过完了，妈妈却走了，好日子开始了，妈妈却走了，这就是我苦命的妈妈。妈妈在时，上有老是一种表面的负担，妈妈没了，亲不待是一种本质的孤独。妈妈在时，家乡是我的老家，妈妈没了，家乡就只能叫做故乡了，梦见的次数会越来越多，回去的次数却越来越少。</p><div><img width=\"300px\" data-loadfunc=\"0\" src=\"https://t12.baidu.com/it/u=3634585013,2775072753&amp;fm=173&amp;s=AD32E41659B24694124131DE0300E0A0&amp;w=300&amp;h=240&amp;img.JPEG\" data-loaded=\"0\"></div><p>妈妈只是一个平凡质朴的农村妇女，没有多少文化，但对我和姐姐要求很严厉，小的时候我们很淘气，挨过不少妈妈的打。等我长大一点时，看见妈妈那么辛苦，想帮妈妈干点活，可她总是不让，要我好好学习，将来好有出息。家里有台缝纫机，妈妈每次忙完农活，就给我和姐姐做衣服穿，也许都是旧布料，但每次上学我们的衣服总是干干净净。</p><p>01</p><p>01</p><div><img width=\"500px\" data-loadfunc=\"0\" src=\"https://t10.baidu.com/it/u=2681986335,2371913617&amp;fm=173&amp;s=CC2AA7570A62420D449F45600300703A&amp;w=500&amp;h=527&amp;img.JPEG\" data-loaded=\"0\"></div><p>记得小的时候，爸爸参军复员后工作离家很远，交通不方便，每隔几个月才回家一次，是妈妈一个人拉扯着我和姐姐，为了生计，印象中妈妈每天都是忙忙碌碌，忙完这个又忙那个。每次吃饭，都是叮咛着我和姐姐吃饱，妈妈才吃凉了的饭菜，就这样，不知她吃了多少的凉饭，饥一顿饱一顿，才把我们都拉扯大。</p><p>Mom</p><p>02</p><div><img data-loadfunc=\"0\" src=\"https://t12.baidu.com/it/u=2902618094,2470061509&amp;fm=173&amp;s=71A390550E726C174837F6EA0300701D&amp;w=640&amp;h=384&amp;img.JPEG\" data-loaded=\"0\"></div><p>上大学以后，离家很远，忙着学习，忙着贪玩，回家的时间变得更少，偶尔的电话问候，也总被自己以各种借口一拖再拖，电话拨通没说几句，可能就匆匆挂掉。即使回家，也是各种同学聚会，玩累了到家倒头就睡，却时常忘记妈妈为我准备了很久的饭菜。</p><p>Mom</p><p>03</p><div><img data-loadfunc=\"0\" src=\"https://t12.baidu.com/it/u=2231813108,1279982737&amp;fm=173&amp;s=038B914DD4DB4E7E1600F1A00300E001&amp;w=640&amp;h=457&amp;img.JPEG\" data-loaded=\"0\"></div><p>时光太匆匆，转眼我已到了而立之年，已经是两个孩子的爸爸，逐渐体会到了生活的不易，为人父母的不易。脑海中不觉想象着妈妈的模样，想念着妈妈做饭菜味道，想象着，如果妈妈还在该有多好，或许岁月已染白了她的双鬓，或许时光已雕刻了她的额头，或许看着膝下的乖孙打闹，她还会露出慈祥的微笑。</p><p>Mom</p><p>想您了，妈妈。</p><p>如果可以，下次梦里能不能别那么着急走？</p><p>我们的世界很大，远游寻梦，却时常模糊了父母的音容，父母的世界却很小，小到只剩下孩子和家。盼望着每一次我们给他们打电话，期盼着我们每一次回家……人生其实很短，有些话有些事总等着以后说和做，总想着爸妈总在那儿，以后有的是机会。可我们在慢慢长大，他们却在慢慢变老，岁月不会为你和父母驻足，一回头他们已经白发苍苍，不要让等待最终成为遗憾。多给爱你的人留点时间，珍惜和父母团聚的日子，多陪陪他们。</p><div><img width=\"500px\" data-loadfunc=\"0\" src=\"https://t10.baidu.com/it/u=3589243416,2657788446&amp;fm=173&amp;s=54525D3A417647300A6CF1D40300C0B2&amp;w=500&amp;h=138&amp;img.JPEG\" data-loaded=\"0\"></div>', '5', '1', '2018-02-24 09:30:47', '2018-02-24 09:30:47', '1002');
 INSERT INTO `article_tb` VALUES ('9', '中国游客出境被索“小费” 千万别给还要记住这招', '春节假期，不少人选择出境游。据中国旅游研究院预计，今年春节假期我国出境游人次将达到650万，规模为历史之最。', 'https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2414048836,1326700880&fm=173&s=FE3A57CB4DF58E4568D9351F0300D0C1&w=218&h=146&img.JPEG', '', '<p>春节假期，不少人选择出境游。据中国旅游研究院预计，今年春节假期我国出境游人次将达到650万，规模为历史之最。</p><p>　　 在这些出境的游客中，有些去了墨西哥，却遭遇到了一些不愉快的经历。</p><p>　　 一些中国公民反映墨方个别移民官员在入境核查时向他们索要“小费”。其实，除了墨西哥，还有一些国家海关人员也有向中国游客索要小费的行为，还有些中国游客因此遭遇了海关人员的暴力。</p><p>　　墨西哥：部分中国公民在墨入境被索要“小费”</p><p>　　 2月15号，中国驻墨西哥大使馆网站发文指出，近期，中国公民在墨西哥城国际机场入境出境过境受阻案件有所增多。同时，一些中国公民反映墨方个别移民官员在入境核查时向他们索要“小费”。</p><div><img data-loadfunc=\"0\" src=\"https://t10.baidu.com/it/u=4091121756,3037057569&amp;fm=173&amp;s=FE3A57CB4DF58E4568D9351F0300D0C1&amp;w=640&amp;h=326&amp;img.JPEG\" data-loaded=\"0\"></div><p>　　 中国驻墨西哥大使馆已经就此与墨方提出交涉。墨西哥方面给出回应称，墨西哥紧邻美国，移民和出入境政策十分严格，对各国公民一视同仁。</p><div><img data-loadfunc=\"0\" src=\"https://t10.baidu.com/it/u=3481985712,2938738922&amp;fm=173&amp;s=E99A26D504312D8C7A9C42630300E056&amp;w=640&amp;h=324&amp;img.JPEG\" data-loaded=\"0\"></div><p>　　 墨西哥方面将就中方提出的索贿问题展开调查，希望中国公民能够及时举证，协助墨西哥方面执法。</p><div><img data-loadfunc=\"0\" src=\"https://t12.baidu.com/it/u=2616440279,2374485275&amp;fm=173&amp;s=BC9943910A110DC81E38F9500300D0F1&amp;w=640&amp;h=324&amp;img.JPEG\" data-loaded=\"0\"></div><p>　　新闻链接：中国公民在国外屡被索要“小费”</p><p>　　 其实不仅仅是在墨西哥，很多中国游客在国外都遭遇过海关人员索要小费的经历，有些游客迫于压力给了，有些则没给。还有些中国游客因此遭遇了海关人员的暴力。</p><p>　　 这段视频据称拍摄于2016年5月2号晚，越南芽庄金兰国际机场边检工作人员向中国游客索要10元人民币小费。一名带小孩的母亲拒绝给小费，越南边检人员竟然扣下孩子的护照，要求母亲交100元人民币才能出关。</p><p>　　 在网友拍摄的现场视频中，可以看到有边检人员，甚至还拿出电击枪向游客挥舞。</p><p>　　 事件被曝光后，芽庄机场涉事工作人员被停职调查。</p><p>　　 这段视频拍摄于印尼海关，拍摄时间是2017年3月，画面中蓝色短袖男子是一名中国游客，他在入境柜台前拿出了钱包。视频的拍摄者是他后面等候的中国游客。据拍摄者表示，入关印尼，海关强制收取中国人小费100-300元，只收中国人。</p><p>　　出境游被索要“小费”怎么办？</p><p>　　 根据国际惯例，即使你已获得一国签证，相关国家也有权拒绝入境且无需说明理由。因此建议中国游客在入境前要正确填写入境卡和海关申报表，办理落地签证，提前准备好机票和酒店预订单等材料，不给对方借题发挥的空间。</p><p>　　 在这里，提醒大家：如果遇到索要小费的情况，请不要支付，并记录下对方信息及时举证。如遇紧急情况、受到不公正对待或发生纠纷，可及时与当地使馆联系，并收集和保存好证据，以便日后通过投诉或司法途径解决。</p>', '8', '1', '2018-02-24 09:32:18', '2018-02-24 09:32:18', '1000');
-INSERT INTO `article_tb` VALUES ('10', '只想省点钱\"携号转网\"：移动请放过我', '　如今，“移动革命”接近尾声，人类被移动互联网重重包围，生活方式随之改变。', 'https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3587693726,2308931756&fm=173&s=A62245A128D08894591D4DDB03009092&w=218&h=146&img.JPEG', '', '<p>如今，“移动革命”接近尾声，人类被移动互联网重重包围，生活方式随之改变。与此同时，智能手机的电话功能已逐渐被“免费”即时通讯应用所取代，并且手机娱乐影音属性进一步强化，所以数据流量自然成为手机用户最关心的问题之一。</p><p>　　不过，随着互联网手机卡的到来，数据流量资费的困扰开始被解除，但是对于笔者来说，直到目前仍没有享受到这种福利，因为我是一名中国移动“情怀”用户。</p><div><img data-loadfunc=\"0\" src=\"https://t10.baidu.com/it/u=969799350,4019288445&amp;fm=173&amp;s=A62245A128D08894591D4DDB03009092&amp;w=600&amp;h=370&amp;img.JPEG\" data-loaded=\"0\"></div><p>　　情怀不能当饭吃，这句话用来形容“我的手机卡”来说最合适不过了，来看看笔者近六个月的资费详情：（2017年9月和10月份是本人每月实际消费，从11月开始通过其他平台进行数据流量充值，所以移动数据显示只有低消的68元）</p><div><img data-loadfunc=\"0\" src=\"https://t11.baidu.com/it/u=910493017,3875051378&amp;fm=173&amp;s=903674335F674D1B4A4821D20000C0B2&amp;w=600&amp;h=395&amp;img.JPEG\" data-loaded=\"0\"></div><p>　　本人是每月180分钟通话+6GB数据流量的套餐标准，作为对比，如果我更换为联网手机卡（这里以“腾讯大王卡”为例），则可以省下不少钱。</p><p>　　腾讯大王卡</p><p>　　省内用户每月资费：19元月费+18元语音费+30元流量费（约23.4GB）=67元；</p><p>　　省外用户每月资费：19元月费+18元语音费+60元流量费（约23.4GB）=97元。</p><p>　　即使每月消耗的是全国流量，其实际资费也不过97元而已，但是却可以使用近25GB的数据流量，这与6GB数据流量体验完全不在一个量级上。由此可见，互联网手机卡既省钱，又能吃得饱。</p><p>　　想\"逃离\"，但中国移动不想放我</p><p>　　其实，中国移动也推出了互联网卡，但是比起中国联通、电信与互联网公司合作推出第三方互联网卡要鸡肋一些。</p><p>　　第一款是小魔卡——上海当地互联网套餐卡，目前并不在其它地区开放办理。第二款是“任我用”套餐（无限流量），套餐资费从188元起步，还有288元价位档，当然这是针对新用户的；而针对老用户推出的是238元的套餐。不管是哪个资费套餐，对于普通用户来说都有些不实用。</p><p>　　可能有的小伙伴会说，你转投其他互联网手机卡（中国联通、中国电信）阵营不就解决问题了吗？</p><p>　　本人何尝不想啊，本人手机号绑定的银行卡以及重要应用注册账号不少于60个，解除绑定并且重新重新绑定新手机号，想想都是一个可怕的大工程；并且还需要重新告知家人、朋友以及客户新更换的手机号码；相信很多中国移动手机卡的小伙伴都会有同感。但是如果可以“携号转网”，换手机卡带来的困扰都可以被解决。</p><p>　　携号转网大家应该知道吧？就是号码可携带、移机不改号，一家移动电信运营商的，比如持有移动号码的手机用户，转入中国电信或中国联通，享受中国电信或中国联通提供的电信运营服务。但是对于开放携号转网这件事，笔者认为中国移动不会同意；先来看一组数据：</p><div><img data-loadfunc=\"0\" src=\"https://t10.baidu.com/it/u=932242680,3970689300&amp;fm=173&amp;s=5191E93397E06D0950F809CE0300C036&amp;w=600&amp;h=219&amp;img.JPEG\" data-loaded=\"0\"></div><p>　　2010年11月22日，工信部第一批携号转网试点在天津、海南启动。2014年9月20日，第二批携号转网试点在江西、湖北、云南落地实施。从工信部数据显示来看，截止2016年6月底，开展携号转网试点的五省（市）共有超过45万用户使用了号码携带服务。</p><p>　　其中，中国电信携入16.8万，携出6.6万，净增用户10.2万；中国移动携入16.2万，携出25万，净增用户-8.8万；中国联通携入14.7万，携出16.1万，净增用户-1.4万。从结果来看，转入中国电信网络的用户最多，而中国移动的用户流失率最高。</p><p>　　再来看一组数据：</p><div><img data-loadfunc=\"0\" src=\"https://t12.baidu.com/it/u=944852705,3955035510&amp;fm=173&amp;s=1CBB7E9620B88825467412770300D038&amp;w=600&amp;h=164&amp;img.JPEG\" data-loaded=\"0\"></div><p>　　截止到2017年年末，中国移动4G用户累计6.49亿人，而中国电信4G用户、中国联通4G用户分别仅有1.82亿人、1.74亿人；如果以携号转网试点的五省（市）为参考标准，开放携号转网后，中国移动将会用户流失是巨大的，其损失是不可估量的。所以不妨猜测，中国移动必然会抵制携号转网的全面开放。</p><p>　　此前，工信部电信研究院报告曾直白地指出，用户携号转网难度大，而究其原因，是运营商为避免用户流失，通过技术手段人为设置各种门槛，阻止用户携出。所以，携号转网试点近7年仍未全面放开，这背后最大的阻碍者就是运营商。</p><p>　　除了\"身不由己\"，也有好消息</p><p>　　不过，对于消费者似乎也有好消息，2017年8月，工信部在一份“十三五规划纲要”文件中，明确指出要在2020年全国范围内推行携号转网服务。另外还有消息称，工信部将开展“异网漫游”试点，用户可在保持号码不变、归属运营商不变的情况下，使用其他运营商的网络。打比方来说，在联通信号弱、移动信号强的区域，联通用户可使用移动的网络。</p><p>　　不管是携号转网还是异网漫游，成为现实都将有很长的路要走。不过我们可以以取消漫游资费来做参照，国内漫游费伴随手机用户20多个年头，堪称化石费用，但是去年在国家强令要求下，很快就被取消了；所以说，携号转网、异网漫游或许也会通过类似方法成功实现。</p><p>　　如果携号转网最终能够全国落实，对于用户来说是一个利好消息，有了流通选择业务的自由，以前卖方强势运营商说了算的时代将成为过去。自由竞争的市场，不管是在资费还是在服务水平上，几大运营商都要展开积极的调整来吸引用户，最终不管是资费下降还是服务提升获利的还是消费者。</p><p>　　如果携号转网全面开放，对于中国电信和中国联通来说，也是一大利好，因为在4G时代，两者就确立4G网络共享、融合发展的策略，能够想象，携号转网开放后，中国联通与中国电信之间的用户携出与携入必将十分活跃，变得更加频繁。而对于中国移动来说，如果舍不得让利，一旦携号转网全面放开，用户的选择更多样更自由，中国移动估计要哭晕在厕所。</p><p>　　最后，对于携号转网大家怎么看？如果携号转网全面开放，你们会投到哪家阵营下？</p><div><img data-loadfunc=\"0\" src=\"https://t11.baidu.com/it/u=939596530,3947916671&amp;fm=173&amp;s=F33B30C4462548B61D1264D00300309A&amp;w=600&amp;h=398&amp;img.JPEG\" data-loaded=\"0\"></div>', '9', '1', '2018-02-24 09:32:59', '2018-02-24 09:32:59', '1000');
-INSERT INTO `article_tb` VALUES ('13', '国产航母二次海试在即，有望提前入役？', '军事专家：国产航母不做“跳级生', 'http://p2bhwwngu.bkt.clouddn.com/o_1chkh8qn7bg3nkfh7b1kr3130b6i.jpg', '', '<p>【环球时报-环球网报道记者郭媛丹】香港文汇网发布消息称，4日首艘国产航母在完成近一个半月的坞内舾装后再次出坞。军事专家宋忠平5日对《环球时报》表示，这表明第二次海试在即，虽然国产航母海试的时间已经大大提前，但在环节上一个都不能少，国产航母不会因为有辽宁舰的经验，进展顺利，就成为“跳级生”。</p><p>首艘国产航母于5月18日完成了历时5天的首次试航任务返港，5月23日，国产航母首次进入船坞。此前有消息称，首轮出海试验的国产航母在各方面状态都比较理想。</p><div><img src=\"http://p9.pstatp.com/large/pgc-image/153076627078120c425acbd\" img_width=\"500\" img_height=\"300\" alt=\"国产航母二次海试在即，有望提前入役？\" inline=\"0\"><p></p></div><p>宋忠平5日接受《环球时报》采访时表示，从目前披露的照片看，航母外观没有呈现太大差异。“在船坞内主要对航母进行了大量的检修，比如检查是不是有漏水、是不是有一些零件松动等，对每一处都要详细检查，排查排除隐患，对于发现的问题要进行处理。此外，在首次海试测试过程中通过各种仪器设备也搜集到了很多的基础信息，因此也需要在此期间对航母进行总体的调整。”</p><p>从5月23日入坞到7月4日出坞，在这么短的时间内，国产航母即将进行第二次海试，是否意味着国产航母能够提前入役?</p><p>对此，宋忠平表示，从入役的角度来讲，正常入役就可以。在一切都顺利的前提下，提前入役也不是不可以选择的一条路。“技术稳妥是最首要的问题，也就是要把所有的隐患在交付部队之前排除，让部队能够获得安全放心可靠的武器装备。这是船厂要做的最主要的工作。”</p><p>同时，宋忠平也认为航母有提前服役的必要，“只有加大海事的频度和力度才能够让航母提前服役，而且航母服役后到了部队还要进行实验，也就是适应性服役。这还需要一定的周期，所以提前入役更有必要。”</p><p>接下来，航母海事任务很重。宋忠平认为，实际上国产航母的海试时间已经大大提前。首次海试和第二次海试间隔时间如此之短，说明首次海试基本上达到了任务需求的各种指标。接下来还会进行一系列海试，加速进行海试的频度恰恰是希望让航母尽快完成海试的各个试验项目，把航母交付部队使用。</p><p>国产航母应该进行几次海试?宋忠平认为这并没有一个标准模式，“只能说是航母测试，主要是功能测试达到规定指标，而且每一次测试验证的功能是有所区别的。在最终全部功能验证完成后，将航母交付部队。”</p><p>当记者问，在辽宁舰的基础之上，国产航母海试会不会出现“跳级”，即环节上的省略时，宋忠平予以否认，“跳级可能性不大，但有可能会加快时间进程。因为辽宁舰做了一个基础，经验比较丰富。经过辽宁舰的充分摸索，有一套完整的测试大纲，不再需要有摸索过程，所以就会快得多”。</p><p>宋忠平介绍背景说，在辽宁舰之前中国并没有航母的测试经验，虽然有水面舰艇的测试经验，但航母不同于驱逐舰、护卫舰等大中型水面舰艇，属于超大型水面舰艇，因此航母的测试难度比较大。“其它国家是不会对外透露这些测试流程的，完全要靠我们自己摸索，总结。”</p>', '0', '1', '2018-07-05 14:15:04', '2018-07-05 14:15:04', '1006');
+INSERT INTO `article_tb` VALUES ('10', '只想省点钱\"携号转网\"：移动请放过我', '　如今，“移动革命”接近尾声，人类被移动互联网重重包围，生活方式随之改变。', 'https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3587693726,2308931756&fm=173&s=A62245A128D08894591D4DDB03009092&w=218&h=146&img.JPEG', '', '<p>如今，“移动革命”接近尾声，人类被移动互联网重重包围，生活方式随之改变。与此同时，智能手机的电话功能已逐渐被“免费”即时通讯应用所取代，并且手机娱乐影音属性进一步强化，所以数据流量自然成为手机用户最关心的问题之一。</p><p>　　不过，随着互联网手机卡的到来，数据流量资费的困扰开始被解除，但是对于笔者来说，直到目前仍没有享受到这种福利，因为我是一名中国移动“情怀”用户。</p><div><img data-loadfunc=\"0\" src=\"https://t10.baidu.com/it/u=969799350,4019288445&amp;fm=173&amp;s=A62245A128D08894591D4DDB03009092&amp;w=600&amp;h=370&amp;img.JPEG\" data-loaded=\"0\"></div><p>　　情怀不能当饭吃，这句话用来形容“我的手机卡”来说最合适不过了，来看看笔者近六个月的资费详情：（2017年9月和10月份是本人每月实际消费，从11月开始通过其他平台进行数据流量充值，所以移动数据显示只有低消的68元）</p><div><img data-loadfunc=\"0\" src=\"https://t11.baidu.com/it/u=910493017,3875051378&amp;fm=173&amp;s=903674335F674D1B4A4821D20000C0B2&amp;w=600&amp;h=395&amp;img.JPEG\" data-loaded=\"0\"></div><p>　　本人是每月180分钟通话+6GB数据流量的套餐标准，作为对比，如果我更换为联网手机卡（这里以“腾讯大王卡”为例），则可以省下不少钱。</p><p>　　腾讯大王卡</p><p>　　省内用户每月资费：19元月费+18元语音费+30元流量费（约23.4GB）=67元；</p><p>　　省外用户每月资费：19元月费+18元语音费+60元流量费（约23.4GB）=97元。</p><p>　　即使每月消耗的是全国流量，其实际资费也不过97元而已，但是却可以使用近25GB的数据流量，这与6GB数据流量体验完全不在一个量级上。由此可见，互联网手机卡既省钱，又能吃得饱。</p><p>　　想\"逃离\"，但中国移动不想放我</p><p>　　其实，中国移动也推出了互联网卡，但是比起中国联通、电信与互联网公司合作推出第三方互联网卡要鸡肋一些。</p><p>　　第一款是小魔卡——上海当地互联网套餐卡，目前并不在其它地区开放办理。第二款是“任我用”套餐（无限流量），套餐资费从188元起步，还有288元价位档，当然这是针对新用户的；而针对老用户推出的是238元的套餐。不管是哪个资费套餐，对于普通用户来说都有些不实用。</p><p>　　可能有的小伙伴会说，你转投其他互联网手机卡（中国联通、中国电信）阵营不就解决问题了吗？</p><p>　　本人何尝不想啊，本人手机号绑定的银行卡以及重要应用注册账号不少于60个，解除绑定并且重新重新绑定新手机号，想想都是一个可怕的大工程；并且还需要重新告知家人、朋友以及客户新更换的手机号码；相信很多中国移动手机卡的小伙伴都会有同感。但是如果可以“携号转网”，换手机卡带来的困扰都可以被解决。</p><p>　　携号转网大家应该知道吧？就是号码可携带、移机不改号，一家移动电信运营商的，比如持有移动号码的手机用户，转入中国电信或中国联通，享受中国电信或中国联通提供的电信运营服务。但是对于开放携号转网这件事，笔者认为中国移动不会同意；先来看一组数据：</p><div><img data-loadfunc=\"0\" src=\"https://t10.baidu.com/it/u=932242680,3970689300&amp;fm=173&amp;s=5191E93397E06D0950F809CE0300C036&amp;w=600&amp;h=219&amp;img.JPEG\" data-loaded=\"0\"></div><p>　　2010年11月22日，工信部第一批携号转网试点在天津、海南启动。2014年9月20日，第二批携号转网试点在江西、湖北、云南落地实施。从工信部数据显示来看，截止2016年6月底，开展携号转网试点的五省（市）共有超过45万用户使用了号码携带服务。</p><p>　　其中，中国电信携入16.8万，携出6.6万，净增用户10.2万；中国移动携入16.2万，携出25万，净增用户-8.8万；中国联通携入14.7万，携出16.1万，净增用户-1.4万。从结果来看，转入中国电信网络的用户最多，而中国移动的用户流失率最高。</p><p>　　再来看一组数据：</p><div><img data-loadfunc=\"0\" src=\"https://t12.baidu.com/it/u=944852705,3955035510&amp;fm=173&amp;s=1CBB7E9620B88825467412770300D038&amp;w=600&amp;h=164&amp;img.JPEG\" data-loaded=\"0\"></div><p>　　截止到2017年年末，中国移动4G用户累计6.49亿人，而中国电信4G用户、中国联通4G用户分别仅有1.82亿人、1.74亿人；如果以携号转网试点的五省（市）为参考标准，开放携号转网后，中国移动将会用户流失是巨大的，其损失是不可估量的。所以不妨猜测，中国移动必然会抵制携号转网的全面开放。</p><p>　　此前，工信部电信研究院报告曾直白地指出，用户携号转网难度大，而究其原因，是运营商为避免用户流失，通过技术手段人为设置各种门槛，阻止用户携出。所以，携号转网试点近7年仍未全面放开，这背后最大的阻碍者就是运营商。</p><p>　　除了\"身不由己\"，也有好消息</p><p>　　不过，对于消费者似乎也有好消息，2017年8月，工信部在一份“十三五规划纲要”文件中，明确指出要在2020年全国范围内推行携号转网服务。另外还有消息称，工信部将开展“异网漫游”试点，用户可在保持号码不变、归属运营商不变的情况下，使用其他运营商的网络。打比方来说，在联通信号弱、移动信号强的区域，联通用户可使用移动的网络。</p><p>　　不管是携号转网还是异网漫游，成为现实都将有很长的路要走。不过我们可以以取消漫游资费来做参照，国内漫游费伴随手机用户20多个年头，堪称化石费用，但是去年在国家强令要求下，很快就被取消了；所以说，携号转网、异网漫游或许也会通过类似方法成功实现。</p><p>　　如果携号转网最终能够全国落实，对于用户来说是一个利好消息，有了流通选择业务的自由，以前卖方强势运营商说了算的时代将成为过去。自由竞争的市场，不管是在资费还是在服务水平上，几大运营商都要展开积极的调整来吸引用户，最终不管是资费下降还是服务提升获利的还是消费者。</p><p>　　如果携号转网全面开放，对于中国电信和中国联通来说，也是一大利好，因为在4G时代，两者就确立4G网络共享、融合发展的策略，能够想象，携号转网开放后，中国联通与中国电信之间的用户携出与携入必将十分活跃，变得更加频繁。而对于中国移动来说，如果舍不得让利，一旦携号转网全面放开，用户的选择更多样更自由，中国移动估计要哭晕在厕所。</p><p>　　最后，对于携号转网大家怎么看？如果携号转网全面开放，你们会投到哪家阵营下？</p><div><img data-loadfunc=\"0\" src=\"https://t11.baidu.com/it/u=939596530,3947916671&amp;fm=173&amp;s=F33B30C4462548B61D1264D00300309A&amp;w=600&amp;h=398&amp;img.JPEG\" data-loaded=\"0\"></div>', '10', '1', '2018-02-24 09:32:59', '2018-02-24 09:32:59', '1000');
+INSERT INTO `article_tb` VALUES ('15', '再来人：用科学技术推动教育行业的变革', '用科技解放双手，推动教育行业的变革', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cjksjqum1vv8kkmrgvuth1mlj11.png', '', '<p>2018年7月20日14：00整，于再来人北京总部——神州数码大厦5层，召开了其最新研发的科技产品MSP的发布会。由再来人联合创始人兼CEO谌烜沙(Alan)、再来人联合创始人Vits(魏博乐)、再来人技术部总监何苏轩及再来人产品经理刘婧铱(Olivia)出席并发表讲话。</p><center><img src=\"https://a5img.pncdn.cn/2018/0730/1532923287955.png\" border=\"0\"></center><p>　　<strong>用科技解放双手，推动教育行业的变革</strong></p><p>　　教育公司&amp;科技产品，如果不是再来人，我们可能很难将教育行业与科技产品联想到一块。再来人作为一家教育科技公司，凭借其领先的科学技术及海量的数据资料研发出一套独有的KEIS方法论，并致力于以更高效的方式完成教与学的整个过程、在有限的时间内将学生的结果最佳化，提升学生及家长的服务满意度，目前再来人以96%的服务满意度在业界遥遥领先，事实证明，他们也正在通过科技推动着教育行业的变革。</p><center><img src=\"https://a5img.pncdn.cn/2018/0730/1532923287646.png\" border=\"0\"></center><p>　　<strong>以产品效果与用户体验为前提，用科技颠覆行业</strong></p><p>　　再来人联合创始人谌烜沙(Alan)为会议发表了致辞，他表示再来人作为一个产品导向的公司，在过程中不断自我提升、力求完美，从服务结果上看，我们目前拥有的产品已达到行业顶级。以清华、北大学生为例，我们目前为止帮助的清华、北大学员获得世界排名前十名校Offer的概率已超过90%，而除再来人外，行业内平均值仅为25%。那么此次MSP的发布就意味着我们的产品在拥有超高水准的基础上，又做了一次巨大的飞跃，对此我也表示非常的激动。同时Alan又为大家分享了再来人产品迭代中几次重要的升级：</p><p>　　2013年，我同另外一位联合创始人Vits以及以名校招生官组成的顾问团队的共同努力下，研发出了产品的雏形MVP(Minimum Viable Product，最小可行性产品)。</p><p>　　2014年我们来到北京，v1.0产品核心STEP辅导体系及KEIS方法论正式上线。我们确立了STEP体系中的关键角色——名校导师，将其拆分延伸为学术、文笔、职业三个不同方向，让导师发挥其最擅长的。为了确保效果，我们对导师设定了学生杠杆数量及13步入驻的导师质量把控体系。</p><p>　　2015年，我们验证了产品效果之后，发现其有效性远高于同行竞品，同时我们获得了来自于Ian(劳斯莱斯全球董事长、前麦肯锡全球董事长)、Jim O\'Neill(前英国商务部部长、前高盛资产管理部董事长)的投资。为了学员能更科学的选校我们又上线了v2.0产品，同年申请季，我们成为了全美排名第一的普林斯顿大学输送学生数量最多的国内留学品牌，在保障申请结果的同时，我们维持了95%的客户满意度，而当时行业的平均满意度仅仅只是9%。</p><p>　　2016年，我们发布了v3.0产品，加入了全职的班主任(Coordinator)角色。进军留学市场两年的我们就已收获数千份名校录取，同时我们帮助学员所获奖学金突破5亿大关。在规模增大的同时，我们一直保持着超高的客户满意度，普林斯顿大学录取数量连续两年保持行业首位。同年统计，当时我们的名校录取数量就已成为“5大”传统机构录取总数的3倍;同时，被称为“本科诺贝尔奖”的罗德奖学金，每年中国区仅4位获得者，我们的学员就有2位，这些数据再一次证明我们研发的产品是可以帮助学生变得更加卓越的。</p><p>　　2017年，我们在v4.0产品中加入PlanB服务，同时又升级了背景提升项目，更好的支持了低年级同学。我们同时获得了新华网《公众信赖出国服务》&amp;新浪网《中国品牌知名度留学机构》两项大奖，截止至2017年，我们帮助学员获得的奖学金总额已超过12亿大关，这是一件多么振奋人心的事情。</p><p>　　Alan强调再来人是一家产品导向的公司，我们产品的发展历程足以体现初衷，我们愿意用实际行动去解决用户所面临的问题。事实证明，我们在产品上所有的动作，不但保障了服务结果同时也提升了用户体验。</p><center><img src=\"https://a5img.pncdn.cn/2018/0730/1532923287903.png\" border=\"0\"></center><p>　　<strong>什么是MSP？</strong></p><p>　　那么究竟什么是MSP?再来人产品经理刘婧铱(Olivia)为现场所有人做了详尽的说明。</p><p>　　MSP即Mentee-Mentor Service Platform，是一套实现从学员-家长-导师-班主任(Coordinator)“四位一体”全方位服务的平台。为了能够使我们目前拥有的600+并于下半年持续增长至1000+的海外名校导师能够更好、更科学的服务于我们的学员，我们研发了MSP。它的应用还可以让导师、学员间的合作更加高效，在保障学员申请结果的同时，又能减少重复性工作以提高用户体验。</p><p>　　MSP分为四个子系统，分别是学生服务平台、导师服务平台、家长跟踪平台、班主任&amp;导师管理系统。学员、家长、导师、班主任(Coordinator)可通过MSP完成服务过程中的所有动作，并实时跟踪服务进程，将整个服务过程透明化、公开化、数据化。</p><p>　　<strong>四大主要功能</strong></p><p>　　1.信息同步与整合</p><p>　　通过MSP，学员、导师、家长、班主任(Coordinator)可以清晰的看到所有服务相关信息，并将信息进行整合而不是零散的散落在邮件里。</p><p>　　2.时间预约与反馈</p><p>　　学生可以在MSP预约沟通时间，只需选择所在时区，系统将自动调换至该时区的日期和时间。沟通结束，MSP会将导师反馈内容标准化，导师可以在平台直接提交反馈。</p><p>　　3.文书上传与下载</p><p>　　文书及其他申请材料的上传、下载都会在MSP上进行，并可以看到修改进度，方便导师和学生把控时间，在项目截止日之前，完成修改工作。</p><p>　　4.信息提示与提醒</p><p>　　MSP会根据学生、导师、班主任(Coordinator)、家长的操作相互发送提醒，实现了学生、导师把控服务进度，家长、班主任跟踪服务过程。</p><center><img src=\"https://a5img.pncdn.cn/2018/0730/1532923287547.png\" border=\"0\"></center><p>　　<strong>科技丰富教育理念，产品优化教育结果</strong></p><p>　　作为再来人技术部总监，何苏轩首先对所有参与MSP研发以及发布的同事表示感谢。他发表了从科技角度出发对教育理念的理解，他生动地将教育的整个过程比作“漆黑的森林”，而将科技比作为黑暗中指引方向的“火把”，他表示教育不应该只单单停留在“教”与“学”的基本概念，它应该结合大数据与科学的方法更高效的完成整个过程，并让学生所有的选择变得更科学，从而保障学生的结果最佳化。</p><p>　　同时，他也声明再来人未来还将会坚持产品导向，持续研发更前沿的科技产品，应用于我们的学员、家长、导师及工作团队，用科技力量推动教育行业的变革。</p><center><img src=\"https://a5img.pncdn.cn/2018/0730/1532923287101.png\" border=\"0\"></center><p>　　<strong>从繁到简，见证行业变革</strong></p><p>　　最后，再来人联合创始人Vits强调对MSP能够实际应用到学员学习、导师服务及员工工作中表示非常激动，并对MSP的实际效果非常期待，他认为MSP的发布意味着教育行业 “从繁到简”的转变，在场的所有人也会是这次再来人乃至整个教育行业科技变革的见证者。</p>', '1', '1', '2018-07-30 14:05:18', '2018-07-30 14:05:18', '1002');
 
 -- ----------------------------
 -- Table structure for `banner_tb`
@@ -364,7 +367,7 @@ CREATE TABLE `banner_tb` (
   PRIMARY KEY (`banner_id`),
   KEY `INDEX_TYPE` (`type`) USING BTREE,
   KEY `INDEX_STATUS` (`status`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1012 DEFAULT CHARSET=utf8 COMMENT='banner表';
+) ENGINE=InnoDB AUTO_INCREMENT=1016 DEFAULT CHARSET=utf8 COMMENT='banner表';
 
 -- ----------------------------
 -- Records of banner_tb
@@ -372,10 +375,13 @@ CREATE TABLE `banner_tb` (
 INSERT INTO `banner_tb` VALUES ('1002', '连续第三年裁员或涉及千人', '3', 'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2517002031,3108225445&fm=173&app=12&f=JPEG?w=218&h=146&s=C03417D05E614B1F7480E8010300F0E3', '连续第三年裁员或涉及千人，魅族官方称是末位淘汰不超10%', 'https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_7990631491843176035%22%7D&n_type=0&p_from=1', '2018-03-30 18:00:42', '1');
 INSERT INTO `banner_tb` VALUES ('1003', '独孤天下', '2', 'https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=37681831,3945139552&fm=173&app=25&f=JPEG?w=218&h=146&s=D5600CAB12AF86FC119938B403009040', '《独孤天下》独孤般若凄美下线 安以轩虐心演绎', 'https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_10862629842721736047%22%7D&n_type=0&p_from=1', '2018-03-30 18:02:23', '1');
 INSERT INTO `banner_tb` VALUES ('1005', '测试文章', '1', 'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3474194859,3738622053&fm=173&s=B46248A60CE284925909E1320300F013&w=218&h=146&img.JPEG', null, 'laoyeshuo://article?articleId=10', '2018-04-02 22:52:05', '1');
-INSERT INTO `banner_tb` VALUES ('1006', '测试视频', '1', 'http://puui.qpic.cn/vcover_hz_pic/0/xvlhj7cglyfwx8x1489802187/0', '', 'laoyeshuo://videoSet?videoSetId=1008', '2018-04-02 22:54:41', '1');
-INSERT INTO `banner_tb` VALUES ('1007', '测试', '3', 'http://puui.qpic.cn/vcover_hz_pic/0/xvlhj7cglyfwx8x1489802187/0', null, 'laoyeshuo://videoSet?videoSetId=1008', '2018-04-02 23:00:25', '1');
+INSERT INTO `banner_tb` VALUES ('1006', '测试视频', '1', 'http://puui.qpic.cn/vcover_hz_pic/0/xvlhj7cglyfwx8x1489802187/0', '', 'laoyeshuo://videoSet?videoSetId=1029', '2018-07-20 16:32:41', '1');
+INSERT INTO `banner_tb` VALUES ('1007', '测试', '3', 'http://puui.qpic.cn/vcover_hz_pic/0/xvlhj7cglyfwx8x1489802187/0', '', 'laoyeshuo://videoSet?videoSetId=1029', '2018-07-20 15:34:04', '1');
 INSERT INTO `banner_tb` VALUES ('1008', '测试', '3', 'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3474194859,3738622053&fm=173&s=B46248A60CE284925909E1320300F013&w=218&h=146&img.JPEG', '', 'laoyeshuo://article?articleId=10', '2018-04-02 23:02:57', '1');
-INSERT INTO `banner_tb` VALUES ('1011', '测试banner', '1', 'http://p2bhwwngu.bkt.clouddn.com/o_1chkm3ehabd6ecq1c0q14c8fhi1d.jpg', '测试', 'laoyeshuo://videoSet?videoSetId=1034', '2018-07-05 15:41:21', '1');
+INSERT INTO `banner_tb` VALUES ('1012', '测试视频01', '1', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cjkt7b0ddlka8r8t712bf84u7q.jpg', null, 'laoyeshuo://videoSet?videoSetId=1029', '2018-07-30 14:15:31', '1');
+INSERT INTO `banner_tb` VALUES ('1013', '测试视频02', '3', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cjktau0p9e71oi210tqj7g14d47v.jpg', '2018年7月20日14：00整，于再来人北京总部——神州数码大厦5层，召开了其最新研发的科技产品MSP的发布会。由再来人联合创始人兼CEO谌烜沙(Alan)、再来人联合创始人Vits(魏博乐)、再来人技术部总监何苏轩及再来人产品经理刘婧铱(Olivia)出席并发表讲话。', 'https://www.admin5.com/article/20180730/868145.shtml', '2018-07-30 14:17:51', '1');
+INSERT INTO `banner_tb` VALUES ('1014', '测试视频03', '2', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cjkufac61rvsqjr9uvuk51186cm.jpg', '', 'laoyeshuo://videoSet?videoSetId=1027', '2018-07-30 14:37:13', '1');
+INSERT INTO `banner_tb` VALUES ('1015', '测试', '1', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cjku31c84241nla1s6417ph1bgkab.jpg', null, 'laoyeshuo://article?articleId=5', '2018-07-30 14:32:12', '1');
 
 -- ----------------------------
 -- Table structure for `config_tb`
@@ -416,7 +422,7 @@ CREATE TABLE `distribute_tb` (
   KEY `INDEX_CREATEDATE` (`create_date`) USING BTREE,
   KEY `INDEX_UPDATEDATE` (`update_date`) USING BTREE,
   KEY `INDEX_STATUS` (`status`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1010 DEFAULT CHARSET=utf8 COMMENT='分发表';
+) ENGINE=InnoDB AUTO_INCREMENT=1011 DEFAULT CHARSET=utf8 COMMENT='分发表';
 
 -- ----------------------------
 -- Records of distribute_tb
@@ -428,6 +434,7 @@ INSERT INTO `distribute_tb` VALUES ('1006', '刘海歌他哥', '1', '365.00', '2
 INSERT INTO `distribute_tb` VALUES ('1007', '王小明', '1', '365.00', '2018-06-01 11:05:13', '2018-06-01 11:05:13', '2018-06-01 11:05:13', '1', '1009', '1019');
 INSERT INTO `distribute_tb` VALUES ('1008', '', '1', '365.00', '2018-06-01 17:46:32', '2018-06-01 17:46:32', '2018-06-01 17:46:32', '1', '1009', '1042');
 INSERT INTO `distribute_tb` VALUES ('1009', '梁未', '1', '365.00', '2018-06-27 10:18:52', '2018-06-27 10:18:52', '2018-06-27 10:18:52', '1', '1009', '1052');
+INSERT INTO `distribute_tb` VALUES ('1010', '刘哥', '1', '365.00', '2018-07-20 15:38:46', '2018-07-20 15:38:46', '2018-07-20 15:38:46', '1', '1009', '1041');
 
 -- ----------------------------
 -- Table structure for `feedback_tb`
@@ -469,22 +476,22 @@ CREATE TABLE `finance_record_tb` (
   KEY `INDEX_METHOD` (`method`) USING BTREE,
   KEY `INDEX_TYPE` (`type`) USING BTREE,
   KEY `INDEX_TRANSACTIONNUMBER` (`transaction_number`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1118 DEFAULT CHARSET=utf8 COMMENT='财务记录表 ';
+) ENGINE=InnoDB AUTO_INCREMENT=1145 DEFAULT CHARSET=utf8 COMMENT='财务记录表 ';
 
 -- ----------------------------
 -- Records of finance_record_tb
 -- ----------------------------
 INSERT INTO `finance_record_tb` VALUES ('1000', '2', '1', '12552018020415050511009', '704535.00', '2', '2018-02-04 15:05:06', '2018-02-04 15:05:06', '1009');
 INSERT INTO `finance_record_tb` VALUES ('1002', '2', '2', '37442018020415270911009', '200.00', '2', '2018-02-04 15:27:10', '2018-02-26 16:18:12', '1009');
-INSERT INTO `finance_record_tb` VALUES ('1003', '2', '2', '98252018020415280711009', '100000.00', '1', '2018-02-04 15:28:08', '2018-02-04 15:28:08', '1009');
+INSERT INTO `finance_record_tb` VALUES ('1003', '2', '2', '98252018020415280711009', '100000.00', '3', '2018-02-04 15:28:08', '2018-07-30 19:10:22', '1009');
 INSERT INTO `finance_record_tb` VALUES ('1004', '2', '1', '31372018020415414411009', '64949.00', '2', '2018-02-04 15:41:44', '2018-02-04 15:41:44', '1009');
-INSERT INTO `finance_record_tb` VALUES ('1005', '2', '2', '40662018020415415811009', '600000.00', '1', '2018-02-04 15:41:58', '2018-02-04 15:41:58', '1009');
+INSERT INTO `finance_record_tb` VALUES ('1005', '2', '2', '40662018020415415811009', '600000.00', '3', '2018-02-04 15:41:58', '2018-07-30 19:13:27', '1009');
 INSERT INTO `finance_record_tb` VALUES ('1006', '2', '1', '16202018020420321211010', '100000.00', '2', '2018-02-04 20:32:13', '2018-02-04 20:32:13', '1010');
 INSERT INTO `finance_record_tb` VALUES ('1007', '1', '1', '71692018020420585311010', '10000.00', '2', '2018-02-04 20:58:53', '2018-02-04 20:58:53', '1010');
 INSERT INTO `finance_record_tb` VALUES ('1008', '2', '1', '53902018020421015911010', '10000.00', '2', '2018-02-04 21:01:59', '2018-02-04 21:01:59', '1010');
 INSERT INTO `finance_record_tb` VALUES ('1009', '1', '1', '39242018020421021411010', '10000.00', '2', '2018-02-04 21:02:14', '2018-02-04 21:02:14', '1010');
 INSERT INTO `finance_record_tb` VALUES ('1010', '1', '2', '12192018020421094211010', '10000.00', '2', '2018-02-04 21:09:42', '2018-04-11 12:06:10', '1010');
-INSERT INTO `finance_record_tb` VALUES ('1011', '2', '2', '26592018020421123811010', '10000.00', '1', '2018-02-04 21:12:38', '2018-02-04 21:12:38', '1010');
+INSERT INTO `finance_record_tb` VALUES ('1011', '2', '2', '26592018020421123811010', '10000.00', '3', '2018-02-04 21:12:38', '2018-07-30 19:15:56', '1010');
 INSERT INTO `finance_record_tb` VALUES ('1012', '2', '8', '41592018020517091918768', '365.00', '2', '2018-02-05 17:09:20', '2018-02-05 17:09:20', '1010');
 INSERT INTO `finance_record_tb` VALUES ('1013', '2', '9', '74502018020517091914980', '365.00', '2', '2018-02-05 17:09:20', '2018-02-05 17:09:20', '1000');
 INSERT INTO `finance_record_tb` VALUES ('1014', '3', '11', '56842018020521043315760', '1111.00', '2', '2018-02-05 21:04:34', '2018-02-05 21:04:34', '1009');
@@ -591,6 +598,33 @@ INSERT INTO `finance_record_tb` VALUES ('1114', '1', '1', '101620180705164600448
 INSERT INTO `finance_record_tb` VALUES ('1115', '1', '1', '1016201807051646437258', '0.20', '2', '2018-07-05 16:46:47', '2018-07-05 16:46:47', '1016');
 INSERT INTO `finance_record_tb` VALUES ('1116', '1', '1', '1016201807051647306629', '0.10', '2', '2018-07-05 16:47:35', '2018-07-05 16:47:35', '1016');
 INSERT INTO `finance_record_tb` VALUES ('1117', '1', '1', '1041201807051658076312', '0.01', '2', '2018-07-05 16:58:14', '2018-07-05 16:58:14', '1041');
+INSERT INTO `finance_record_tb` VALUES ('1118', '1', '2', '1052201807170948244313', '10.00', '2', '2018-07-17 09:48:24', '2018-07-17 09:48:44', '1052');
+INSERT INTO `finance_record_tb` VALUES ('1119', '1', '2', '1052201807171730211848', '100.00', '2', '2018-07-17 17:30:22', '2018-07-17 17:31:00', '1052');
+INSERT INTO `finance_record_tb` VALUES ('1120', '1', '1', '1041201807201521357519', '0.01', '2', '2018-07-20 15:21:52', '2018-07-20 15:21:52', '1041');
+INSERT INTO `finance_record_tb` VALUES ('1121', '1', '2', '1041201807201522354837', '100.00', '2', '2018-07-20 15:22:35', '2018-07-20 15:23:03', '1041');
+INSERT INTO `finance_record_tb` VALUES ('1122', '3', '8', '1041201807201538455650', '365.00', '2', '2018-07-20 15:38:46', '2018-07-20 15:38:46', '1041');
+INSERT INTO `finance_record_tb` VALUES ('1123', '3', '9', '1009201807201538453854', '146.00', '2', '2018-07-20 15:38:46', '2018-07-20 15:38:46', '1009');
+INSERT INTO `finance_record_tb` VALUES ('1124', '3', '10', '1000201807201538453472', '91.25', '2', '2018-07-20 15:38:46', '2018-07-20 15:38:46', '1000');
+INSERT INTO `finance_record_tb` VALUES ('1125', '1', '1', '1016201807301434016387', '0.10', '2', '2018-07-30 14:34:07', '2018-07-30 14:34:07', '1016');
+INSERT INTO `finance_record_tb` VALUES ('1126', '1', '2', '1016201807301439277607', '0.30', '2', '2018-07-30 14:39:28', '2018-07-30 14:40:22', '1016');
+INSERT INTO `finance_record_tb` VALUES ('1127', '1', '1', '1016201807301446574693', '0.01', '2', '2018-07-30 14:47:01', '2018-07-30 14:47:01', '1016');
+INSERT INTO `finance_record_tb` VALUES ('1128', '1', '1', '1041201807301549542362', '0.01', '2', '2018-07-30 15:50:12', '2018-07-30 15:50:12', '1041');
+INSERT INTO `finance_record_tb` VALUES ('1129', '1', '1', '1016201807301618203459', '0.10', '2', '2018-07-30 16:19:45', '2018-07-30 16:19:45', '1016');
+INSERT INTO `finance_record_tb` VALUES ('1130', '3', '11', '1041201807301712022911', '0.01', '2', '2018-07-30 17:12:03', '2018-07-30 17:12:03', '1041');
+INSERT INTO `finance_record_tb` VALUES ('1131', '1', '2', '1041201807301922589414', '100.00', '3', '2018-07-30 19:22:59', '2018-07-30 19:23:28', '1041');
+INSERT INTO `finance_record_tb` VALUES ('1132', '1', '2', '1052201807311114036291', '14.00', '1', '2018-07-31 11:14:04', '2018-07-31 11:14:04', '1052');
+INSERT INTO `finance_record_tb` VALUES ('1133', '1', '1', '1052201807311114332156', '0.01', '2', '2018-07-31 11:15:31', '2018-07-31 11:15:31', '1052');
+INSERT INTO `finance_record_tb` VALUES ('1134', '1', '2', '1052201807311442553439', '10.01', '1', '2018-07-31 14:42:55', '2018-07-31 14:42:55', '1052');
+INSERT INTO `finance_record_tb` VALUES ('1135', '1', '1', '1052201807311443178198', '0.01', '2', '2018-07-31 14:43:48', '2018-07-31 14:43:48', '1052');
+INSERT INTO `finance_record_tb` VALUES ('1136', '1', '1', '1052201807311447448089', '0.01', '2', '2018-07-31 14:48:08', '2018-07-31 14:48:08', '1052');
+INSERT INTO `finance_record_tb` VALUES ('1137', '1', '1', '1052201807311450423472', '0.01', '2', '2018-07-31 14:51:01', '2018-07-31 14:51:01', '1052');
+INSERT INTO `finance_record_tb` VALUES ('1138', '1', '1', '1052201807311454334836', '0.01', '2', '2018-07-31 14:55:13', '2018-07-31 14:55:13', '1052');
+INSERT INTO `finance_record_tb` VALUES ('1139', '1', '1', '1052201807311457146075', '0.01', '2', '2018-07-31 14:57:40', '2018-07-31 14:57:40', '1052');
+INSERT INTO `finance_record_tb` VALUES ('1140', '3', '11', '1016201811231050186226', '0.01', '2', '2018-11-23 10:50:18', '2018-11-23 10:50:18', '1016');
+INSERT INTO `finance_record_tb` VALUES ('1141', '3', '11', '1016201811231050259662', '0.01', '2', '2018-11-23 10:50:25', '2018-11-23 10:50:25', '1016');
+INSERT INTO `finance_record_tb` VALUES ('1142', '1', '1', '1055201811231103144858', '0.10', '2', '2018-11-23 11:04:18', '2018-11-23 11:04:18', '1055');
+INSERT INTO `finance_record_tb` VALUES ('1143', '3', '11', '1055201811231314092953', '0.01', '2', '2018-11-23 13:14:10', '2018-11-23 13:14:10', '1055');
+INSERT INTO `finance_record_tb` VALUES ('1144', '3', '11', '1055201811231314155801', '0.01', '2', '2018-11-23 13:14:15', '2018-11-23 13:14:15', '1055');
 
 -- ----------------------------
 -- Table structure for `finance_tb`
@@ -616,20 +650,20 @@ CREATE TABLE `finance_tb` (
   KEY `INDEX_ACCOUNTID` (`account_id`) USING BTREE,
   KEY `INDEX_CREATEDATE` (`create_date`) USING BTREE,
   KEY `INDEX_UPDATEDATE` (`update_date`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1051 DEFAULT CHARSET=utf8 COMMENT='财务表';
+) ENGINE=InnoDB AUTO_INCREMENT=1052 DEFAULT CHARSET=utf8 COMMENT='财务表';
 
 -- ----------------------------
 -- Records of finance_tb
 -- ----------------------------
-INSERT INTO `finance_tb` VALUES ('1000', '11874bb6149dd45428da628c9766b252', '24503.74', '0.00', '100.01', '0.00', '0.00', '0.00', '0.00', '24330.00', '273.75', '0.00', '1000', '2018-01-19 15:46:08', '2018-06-27 10:18:52');
-INSERT INTO `finance_tb` VALUES ('1005', '11874bb6149dd45428da628c9766b252', '438.04', '769484.04', '5611.00', '761651.00', '0.00', '0.00', '4500.00', '438.00', '0.00', '0.00', '1009', '2018-01-27 18:21:05', '2018-06-27 10:18:52');
+INSERT INTO `finance_tb` VALUES ('1000', '11874bb6149dd45428da628c9766b252', '24594.99', '0.00', '100.01', '0.00', '0.00', '0.00', '0.00', '24330.00', '365.00', '0.00', '1000', '2018-01-19 15:46:08', '2018-07-20 15:38:46');
+INSERT INTO `finance_tb` VALUES ('1005', '11874bb6149dd45428da628c9766b252', '584.04', '769484.04', '5611.00', '761651.00', '0.00', '0.00', '4500.00', '584.00', '0.00', '0.00', '1009', '2018-01-27 18:21:05', '2018-07-20 15:38:46');
 INSERT INTO `finance_tb` VALUES ('1006', '11874bb6149dd45428da628c9766b252', '95498.04', '150000.05', '29500.01', '25002.00', '0.00', '0.00', '29500.00', '0.00', '0.00', '0.00', '1010', '2018-01-27 20:23:22', '2018-04-08 16:41:48');
 INSERT INTO `finance_tb` VALUES ('1007', null, '200020001.00', '200020001.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1011', '2018-02-06 16:39:35', '2018-02-08 14:15:42');
 INSERT INTO `finance_tb` VALUES ('1008', '603c05920d6f94cccaf1ddbe6bf1597c', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1012', '2018-02-07 01:15:45', '2018-05-30 14:56:09');
 INSERT INTO `finance_tb` VALUES ('1009', null, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1013', '2018-02-10 13:13:19', '2018-02-10 13:13:19');
 INSERT INTO `finance_tb` VALUES ('1010', '11874bb6149dd45428da628c9766b252', '0.12', '10000.12', '1476.00', '8524.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1014', '2018-02-10 13:19:45', '2018-07-05 16:25:18');
 INSERT INTO `finance_tb` VALUES ('1011', null, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1015', '2018-02-22 16:43:03', '2018-02-22 16:43:03');
-INSERT INTO `finance_tb` VALUES ('1012', '9a4dc3c8d8a5292000960aa991369e4e', '0.40', '0.84', '0.00', '0.44', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1016', '2018-02-23 14:07:13', '2018-07-05 16:47:35');
+INSERT INTO `finance_tb` VALUES ('1012', '9a4dc3c8d8a5292000960aa991369e4e', '0.29', '1.05', '0.02', '0.74', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1016', '2018-02-23 14:07:13', '2018-11-23 10:50:25');
 INSERT INTO `finance_tb` VALUES ('1013', null, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1017', '2018-02-28 17:54:43', '2018-02-28 17:54:43');
 INSERT INTO `finance_tb` VALUES ('1014', null, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1018', '2018-03-01 13:23:55', '2018-03-01 13:23:55');
 INSERT INTO `finance_tb` VALUES ('1015', '4792b97ccc109aab951677410802d7ce', '99635.00', '0.00', '365.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '100000.00', '1019', '2018-03-13 09:49:12', '2018-06-01 11:05:13');
@@ -653,7 +687,7 @@ INSERT INTO `finance_tb` VALUES ('1033', null, '0.00', '0.00', '0.00', '0.00', '
 INSERT INTO `finance_tb` VALUES ('1034', '11874bb6149dd45428da628c9766b252', '94670.00', '0.00', '5330.00', '0.00', '0.00', '0.00', '4500.00', '0.00', '0.00', '100000.00', '1038', '2018-05-30 18:31:26', '2018-06-12 16:09:55');
 INSERT INTO `finance_tb` VALUES ('1035', null, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1039', '2018-05-31 14:20:08', '2018-05-31 14:20:08');
 INSERT INTO `finance_tb` VALUES ('1036', null, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1040', '2018-06-01 14:43:35', '2018-06-01 14:43:35');
-INSERT INTO `finance_tb` VALUES ('1037', '11874bb6149dd45428da628c9766b252', '99699.12', '0.12', '0.00', '301.00', '0.00', '0.00', '0.00', '0.00', '0.00', '100000.00', '1041', '2018-06-01 16:14:28', '2018-07-05 16:58:14');
+INSERT INTO `finance_tb` VALUES ('1037', '11874bb6149dd45428da628c9766b252', '99134.13', '0.14', '365.01', '501.00', '0.00', '0.00', '0.00', '0.00', '0.00', '100000.00', '1041', '2018-06-01 16:14:28', '2018-07-30 19:22:59');
 INSERT INTO `finance_tb` VALUES ('1038', '11874bb6149dd45428da628c9766b252', '999635.00', '0.00', '365.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1000000.00', '1042', '2018-06-01 16:35:05', '2018-06-01 17:46:32');
 INSERT INTO `finance_tb` VALUES ('1039', null, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1043', '2018-06-04 13:39:47', '2018-06-04 13:39:47');
 INSERT INTO `finance_tb` VALUES ('1040', '11874bb6149dd45428da628c9766b252', '1.32', '1.32', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1044', '2018-06-13 14:09:14', '2018-07-05 16:33:16');
@@ -664,9 +698,10 @@ INSERT INTO `finance_tb` VALUES ('1044', null, '0.00', '0.00', '0.00', '0.00', '
 INSERT INTO `finance_tb` VALUES ('1045', null, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1049', '2018-06-25 09:20:53', '2018-06-25 09:20:53');
 INSERT INTO `finance_tb` VALUES ('1046', null, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1050', '2018-06-25 09:22:16', '2018-06-25 09:22:16');
 INSERT INTO `finance_tb` VALUES ('1047', null, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1051', '2018-06-25 09:35:22', '2018-06-25 09:35:22');
-INSERT INTO `finance_tb` VALUES ('1048', 'bfbe6b47df0d8f1f52958d23010b119b', '99624.00', '0.00', '365.00', '11.00', '0.00', '0.00', '0.00', '0.00', '0.00', '100000.00', '1052', '2018-06-26 17:34:51', '2018-06-27 10:27:15');
+INSERT INTO `finance_tb` VALUES ('1048', 'bfbe6b47df0d8f1f52958d23010b119b', '99490.05', '0.06', '365.00', '145.01', '0.00', '0.00', '0.00', '0.00', '0.00', '100000.00', '1052', '2018-06-26 17:34:51', '2018-07-31 14:57:40');
 INSERT INTO `finance_tb` VALUES ('1049', null, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1053', '2018-07-04 10:54:56', '2018-07-04 10:54:56');
 INSERT INTO `finance_tb` VALUES ('1050', null, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1054', '2018-07-04 13:54:55', '2018-07-04 13:54:55');
+INSERT INTO `finance_tb` VALUES ('1051', '11874bb6149dd45428da628c9766b252', '0.08', '0.10', '0.02', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '1055', '2018-11-23 10:35:15', '2018-11-23 13:14:15');
 
 -- ----------------------------
 -- Table structure for `integral_board_tb`
@@ -690,145 +725,180 @@ CREATE TABLE `integral_board_tb` (
   KEY `INDEX_RECORDTIME` (`record_time`) USING BTREE,
   KEY `INDEX_CREATEDATE` (`create_date`) USING BTREE,
   KEY `INDEX_UPDATEDATE` (`update_date`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1137 DEFAULT CHARSET=utf8 COMMENT='积分榜表';
+) ENGINE=InnoDB AUTO_INCREMENT=1172 DEFAULT CHARSET=utf8 COMMENT='积分榜表';
 
 -- ----------------------------
 -- Records of integral_board_tb
 -- ----------------------------
-INSERT INTO `integral_board_tb` VALUES ('1000', '1', '1', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180127193722', '74.00', '2018-02-05 00:00:00', '2018-02-09 16:02:23', '2018-02-10 13:56:49', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1001', '1', '2', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180127193722', '180.00', '2018-02-01 00:00:00', '2018-02-09 16:02:23', '2018-02-28 17:47:41', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1002', '1', '3', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180127193722', '517.00', '2018-01-01 00:00:00', '2018-02-09 16:02:23', '2018-07-04 14:50:57', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1003', '2', '3', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180127193722', '517.00', '2018-01-01 00:00:00', '2018-02-09 16:02:23', '2018-07-04 14:50:57', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1005', '1', '1', '舒靖宇', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1517055943.png', '36.00', '2018-02-05 00:00:00', '2018-02-09 22:11:18', '2018-02-10 13:33:30', '1010');
-INSERT INTO `integral_board_tb` VALUES ('1006', '1', '2', '舒靖宇', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1517055943.png', '132.00', '2018-02-01 00:00:00', '2018-02-09 22:11:18', '2018-02-28 13:52:42', '1010');
-INSERT INTO `integral_board_tb` VALUES ('1007', '1', '3', '舒靖宇', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1517055943.png', '245.00', '2018-01-01 00:00:00', '2018-02-09 22:11:18', '2018-05-15 13:05:56', '1010');
-INSERT INTO `integral_board_tb` VALUES ('1008', '2', '3', '舒靖宇', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1517055943.png', '245.00', '2018-01-01 00:00:00', '2018-02-09 22:11:18', '2018-05-15 13:05:56', '1010');
+INSERT INTO `integral_board_tb` VALUES ('1000', '1', '1', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180127193722', '74.00', '2018-02-05 00:00:00', '2018-02-09 16:02:23', '2018-02-10 13:56:49', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1001', '1', '2', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180127193722', '180.00', '2018-02-01 00:00:00', '2018-02-09 16:02:23', '2018-02-28 17:47:41', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1002', '1', '3', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180127193722', '517.00', '2018-01-01 00:00:00', '2018-02-09 16:02:23', '2018-07-04 14:50:57', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1003', '2', '3', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180127193722', '517.00', '2018-01-01 00:00:00', '2018-02-09 16:02:23', '2018-07-04 14:50:57', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1005', '1', '1', '舒靖宇', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1517055943.png', '36.00', '2018-02-05 00:00:00', '2018-02-09 22:11:18', '2018-02-10 13:33:30', '1010');
+INSERT INTO `integral_board_tb` VALUES ('1006', '1', '2', '舒靖宇', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1517055943.png', '132.00', '2018-02-01 00:00:00', '2018-02-09 22:11:18', '2018-02-28 13:52:42', '1010');
+INSERT INTO `integral_board_tb` VALUES ('1007', '1', '3', '舒靖宇', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1517055943.png', '245.00', '2018-01-01 00:00:00', '2018-02-09 22:11:18', '2018-05-15 13:05:56', '1010');
+INSERT INTO `integral_board_tb` VALUES ('1008', '2', '3', '舒靖宇', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1517055943.png', '245.00', '2018-01-01 00:00:00', '2018-02-09 22:11:18', '2018-05-15 13:05:56', '1010');
 INSERT INTO `integral_board_tb` VALUES ('1009', '1', '1', null, null, '91.00', '2018-02-05 00:00:00', '2018-02-09 22:27:37', '2018-02-11 22:09:41', '1000');
 INSERT INTO `integral_board_tb` VALUES ('1010', '1', '2', null, null, '167.00', '2018-02-01 00:00:00', '2018-02-09 22:27:37', '2018-02-28 21:34:44', '1000');
-INSERT INTO `integral_board_tb` VALUES ('1011', '1', '3', null, null, '598.00', '2018-01-01 00:00:00', '2018-02-09 22:27:37', '2018-06-26 23:38:24', '1000');
-INSERT INTO `integral_board_tb` VALUES ('1012', '2', '3', null, null, '708.00', '2018-01-01 00:00:00', '2018-02-09 23:51:42', '2018-06-26 23:38:24', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1011', '1', '3', null, null, '606.00', '2018-01-01 00:00:00', '2018-02-09 22:27:37', '2018-11-23 11:18:51', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1012', '2', '3', null, null, '716.00', '2018-01-01 00:00:00', '2018-02-09 23:51:42', '2018-11-23 11:18:51', '1000');
 INSERT INTO `integral_board_tb` VALUES ('1015', '1', '1', null, null, '10.00', '2018-02-12 00:00:00', '2018-02-12 18:36:23', '2018-02-15 22:03:50', '1000');
-INSERT INTO `integral_board_tb` VALUES ('1016', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/ios_1000_1519287324.png', '59.00', '2018-02-19 00:00:00', '2018-02-22 16:16:02', '2018-02-24 09:24:54', '1000');
-INSERT INTO `integral_board_tb` VALUES ('1017', '1', '1', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180127193722', '42.00', '2018-02-19 00:00:00', '2018-02-23 09:54:01', '2018-02-23 23:57:29', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1018', '2', '2', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180127193722', '813.00', '2018-01-01 00:00:00', '2018-02-23 09:54:01', '2018-07-05 17:51:23', '1000');
-INSERT INTO `integral_board_tb` VALUES ('1019', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1519366739.png', '2.00', '2018-02-19 00:00:00', '2018-02-23 14:20:24', '2018-02-23 14:20:48', '1016');
-INSERT INTO `integral_board_tb` VALUES ('1020', '1', '2', null, 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1519366739.png', '4.00', '2018-02-01 00:00:00', '2018-02-23 14:20:24', '2018-02-28 17:49:16', '1016');
-INSERT INTO `integral_board_tb` VALUES ('1021', '1', '3', null, 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1519366739.png', '58.00', '2018-01-01 00:00:00', '2018-02-23 14:20:24', '2018-07-05 17:51:23', '1016');
-INSERT INTO `integral_board_tb` VALUES ('1022', '2', '3', null, 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1519366739.png', '58.00', '2018-01-01 00:00:00', '2018-02-23 14:20:24', '2018-07-05 17:51:23', '1016');
-INSERT INTO `integral_board_tb` VALUES ('1023', '1', '1', '舒靖宇', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1517055943.png', '59.00', '2018-02-19 00:00:00', '2018-02-24 13:14:45', '2018-02-25 18:55:54', '1010');
-INSERT INTO `integral_board_tb` VALUES ('1024', '1', '1', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180224135432', '93.00', '2018-02-26 00:00:00', '2018-02-26 09:52:41', '2018-03-02 14:04:28', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1025', '1', '1', '舒靖宇', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1519451189.png', '37.00', '2018-02-26 00:00:00', '2018-02-26 13:14:50', '2018-02-28 13:52:42', '1010');
-INSERT INTO `integral_board_tb` VALUES ('1026', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1519366739.png', '2.00', '2018-02-26 00:00:00', '2018-02-28 17:49:05', '2018-02-28 17:49:16', '1016');
-INSERT INTO `integral_board_tb` VALUES ('1027', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/ios_1000_1519287324.png', '41.00', '2018-02-26 00:00:00', '2018-02-28 21:30:08', '2018-03-03 20:43:47', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1016', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/ios_1000_1519287324.png', '59.00', '2018-02-19 00:00:00', '2018-02-22 16:16:02', '2018-02-24 09:24:54', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1017', '1', '1', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180127193722', '42.00', '2018-02-19 00:00:00', '2018-02-23 09:54:01', '2018-02-23 23:57:29', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1018', '2', '2', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180127193722', '843.00', '2018-01-01 00:00:00', '2018-02-23 09:54:01', '2018-11-23 12:34:03', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1019', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1519366739.png', '2.00', '2018-02-19 00:00:00', '2018-02-23 14:20:24', '2018-02-23 14:20:48', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1020', '1', '2', null, 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1519366739.png', '4.00', '2018-02-01 00:00:00', '2018-02-23 14:20:24', '2018-02-28 17:49:16', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1021', '1', '3', null, 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1519366739.png', '88.00', '2018-01-01 00:00:00', '2018-02-23 14:20:24', '2018-11-23 12:34:03', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1022', '2', '3', null, 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1519366739.png', '88.00', '2018-01-01 00:00:00', '2018-02-23 14:20:24', '2018-11-23 12:34:03', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1023', '1', '1', '舒靖宇', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1517055943.png', '59.00', '2018-02-19 00:00:00', '2018-02-24 13:14:45', '2018-02-25 18:55:54', '1010');
+INSERT INTO `integral_board_tb` VALUES ('1024', '1', '1', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180224135432', '93.00', '2018-02-26 00:00:00', '2018-02-26 09:52:41', '2018-03-02 14:04:28', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1025', '1', '1', '舒靖宇', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1519451189.png', '37.00', '2018-02-26 00:00:00', '2018-02-26 13:14:50', '2018-02-28 13:52:42', '1010');
+INSERT INTO `integral_board_tb` VALUES ('1026', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1519366739.png', '2.00', '2018-02-26 00:00:00', '2018-02-28 17:49:05', '2018-02-28 17:49:16', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1027', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/ios_1000_1519287324.png', '41.00', '2018-02-26 00:00:00', '2018-02-28 21:30:08', '2018-03-03 20:43:47', '1000');
 INSERT INTO `integral_board_tb` VALUES ('1028', '1', '1', null, null, '5.00', '2018-02-26 00:00:00', '2018-03-01 13:38:16', '2018-03-01 13:38:36', '1018');
 INSERT INTO `integral_board_tb` VALUES ('1029', '1', '2', null, null, '14.00', '2018-03-01 00:00:00', '2018-03-01 13:38:16', '2018-03-27 14:59:18', '1018');
 INSERT INTO `integral_board_tb` VALUES ('1030', '1', '3', null, null, '14.00', '2018-01-01 00:00:00', '2018-03-01 13:38:16', '2018-03-27 14:59:18', '1018');
 INSERT INTO `integral_board_tb` VALUES ('1031', '2', '3', null, null, '14.00', '2018-01-01 00:00:00', '2018-03-01 13:38:16', '2018-03-27 14:59:18', '1018');
-INSERT INTO `integral_board_tb` VALUES ('1032', '2', '2', null, null, '43.00', '2018-01-01 00:00:00', '2018-03-01 13:38:16', '2018-04-17 16:54:11', '1016');
-INSERT INTO `integral_board_tb` VALUES ('1033', '1', '2', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180227114533', '109.00', '2018-03-01 00:00:00', '2018-03-01 13:51:02', '2018-03-27 13:18:42', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1034', '1', '2', null, 'http://p2bhwwngu.bkt.clouddn.com/ios_1000_1519287324.png', '325.00', '2018-03-01 00:00:00', '2018-03-02 11:04:06', '2018-03-31 18:56:58', '1000');
-INSERT INTO `integral_board_tb` VALUES ('1035', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1519366739.png', '2.00', '2018-03-05 00:00:00', '2018-03-05 15:46:23', '2018-03-05 15:47:01', '1016');
-INSERT INTO `integral_board_tb` VALUES ('1036', '1', '2', null, 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1519366739.png', '12.00', '2018-03-01 00:00:00', '2018-03-05 15:46:23', '2018-03-26 17:39:04', '1016');
-INSERT INTO `integral_board_tb` VALUES ('1037', '1', '1', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180227114533', '13.00', '2018-03-05 00:00:00', '2018-03-05 15:48:52', '2018-03-08 17:41:45', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1038', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/ios_1000_1519287324.png', '37.00', '2018-03-05 00:00:00', '2018-03-08 17:23:15', '2018-03-11 05:17:07', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1032', '2', '2', null, null, '61.00', '2018-01-01 00:00:00', '2018-03-01 13:38:16', '2018-11-23 13:39:54', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1033', '1', '2', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180227114533', '109.00', '2018-03-01 00:00:00', '2018-03-01 13:51:02', '2018-03-27 13:18:42', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1034', '1', '2', null, 'http://laoyeshuovideo.laoyeshuo.cn/ios_1000_1519287324.png', '325.00', '2018-03-01 00:00:00', '2018-03-02 11:04:06', '2018-03-31 18:56:58', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1035', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1519366739.png', '2.00', '2018-03-05 00:00:00', '2018-03-05 15:46:23', '2018-03-05 15:47:01', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1036', '1', '2', null, 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1519366739.png', '12.00', '2018-03-01 00:00:00', '2018-03-05 15:46:23', '2018-03-26 17:39:04', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1037', '1', '1', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180227114533', '13.00', '2018-03-05 00:00:00', '2018-03-05 15:48:52', '2018-03-08 17:41:45', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1038', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/ios_1000_1519287324.png', '37.00', '2018-03-05 00:00:00', '2018-03-08 17:23:15', '2018-03-11 05:17:07', '1000');
 INSERT INTO `integral_board_tb` VALUES ('1039', '1', '1', null, null, '5.00', '2018-03-05 00:00:00', '2018-03-08 17:55:30', '2018-03-08 18:00:24', '1018');
-INSERT INTO `integral_board_tb` VALUES ('1040', '1', '1', '舒靖宇', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1520035085.png', '6.00', '2018-03-05 00:00:00', '2018-03-11 04:47:43', '2018-03-11 05:13:16', '1010');
-INSERT INTO `integral_board_tb` VALUES ('1041', '1', '2', '舒靖宇', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1520035085.png', '55.00', '2018-03-01 00:00:00', '2018-03-11 04:47:43', '2018-03-31 23:32:00', '1010');
-INSERT INTO `integral_board_tb` VALUES ('1042', '1', '1', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180227114533', '30.00', '2018-03-12 00:00:00', '2018-03-12 09:34:55', '2018-03-18 10:36:19', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1043', '1', '1', '舒靖宇', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1520035085.png', '35.00', '2018-03-12 00:00:00', '2018-03-12 11:12:31', '2018-03-16 10:00:26', '1010');
-INSERT INTO `integral_board_tb` VALUES ('1044', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/ios_1000_1519287324.png', '56.00', '2018-03-12 00:00:00', '2018-03-12 21:04:49', '2018-03-15 19:19:20', '1000');
-INSERT INTO `integral_board_tb` VALUES ('1045', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180313162550', '1.00', '2018-03-12 00:00:00', '2018-03-13 16:43:20', '2018-03-13 16:43:20', '1018');
-INSERT INTO `integral_board_tb` VALUES ('1046', '1', '1', '测试', 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1520929499.png', '2.00', '2018-03-12 00:00:00', '2018-03-13 17:20:04', '2018-03-13 17:20:14', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1040', '1', '1', '舒靖宇', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1520035085.png', '6.00', '2018-03-05 00:00:00', '2018-03-11 04:47:43', '2018-03-11 05:13:16', '1010');
+INSERT INTO `integral_board_tb` VALUES ('1041', '1', '2', '舒靖宇', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1520035085.png', '55.00', '2018-03-01 00:00:00', '2018-03-11 04:47:43', '2018-03-31 23:32:00', '1010');
+INSERT INTO `integral_board_tb` VALUES ('1042', '1', '1', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180227114533', '30.00', '2018-03-12 00:00:00', '2018-03-12 09:34:55', '2018-03-18 10:36:19', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1043', '1', '1', '舒靖宇', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1520035085.png', '35.00', '2018-03-12 00:00:00', '2018-03-12 11:12:31', '2018-03-16 10:00:26', '1010');
+INSERT INTO `integral_board_tb` VALUES ('1044', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/ios_1000_1519287324.png', '56.00', '2018-03-12 00:00:00', '2018-03-12 21:04:49', '2018-03-15 19:19:20', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1045', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180313162550', '1.00', '2018-03-12 00:00:00', '2018-03-13 16:43:20', '2018-03-13 16:43:20', '1018');
+INSERT INTO `integral_board_tb` VALUES ('1046', '1', '1', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1520929499.png', '2.00', '2018-03-12 00:00:00', '2018-03-13 17:20:04', '2018-03-13 17:20:14', '1016');
 INSERT INTO `integral_board_tb` VALUES ('1047', '1', '1', '小胖子', '', '21.00', '2018-03-12 00:00:00', '2018-03-14 09:32:17', '2018-03-16 21:15:02', '1014');
 INSERT INTO `integral_board_tb` VALUES ('1048', '1', '2', '小胖子', '', '21.00', '2018-03-01 00:00:00', '2018-03-14 09:32:17', '2018-03-16 21:15:02', '1014');
-INSERT INTO `integral_board_tb` VALUES ('1049', '1', '3', '小胖子', '', '25.00', '2018-01-01 00:00:00', '2018-03-14 09:32:17', '2018-07-10 18:52:50', '1014');
-INSERT INTO `integral_board_tb` VALUES ('1050', '2', '3', '小胖子', '', '25.00', '2018-01-01 00:00:00', '2018-03-14 09:32:17', '2018-07-10 18:52:50', '1014');
-INSERT INTO `integral_board_tb` VALUES ('1051', '2', '2', '小胖子', '', '25.00', '2018-01-01 00:00:00', '2018-03-14 09:32:17', '2018-07-10 18:52:50', '1010');
-INSERT INTO `integral_board_tb` VALUES ('1052', '1', '1', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180227114533', '3.00', '2018-03-19 00:00:00', '2018-03-19 14:40:47', '2018-03-19 14:42:05', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1053', '1', '1', '测试', 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1520929499.png', '8.00', '2018-03-26 00:00:00', '2018-03-26 16:44:05', '2018-03-26 17:39:04', '1016');
-INSERT INTO `integral_board_tb` VALUES ('1054', '1', '1', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180227114533', '49.00', '2018-03-26 00:00:00', '2018-03-26 17:25:23', '2018-04-01 21:38:40', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1049', '1', '3', '小胖子', '', '40.00', '2018-01-01 00:00:00', '2018-03-14 09:32:17', '2018-09-06 21:46:48', '1014');
+INSERT INTO `integral_board_tb` VALUES ('1050', '2', '3', '小胖子', '', '40.00', '2018-01-01 00:00:00', '2018-03-14 09:32:17', '2018-09-06 21:46:48', '1014');
+INSERT INTO `integral_board_tb` VALUES ('1051', '2', '2', '小胖子', '', '40.00', '2018-01-01 00:00:00', '2018-03-14 09:32:17', '2018-09-06 21:46:48', '1010');
+INSERT INTO `integral_board_tb` VALUES ('1052', '1', '1', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180227114533', '3.00', '2018-03-19 00:00:00', '2018-03-19 14:40:47', '2018-03-19 14:42:05', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1053', '1', '1', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1520929499.png', '8.00', '2018-03-26 00:00:00', '2018-03-26 16:44:05', '2018-03-26 17:39:04', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1054', '1', '1', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180227114533', '49.00', '2018-03-26 00:00:00', '2018-03-26 17:25:23', '2018-04-01 21:38:40', '1009');
 INSERT INTO `integral_board_tb` VALUES ('1055', '1', '1', '王小明', null, '53.00', '2018-03-26 00:00:00', '2018-03-27 13:19:25', '2018-03-27 13:24:13', '1019');
 INSERT INTO `integral_board_tb` VALUES ('1056', '1', '2', '王小明', null, '53.00', '2018-03-01 00:00:00', '2018-03-27 13:19:25', '2018-03-27 13:24:13', '1019');
 INSERT INTO `integral_board_tb` VALUES ('1057', '1', '3', '王小明', null, '68.00', '2018-01-01 00:00:00', '2018-03-27 13:19:25', '2018-04-03 10:20:23', '1019');
 INSERT INTO `integral_board_tb` VALUES ('1058', '2', '3', '王小明', null, '68.00', '2018-01-01 00:00:00', '2018-03-27 13:19:25', '2018-04-03 10:20:23', '1019');
-INSERT INTO `integral_board_tb` VALUES ('1059', '2', '2', '王小明', null, '68.00', '2018-01-01 00:00:00', '2018-03-27 13:19:25', '2018-04-03 10:20:23', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1060', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/ios_1000_1519287324.png', '199.00', '2018-03-26 00:00:00', '2018-03-27 13:49:42', '2018-04-01 22:27:05', '1000');
-INSERT INTO `integral_board_tb` VALUES ('1061', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180313162550', '3.00', '2018-03-26 00:00:00', '2018-03-27 14:58:52', '2018-03-27 14:59:18', '1018');
-INSERT INTO `integral_board_tb` VALUES ('1062', '1', '1', '舒靖宇', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1520863161.png', '36.00', '2018-03-26 00:00:00', '2018-03-31 15:13:06', '2018-04-01 17:46:19', '1010');
-INSERT INTO `integral_board_tb` VALUES ('1063', '1', '2', '舒靖宇', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1520863161.png', '28.00', '2018-04-01 00:00:00', '2018-04-01 02:04:25', '2018-04-11 21:32:29', '1010');
-INSERT INTO `integral_board_tb` VALUES ('1064', '1', '2', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180401135421', '110.00', '2018-04-01 00:00:00', '2018-04-01 13:55:53', '2018-04-17 17:50:11', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1065', '1', '2', null, 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180327135737', '72.00', '2018-04-01 00:00:00', '2018-04-01 22:27:05', '2018-04-22 15:14:47', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1059', '2', '2', '王小明', null, '128.00', '2018-01-01 00:00:00', '2018-03-27 13:19:25', '2018-07-31 23:09:13', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1060', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/ios_1000_1519287324.png', '199.00', '2018-03-26 00:00:00', '2018-03-27 13:49:42', '2018-04-01 22:27:05', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1061', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180313162550', '3.00', '2018-03-26 00:00:00', '2018-03-27 14:58:52', '2018-03-27 14:59:18', '1018');
+INSERT INTO `integral_board_tb` VALUES ('1062', '1', '1', '舒靖宇', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1520863161.png', '36.00', '2018-03-26 00:00:00', '2018-03-31 15:13:06', '2018-04-01 17:46:19', '1010');
+INSERT INTO `integral_board_tb` VALUES ('1063', '1', '2', '舒靖宇', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1520863161.png', '28.00', '2018-04-01 00:00:00', '2018-04-01 02:04:25', '2018-04-11 21:32:29', '1010');
+INSERT INTO `integral_board_tb` VALUES ('1064', '1', '2', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180401135421', '110.00', '2018-04-01 00:00:00', '2018-04-01 13:55:53', '2018-04-17 17:50:11', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1065', '1', '2', null, 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180327135737', '72.00', '2018-04-01 00:00:00', '2018-04-01 22:27:05', '2018-04-22 15:14:47', '1000');
 INSERT INTO `integral_board_tb` VALUES ('1066', '1', '1', null, null, '83.00', '2018-04-02 00:00:00', '2018-04-02 16:54:28', '2018-04-03 13:35:04', '1023');
 INSERT INTO `integral_board_tb` VALUES ('1067', '1', '2', null, null, '83.00', '2018-04-01 00:00:00', '2018-04-02 16:54:28', '2018-04-03 13:35:04', '1023');
 INSERT INTO `integral_board_tb` VALUES ('1068', '1', '3', null, null, '83.00', '2018-01-01 00:00:00', '2018-04-02 16:54:28', '2018-04-03 13:35:04', '1023');
 INSERT INTO `integral_board_tb` VALUES ('1069', '2', '3', null, null, '83.00', '2018-01-01 00:00:00', '2018-04-02 16:54:28', '2018-04-03 13:35:04', '1023');
-INSERT INTO `integral_board_tb` VALUES ('1070', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180327135737', '62.00', '2018-04-02 00:00:00', '2018-04-02 22:54:30', '2018-04-07 10:24:50', '1000');
-INSERT INTO `integral_board_tb` VALUES ('1071', '1', '1', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180401153106', '57.00', '2018-04-02 00:00:00', '2018-04-02 22:55:28', '2018-04-08 21:30:21', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1072', '1', '1', '舒靖宇', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1520863161.png', '3.00', '2018-04-02 00:00:00', '2018-04-02 22:59:03', '2018-04-05 23:13:05', '1010');
+INSERT INTO `integral_board_tb` VALUES ('1070', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180327135737', '62.00', '2018-04-02 00:00:00', '2018-04-02 22:54:30', '2018-04-07 10:24:50', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1071', '1', '1', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180401153106', '57.00', '2018-04-02 00:00:00', '2018-04-02 22:55:28', '2018-04-08 21:30:21', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1072', '1', '1', '舒靖宇', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1520863161.png', '3.00', '2018-04-02 00:00:00', '2018-04-02 22:59:03', '2018-04-05 23:13:05', '1010');
 INSERT INTO `integral_board_tb` VALUES ('1073', '1', '1', '王小明', null, '15.00', '2018-04-02 00:00:00', '2018-04-03 10:16:12', '2018-04-03 10:20:23', '1019');
 INSERT INTO `integral_board_tb` VALUES ('1074', '1', '2', '王小明', null, '15.00', '2018-04-01 00:00:00', '2018-04-03 10:16:12', '2018-04-03 10:20:23', '1019');
-INSERT INTO `integral_board_tb` VALUES ('1075', '1', '1', '测试', 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1522142869.png', '9.00', '2018-04-02 00:00:00', '2018-04-03 10:47:20', '2018-04-03 11:15:39', '1016');
-INSERT INTO `integral_board_tb` VALUES ('1076', '1', '2', '测试', 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1522142869.png', '28.00', '2018-04-01 00:00:00', '2018-04-03 10:47:20', '2018-04-17 18:00:08', '1016');
-INSERT INTO `integral_board_tb` VALUES ('1077', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180327135737', '7.00', '2018-04-09 00:00:00', '2018-04-11 10:28:53', '2018-04-11 10:30:25', '1000');
-INSERT INTO `integral_board_tb` VALUES ('1078', '1', '1', '舒靖宇', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1520863161.png', '3.00', '2018-04-09 00:00:00', '2018-04-11 19:46:49', '2018-04-11 21:32:29', '1010');
-INSERT INTO `integral_board_tb` VALUES ('1079', '1', '1', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180401153106', '12.00', '2018-04-09 00:00:00', '2018-04-11 21:15:18', '2018-04-13 11:13:53', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1080', '1', '1', '测试', 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1522142869.png', '8.00', '2018-04-09 00:00:00', '2018-04-12 14:11:20', '2018-04-12 14:56:00', '1016');
-INSERT INTO `integral_board_tb` VALUES ('1081', '1', '1', '测试', 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1522142869.png', '11.00', '2018-04-16 00:00:00', '2018-04-17 14:38:57', '2018-04-17 18:00:08', '1016');
-INSERT INTO `integral_board_tb` VALUES ('1082', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/ios_1021_1523946788.png', '1.00', '2018-04-16 00:00:00', '2018-04-17 14:39:05', '2018-04-17 14:39:05', '1021');
-INSERT INTO `integral_board_tb` VALUES ('1083', '1', '2', null, 'http://p2bhwwngu.bkt.clouddn.com/ios_1021_1523946788.png', '1.00', '2018-04-01 00:00:00', '2018-04-17 14:39:05', '2018-04-17 14:39:05', '1021');
-INSERT INTO `integral_board_tb` VALUES ('1084', '1', '3', null, 'http://p2bhwwngu.bkt.clouddn.com/ios_1021_1523946788.png', '1.00', '2018-01-01 00:00:00', '2018-04-17 14:39:05', '2018-04-17 14:39:05', '1021');
-INSERT INTO `integral_board_tb` VALUES ('1085', '2', '3', null, 'http://p2bhwwngu.bkt.clouddn.com/ios_1021_1523946788.png', '1.00', '2018-01-01 00:00:00', '2018-04-17 14:39:05', '2018-04-17 14:39:05', '1021');
-INSERT INTO `integral_board_tb` VALUES ('1086', '1', '1', '测试', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180417154011', '28.00', '2018-04-16 00:00:00', '2018-04-17 16:47:02', '2018-04-17 16:54:11', '1017');
-INSERT INTO `integral_board_tb` VALUES ('1087', '1', '2', '测试', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180417154011', '28.00', '2018-04-01 00:00:00', '2018-04-17 16:47:02', '2018-04-17 16:54:11', '1017');
-INSERT INTO `integral_board_tb` VALUES ('1088', '1', '3', '测试', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180417154011', '28.00', '2018-01-01 00:00:00', '2018-04-17 16:47:02', '2018-04-17 16:54:11', '1017');
-INSERT INTO `integral_board_tb` VALUES ('1089', '2', '3', '测试', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180417154011', '28.00', '2018-01-01 00:00:00', '2018-04-17 16:47:02', '2018-04-17 16:54:11', '1017');
-INSERT INTO `integral_board_tb` VALUES ('1090', '1', '1', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180401153106', '26.00', '2018-04-16 00:00:00', '2018-04-17 17:06:53', '2018-04-17 17:50:11', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1075', '1', '1', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1522142869.png', '9.00', '2018-04-02 00:00:00', '2018-04-03 10:47:20', '2018-04-03 11:15:39', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1076', '1', '2', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1522142869.png', '28.00', '2018-04-01 00:00:00', '2018-04-03 10:47:20', '2018-04-17 18:00:08', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1077', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180327135737', '7.00', '2018-04-09 00:00:00', '2018-04-11 10:28:53', '2018-04-11 10:30:25', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1078', '1', '1', '舒靖宇', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1520863161.png', '3.00', '2018-04-09 00:00:00', '2018-04-11 19:46:49', '2018-04-11 21:32:29', '1010');
+INSERT INTO `integral_board_tb` VALUES ('1079', '1', '1', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180401153106', '12.00', '2018-04-09 00:00:00', '2018-04-11 21:15:18', '2018-04-13 11:13:53', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1080', '1', '1', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1522142869.png', '8.00', '2018-04-09 00:00:00', '2018-04-12 14:11:20', '2018-04-12 14:56:00', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1081', '1', '1', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1522142869.png', '11.00', '2018-04-16 00:00:00', '2018-04-17 14:38:57', '2018-04-17 18:00:08', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1082', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/ios_1021_1523946788.png', '1.00', '2018-04-16 00:00:00', '2018-04-17 14:39:05', '2018-04-17 14:39:05', '1021');
+INSERT INTO `integral_board_tb` VALUES ('1083', '1', '2', null, 'http://laoyeshuovideo.laoyeshuo.cn/ios_1021_1523946788.png', '1.00', '2018-04-01 00:00:00', '2018-04-17 14:39:05', '2018-04-17 14:39:05', '1021');
+INSERT INTO `integral_board_tb` VALUES ('1084', '1', '3', null, 'http://laoyeshuovideo.laoyeshuo.cn/ios_1021_1523946788.png', '1.00', '2018-01-01 00:00:00', '2018-04-17 14:39:05', '2018-04-17 14:39:05', '1021');
+INSERT INTO `integral_board_tb` VALUES ('1085', '2', '3', null, 'http://laoyeshuovideo.laoyeshuo.cn/ios_1021_1523946788.png', '1.00', '2018-01-01 00:00:00', '2018-04-17 14:39:05', '2018-04-17 14:39:05', '1021');
+INSERT INTO `integral_board_tb` VALUES ('1086', '1', '1', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180417154011', '28.00', '2018-04-16 00:00:00', '2018-04-17 16:47:02', '2018-04-17 16:54:11', '1017');
+INSERT INTO `integral_board_tb` VALUES ('1087', '1', '2', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180417154011', '28.00', '2018-04-01 00:00:00', '2018-04-17 16:47:02', '2018-04-17 16:54:11', '1017');
+INSERT INTO `integral_board_tb` VALUES ('1088', '1', '3', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180417154011', '28.00', '2018-01-01 00:00:00', '2018-04-17 16:47:02', '2018-04-17 16:54:11', '1017');
+INSERT INTO `integral_board_tb` VALUES ('1089', '2', '3', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180417154011', '28.00', '2018-01-01 00:00:00', '2018-04-17 16:47:02', '2018-04-17 16:54:11', '1017');
+INSERT INTO `integral_board_tb` VALUES ('1090', '1', '1', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180401153106', '26.00', '2018-04-16 00:00:00', '2018-04-17 17:06:53', '2018-04-17 17:50:11', '1009');
 INSERT INTO `integral_board_tb` VALUES ('1091', '1', '1', '', '', '12.00', '2018-04-16 00:00:00', '2018-04-17 17:47:20', '2018-04-17 17:48:55', '1015');
 INSERT INTO `integral_board_tb` VALUES ('1092', '1', '2', '', '', '12.00', '2018-04-01 00:00:00', '2018-04-17 17:47:20', '2018-04-17 17:48:55', '1015');
 INSERT INTO `integral_board_tb` VALUES ('1093', '1', '3', '', '', '12.00', '2018-01-01 00:00:00', '2018-04-17 17:47:20', '2018-04-17 17:48:55', '1015');
 INSERT INTO `integral_board_tb` VALUES ('1094', '2', '3', '', '', '12.00', '2018-01-01 00:00:00', '2018-04-17 17:47:20', '2018-04-17 17:48:55', '1015');
-INSERT INTO `integral_board_tb` VALUES ('1095', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180327135737', '2.00', '2018-04-16 00:00:00', '2018-04-22 15:14:42', '2018-04-22 15:14:47', '1000');
-INSERT INTO `integral_board_tb` VALUES ('1096', '1', '1', '舒靖宇', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1520863161.png', '13.00', '2018-04-30 00:00:00', '2018-05-01 14:43:18', '2018-05-06 14:28:59', '1010');
-INSERT INTO `integral_board_tb` VALUES ('1097', '1', '2', '舒靖宇', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1520863161.png', '30.00', '2018-05-01 00:00:00', '2018-05-01 14:43:18', '2018-05-15 13:05:56', '1010');
-INSERT INTO `integral_board_tb` VALUES ('1098', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180327135737', '3.00', '2018-04-30 00:00:00', '2018-05-01 16:20:55', '2018-05-01 16:21:47', '1000');
-INSERT INTO `integral_board_tb` VALUES ('1099', '1', '2', null, 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180327135737', '19.00', '2018-05-01 00:00:00', '2018-05-01 16:20:55', '2018-05-31 16:42:54', '1000');
-INSERT INTO `integral_board_tb` VALUES ('1100', '1', '1', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180401153106', '36.00', '2018-05-07 00:00:00', '2018-05-07 13:54:15', '2018-05-13 15:02:22', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1101', '1', '2', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180401153106', '59.00', '2018-05-01 00:00:00', '2018-05-07 13:54:15', '2018-05-31 14:29:35', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1102', '1', '1', '舒靖宇', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1520863161.png', '2.00', '2018-05-07 00:00:00', '2018-05-07 23:11:56', '2018-05-07 23:13:18', '1010');
-INSERT INTO `integral_board_tb` VALUES ('1103', '1', '1', '舒靖宇', 'http://p2bhwwngu.bkt.clouddn.com/ios_1010_1520863161.png', '15.00', '2018-05-14 00:00:00', '2018-05-15 00:04:45', '2018-05-15 13:05:56', '1010');
-INSERT INTO `integral_board_tb` VALUES ('1104', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180327135737', '13.00', '2018-05-21 00:00:00', '2018-05-23 22:29:08', '2018-05-23 22:30:49', '1000');
-INSERT INTO `integral_board_tb` VALUES ('1105', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180327135737', '3.00', '2018-05-28 00:00:00', '2018-05-29 18:08:39', '2018-05-31 16:42:54', '1000');
-INSERT INTO `integral_board_tb` VALUES ('1106', '1', '1', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180401153106', '23.00', '2018-05-28 00:00:00', '2018-05-30 16:37:25', '2018-05-31 14:29:35', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1095', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180327135737', '2.00', '2018-04-16 00:00:00', '2018-04-22 15:14:42', '2018-04-22 15:14:47', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1096', '1', '1', '舒靖宇', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1520863161.png', '13.00', '2018-04-30 00:00:00', '2018-05-01 14:43:18', '2018-05-06 14:28:59', '1010');
+INSERT INTO `integral_board_tb` VALUES ('1097', '1', '2', '舒靖宇', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1520863161.png', '30.00', '2018-05-01 00:00:00', '2018-05-01 14:43:18', '2018-05-15 13:05:56', '1010');
+INSERT INTO `integral_board_tb` VALUES ('1098', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180327135737', '3.00', '2018-04-30 00:00:00', '2018-05-01 16:20:55', '2018-05-01 16:21:47', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1099', '1', '2', null, 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180327135737', '19.00', '2018-05-01 00:00:00', '2018-05-01 16:20:55', '2018-05-31 16:42:54', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1100', '1', '1', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180401153106', '36.00', '2018-05-07 00:00:00', '2018-05-07 13:54:15', '2018-05-13 15:02:22', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1101', '1', '2', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180401153106', '59.00', '2018-05-01 00:00:00', '2018-05-07 13:54:15', '2018-05-31 14:29:35', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1102', '1', '1', '舒靖宇', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1520863161.png', '2.00', '2018-05-07 00:00:00', '2018-05-07 23:11:56', '2018-05-07 23:13:18', '1010');
+INSERT INTO `integral_board_tb` VALUES ('1103', '1', '1', '舒靖宇', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1010_1520863161.png', '15.00', '2018-05-14 00:00:00', '2018-05-15 00:04:45', '2018-05-15 13:05:56', '1010');
+INSERT INTO `integral_board_tb` VALUES ('1104', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180327135737', '13.00', '2018-05-21 00:00:00', '2018-05-23 22:29:08', '2018-05-23 22:30:49', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1105', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180327135737', '3.00', '2018-05-28 00:00:00', '2018-05-29 18:08:39', '2018-05-31 16:42:54', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1106', '1', '1', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180401153106', '23.00', '2018-05-28 00:00:00', '2018-05-30 16:37:25', '2018-05-31 14:29:35', '1009');
 INSERT INTO `integral_board_tb` VALUES ('1107', '1', '1', '刘海歌他哥', '', '4.00', '2018-05-28 00:00:00', '2018-05-31 17:03:12', '2018-05-31 17:03:20', '1038');
 INSERT INTO `integral_board_tb` VALUES ('1108', '1', '2', '刘海歌他哥', '', '4.00', '2018-05-01 00:00:00', '2018-05-31 17:03:12', '2018-05-31 17:03:20', '1038');
 INSERT INTO `integral_board_tb` VALUES ('1109', '1', '3', '刘海歌他哥', '', '8.00', '2018-01-01 00:00:00', '2018-05-31 17:03:12', '2018-06-12 16:14:23', '1038');
 INSERT INTO `integral_board_tb` VALUES ('1110', '2', '3', '刘海歌他哥', '', '8.00', '2018-01-01 00:00:00', '2018-05-31 17:03:12', '2018-06-12 16:14:23', '1038');
-INSERT INTO `integral_board_tb` VALUES ('1111', '1', '1', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180401153106', '5.00', '2018-06-04 00:00:00', '2018-06-05 11:19:43', '2018-06-08 13:44:56', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1112', '1', '2', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180401153106', '6.00', '2018-06-01 00:00:00', '2018-06-05 11:19:43', '2018-06-23 14:11:34', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1113', '1', '1', '刘海歌他哥', 'http://p2bhwwngu.bkt.clouddn.com/ios_1038_1527760312.png', '1.00', '2018-06-04 00:00:00', '2018-06-08 17:44:26', '2018-06-08 17:44:26', '1038');
-INSERT INTO `integral_board_tb` VALUES ('1114', '1', '2', '刘海歌他哥', 'http://p2bhwwngu.bkt.clouddn.com/ios_1038_1527760312.png', '4.00', '2018-06-01 00:00:00', '2018-06-08 17:44:26', '2018-06-12 16:14:23', '1038');
-INSERT INTO `integral_board_tb` VALUES ('1115', '1', '1', '刘海歌他哥', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180611102033', '3.00', '2018-06-11 00:00:00', '2018-06-12 16:14:14', '2018-06-12 16:14:23', '1038');
-INSERT INTO `integral_board_tb` VALUES ('1116', '1', '1', '测试', 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1522142869.png', '1.00', '2018-06-18 00:00:00', '2018-06-23 13:49:06', '2018-06-23 13:49:06', '1016');
-INSERT INTO `integral_board_tb` VALUES ('1117', '1', '2', '测试', 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1522142869.png', '1.00', '2018-06-01 00:00:00', '2018-06-23 13:49:06', '2018-06-23 13:49:06', '1016');
-INSERT INTO `integral_board_tb` VALUES ('1118', '1', '1', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180401153106', '1.00', '2018-06-18 00:00:00', '2018-06-23 14:11:34', '2018-06-23 14:11:34', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1119', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180327135737', '1.00', '2018-06-18 00:00:00', '2018-06-24 10:31:38', '2018-06-24 10:31:38', '1000');
-INSERT INTO `integral_board_tb` VALUES ('1120', '1', '2', null, 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180327135737', '15.00', '2018-06-01 00:00:00', '2018-06-24 10:31:38', '2018-06-26 23:38:24', '1000');
-INSERT INTO `integral_board_tb` VALUES ('1121', '1', '1', '刘哥', 'http://p2bhwwngu.bkt.clouddn.com/ios_1041_1528437172.png', '3.00', '2018-06-25 00:00:00', '2018-06-26 17:05:54', '2018-06-26 17:06:20', '1041');
-INSERT INTO `integral_board_tb` VALUES ('1122', '1', '2', '刘哥', 'http://p2bhwwngu.bkt.clouddn.com/ios_1041_1528437172.png', '3.00', '2018-06-01 00:00:00', '2018-06-26 17:05:54', '2018-06-26 17:06:20', '1041');
-INSERT INTO `integral_board_tb` VALUES ('1123', '1', '3', '刘哥', 'http://p2bhwwngu.bkt.clouddn.com/ios_1041_1528437172.png', '4.00', '2018-01-01 00:00:00', '2018-06-26 17:05:54', '2018-07-09 10:17:56', '1041');
-INSERT INTO `integral_board_tb` VALUES ('1124', '2', '3', '刘哥', 'http://p2bhwwngu.bkt.clouddn.com/ios_1041_1528437172.png', '4.00', '2018-01-01 00:00:00', '2018-06-26 17:05:54', '2018-07-09 10:17:56', '1041');
-INSERT INTO `integral_board_tb` VALUES ('1125', '2', '2', '刘哥', 'http://p2bhwwngu.bkt.clouddn.com/ios_1041_1528437172.png', '4.00', '2018-01-01 00:00:00', '2018-06-26 17:05:54', '2018-07-09 10:17:56', '1038');
+INSERT INTO `integral_board_tb` VALUES ('1111', '1', '1', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180401153106', '5.00', '2018-06-04 00:00:00', '2018-06-05 11:19:43', '2018-06-08 13:44:56', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1112', '1', '2', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180401153106', '6.00', '2018-06-01 00:00:00', '2018-06-05 11:19:43', '2018-06-23 14:11:34', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1113', '1', '1', '刘海歌他哥', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1038_1527760312.png', '1.00', '2018-06-04 00:00:00', '2018-06-08 17:44:26', '2018-06-08 17:44:26', '1038');
+INSERT INTO `integral_board_tb` VALUES ('1114', '1', '2', '刘海歌他哥', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1038_1527760312.png', '4.00', '2018-06-01 00:00:00', '2018-06-08 17:44:26', '2018-06-12 16:14:23', '1038');
+INSERT INTO `integral_board_tb` VALUES ('1115', '1', '1', '刘海歌他哥', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180611102033', '3.00', '2018-06-11 00:00:00', '2018-06-12 16:14:14', '2018-06-12 16:14:23', '1038');
+INSERT INTO `integral_board_tb` VALUES ('1116', '1', '1', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1522142869.png', '1.00', '2018-06-18 00:00:00', '2018-06-23 13:49:06', '2018-06-23 13:49:06', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1117', '1', '2', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1522142869.png', '1.00', '2018-06-01 00:00:00', '2018-06-23 13:49:06', '2018-06-23 13:49:06', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1118', '1', '1', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180401153106', '1.00', '2018-06-18 00:00:00', '2018-06-23 14:11:34', '2018-06-23 14:11:34', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1119', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180327135737', '1.00', '2018-06-18 00:00:00', '2018-06-24 10:31:38', '2018-06-24 10:31:38', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1120', '1', '2', null, 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180327135737', '15.00', '2018-06-01 00:00:00', '2018-06-24 10:31:38', '2018-06-26 23:38:24', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1121', '1', '1', '刘哥', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1041_1528437172.png', '3.00', '2018-06-25 00:00:00', '2018-06-26 17:05:54', '2018-06-26 17:06:20', '1041');
+INSERT INTO `integral_board_tb` VALUES ('1122', '1', '2', '刘哥', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1041_1528437172.png', '3.00', '2018-06-01 00:00:00', '2018-06-26 17:05:54', '2018-06-26 17:06:20', '1041');
+INSERT INTO `integral_board_tb` VALUES ('1123', '1', '3', '刘哥', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1041_1528437172.png', '51.00', '2018-01-01 00:00:00', '2018-06-26 17:05:54', '2018-08-02 10:05:44', '1041');
+INSERT INTO `integral_board_tb` VALUES ('1124', '2', '3', '刘哥', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1041_1528437172.png', '51.00', '2018-01-01 00:00:00', '2018-06-26 17:05:54', '2018-08-02 10:05:44', '1041');
+INSERT INTO `integral_board_tb` VALUES ('1125', '2', '2', '刘哥', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1041_1528437172.png', '51.00', '2018-01-01 00:00:00', '2018-06-26 17:05:54', '2018-08-02 10:05:44', '1038');
 INSERT INTO `integral_board_tb` VALUES ('1126', '1', '1', '小胖子', '', '3.00', '2018-06-25 00:00:00', '2018-06-26 23:22:28', '2018-06-28 10:49:11', '1014');
 INSERT INTO `integral_board_tb` VALUES ('1127', '1', '2', '小胖子', '', '3.00', '2018-06-01 00:00:00', '2018-06-26 23:22:28', '2018-06-28 10:49:11', '1014');
-INSERT INTO `integral_board_tb` VALUES ('1128', '1', '1', null, 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180327135737', '14.00', '2018-06-25 00:00:00', '2018-06-26 23:24:02', '2018-06-26 23:38:24', '1000');
-INSERT INTO `integral_board_tb` VALUES ('1129', '1', '1', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180401153106', '53.00', '2018-07-02 00:00:00', '2018-07-04 14:46:03', '2018-07-04 14:50:57', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1130', '1', '2', '谢威', 'http://p2bhwwngu.bkt.clouddn.com/fitment_20180401153106', '53.00', '2018-07-01 00:00:00', '2018-07-04 14:46:03', '2018-07-04 14:50:57', '1009');
-INSERT INTO `integral_board_tb` VALUES ('1131', '1', '1', '测试', 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1522142869.png', '13.00', '2018-07-02 00:00:00', '2018-07-04 16:05:18', '2018-07-05 17:51:23', '1016');
-INSERT INTO `integral_board_tb` VALUES ('1132', '1', '2', '测试', 'http://p2bhwwngu.bkt.clouddn.com/ios_1016_1522142869.png', '13.00', '2018-07-01 00:00:00', '2018-07-04 16:05:18', '2018-07-05 17:51:23', '1016');
-INSERT INTO `integral_board_tb` VALUES ('1133', '1', '1', '刘哥', 'http://p2bhwwngu.bkt.clouddn.com/ios_1041_1528437172.png', '1.00', '2018-07-09 00:00:00', '2018-07-09 10:17:56', '2018-07-09 10:17:56', '1041');
-INSERT INTO `integral_board_tb` VALUES ('1134', '1', '2', '刘哥', 'http://p2bhwwngu.bkt.clouddn.com/ios_1041_1528437172.png', '1.00', '2018-07-01 00:00:00', '2018-07-09 10:17:56', '2018-07-09 10:17:56', '1041');
+INSERT INTO `integral_board_tb` VALUES ('1128', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180327135737', '14.00', '2018-06-25 00:00:00', '2018-06-26 23:24:02', '2018-06-26 23:38:24', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1129', '1', '1', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180401153106', '53.00', '2018-07-02 00:00:00', '2018-07-04 14:46:03', '2018-07-04 14:50:57', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1130', '1', '2', '谢威', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180401153106', '53.00', '2018-07-01 00:00:00', '2018-07-04 14:46:03', '2018-07-04 14:50:57', '1009');
+INSERT INTO `integral_board_tb` VALUES ('1131', '1', '1', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1522142869.png', '13.00', '2018-07-02 00:00:00', '2018-07-04 16:05:18', '2018-07-05 17:51:23', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1132', '1', '2', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1522142869.png', '22.00', '2018-07-01 00:00:00', '2018-07-04 16:05:18', '2018-07-30 16:26:24', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1133', '1', '1', '刘哥', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1041_1528437172.png', '1.00', '2018-07-09 00:00:00', '2018-07-09 10:17:56', '2018-07-09 10:17:56', '1041');
+INSERT INTO `integral_board_tb` VALUES ('1134', '1', '2', '刘哥', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1041_1528437172.png', '47.00', '2018-07-01 00:00:00', '2018-07-09 10:17:56', '2018-07-31 18:10:57', '1041');
 INSERT INTO `integral_board_tb` VALUES ('1135', '1', '1', '小胖子', '', '1.00', '2018-07-09 00:00:00', '2018-07-10 18:52:50', '2018-07-10 18:52:50', '1014');
-INSERT INTO `integral_board_tb` VALUES ('1136', '1', '2', '小胖子', '', '1.00', '2018-07-01 00:00:00', '2018-07-10 18:52:50', '2018-07-10 18:52:50', '1014');
+INSERT INTO `integral_board_tb` VALUES ('1136', '1', '2', '小胖子', '', '9.00', '2018-07-01 00:00:00', '2018-07-10 18:52:50', '2018-07-26 09:49:34', '1014');
+INSERT INTO `integral_board_tb` VALUES ('1137', '1', '1', '小胖子', '', '3.00', '2018-07-16 00:00:00', '2018-07-16 18:09:08', '2018-07-16 18:09:38', '1014');
+INSERT INTO `integral_board_tb` VALUES ('1138', '1', '1', '梁威', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1052_1530005702.png', '15.00', '2018-07-16 00:00:00', '2018-07-17 09:52:10', '2018-07-18 09:16:02', '1052');
+INSERT INTO `integral_board_tb` VALUES ('1139', '1', '2', '梁威', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1052_1530005702.png', '36.00', '2018-07-01 00:00:00', '2018-07-17 09:52:10', '2018-07-31 16:58:48', '1052');
+INSERT INTO `integral_board_tb` VALUES ('1140', '1', '3', '梁威', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1052_1530005702.png', '36.00', '2018-01-01 00:00:00', '2018-07-17 09:52:10', '2018-07-31 16:58:48', '1052');
+INSERT INTO `integral_board_tb` VALUES ('1141', '2', '3', '梁威', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1052_1530005702.png', '36.00', '2018-01-01 00:00:00', '2018-07-17 09:52:10', '2018-07-31 16:58:48', '1052');
+INSERT INTO `integral_board_tb` VALUES ('1142', '1', '1', '刘哥', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1041_1528437172.png', '35.00', '2018-07-16 00:00:00', '2018-07-20 14:54:25', '2018-07-20 16:34:51', '1041');
+INSERT INTO `integral_board_tb` VALUES ('1143', '1', '1', '没小钱', '', '6.00', '2018-07-16 00:00:00', '2018-07-20 16:33:55', '2018-07-20 16:36:32', '1042');
+INSERT INTO `integral_board_tb` VALUES ('1144', '1', '2', '没小钱', '', '9.00', '2018-07-01 00:00:00', '2018-07-20 16:33:55', '2018-07-31 16:07:04', '1042');
+INSERT INTO `integral_board_tb` VALUES ('1145', '1', '3', '没小钱', '', '9.00', '2018-01-01 00:00:00', '2018-07-20 16:33:55', '2018-07-31 16:07:04', '1042');
+INSERT INTO `integral_board_tb` VALUES ('1146', '2', '3', '没小钱', '', '9.00', '2018-01-01 00:00:00', '2018-07-20 16:33:56', '2018-07-31 16:07:04', '1042');
+INSERT INTO `integral_board_tb` VALUES ('1147', '1', '1', '小胖子', '', '5.00', '2018-07-23 00:00:00', '2018-07-26 09:21:18', '2018-07-26 09:49:34', '1014');
+INSERT INTO `integral_board_tb` VALUES ('1148', '1', '1', '梁威', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1052_1530005702.png', '5.00', '2018-07-23 00:00:00', '2018-07-26 14:03:44', '2018-07-26 14:04:55', '1052');
+INSERT INTO `integral_board_tb` VALUES ('1149', '1', '1', '刘哥', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1041_1532076143.png', '3.00', '2018-07-23 00:00:00', '2018-07-26 16:41:24', '2018-07-27 09:45:19', '1041');
+INSERT INTO `integral_board_tb` VALUES ('1150', '1', '1', '啦啦啦', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180507120009', '14.00', '2018-07-23 00:00:00', '2018-07-26 22:42:50', '2018-07-26 22:48:15', '1012');
+INSERT INTO `integral_board_tb` VALUES ('1151', '1', '2', '啦啦啦', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180507120009', '15.00', '2018-07-01 00:00:00', '2018-07-26 22:42:50', '2018-07-31 23:09:13', '1012');
+INSERT INTO `integral_board_tb` VALUES ('1152', '1', '3', '啦啦啦', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180507120009', '15.00', '2018-01-01 00:00:00', '2018-07-26 22:42:50', '2018-07-31 23:09:13', '1012');
+INSERT INTO `integral_board_tb` VALUES ('1153', '2', '3', '啦啦啦', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180507120009', '15.00', '2018-01-01 00:00:00', '2018-07-26 22:42:50', '2018-07-31 23:09:13', '1012');
+INSERT INTO `integral_board_tb` VALUES ('1154', '1', '1', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1016_1522142869.png', '9.00', '2018-07-30 00:00:00', '2018-07-30 14:00:26', '2018-07-30 16:26:24', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1155', '1', '1', '刘哥', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1041_1532076143.png', '9.00', '2018-07-30 00:00:00', '2018-07-30 17:12:11', '2018-08-02 10:05:44', '1041');
+INSERT INTO `integral_board_tb` VALUES ('1156', '1', '1', '没小钱', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1042_1533024218.png', '3.00', '2018-07-30 00:00:00', '2018-07-31 16:04:19', '2018-07-31 16:07:04', '1042');
+INSERT INTO `integral_board_tb` VALUES ('1157', '1', '1', '梁威', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1052_1530005702.png', '16.00', '2018-07-30 00:00:00', '2018-07-31 16:09:39', '2018-07-31 16:58:48', '1052');
+INSERT INTO `integral_board_tb` VALUES ('1158', '1', '1', '啦啦啦', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180507120009', '1.00', '2018-07-30 00:00:00', '2018-07-31 23:09:13', '2018-07-31 23:09:13', '1012');
+INSERT INTO `integral_board_tb` VALUES ('1159', '1', '2', '刘哥', 'http://laoyeshuovideo.laoyeshuo.cn/ios_1041_1532076143.png', '1.00', '2018-08-01 00:00:00', '2018-08-02 10:05:44', '2018-08-02 10:05:44', '1041');
+INSERT INTO `integral_board_tb` VALUES ('1160', '1', '1', '小胖子', '', '6.00', '2018-08-20 00:00:00', '2018-08-23 15:02:46', '2018-08-23 15:03:10', '1014');
+INSERT INTO `integral_board_tb` VALUES ('1161', '1', '2', '小胖子', '', '6.00', '2018-08-01 00:00:00', '2018-08-23 15:02:46', '2018-08-23 15:03:10', '1014');
+INSERT INTO `integral_board_tb` VALUES ('1162', '1', '1', '小胖子', '', '1.00', '2018-09-03 00:00:00', '2018-09-06 21:46:48', '2018-09-06 21:46:48', '1014');
+INSERT INTO `integral_board_tb` VALUES ('1163', '1', '2', '小胖子', '', '1.00', '2018-09-01 00:00:00', '2018-09-06 21:46:48', '2018-09-06 21:46:48', '1014');
+INSERT INTO `integral_board_tb` VALUES ('1164', '1', '1', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180730162025', '21.00', '2018-11-19 00:00:00', '2018-11-23 10:43:21', '2018-11-23 12:34:03', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1165', '1', '2', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180730162025', '21.00', '2018-11-01 00:00:00', '2018-11-23 10:43:21', '2018-11-23 12:34:03', '1016');
+INSERT INTO `integral_board_tb` VALUES ('1166', '1', '1', null, 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180327135737', '8.00', '2018-11-19 00:00:00', '2018-11-23 11:18:32', '2018-11-23 11:18:51', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1167', '1', '2', null, 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20180327135737', '8.00', '2018-11-01 00:00:00', '2018-11-23 11:18:32', '2018-11-23 11:18:51', '1000');
+INSERT INTO `integral_board_tb` VALUES ('1168', '1', '1', '111', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20181123104555', '18.00', '2018-11-19 00:00:00', '2018-11-23 13:14:24', '2018-11-23 13:39:54', '1055');
+INSERT INTO `integral_board_tb` VALUES ('1169', '1', '2', '111', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20181123104555', '18.00', '2018-11-01 00:00:00', '2018-11-23 13:14:24', '2018-11-23 13:39:54', '1055');
+INSERT INTO `integral_board_tb` VALUES ('1170', '1', '3', '111', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20181123104555', '18.00', '2018-01-01 00:00:00', '2018-11-23 13:14:24', '2018-11-23 13:39:54', '1055');
+INSERT INTO `integral_board_tb` VALUES ('1171', '2', '3', '111', 'http://laoyeshuovideo.laoyeshuo.cn/fitment_20181123104555', '18.00', '2018-01-01 00:00:00', '2018-11-23 13:14:24', '2018-11-23 13:39:54', '1055');
 
 -- ----------------------------
 -- Table structure for `integral_detail_tb`
@@ -846,7 +916,7 @@ CREATE TABLE `integral_detail_tb` (
   KEY `INDEX_ACCOUNTID` (`account_id`) USING BTREE,
   KEY `INDEX_CREATEDATE` (`create_date`) USING BTREE,
   KEY `INDEX_UPDATEDATE` (`update_date`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=2802 DEFAULT CHARSET=utf8 COMMENT='积分详细表';
+) ENGINE=InnoDB AUTO_INCREMENT=2980 DEFAULT CHARSET=utf8 COMMENT='积分详细表';
 
 -- ----------------------------
 -- Records of integral_detail_tb
@@ -2512,6 +2582,184 @@ INSERT INTO `integral_detail_tb` VALUES ('2798', '1', '1.00', '2018-07-05 17:51:
 INSERT INTO `integral_detail_tb` VALUES ('2799', '1', '1.00', '2018-07-05 17:51:23', '2018-07-05 17:51:23', '1016');
 INSERT INTO `integral_detail_tb` VALUES ('2800', '1', '1.00', '2018-07-09 10:17:56', '2018-07-09 10:17:56', '1041');
 INSERT INTO `integral_detail_tb` VALUES ('2801', '1', '1.00', '2018-07-10 18:52:50', '2018-07-10 18:52:50', '1014');
+INSERT INTO `integral_detail_tb` VALUES ('2802', '1', '1.00', '2018-07-16 18:09:08', '2018-07-16 18:09:08', '1014');
+INSERT INTO `integral_detail_tb` VALUES ('2803', '1', '1.00', '2018-07-16 18:09:13', '2018-07-16 18:09:13', '1014');
+INSERT INTO `integral_detail_tb` VALUES ('2804', '1', '1.00', '2018-07-16 18:09:38', '2018-07-16 18:09:38', '1014');
+INSERT INTO `integral_detail_tb` VALUES ('2805', '1', '1.00', '2018-07-17 09:52:10', '2018-07-17 09:52:10', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2806', '1', '1.00', '2018-07-17 10:48:45', '2018-07-17 10:48:45', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2807', '1', '1.00', '2018-07-17 10:49:44', '2018-07-17 10:49:44', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2808', '1', '1.00', '2018-07-17 10:51:24', '2018-07-17 10:51:24', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2809', '1', '1.00', '2018-07-17 10:52:23', '2018-07-17 10:52:23', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2810', '1', '1.00', '2018-07-17 10:53:23', '2018-07-17 10:53:23', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2811', '1', '1.00', '2018-07-17 10:55:04', '2018-07-17 10:55:04', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2812', '1', '1.00', '2018-07-17 10:55:11', '2018-07-17 10:55:11', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2813', '1', '1.00', '2018-07-17 10:55:28', '2018-07-17 10:55:28', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2814', '1', '1.00', '2018-07-17 10:55:45', '2018-07-17 10:55:45', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2815', '1', '1.00', '2018-07-17 10:55:52', '2018-07-17 10:55:52', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2816', '1', '1.00', '2018-07-17 13:53:33', '2018-07-17 13:53:33', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2817', '1', '1.00', '2018-07-17 13:54:53', '2018-07-17 13:54:53', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2818', '1', '1.00', '2018-07-17 17:29:27', '2018-07-17 17:29:27', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2819', '1', '1.00', '2018-07-18 09:16:02', '2018-07-18 09:16:02', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2820', '1', '1.00', '2018-07-20 14:54:25', '2018-07-20 14:54:25', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2821', '1', '1.00', '2018-07-20 15:24:01', '2018-07-20 15:24:01', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2822', '1', '1.00', '2018-07-20 15:29:36', '2018-07-20 15:29:36', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2823', '1', '1.00', '2018-07-20 15:29:41', '2018-07-20 15:29:41', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2824', '1', '1.00', '2018-07-20 15:29:46', '2018-07-20 15:29:46', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2825', '1', '1.00', '2018-07-20 15:29:51', '2018-07-20 15:29:51', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2826', '1', '1.00', '2018-07-20 15:29:56', '2018-07-20 15:29:56', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2827', '1', '1.00', '2018-07-20 15:30:01', '2018-07-20 15:30:01', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2828', '1', '1.00', '2018-07-20 15:30:06', '2018-07-20 15:30:06', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2829', '1', '1.00', '2018-07-20 15:30:11', '2018-07-20 15:30:11', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2830', '1', '1.00', '2018-07-20 15:30:16', '2018-07-20 15:30:16', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2831', '1', '1.00', '2018-07-20 15:30:21', '2018-07-20 15:30:21', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2832', '1', '1.00', '2018-07-20 15:30:26', '2018-07-20 15:30:26', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2833', '1', '1.00', '2018-07-20 15:30:31', '2018-07-20 15:30:31', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2834', '1', '1.00', '2018-07-20 15:30:36', '2018-07-20 15:30:36', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2835', '1', '1.00', '2018-07-20 15:33:20', '2018-07-20 15:33:20', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2836', '1', '1.00', '2018-07-20 15:33:30', '2018-07-20 15:33:30', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2837', '1', '1.00', '2018-07-20 15:40:14', '2018-07-20 15:40:14', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2838', '1', '1.00', '2018-07-20 15:40:26', '2018-07-20 15:40:26', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2839', '1', '1.00', '2018-07-20 16:17:20', '2018-07-20 16:17:20', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2840', '1', '1.00', '2018-07-20 16:18:19', '2018-07-20 16:18:19', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2841', '1', '1.00', '2018-07-20 16:19:19', '2018-07-20 16:19:19', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2842', '1', '1.00', '2018-07-20 16:20:19', '2018-07-20 16:20:19', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2843', '1', '1.00', '2018-07-20 16:21:19', '2018-07-20 16:21:19', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2844', '1', '1.00', '2018-07-20 16:22:19', '2018-07-20 16:22:19', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2845', '1', '1.00', '2018-07-20 16:23:19', '2018-07-20 16:23:19', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2846', '1', '1.00', '2018-07-20 16:24:19', '2018-07-20 16:24:19', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2847', '1', '1.00', '2018-07-20 16:25:19', '2018-07-20 16:25:19', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2848', '1', '1.00', '2018-07-20 16:26:19', '2018-07-20 16:26:19', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2849', '1', '1.00', '2018-07-20 16:27:19', '2018-07-20 16:27:19', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2850', '1', '1.00', '2018-07-20 16:28:19', '2018-07-20 16:28:19', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2851', '1', '1.00', '2018-07-20 16:31:24', '2018-07-20 16:31:24', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2852', '1', '1.00', '2018-07-20 16:31:29', '2018-07-20 16:31:29', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2853', '1', '1.00', '2018-07-20 16:33:52', '2018-07-20 16:33:52', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2854', '1', '1.00', '2018-07-20 16:33:55', '2018-07-20 16:33:55', '1042');
+INSERT INTO `integral_detail_tb` VALUES ('2855', '1', '1.00', '2018-07-20 16:34:00', '2018-07-20 16:34:00', '1042');
+INSERT INTO `integral_detail_tb` VALUES ('2856', '1', '1.00', '2018-07-20 16:34:05', '2018-07-20 16:34:05', '1042');
+INSERT INTO `integral_detail_tb` VALUES ('2857', '1', '1.00', '2018-07-20 16:34:51', '2018-07-20 16:34:51', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2858', '1', '1.00', '2018-07-20 16:35:24', '2018-07-20 16:35:24', '1042');
+INSERT INTO `integral_detail_tb` VALUES ('2859', '1', '1.00', '2018-07-20 16:36:27', '2018-07-20 16:36:27', '1042');
+INSERT INTO `integral_detail_tb` VALUES ('2860', '1', '1.00', '2018-07-20 16:36:32', '2018-07-20 16:36:32', '1042');
+INSERT INTO `integral_detail_tb` VALUES ('2861', '1', '1.00', '2018-07-26 09:21:18', '2018-07-26 09:21:18', '1014');
+INSERT INTO `integral_detail_tb` VALUES ('2862', '1', '1.00', '2018-07-26 09:23:17', '2018-07-26 09:23:17', '1014');
+INSERT INTO `integral_detail_tb` VALUES ('2863', '1', '1.00', '2018-07-26 09:37:59', '2018-07-26 09:37:59', '1014');
+INSERT INTO `integral_detail_tb` VALUES ('2864', '1', '1.00', '2018-07-26 09:46:35', '2018-07-26 09:46:35', '1014');
+INSERT INTO `integral_detail_tb` VALUES ('2865', '1', '1.00', '2018-07-26 09:49:34', '2018-07-26 09:49:34', '1014');
+INSERT INTO `integral_detail_tb` VALUES ('2866', '1', '1.00', '2018-07-26 14:03:44', '2018-07-26 14:03:44', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2867', '1', '1.00', '2018-07-26 14:03:52', '2018-07-26 14:03:52', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2868', '1', '1.00', '2018-07-26 14:04:23', '2018-07-26 14:04:23', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2869', '1', '1.00', '2018-07-26 14:04:27', '2018-07-26 14:04:27', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2870', '1', '1.00', '2018-07-26 14:04:55', '2018-07-26 14:04:55', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2871', '1', '1.00', '2018-07-26 16:41:24', '2018-07-26 16:41:24', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2872', '1', '1.00', '2018-07-26 22:42:50', '2018-07-26 22:42:50', '1012');
+INSERT INTO `integral_detail_tb` VALUES ('2873', '1', '1.00', '2018-07-26 22:42:55', '2018-07-26 22:42:55', '1012');
+INSERT INTO `integral_detail_tb` VALUES ('2874', '1', '1.00', '2018-07-26 22:43:00', '2018-07-26 22:43:00', '1012');
+INSERT INTO `integral_detail_tb` VALUES ('2875', '1', '1.00', '2018-07-26 22:43:05', '2018-07-26 22:43:05', '1012');
+INSERT INTO `integral_detail_tb` VALUES ('2876', '1', '1.00', '2018-07-26 22:43:10', '2018-07-26 22:43:10', '1012');
+INSERT INTO `integral_detail_tb` VALUES ('2877', '1', '1.00', '2018-07-26 22:43:15', '2018-07-26 22:43:15', '1012');
+INSERT INTO `integral_detail_tb` VALUES ('2878', '1', '1.00', '2018-07-26 22:43:20', '2018-07-26 22:43:20', '1012');
+INSERT INTO `integral_detail_tb` VALUES ('2879', '1', '1.00', '2018-07-26 22:43:25', '2018-07-26 22:43:25', '1012');
+INSERT INTO `integral_detail_tb` VALUES ('2880', '1', '1.00', '2018-07-26 22:43:30', '2018-07-26 22:43:30', '1012');
+INSERT INTO `integral_detail_tb` VALUES ('2881', '1', '1.00', '2018-07-26 22:47:55', '2018-07-26 22:47:55', '1012');
+INSERT INTO `integral_detail_tb` VALUES ('2882', '1', '1.00', '2018-07-26 22:48:00', '2018-07-26 22:48:00', '1012');
+INSERT INTO `integral_detail_tb` VALUES ('2883', '1', '1.00', '2018-07-26 22:48:05', '2018-07-26 22:48:05', '1012');
+INSERT INTO `integral_detail_tb` VALUES ('2884', '1', '1.00', '2018-07-26 22:48:10', '2018-07-26 22:48:10', '1012');
+INSERT INTO `integral_detail_tb` VALUES ('2885', '1', '1.00', '2018-07-26 22:48:15', '2018-07-26 22:48:15', '1012');
+INSERT INTO `integral_detail_tb` VALUES ('2886', '1', '1.00', '2018-07-27 09:45:14', '2018-07-27 09:45:14', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2887', '1', '1.00', '2018-07-27 09:45:19', '2018-07-27 09:45:19', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2888', '1', '1.00', '2018-07-30 14:00:26', '2018-07-30 14:00:26', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2889', '1', '1.00', '2018-07-30 14:00:42', '2018-07-30 14:00:42', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2890', '1', '1.00', '2018-07-30 14:00:50', '2018-07-30 14:00:50', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2891', '1', '1.00', '2018-07-30 14:19:24', '2018-07-30 14:19:24', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2892', '1', '1.00', '2018-07-30 14:51:48', '2018-07-30 14:51:48', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2893', '1', '1.00', '2018-07-30 16:12:57', '2018-07-30 16:12:57', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2894', '1', '1.00', '2018-07-30 16:13:23', '2018-07-30 16:13:23', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2895', '1', '1.00', '2018-07-30 16:23:43', '2018-07-30 16:23:43', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2896', '1', '1.00', '2018-07-30 16:26:24', '2018-07-30 16:26:24', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2897', '1', '1.00', '2018-07-30 17:12:11', '2018-07-30 17:12:11', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2898', '1', '1.00', '2018-07-30 17:12:16', '2018-07-30 17:12:16', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2899', '1', '1.00', '2018-07-30 17:12:19', '2018-07-30 17:12:19', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2900', '1', '1.00', '2018-07-30 17:12:24', '2018-07-30 17:12:24', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2901', '1', '1.00', '2018-07-30 17:12:57', '2018-07-30 17:12:57', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2902', '1', '1.00', '2018-07-30 17:14:24', '2018-07-30 17:14:24', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2903', '1', '1.00', '2018-07-30 17:16:29', '2018-07-30 17:16:29', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2904', '1', '1.00', '2018-07-31 16:04:19', '2018-07-31 16:04:19', '1042');
+INSERT INTO `integral_detail_tb` VALUES ('2905', '1', '1.00', '2018-07-31 16:04:35', '2018-07-31 16:04:35', '1042');
+INSERT INTO `integral_detail_tb` VALUES ('2906', '1', '1.00', '2018-07-31 16:07:04', '2018-07-31 16:07:04', '1042');
+INSERT INTO `integral_detail_tb` VALUES ('2907', '1', '1.00', '2018-07-31 16:09:39', '2018-07-31 16:09:39', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2908', '1', '1.00', '2018-07-31 16:11:11', '2018-07-31 16:11:11', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2909', '1', '1.00', '2018-07-31 16:18:27', '2018-07-31 16:18:27', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2910', '1', '1.00', '2018-07-31 16:18:38', '2018-07-31 16:18:38', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2911', '1', '1.00', '2018-07-31 16:18:42', '2018-07-31 16:18:42', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2912', '1', '1.00', '2018-07-31 16:21:49', '2018-07-31 16:21:49', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2913', '1', '1.00', '2018-07-31 16:22:45', '2018-07-31 16:22:45', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2914', '1', '1.00', '2018-07-31 16:24:09', '2018-07-31 16:24:09', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2915', '1', '1.00', '2018-07-31 16:24:15', '2018-07-31 16:24:15', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2916', '1', '1.00', '2018-07-31 16:24:20', '2018-07-31 16:24:20', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2917', '1', '1.00', '2018-07-31 16:37:21', '2018-07-31 16:37:21', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2918', '1', '1.00', '2018-07-31 16:37:36', '2018-07-31 16:37:36', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2919', '1', '1.00', '2018-07-31 16:37:42', '2018-07-31 16:37:42', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2920', '1', '1.00', '2018-07-31 16:37:43', '2018-07-31 16:37:43', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2921', '1', '1.00', '2018-07-31 16:43:18', '2018-07-31 16:43:18', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2922', '1', '1.00', '2018-07-31 16:58:48', '2018-07-31 16:58:48', '1052');
+INSERT INTO `integral_detail_tb` VALUES ('2923', '1', '1.00', '2018-07-31 18:10:56', '2018-07-31 18:10:56', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2924', '1', '1.00', '2018-07-31 23:09:13', '2018-07-31 23:09:13', '1012');
+INSERT INTO `integral_detail_tb` VALUES ('2925', '1', '1.00', '2018-08-02 10:05:44', '2018-08-02 10:05:44', '1041');
+INSERT INTO `integral_detail_tb` VALUES ('2926', '1', '1.00', '2018-08-23 15:02:45', '2018-08-23 15:02:45', '1014');
+INSERT INTO `integral_detail_tb` VALUES ('2927', '1', '1.00', '2018-08-23 15:02:50', '2018-08-23 15:02:50', '1014');
+INSERT INTO `integral_detail_tb` VALUES ('2928', '1', '1.00', '2018-08-23 15:02:55', '2018-08-23 15:02:55', '1014');
+INSERT INTO `integral_detail_tb` VALUES ('2929', '1', '1.00', '2018-08-23 15:03:00', '2018-08-23 15:03:00', '1014');
+INSERT INTO `integral_detail_tb` VALUES ('2930', '1', '1.00', '2018-08-23 15:03:05', '2018-08-23 15:03:05', '1014');
+INSERT INTO `integral_detail_tb` VALUES ('2931', '1', '1.00', '2018-08-23 15:03:10', '2018-08-23 15:03:10', '1014');
+INSERT INTO `integral_detail_tb` VALUES ('2932', '1', '1.00', '2018-09-06 21:46:48', '2018-09-06 21:46:48', '1014');
+INSERT INTO `integral_detail_tb` VALUES ('2933', '1', '1.00', '2018-11-23 10:43:21', '2018-11-23 10:43:21', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2934', '1', '1.00', '2018-11-23 10:43:42', '2018-11-23 10:43:42', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2935', '1', '1.00', '2018-11-23 10:43:47', '2018-11-23 10:43:47', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2936', '1', '1.00', '2018-11-23 10:47:02', '2018-11-23 10:47:02', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2937', '1', '1.00', '2018-11-23 10:47:07', '2018-11-23 10:47:07', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2938', '1', '1.00', '2018-11-23 10:47:12', '2018-11-23 10:47:12', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2939', '1', '1.00', '2018-11-23 10:47:17', '2018-11-23 10:47:17', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2940', '1', '1.00', '2018-11-23 10:47:22', '2018-11-23 10:47:22', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2941', '1', '1.00', '2018-11-23 10:47:27', '2018-11-23 10:47:27', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2942', '1', '1.00', '2018-11-23 10:47:32', '2018-11-23 10:47:32', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2943', '1', '1.00', '2018-11-23 10:47:37', '2018-11-23 10:47:37', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2944', '1', '1.00', '2018-11-23 10:47:42', '2018-11-23 10:47:42', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2945', '1', '1.00', '2018-11-23 10:47:47', '2018-11-23 10:47:47', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2946', '1', '1.00', '2018-11-23 10:47:52', '2018-11-23 10:47:52', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2947', '1', '1.00', '2018-11-23 10:48:28', '2018-11-23 10:48:28', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2948', '1', '1.00', '2018-11-23 10:48:33', '2018-11-23 10:48:33', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2949', '1', '1.00', '2018-11-23 10:49:26', '2018-11-23 10:49:26', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2950', '1', '1.00', '2018-11-23 10:50:30', '2018-11-23 10:50:30', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2951', '1', '1.00', '2018-11-23 10:50:35', '2018-11-23 10:50:35', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2952', '1', '1.00', '2018-11-23 10:58:08', '2018-11-23 10:58:08', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2953', '1', '1.00', '2018-11-23 11:18:32', '2018-11-23 11:18:32', '1000');
+INSERT INTO `integral_detail_tb` VALUES ('2954', '1', '1.00', '2018-11-23 11:18:35', '2018-11-23 11:18:35', '1000');
+INSERT INTO `integral_detail_tb` VALUES ('2955', '1', '1.00', '2018-11-23 11:18:37', '2018-11-23 11:18:37', '1000');
+INSERT INTO `integral_detail_tb` VALUES ('2956', '1', '1.00', '2018-11-23 11:18:39', '2018-11-23 11:18:39', '1000');
+INSERT INTO `integral_detail_tb` VALUES ('2957', '1', '1.00', '2018-11-23 11:18:40', '2018-11-23 11:18:40', '1000');
+INSERT INTO `integral_detail_tb` VALUES ('2958', '1', '1.00', '2018-11-23 11:18:44', '2018-11-23 11:18:44', '1000');
+INSERT INTO `integral_detail_tb` VALUES ('2959', '1', '1.00', '2018-11-23 11:18:47', '2018-11-23 11:18:47', '1000');
+INSERT INTO `integral_detail_tb` VALUES ('2960', '1', '1.00', '2018-11-23 11:18:51', '2018-11-23 11:18:51', '1000');
+INSERT INTO `integral_detail_tb` VALUES ('2961', '1', '1.00', '2018-11-23 12:34:03', '2018-11-23 12:34:03', '1016');
+INSERT INTO `integral_detail_tb` VALUES ('2962', '1', '1.00', '2018-11-23 13:14:24', '2018-11-23 13:14:24', '1055');
+INSERT INTO `integral_detail_tb` VALUES ('2963', '1', '1.00', '2018-11-23 13:20:02', '2018-11-23 13:20:02', '1055');
+INSERT INTO `integral_detail_tb` VALUES ('2964', '1', '1.00', '2018-11-23 13:20:07', '2018-11-23 13:20:07', '1055');
+INSERT INTO `integral_detail_tb` VALUES ('2965', '1', '1.00', '2018-11-23 13:20:12', '2018-11-23 13:20:12', '1055');
+INSERT INTO `integral_detail_tb` VALUES ('2966', '1', '1.00', '2018-11-23 13:20:15', '2018-11-23 13:20:15', '1055');
+INSERT INTO `integral_detail_tb` VALUES ('2967', '1', '1.00', '2018-11-23 13:20:18', '2018-11-23 13:20:18', '1055');
+INSERT INTO `integral_detail_tb` VALUES ('2968', '1', '1.00', '2018-11-23 13:21:26', '2018-11-23 13:21:26', '1055');
+INSERT INTO `integral_detail_tb` VALUES ('2969', '1', '1.00', '2018-11-23 13:21:31', '2018-11-23 13:21:31', '1055');
+INSERT INTO `integral_detail_tb` VALUES ('2970', '1', '1.00', '2018-11-23 13:21:36', '2018-11-23 13:21:36', '1055');
+INSERT INTO `integral_detail_tb` VALUES ('2971', '1', '1.00', '2018-11-23 13:21:37', '2018-11-23 13:21:37', '1055');
+INSERT INTO `integral_detail_tb` VALUES ('2972', '1', '1.00', '2018-11-23 13:21:39', '2018-11-23 13:21:39', '1055');
+INSERT INTO `integral_detail_tb` VALUES ('2973', '1', '1.00', '2018-11-23 13:21:54', '2018-11-23 13:21:54', '1055');
+INSERT INTO `integral_detail_tb` VALUES ('2974', '1', '1.00', '2018-11-23 13:21:59', '2018-11-23 13:21:59', '1055');
+INSERT INTO `integral_detail_tb` VALUES ('2975', '1', '1.00', '2018-11-23 13:22:02', '2018-11-23 13:22:02', '1055');
+INSERT INTO `integral_detail_tb` VALUES ('2976', '1', '1.00', '2018-11-23 13:22:04', '2018-11-23 13:22:04', '1055');
+INSERT INTO `integral_detail_tb` VALUES ('2977', '1', '1.00', '2018-11-23 13:22:09', '2018-11-23 13:22:09', '1055');
+INSERT INTO `integral_detail_tb` VALUES ('2978', '1', '1.00', '2018-11-23 13:22:11', '2018-11-23 13:22:11', '1055');
+INSERT INTO `integral_detail_tb` VALUES ('2979', '1', '1.00', '2018-11-23 13:39:54', '2018-11-23 13:39:54', '1055');
 
 -- ----------------------------
 -- Table structure for `integral_tb`
@@ -2530,20 +2778,20 @@ CREATE TABLE `integral_tb` (
   KEY `INDEX_ACCOUNTID` (`account_id`) USING BTREE,
   KEY `INDEX_CREATEDATE` (`create_date`) USING BTREE,
   KEY `INDEX_UPDATEDATE` (`update_date`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1051 DEFAULT CHARSET=utf8 COMMENT='积分表';
+) ENGINE=InnoDB AUTO_INCREMENT=1052 DEFAULT CHARSET=utf8 COMMENT='积分表';
 
 -- ----------------------------
 -- Records of integral_tb
 -- ----------------------------
-INSERT INTO `integral_tb` VALUES ('1004', '597.00', '0.00', '0.00', '0.00', '2018-02-08 21:46:59', '2018-06-26 23:38:24', '1000');
+INSERT INTO `integral_tb` VALUES ('1004', '605.00', '0.00', '0.00', '0.00', '2018-02-08 21:46:59', '2018-11-23 11:18:51', '1000');
 INSERT INTO `integral_tb` VALUES ('1005', '517.00', '0.00', '0.00', '0.00', '2018-02-08 21:47:19', '2018-07-04 14:50:57', '1009');
 INSERT INTO `integral_tb` VALUES ('1006', '245.00', '0.00', '0.00', '0.00', '2018-02-08 21:47:33', '2018-05-15 13:05:56', '1010');
 INSERT INTO `integral_tb` VALUES ('1007', '0.00', '0.00', '0.00', '0.00', '2018-02-08 21:47:48', '2018-02-08 21:47:50', '1011');
-INSERT INTO `integral_tb` VALUES ('1008', '0.00', '0.00', '0.00', '0.00', '2018-02-08 21:48:00', '2018-02-08 21:48:03', '1012');
+INSERT INTO `integral_tb` VALUES ('1008', '15.00', '0.00', '0.00', '0.00', '2018-02-08 21:48:00', '2018-07-31 23:09:13', '1012');
 INSERT INTO `integral_tb` VALUES ('1009', '0.00', '0.00', '0.00', '0.00', '2018-02-10 13:13:19', '2018-02-10 13:13:19', '1013');
-INSERT INTO `integral_tb` VALUES ('1010', '25.00', '0.00', '0.00', '0.00', '2018-02-10 13:19:45', '2018-07-10 18:52:50', '1014');
+INSERT INTO `integral_tb` VALUES ('1010', '40.00', '0.00', '0.00', '0.00', '2018-02-10 13:19:45', '2018-09-06 21:46:48', '1014');
 INSERT INTO `integral_tb` VALUES ('1011', '12.00', '0.00', '0.00', '0.00', '2018-02-22 16:43:03', '2018-04-17 17:48:55', '1015');
-INSERT INTO `integral_tb` VALUES ('1012', '58.00', '0.00', '0.00', '0.00', '2018-02-23 14:07:13', '2018-07-05 17:51:23', '1016');
+INSERT INTO `integral_tb` VALUES ('1012', '88.00', '0.00', '0.00', '0.00', '2018-02-23 14:07:13', '2018-11-23 12:34:03', '1016');
 INSERT INTO `integral_tb` VALUES ('1013', '28.00', '0.00', '0.00', '0.00', '2018-02-28 17:54:43', '2018-04-17 16:54:11', '1017');
 INSERT INTO `integral_tb` VALUES ('1014', '14.00', '0.00', '0.00', '0.00', '2018-03-01 13:23:55', '2018-03-27 14:59:18', '1018');
 INSERT INTO `integral_tb` VALUES ('1015', '68.00', '0.00', '0.00', '0.00', '2018-03-13 09:49:12', '2018-04-03 10:20:23', '1019');
@@ -2568,8 +2816,8 @@ INSERT INTO `integral_tb` VALUES ('1033', '0.00', '0.00', '0.00', '0.00', '2018-
 INSERT INTO `integral_tb` VALUES ('1034', '8.00', '0.00', '0.00', '0.00', '2018-05-30 18:31:26', '2018-06-12 16:14:23', '1038');
 INSERT INTO `integral_tb` VALUES ('1035', '0.00', '0.00', '0.00', '0.00', '2018-05-31 14:20:08', '2018-05-31 14:20:08', '1039');
 INSERT INTO `integral_tb` VALUES ('1036', '0.00', '0.00', '0.00', '0.00', '2018-06-01 14:43:35', '2018-06-01 14:43:35', '1040');
-INSERT INTO `integral_tb` VALUES ('1037', '4.00', '0.00', '0.00', '0.00', '2018-06-01 16:14:28', '2018-07-09 10:17:56', '1041');
-INSERT INTO `integral_tb` VALUES ('1038', '0.00', '0.00', '0.00', '0.00', '2018-06-01 16:35:05', '2018-06-01 16:35:05', '1042');
+INSERT INTO `integral_tb` VALUES ('1037', '51.00', '0.00', '0.00', '0.00', '2018-06-01 16:14:28', '2018-08-02 10:05:44', '1041');
+INSERT INTO `integral_tb` VALUES ('1038', '9.00', '0.00', '0.00', '0.00', '2018-06-01 16:35:05', '2018-07-31 16:07:04', '1042');
 INSERT INTO `integral_tb` VALUES ('1039', '0.00', '0.00', '0.00', '0.00', '2018-06-04 13:39:47', '2018-06-04 13:39:47', '1043');
 INSERT INTO `integral_tb` VALUES ('1040', '0.00', '0.00', '0.00', '0.00', '2018-06-13 14:09:14', '2018-06-13 14:09:14', '1044');
 INSERT INTO `integral_tb` VALUES ('1041', '0.00', '0.00', '0.00', '0.00', '2018-06-24 11:36:11', '2018-06-24 11:36:11', '1045');
@@ -2579,9 +2827,10 @@ INSERT INTO `integral_tb` VALUES ('1044', '0.00', '0.00', '0.00', '0.00', '2018-
 INSERT INTO `integral_tb` VALUES ('1045', '0.00', '0.00', '0.00', '0.00', '2018-06-25 09:20:53', '2018-06-25 09:20:53', '1049');
 INSERT INTO `integral_tb` VALUES ('1046', '0.00', '0.00', '0.00', '0.00', '2018-06-25 09:22:16', '2018-06-25 09:22:16', '1050');
 INSERT INTO `integral_tb` VALUES ('1047', '0.00', '0.00', '0.00', '0.00', '2018-06-25 09:35:22', '2018-06-25 09:35:22', '1051');
-INSERT INTO `integral_tb` VALUES ('1048', '0.00', '0.00', '0.00', '0.00', '2018-06-26 17:34:51', '2018-06-26 17:34:51', '1052');
+INSERT INTO `integral_tb` VALUES ('1048', '36.00', '0.00', '0.00', '0.00', '2018-06-26 17:34:51', '2018-07-31 16:58:48', '1052');
 INSERT INTO `integral_tb` VALUES ('1049', '0.00', '0.00', '0.00', '0.00', '2018-07-04 10:54:56', '2018-07-04 10:54:56', '1053');
 INSERT INTO `integral_tb` VALUES ('1050', '0.00', '0.00', '0.00', '0.00', '2018-07-04 13:54:55', '2018-07-04 13:54:55', '1054');
+INSERT INTO `integral_tb` VALUES ('1051', '18.00', '0.00', '0.00', '0.00', '2018-11-23 10:35:15', '2018-11-23 13:39:54', '1055');
 
 -- ----------------------------
 -- Table structure for `medal_tb`
@@ -2645,185 +2894,194 @@ CREATE TABLE `notice_tb` (
   KEY `INDEX_STATUS` (`status`) USING BTREE,
   KEY `INDEX_REGION` (`region`) USING BTREE,
   KEY `INDEX_PARENTID` (`parent_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1264 DEFAULT CHARSET=utf8 COMMENT='通知表';
+) ENGINE=InnoDB AUTO_INCREMENT=1273 DEFAULT CHARSET=utf8 COMMENT='通知表';
 
 -- ----------------------------
 -- Records of notice_tb
 -- ----------------------------
-INSERT INTO `notice_tb` VALUES ('1004', '2', '团购通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gav4cn173evs35fv1g8f1e6pu.png', '您的4500.0元团购申请已成功，详情请前往您的团购中查看。', '1', '2018-02-09 15:41:55', '2018-05-31 14:16:32', '1009', null);
-INSERT INTO `notice_tb` VALUES ('1005', '2', '团购申请', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb9b7411vottl4am19qm7i81d.png', '您新收到一个来自谢威的4500.0元团购申请，请及时处理。', '1', '2018-02-09 15:41:55', '2018-05-01 16:22:11', '1000', null);
-INSERT INTO `notice_tb` VALUES ('1012', '2', '团购通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gav4cn173evs35fv1g8f1e6pu.png', '您的25000.0元团购申请已成功，详情请前往您的团购中查看。', '1', '2018-02-24 11:07:31', '2018-05-31 14:16:34', '1009', null);
-INSERT INTO `notice_tb` VALUES ('1013', '2', '团购申请', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb9b7411vottl4am19qm7i81d.png', '您新收到一个来自谢威的25000.0元团购申请，请及时处理。', '1', '2018-02-24 11:07:31', '2018-05-01 16:22:13', '1000', null);
-INSERT INTO `notice_tb` VALUES ('1014', '2', '团购通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gav4cn173evs35fv1g8f1e6pu.png', '您的4500.0元团购申请已成功，详情请前往您的团购中查看。', '0', '2018-03-05 12:35:01', '2018-03-05 12:35:01', '1010', null);
-INSERT INTO `notice_tb` VALUES ('1015', '2', '团购申请', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb9b7411vottl4am19qm7i81d.png', '您新收到一个来自舒靖宇的4500.0元团购申请，请及时处理。', '0', '2018-03-05 12:35:01', '2018-03-05 12:35:01', '1000', null);
-INSERT INTO `notice_tb` VALUES ('1016', '2', '团购通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gav4cn173evs35fv1g8f1e6pu.png', '您的25000.0元团购申请已成功，详情请前往您的团购中查看。', '0', '2018-03-13 01:06:14', '2018-03-13 01:06:14', '1010', null);
-INSERT INTO `notice_tb` VALUES ('1017', '2', '团购申请', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb9b7411vottl4am19qm7i81d.png', '您新收到一个来自舒靖宇的25000.0元团购申请，请及时处理。', '1', '2018-03-13 01:06:14', '2018-05-01 16:26:40', '1000', null);
-INSERT INTO `notice_tb` VALUES ('1080', '1', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', null, null);
-INSERT INTO `notice_tb` VALUES ('1081', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1000', '1080');
-INSERT INTO `notice_tb` VALUES ('1082', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '1', '2018-03-30 16:33:44', '2018-04-08 23:13:43', '1009', '1080');
-INSERT INTO `notice_tb` VALUES ('1083', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1010', '1080');
-INSERT INTO `notice_tb` VALUES ('1084', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1011', '1080');
-INSERT INTO `notice_tb` VALUES ('1085', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1012', '1080');
-INSERT INTO `notice_tb` VALUES ('1086', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '1', '2018-03-30 16:33:44', '2018-05-01 01:19:23', '1013', '1080');
-INSERT INTO `notice_tb` VALUES ('1087', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1014', '1080');
-INSERT INTO `notice_tb` VALUES ('1088', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1015', '1080');
-INSERT INTO `notice_tb` VALUES ('1089', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '1', '2018-03-30 16:33:44', '2018-04-12 14:08:38', '1016', '1080');
-INSERT INTO `notice_tb` VALUES ('1090', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1017', '1080');
-INSERT INTO `notice_tb` VALUES ('1091', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1018', '1080');
-INSERT INTO `notice_tb` VALUES ('1092', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1019', '1080');
-INSERT INTO `notice_tb` VALUES ('1093', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1020', '1080');
-INSERT INTO `notice_tb` VALUES ('1094', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1021', '1080');
-INSERT INTO `notice_tb` VALUES ('1095', '1', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '1', '2018-03-30 16:34:17', '2018-03-30 17:03:49', null, null);
-INSERT INTO `notice_tb` VALUES ('1096', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1000', '1095');
-INSERT INTO `notice_tb` VALUES ('1097', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '1', '2018-03-30 16:34:17', '2018-04-08 23:13:43', '1009', '1095');
-INSERT INTO `notice_tb` VALUES ('1098', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1010', '1095');
-INSERT INTO `notice_tb` VALUES ('1099', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1011', '1095');
-INSERT INTO `notice_tb` VALUES ('1100', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1012', '1095');
-INSERT INTO `notice_tb` VALUES ('1101', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1013', '1095');
-INSERT INTO `notice_tb` VALUES ('1102', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1014', '1095');
-INSERT INTO `notice_tb` VALUES ('1103', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1015', '1095');
-INSERT INTO `notice_tb` VALUES ('1104', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '1', '2018-03-30 16:34:17', '2018-04-12 14:08:40', '1016', '1095');
-INSERT INTO `notice_tb` VALUES ('1105', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1017', '1095');
-INSERT INTO `notice_tb` VALUES ('1106', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1018', '1095');
-INSERT INTO `notice_tb` VALUES ('1107', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1019', '1095');
-INSERT INTO `notice_tb` VALUES ('1108', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1020', '1095');
-INSERT INTO `notice_tb` VALUES ('1109', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1021', '1095');
-INSERT INTO `notice_tb` VALUES ('1110', '1', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '1', '2018-03-30 17:03:28', '2018-03-30 17:03:45', null, null);
-INSERT INTO `notice_tb` VALUES ('1111', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1000', '1110');
-INSERT INTO `notice_tb` VALUES ('1112', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '1', '2018-03-30 17:03:28', '2018-04-08 23:13:43', '1009', '1110');
-INSERT INTO `notice_tb` VALUES ('1113', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1010', '1110');
-INSERT INTO `notice_tb` VALUES ('1114', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1011', '1110');
-INSERT INTO `notice_tb` VALUES ('1115', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1012', '1110');
-INSERT INTO `notice_tb` VALUES ('1116', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1013', '1110');
-INSERT INTO `notice_tb` VALUES ('1117', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1014', '1110');
-INSERT INTO `notice_tb` VALUES ('1118', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1015', '1110');
-INSERT INTO `notice_tb` VALUES ('1119', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '1', '2018-03-30 17:03:28', '2018-04-12 14:08:41', '1016', '1110');
-INSERT INTO `notice_tb` VALUES ('1120', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1017', '1110');
-INSERT INTO `notice_tb` VALUES ('1121', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1018', '1110');
-INSERT INTO `notice_tb` VALUES ('1122', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1019', '1110');
-INSERT INTO `notice_tb` VALUES ('1123', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1020', '1110');
-INSERT INTO `notice_tb` VALUES ('1124', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1021', '1110');
-INSERT INTO `notice_tb` VALUES ('1140', '1', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', null, null);
-INSERT INTO `notice_tb` VALUES ('1141', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '1', '2018-04-03 11:10:43', '2018-04-11 10:28:07', '1000', '1140');
-INSERT INTO `notice_tb` VALUES ('1142', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '1', '2018-04-03 11:10:43', '2018-04-08 23:13:43', '1009', '1140');
-INSERT INTO `notice_tb` VALUES ('1143', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1010', '1140');
-INSERT INTO `notice_tb` VALUES ('1144', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1011', '1140');
-INSERT INTO `notice_tb` VALUES ('1145', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1012', '1140');
-INSERT INTO `notice_tb` VALUES ('1146', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1013', '1140');
-INSERT INTO `notice_tb` VALUES ('1147', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1014', '1140');
-INSERT INTO `notice_tb` VALUES ('1148', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1015', '1140');
-INSERT INTO `notice_tb` VALUES ('1149', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '1', '2018-04-03 11:10:43', '2018-04-12 14:08:44', '1016', '1140');
-INSERT INTO `notice_tb` VALUES ('1150', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1017', '1140');
-INSERT INTO `notice_tb` VALUES ('1151', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1018', '1140');
-INSERT INTO `notice_tb` VALUES ('1152', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1019', '1140');
-INSERT INTO `notice_tb` VALUES ('1153', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1020', '1140');
-INSERT INTO `notice_tb` VALUES ('1154', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1021', '1140');
-INSERT INTO `notice_tb` VALUES ('1155', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1022', '1140');
-INSERT INTO `notice_tb` VALUES ('1156', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1023', '1140');
-INSERT INTO `notice_tb` VALUES ('1157', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1024', '1140');
-INSERT INTO `notice_tb` VALUES ('1158', '1', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', null, null);
-INSERT INTO `notice_tb` VALUES ('1159', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1000', '1158');
-INSERT INTO `notice_tb` VALUES ('1160', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '1', '2018-04-03 11:12:05', '2018-04-11 21:17:15', '1009', '1158');
-INSERT INTO `notice_tb` VALUES ('1161', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1010', '1158');
-INSERT INTO `notice_tb` VALUES ('1162', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1011', '1158');
-INSERT INTO `notice_tb` VALUES ('1163', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '1', '2018-04-03 11:12:05', '2018-05-07 11:53:14', '1012', '1158');
-INSERT INTO `notice_tb` VALUES ('1164', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1013', '1158');
-INSERT INTO `notice_tb` VALUES ('1165', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1014', '1158');
-INSERT INTO `notice_tb` VALUES ('1166', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1015', '1158');
-INSERT INTO `notice_tb` VALUES ('1167', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '1', '2018-04-03 11:12:05', '2018-04-12 14:08:46', '1016', '1158');
-INSERT INTO `notice_tb` VALUES ('1168', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1017', '1158');
-INSERT INTO `notice_tb` VALUES ('1169', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1018', '1158');
-INSERT INTO `notice_tb` VALUES ('1170', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1019', '1158');
-INSERT INTO `notice_tb` VALUES ('1171', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1020', '1158');
-INSERT INTO `notice_tb` VALUES ('1172', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1021', '1158');
-INSERT INTO `notice_tb` VALUES ('1173', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1022', '1158');
-INSERT INTO `notice_tb` VALUES ('1174', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1023', '1158');
-INSERT INTO `notice_tb` VALUES ('1175', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1024', '1158');
-INSERT INTO `notice_tb` VALUES ('1176', '1', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', null, null);
-INSERT INTO `notice_tb` VALUES ('1177', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '1', '2018-04-03 11:14:02', '2018-04-08 23:22:01', '1000', '1176');
-INSERT INTO `notice_tb` VALUES ('1178', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '1', '2018-04-03 11:14:02', '2018-04-11 21:16:40', '1009', '1176');
-INSERT INTO `notice_tb` VALUES ('1179', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1010', '1176');
-INSERT INTO `notice_tb` VALUES ('1180', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1011', '1176');
-INSERT INTO `notice_tb` VALUES ('1181', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '1', '2018-04-03 11:14:02', '2018-05-07 11:53:09', '1012', '1176');
-INSERT INTO `notice_tb` VALUES ('1182', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '1', '2018-04-03 11:14:02', '2018-05-01 01:19:09', '1013', '1176');
-INSERT INTO `notice_tb` VALUES ('1183', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1014', '1176');
-INSERT INTO `notice_tb` VALUES ('1184', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1015', '1176');
-INSERT INTO `notice_tb` VALUES ('1185', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '1', '2018-04-03 11:14:02', '2018-04-12 14:08:48', '1016', '1176');
-INSERT INTO `notice_tb` VALUES ('1186', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1017', '1176');
-INSERT INTO `notice_tb` VALUES ('1187', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1018', '1176');
-INSERT INTO `notice_tb` VALUES ('1188', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1019', '1176');
-INSERT INTO `notice_tb` VALUES ('1189', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1020', '1176');
-INSERT INTO `notice_tb` VALUES ('1190', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1021', '1176');
-INSERT INTO `notice_tb` VALUES ('1191', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1022', '1176');
-INSERT INTO `notice_tb` VALUES ('1192', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1023', '1176');
-INSERT INTO `notice_tb` VALUES ('1193', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1024', '1176');
-INSERT INTO `notice_tb` VALUES ('1194', '2', '提现到账通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的10000.0元提现已到账，请前往您的支付宝账号进行查看。', '1', '2018-04-11 12:06:10', '2018-04-11 12:09:59', '1010', null);
-INSERT INTO `notice_tb` VALUES ('1195', '2', '提现到账通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的1.0元提现已到账，请前往您的微信账号进行查看。', '0', '2018-04-11 12:13:51', '2018-04-11 12:13:51', '1010', null);
-INSERT INTO `notice_tb` VALUES ('1196', '2', '提现到账通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的1.0元提现已到账，请前往您的微信账号进行查看。', '0', '2018-04-11 12:16:16', '2018-04-11 12:16:16', '1010', null);
-INSERT INTO `notice_tb` VALUES ('1197', '2', '提现到账通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的1000.0元提现已到账，请前往您的支付宝账号进行查看。', '0', '2018-04-11 12:17:24', '2018-04-11 12:17:24', '1010', null);
-INSERT INTO `notice_tb` VALUES ('1198', '2', '提现到账通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的1000.0元提现已到账，请前往您的微信账号进行查看。', '0', '2018-04-11 12:18:03', '2018-04-11 12:18:03', '1010', null);
-INSERT INTO `notice_tb` VALUES ('1199', '2', '提现到账通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的1000.0元提现已到账，请前往您的支付宝账号进行查看。', '1', '2018-04-11 12:18:39', '2018-05-01 16:41:59', '1010', null);
-INSERT INTO `notice_tb` VALUES ('1200', '1', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', null, null);
-INSERT INTO `notice_tb` VALUES ('1201', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1000', '1200');
-INSERT INTO `notice_tb` VALUES ('1202', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '1', '2018-04-12 14:06:48', '2018-05-07 13:40:46', '1009', '1200');
-INSERT INTO `notice_tb` VALUES ('1203', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '1', '2018-04-12 14:06:48', '2018-05-01 16:52:42', '1010', '1200');
-INSERT INTO `notice_tb` VALUES ('1204', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1011', '1200');
-INSERT INTO `notice_tb` VALUES ('1205', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '1', '2018-04-12 14:06:48', '2018-05-12 22:08:07', '1012', '1200');
-INSERT INTO `notice_tb` VALUES ('1206', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '1', '2018-04-12 14:06:48', '2018-05-01 17:06:20', '1013', '1200');
-INSERT INTO `notice_tb` VALUES ('1207', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1014', '1200');
-INSERT INTO `notice_tb` VALUES ('1208', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1015', '1200');
-INSERT INTO `notice_tb` VALUES ('1209', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '1', '2018-04-12 14:06:48', '2018-04-12 14:08:50', '1016', '1200');
-INSERT INTO `notice_tb` VALUES ('1210', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1017', '1200');
-INSERT INTO `notice_tb` VALUES ('1211', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1018', '1200');
-INSERT INTO `notice_tb` VALUES ('1212', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '1', '2018-04-12 14:06:48', '2018-05-07 14:38:59', '1019', '1200');
-INSERT INTO `notice_tb` VALUES ('1213', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1020', '1200');
-INSERT INTO `notice_tb` VALUES ('1214', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1021', '1200');
-INSERT INTO `notice_tb` VALUES ('1215', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1022', '1200');
-INSERT INTO `notice_tb` VALUES ('1216', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1023', '1200');
-INSERT INTO `notice_tb` VALUES ('1217', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1024', '1200');
-INSERT INTO `notice_tb` VALUES ('1218', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1025', '1200');
-INSERT INTO `notice_tb` VALUES ('1219', '2', '提现到账通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的0.01元提现已到账，请前往您的支付宝账号进行查看。', '1', '2018-05-30 16:57:07', '2018-07-05 15:30:58', '1016', null);
-INSERT INTO `notice_tb` VALUES ('1220', '1', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', null, null);
-INSERT INTO `notice_tb` VALUES ('1221', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '1', '2018-05-30 17:13:35', '2018-05-31 11:32:41', '1000', '1220');
-INSERT INTO `notice_tb` VALUES ('1222', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '1', '2018-05-30 17:13:35', '2018-05-31 14:16:22', '1009', '1220');
-INSERT INTO `notice_tb` VALUES ('1223', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1010', '1220');
-INSERT INTO `notice_tb` VALUES ('1224', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1011', '1220');
-INSERT INTO `notice_tb` VALUES ('1225', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '1', '2018-05-30 17:13:35', '2018-05-31 23:00:56', '1012', '1220');
-INSERT INTO `notice_tb` VALUES ('1226', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1013', '1220');
-INSERT INTO `notice_tb` VALUES ('1227', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1014', '1220');
-INSERT INTO `notice_tb` VALUES ('1228', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1015', '1220');
-INSERT INTO `notice_tb` VALUES ('1229', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '1', '2018-05-30 17:13:35', '2018-07-05 15:30:54', '1016', '1220');
-INSERT INTO `notice_tb` VALUES ('1230', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1017', '1220');
-INSERT INTO `notice_tb` VALUES ('1231', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1018', '1220');
-INSERT INTO `notice_tb` VALUES ('1232', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1019', '1220');
-INSERT INTO `notice_tb` VALUES ('1233', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1020', '1220');
-INSERT INTO `notice_tb` VALUES ('1234', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1021', '1220');
-INSERT INTO `notice_tb` VALUES ('1235', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1022', '1220');
-INSERT INTO `notice_tb` VALUES ('1236', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1023', '1220');
-INSERT INTO `notice_tb` VALUES ('1237', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1024', '1220');
-INSERT INTO `notice_tb` VALUES ('1238', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1025', '1220');
-INSERT INTO `notice_tb` VALUES ('1239', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1026', '1220');
-INSERT INTO `notice_tb` VALUES ('1240', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1027', '1220');
-INSERT INTO `notice_tb` VALUES ('1241', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1028', '1220');
-INSERT INTO `notice_tb` VALUES ('1242', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1029', '1220');
-INSERT INTO `notice_tb` VALUES ('1243', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1030', '1220');
-INSERT INTO `notice_tb` VALUES ('1244', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1031', '1220');
-INSERT INTO `notice_tb` VALUES ('1245', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1032', '1220');
-INSERT INTO `notice_tb` VALUES ('1246', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1033', '1220');
-INSERT INTO `notice_tb` VALUES ('1247', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1034', '1220');
-INSERT INTO `notice_tb` VALUES ('1248', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1035', '1220');
-INSERT INTO `notice_tb` VALUES ('1249', '2', '系统通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1036', '1220');
-INSERT INTO `notice_tb` VALUES ('1251', '2', '团购卡余额不足', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb3tvce1e1d7sivg5kr1naq13.png', '您的团购卡余额不足0张，为了不影响您下级的正常升级，请前往升级。', '0', '2018-06-01 16:27:02', '2018-06-01 16:27:02', '1038', null);
-INSERT INTO `notice_tb` VALUES ('1254', '2', '团购卡余额不足', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb3tvce1e1d7sivg5kr1naq13.png', '您的团购卡余额不足0张，为了不影响您下级的正常升级，请前往升级。', '0', '2018-06-12 16:07:07', '2018-06-12 16:07:07', '1038', null);
-INSERT INTO `notice_tb` VALUES ('1255', '2', '团购通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gav4cn173evs35fv1g8f1e6pu.png', '您的4500.0元团购申请已成功，详情请前往您的团购中查看。', '0', '2018-06-12 16:09:55', '2018-06-12 16:09:55', '1038', null);
-INSERT INTO `notice_tb` VALUES ('1256', '2', '团购申请', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb9b7411vottl4am19qm7i81d.png', '您新收到一个来自普通vip的4500.0元团购申请，请及时处理。', '1', '2018-06-12 16:09:55', '2018-06-13 23:04:48', '1000', null);
-INSERT INTO `notice_tb` VALUES ('1257', '2', '提现到账通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的1.0元提现已到账，请前往您的支付宝账号进行查看。', '0', '2018-06-27 10:22:07', '2018-06-27 10:22:07', '1052', null);
-INSERT INTO `notice_tb` VALUES ('1258', '2', '提现到账通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的10.0元提现已到账，请前往您的支付宝账号进行查看。', '1', '2018-06-27 10:28:28', '2018-06-27 10:47:39', '1052', null);
-INSERT INTO `notice_tb` VALUES ('1259', '2', '提现到账通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的100.0元提现已到账，请前往您的支付宝账号进行查看。', '0', '2018-07-05 14:58:30', '2018-07-05 14:58:30', '1041', null);
-INSERT INTO `notice_tb` VALUES ('1260', '2', '提现到账通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的100.0元提现已到账，请前往您的支付宝账号进行查看。', '0', '2018-07-05 14:58:35', '2018-07-05 14:58:35', '1041', null);
-INSERT INTO `notice_tb` VALUES ('1261', '2', '提现到账通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的1.0元提现已到账，请前往您的支付宝账号进行查看。', '0', '2018-07-05 14:58:37', '2018-07-05 14:58:37', '1041', null);
-INSERT INTO `notice_tb` VALUES ('1262', '2', '提现到账通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的0.43元提现已到账，请前往您的支付宝账号进行查看。', '1', '2018-07-05 15:01:07', '2018-07-05 15:31:09', '1016', null);
-INSERT INTO `notice_tb` VALUES ('1263', '2', '提现到账通知', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的100.0元提现已到账，请前往您的支付宝账号进行查看。', '0', '2018-07-09 13:49:53', '2018-07-09 13:49:53', '1041', null);
+INSERT INTO `notice_tb` VALUES ('1004', '2', '团购通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gav4cn173evs35fv1g8f1e6pu.png', '您的4500.0元团购申请已成功，详情请前往您的团购中查看。', '1', '2018-02-09 15:41:55', '2018-05-31 14:16:32', '1009', null);
+INSERT INTO `notice_tb` VALUES ('1005', '2', '团购申请', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb9b7411vottl4am19qm7i81d.png', '您新收到一个来自谢威的4500.0元团购申请，请及时处理。', '1', '2018-02-09 15:41:55', '2018-05-01 16:22:11', '1000', null);
+INSERT INTO `notice_tb` VALUES ('1012', '2', '团购通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gav4cn173evs35fv1g8f1e6pu.png', '您的25000.0元团购申请已成功，详情请前往您的团购中查看。', '1', '2018-02-24 11:07:31', '2018-05-31 14:16:34', '1009', null);
+INSERT INTO `notice_tb` VALUES ('1013', '2', '团购申请', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb9b7411vottl4am19qm7i81d.png', '您新收到一个来自谢威的25000.0元团购申请，请及时处理。', '1', '2018-02-24 11:07:31', '2018-05-01 16:22:13', '1000', null);
+INSERT INTO `notice_tb` VALUES ('1014', '2', '团购通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gav4cn173evs35fv1g8f1e6pu.png', '您的4500.0元团购申请已成功，详情请前往您的团购中查看。', '0', '2018-03-05 12:35:01', '2018-03-05 12:35:01', '1010', null);
+INSERT INTO `notice_tb` VALUES ('1015', '2', '团购申请', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb9b7411vottl4am19qm7i81d.png', '您新收到一个来自舒靖宇的4500.0元团购申请，请及时处理。', '0', '2018-03-05 12:35:01', '2018-03-05 12:35:01', '1000', null);
+INSERT INTO `notice_tb` VALUES ('1016', '2', '团购通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gav4cn173evs35fv1g8f1e6pu.png', '您的25000.0元团购申请已成功，详情请前往您的团购中查看。', '0', '2018-03-13 01:06:14', '2018-03-13 01:06:14', '1010', null);
+INSERT INTO `notice_tb` VALUES ('1017', '2', '团购申请', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb9b7411vottl4am19qm7i81d.png', '您新收到一个来自舒靖宇的25000.0元团购申请，请及时处理。', '1', '2018-03-13 01:06:14', '2018-05-01 16:26:40', '1000', null);
+INSERT INTO `notice_tb` VALUES ('1080', '1', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', null, null);
+INSERT INTO `notice_tb` VALUES ('1081', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1000', '1080');
+INSERT INTO `notice_tb` VALUES ('1082', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '1', '2018-03-30 16:33:44', '2018-04-08 23:13:43', '1009', '1080');
+INSERT INTO `notice_tb` VALUES ('1083', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1010', '1080');
+INSERT INTO `notice_tb` VALUES ('1084', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1011', '1080');
+INSERT INTO `notice_tb` VALUES ('1085', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1012', '1080');
+INSERT INTO `notice_tb` VALUES ('1086', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '1', '2018-03-30 16:33:44', '2018-05-01 01:19:23', '1013', '1080');
+INSERT INTO `notice_tb` VALUES ('1087', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1014', '1080');
+INSERT INTO `notice_tb` VALUES ('1088', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1015', '1080');
+INSERT INTO `notice_tb` VALUES ('1089', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '1', '2018-03-30 16:33:44', '2018-04-12 14:08:38', '1016', '1080');
+INSERT INTO `notice_tb` VALUES ('1090', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1017', '1080');
+INSERT INTO `notice_tb` VALUES ('1091', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1018', '1080');
+INSERT INTO `notice_tb` VALUES ('1092', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1019', '1080');
+INSERT INTO `notice_tb` VALUES ('1093', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1020', '1080');
+INSERT INTO `notice_tb` VALUES ('1094', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '欢迎进入老爷说', '0', '2018-03-30 16:33:44', '2018-03-30 16:33:44', '1021', '1080');
+INSERT INTO `notice_tb` VALUES ('1095', '1', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '1', '2018-03-30 16:34:17', '2018-03-30 17:03:49', null, null);
+INSERT INTO `notice_tb` VALUES ('1096', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1000', '1095');
+INSERT INTO `notice_tb` VALUES ('1097', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '1', '2018-03-30 16:34:17', '2018-04-08 23:13:43', '1009', '1095');
+INSERT INTO `notice_tb` VALUES ('1098', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1010', '1095');
+INSERT INTO `notice_tb` VALUES ('1099', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1011', '1095');
+INSERT INTO `notice_tb` VALUES ('1100', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1012', '1095');
+INSERT INTO `notice_tb` VALUES ('1101', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1013', '1095');
+INSERT INTO `notice_tb` VALUES ('1102', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1014', '1095');
+INSERT INTO `notice_tb` VALUES ('1103', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1015', '1095');
+INSERT INTO `notice_tb` VALUES ('1104', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '1', '2018-03-30 16:34:17', '2018-04-12 14:08:40', '1016', '1095');
+INSERT INTO `notice_tb` VALUES ('1105', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1017', '1095');
+INSERT INTO `notice_tb` VALUES ('1106', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1018', '1095');
+INSERT INTO `notice_tb` VALUES ('1107', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1019', '1095');
+INSERT INTO `notice_tb` VALUES ('1108', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1020', '1095');
+INSERT INTO `notice_tb` VALUES ('1109', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第一条测试通知', '0', '2018-03-30 16:34:17', '2018-03-30 17:03:49', '1021', '1095');
+INSERT INTO `notice_tb` VALUES ('1110', '1', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '1', '2018-03-30 17:03:28', '2018-03-30 17:03:45', null, null);
+INSERT INTO `notice_tb` VALUES ('1111', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1000', '1110');
+INSERT INTO `notice_tb` VALUES ('1112', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '1', '2018-03-30 17:03:28', '2018-04-08 23:13:43', '1009', '1110');
+INSERT INTO `notice_tb` VALUES ('1113', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1010', '1110');
+INSERT INTO `notice_tb` VALUES ('1114', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1011', '1110');
+INSERT INTO `notice_tb` VALUES ('1115', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1012', '1110');
+INSERT INTO `notice_tb` VALUES ('1116', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1013', '1110');
+INSERT INTO `notice_tb` VALUES ('1117', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1014', '1110');
+INSERT INTO `notice_tb` VALUES ('1118', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1015', '1110');
+INSERT INTO `notice_tb` VALUES ('1119', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '1', '2018-03-30 17:03:28', '2018-04-12 14:08:41', '1016', '1110');
+INSERT INTO `notice_tb` VALUES ('1120', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1017', '1110');
+INSERT INTO `notice_tb` VALUES ('1121', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1018', '1110');
+INSERT INTO `notice_tb` VALUES ('1122', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1019', '1110');
+INSERT INTO `notice_tb` VALUES ('1123', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1020', '1110');
+INSERT INTO `notice_tb` VALUES ('1124', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3c2vq1j41v68pgk1cchb8j2s.png', '这是第二条测试通知', '0', '2018-03-30 17:03:28', '2018-03-30 17:03:45', '1021', '1110');
+INSERT INTO `notice_tb` VALUES ('1140', '1', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', null, null);
+INSERT INTO `notice_tb` VALUES ('1141', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '1', '2018-04-03 11:10:43', '2018-04-11 10:28:07', '1000', '1140');
+INSERT INTO `notice_tb` VALUES ('1142', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '1', '2018-04-03 11:10:43', '2018-04-08 23:13:43', '1009', '1140');
+INSERT INTO `notice_tb` VALUES ('1143', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1010', '1140');
+INSERT INTO `notice_tb` VALUES ('1144', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1011', '1140');
+INSERT INTO `notice_tb` VALUES ('1145', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1012', '1140');
+INSERT INTO `notice_tb` VALUES ('1146', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1013', '1140');
+INSERT INTO `notice_tb` VALUES ('1147', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1014', '1140');
+INSERT INTO `notice_tb` VALUES ('1148', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1015', '1140');
+INSERT INTO `notice_tb` VALUES ('1149', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '1', '2018-04-03 11:10:43', '2018-04-12 14:08:44', '1016', '1140');
+INSERT INTO `notice_tb` VALUES ('1150', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1017', '1140');
+INSERT INTO `notice_tb` VALUES ('1151', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1018', '1140');
+INSERT INTO `notice_tb` VALUES ('1152', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1019', '1140');
+INSERT INTO `notice_tb` VALUES ('1153', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1020', '1140');
+INSERT INTO `notice_tb` VALUES ('1154', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1021', '1140');
+INSERT INTO `notice_tb` VALUES ('1155', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1022', '1140');
+INSERT INTO `notice_tb` VALUES ('1156', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1023', '1140');
+INSERT INTO `notice_tb` VALUES ('1157', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第三条系统通知', '0', '2018-04-03 11:10:43', '2018-04-03 11:10:43', '1024', '1140');
+INSERT INTO `notice_tb` VALUES ('1158', '1', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', null, null);
+INSERT INTO `notice_tb` VALUES ('1159', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1000', '1158');
+INSERT INTO `notice_tb` VALUES ('1160', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '1', '2018-04-03 11:12:05', '2018-04-11 21:17:15', '1009', '1158');
+INSERT INTO `notice_tb` VALUES ('1161', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1010', '1158');
+INSERT INTO `notice_tb` VALUES ('1162', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1011', '1158');
+INSERT INTO `notice_tb` VALUES ('1163', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '1', '2018-04-03 11:12:05', '2018-05-07 11:53:14', '1012', '1158');
+INSERT INTO `notice_tb` VALUES ('1164', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1013', '1158');
+INSERT INTO `notice_tb` VALUES ('1165', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1014', '1158');
+INSERT INTO `notice_tb` VALUES ('1166', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1015', '1158');
+INSERT INTO `notice_tb` VALUES ('1167', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '1', '2018-04-03 11:12:05', '2018-04-12 14:08:46', '1016', '1158');
+INSERT INTO `notice_tb` VALUES ('1168', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1017', '1158');
+INSERT INTO `notice_tb` VALUES ('1169', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1018', '1158');
+INSERT INTO `notice_tb` VALUES ('1170', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1019', '1158');
+INSERT INTO `notice_tb` VALUES ('1171', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1020', '1158');
+INSERT INTO `notice_tb` VALUES ('1172', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1021', '1158');
+INSERT INTO `notice_tb` VALUES ('1173', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1022', '1158');
+INSERT INTO `notice_tb` VALUES ('1174', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1023', '1158');
+INSERT INTO `notice_tb` VALUES ('1175', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第四条系统通知', '0', '2018-04-03 11:12:05', '2018-04-03 11:12:05', '1024', '1158');
+INSERT INTO `notice_tb` VALUES ('1176', '1', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', null, null);
+INSERT INTO `notice_tb` VALUES ('1177', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '1', '2018-04-03 11:14:02', '2018-04-08 23:22:01', '1000', '1176');
+INSERT INTO `notice_tb` VALUES ('1178', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '1', '2018-04-03 11:14:02', '2018-04-11 21:16:40', '1009', '1176');
+INSERT INTO `notice_tb` VALUES ('1179', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1010', '1176');
+INSERT INTO `notice_tb` VALUES ('1180', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1011', '1176');
+INSERT INTO `notice_tb` VALUES ('1181', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '1', '2018-04-03 11:14:02', '2018-05-07 11:53:09', '1012', '1176');
+INSERT INTO `notice_tb` VALUES ('1182', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '1', '2018-04-03 11:14:02', '2018-05-01 01:19:09', '1013', '1176');
+INSERT INTO `notice_tb` VALUES ('1183', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1014', '1176');
+INSERT INTO `notice_tb` VALUES ('1184', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1015', '1176');
+INSERT INTO `notice_tb` VALUES ('1185', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '1', '2018-04-03 11:14:02', '2018-04-12 14:08:48', '1016', '1176');
+INSERT INTO `notice_tb` VALUES ('1186', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1017', '1176');
+INSERT INTO `notice_tb` VALUES ('1187', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1018', '1176');
+INSERT INTO `notice_tb` VALUES ('1188', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1019', '1176');
+INSERT INTO `notice_tb` VALUES ('1189', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1020', '1176');
+INSERT INTO `notice_tb` VALUES ('1190', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1021', '1176');
+INSERT INTO `notice_tb` VALUES ('1191', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1022', '1176');
+INSERT INTO `notice_tb` VALUES ('1192', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1023', '1176');
+INSERT INTO `notice_tb` VALUES ('1193', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第五条系统通知', '0', '2018-04-03 11:14:02', '2018-04-03 11:14:02', '1024', '1176');
+INSERT INTO `notice_tb` VALUES ('1194', '2', '提现到账通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的10000.0元提现已到账，请前往您的支付宝账号进行查看。', '1', '2018-04-11 12:06:10', '2018-04-11 12:09:59', '1010', null);
+INSERT INTO `notice_tb` VALUES ('1195', '2', '提现到账通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的1.0元提现已到账，请前往您的微信账号进行查看。', '0', '2018-04-11 12:13:51', '2018-04-11 12:13:51', '1010', null);
+INSERT INTO `notice_tb` VALUES ('1196', '2', '提现到账通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的1.0元提现已到账，请前往您的微信账号进行查看。', '0', '2018-04-11 12:16:16', '2018-04-11 12:16:16', '1010', null);
+INSERT INTO `notice_tb` VALUES ('1197', '2', '提现到账通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的1000.0元提现已到账，请前往您的支付宝账号进行查看。', '0', '2018-04-11 12:17:24', '2018-04-11 12:17:24', '1010', null);
+INSERT INTO `notice_tb` VALUES ('1198', '2', '提现到账通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的1000.0元提现已到账，请前往您的微信账号进行查看。', '0', '2018-04-11 12:18:03', '2018-04-11 12:18:03', '1010', null);
+INSERT INTO `notice_tb` VALUES ('1199', '2', '提现到账通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的1000.0元提现已到账，请前往您的支付宝账号进行查看。', '1', '2018-04-11 12:18:39', '2018-05-01 16:41:59', '1010', null);
+INSERT INTO `notice_tb` VALUES ('1200', '1', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', null, null);
+INSERT INTO `notice_tb` VALUES ('1201', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1000', '1200');
+INSERT INTO `notice_tb` VALUES ('1202', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '1', '2018-04-12 14:06:48', '2018-05-07 13:40:46', '1009', '1200');
+INSERT INTO `notice_tb` VALUES ('1203', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '1', '2018-04-12 14:06:48', '2018-05-01 16:52:42', '1010', '1200');
+INSERT INTO `notice_tb` VALUES ('1204', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1011', '1200');
+INSERT INTO `notice_tb` VALUES ('1205', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '1', '2018-04-12 14:06:48', '2018-07-31 23:09:57', '1012', '1200');
+INSERT INTO `notice_tb` VALUES ('1206', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '1', '2018-04-12 14:06:48', '2018-05-01 17:06:20', '1013', '1200');
+INSERT INTO `notice_tb` VALUES ('1207', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1014', '1200');
+INSERT INTO `notice_tb` VALUES ('1208', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1015', '1200');
+INSERT INTO `notice_tb` VALUES ('1209', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '1', '2018-04-12 14:06:48', '2018-04-12 14:08:50', '1016', '1200');
+INSERT INTO `notice_tb` VALUES ('1210', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1017', '1200');
+INSERT INTO `notice_tb` VALUES ('1211', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1018', '1200');
+INSERT INTO `notice_tb` VALUES ('1212', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '1', '2018-04-12 14:06:48', '2018-05-07 14:38:59', '1019', '1200');
+INSERT INTO `notice_tb` VALUES ('1213', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1020', '1200');
+INSERT INTO `notice_tb` VALUES ('1214', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1021', '1200');
+INSERT INTO `notice_tb` VALUES ('1215', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1022', '1200');
+INSERT INTO `notice_tb` VALUES ('1216', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1023', '1200');
+INSERT INTO `notice_tb` VALUES ('1217', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1024', '1200');
+INSERT INTO `notice_tb` VALUES ('1218', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '这是第7条通知', '0', '2018-04-12 14:06:48', '2018-04-12 14:06:48', '1025', '1200');
+INSERT INTO `notice_tb` VALUES ('1219', '2', '提现到账通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的0.01元提现已到账，请前往您的支付宝账号进行查看。', '1', '2018-05-30 16:57:07', '2018-07-05 15:30:58', '1016', null);
+INSERT INTO `notice_tb` VALUES ('1220', '1', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', null, null);
+INSERT INTO `notice_tb` VALUES ('1221', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '1', '2018-05-30 17:13:35', '2018-05-31 11:32:41', '1000', '1220');
+INSERT INTO `notice_tb` VALUES ('1222', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '1', '2018-05-30 17:13:35', '2018-05-31 14:16:22', '1009', '1220');
+INSERT INTO `notice_tb` VALUES ('1223', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1010', '1220');
+INSERT INTO `notice_tb` VALUES ('1224', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1011', '1220');
+INSERT INTO `notice_tb` VALUES ('1225', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '1', '2018-05-30 17:13:35', '2018-07-26 22:44:02', '1012', '1220');
+INSERT INTO `notice_tb` VALUES ('1226', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '1', '2018-05-30 17:13:35', '2018-07-31 17:18:52', '1013', '1220');
+INSERT INTO `notice_tb` VALUES ('1227', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1014', '1220');
+INSERT INTO `notice_tb` VALUES ('1228', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1015', '1220');
+INSERT INTO `notice_tb` VALUES ('1229', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '1', '2018-05-30 17:13:35', '2018-07-05 15:30:54', '1016', '1220');
+INSERT INTO `notice_tb` VALUES ('1230', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1017', '1220');
+INSERT INTO `notice_tb` VALUES ('1231', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1018', '1220');
+INSERT INTO `notice_tb` VALUES ('1232', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1019', '1220');
+INSERT INTO `notice_tb` VALUES ('1233', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1020', '1220');
+INSERT INTO `notice_tb` VALUES ('1234', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1021', '1220');
+INSERT INTO `notice_tb` VALUES ('1235', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1022', '1220');
+INSERT INTO `notice_tb` VALUES ('1236', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1023', '1220');
+INSERT INTO `notice_tb` VALUES ('1237', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1024', '1220');
+INSERT INTO `notice_tb` VALUES ('1238', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1025', '1220');
+INSERT INTO `notice_tb` VALUES ('1239', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1026', '1220');
+INSERT INTO `notice_tb` VALUES ('1240', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1027', '1220');
+INSERT INTO `notice_tb` VALUES ('1241', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1028', '1220');
+INSERT INTO `notice_tb` VALUES ('1242', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1029', '1220');
+INSERT INTO `notice_tb` VALUES ('1243', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1030', '1220');
+INSERT INTO `notice_tb` VALUES ('1244', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1031', '1220');
+INSERT INTO `notice_tb` VALUES ('1245', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1032', '1220');
+INSERT INTO `notice_tb` VALUES ('1246', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1033', '1220');
+INSERT INTO `notice_tb` VALUES ('1247', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1034', '1220');
+INSERT INTO `notice_tb` VALUES ('1248', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1035', '1220');
+INSERT INTO `notice_tb` VALUES ('1249', '2', '系统通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gaqqst68db2j16nno61q3cp.jpg', '测试530', '0', '2018-05-30 17:13:35', '2018-05-30 17:13:35', '1036', '1220');
+INSERT INTO `notice_tb` VALUES ('1251', '2', '团购卡余额不足', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb3tvce1e1d7sivg5kr1naq13.png', '您的团购卡余额不足0张，为了不影响您下级的正常升级，请前往升级。', '0', '2018-06-01 16:27:02', '2018-06-01 16:27:02', '1038', null);
+INSERT INTO `notice_tb` VALUES ('1254', '2', '团购卡余额不足', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb3tvce1e1d7sivg5kr1naq13.png', '您的团购卡余额不足0张，为了不影响您下级的正常升级，请前往升级。', '0', '2018-06-12 16:07:07', '2018-06-12 16:07:07', '1038', null);
+INSERT INTO `notice_tb` VALUES ('1255', '2', '团购通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gav4cn173evs35fv1g8f1e6pu.png', '您的4500.0元团购申请已成功，详情请前往您的团购中查看。', '0', '2018-06-12 16:09:55', '2018-06-12 16:09:55', '1038', null);
+INSERT INTO `notice_tb` VALUES ('1256', '2', '团购申请', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb9b7411vottl4am19qm7i81d.png', '您新收到一个来自普通vip的4500.0元团购申请，请及时处理。', '1', '2018-06-12 16:09:55', '2018-11-09 19:04:27', '1000', null);
+INSERT INTO `notice_tb` VALUES ('1257', '2', '提现到账通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的1.0元提现已到账，请前往您的支付宝账号进行查看。', '1', '2018-06-27 10:22:07', '2018-07-17 17:30:44', '1052', null);
+INSERT INTO `notice_tb` VALUES ('1258', '2', '提现到账通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的10.0元提现已到账，请前往您的支付宝账号进行查看。', '1', '2018-06-27 10:28:28', '2018-07-17 17:30:42', '1052', null);
+INSERT INTO `notice_tb` VALUES ('1259', '2', '提现到账通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的100.0元提现已到账，请前往您的支付宝账号进行查看。', '0', '2018-07-05 14:58:30', '2018-07-05 14:58:30', '1041', null);
+INSERT INTO `notice_tb` VALUES ('1260', '2', '提现到账通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的100.0元提现已到账，请前往您的支付宝账号进行查看。', '0', '2018-07-05 14:58:35', '2018-07-05 14:58:35', '1041', null);
+INSERT INTO `notice_tb` VALUES ('1261', '2', '提现到账通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的1.0元提现已到账，请前往您的支付宝账号进行查看。', '0', '2018-07-05 14:58:37', '2018-07-05 14:58:37', '1041', null);
+INSERT INTO `notice_tb` VALUES ('1262', '2', '提现到账通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的0.43元提现已到账，请前往您的支付宝账号进行查看。', '1', '2018-07-05 15:01:07', '2018-07-05 15:31:09', '1016', null);
+INSERT INTO `notice_tb` VALUES ('1263', '2', '提现到账通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的100.0元提现已到账，请前往您的支付宝账号进行查看。', '1', '2018-07-09 13:49:53', '2018-07-30 17:09:10', '1041', null);
+INSERT INTO `notice_tb` VALUES ('1264', '2', '提现到账通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的10.0元提现已到账，请前往您的支付宝账号进行查看。', '1', '2018-07-17 09:48:44', '2018-07-17 17:30:36', '1052', null);
+INSERT INTO `notice_tb` VALUES ('1265', '2', '提现到账通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的100.0元提现已到账，请前往您的支付宝账号进行查看。', '1', '2018-07-17 17:31:00', '2018-07-17 17:31:09', '1052', null);
+INSERT INTO `notice_tb` VALUES ('1266', '2', '提现到账通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的100.0元提现已到账，请前往您的支付宝账号进行查看。', '0', '2018-07-20 15:23:03', '2018-07-20 15:23:03', '1041', null);
+INSERT INTO `notice_tb` VALUES ('1267', '2', '团购卡余额不足', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb3tvce1e1d7sivg5kr1naq13.png', '您的团购卡余额不足0张，为了不影响您下级的正常升级，请前往升级。', '0', '2018-07-20 15:36:02', '2018-07-20 15:36:02', '1038', null);
+INSERT INTO `notice_tb` VALUES ('1268', '2', '提现到账通知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb6olh2b49fi11hvqv914c818.png', '您申请的0.3元提现已到账，请前往您的支付宝账号进行查看。', '1', '2018-07-30 14:40:22', '2018-07-30 14:41:16', '1016', null);
+INSERT INTO `notice_tb` VALUES ('1269', '2', '提现失败', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb3tvce1e1d7sivg5kr1naq13.png', '您申请的100000.0元提现失败，理由为：测试中，不能体现！', '0', '2018-07-30 19:10:23', '2018-07-30 19:10:23', '1009', null);
+INSERT INTO `notice_tb` VALUES ('1270', '2', '提现失败', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb3tvce1e1d7sivg5kr1naq13.png', '您申请的600000.0元提现失败，理由为：对方公司的法规梵蒂冈', '0', '2018-07-30 19:13:27', '2018-07-30 19:13:27', '1009', null);
+INSERT INTO `notice_tb` VALUES ('1271', '2', '提现失败', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb3tvce1e1d7sivg5kr1naq13.png', '您申请的10000.0元提现失败，理由为：buneng打发士大夫', '0', '2018-07-30 19:15:56', '2018-07-30 19:15:56', '1010', null);
+INSERT INTO `notice_tb` VALUES ('1272', '2', '提现失败', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5gb3tvce1e1d7sivg5kr1naq13.png', '您申请的100.0元提现失败，理由为：余额不足，提现失败。', '1', '2018-07-30 19:23:28', '2018-07-30 19:23:38', '1041', null);
 
 -- ----------------------------
 -- Table structure for `order_detail_tb`
@@ -2843,39 +3101,45 @@ CREATE TABLE `order_detail_tb` (
   KEY `INDEX_ORDERID` (`order_id`) USING BTREE,
   KEY `INDEX_CREATEDATE` (`create_date`) USING BTREE,
   KEY `INDEX_UPDATEDATE` (`update_date`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1029 DEFAULT CHARSET=utf8 COMMENT='订单详情表';
+) ENGINE=InnoDB AUTO_INCREMENT=1035 DEFAULT CHARSET=utf8 COMMENT='订单详情表';
 
 -- ----------------------------
 -- Records of order_detail_tb
 -- ----------------------------
-INSERT INTO `order_detail_tb` VALUES ('1000', '普通vip', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5i8g62i1d7i5puat0mh99ah14.png', '365.00', '1', '2018-02-05 17:09:20', '2018-02-05 17:09:20', '1002', '1000');
-INSERT INTO `order_detail_tb` VALUES ('1001', '企业管理学', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52cfqu4fdk14f31c2u1q7j1dq1h.jpg', '1111.00', '1', '2018-02-05 21:04:34', '2018-02-05 21:04:34', '1002', '1001');
-INSERT INTO `order_detail_tb` VALUES ('1002', '企业管理学', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52cfqu4fdk14f31c2u1q7j1dq1h.jpg', '1111.00', '1', '2018-02-05 21:04:37', '2018-02-05 21:04:37', '1002', '1002');
-INSERT INTO `order_detail_tb` VALUES ('1003', '企业管理学', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52cfqu4fdk14f31c2u1q7j1dq1h.jpg', '1111.00', '1', '2018-02-05 22:39:27', '2018-02-05 22:39:27', '1002', '1003');
-INSERT INTO `order_detail_tb` VALUES ('1004', '普通vip', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5i8g62i1d7i5puat0mh99ah14.png', '365.00', '1', '2018-02-06 15:35:18', '2018-02-06 15:35:18', '1002', '1004');
-INSERT INTO `order_detail_tb` VALUES ('1005', '钻石vip', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5i8j4o210nm1ip459l127t1gt219.png', '4500.00', '1', '2018-02-09 15:41:55', '2018-02-09 15:41:55', '1003', '1005');
-INSERT INTO `order_detail_tb` VALUES ('1006', '企业管理学', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52cfqu4fdk14f31c2u1q7j1dq1h.jpg', '1111.00', '1', '2018-02-10 02:04:02', '2018-02-10 02:04:02', '1002', '1006');
-INSERT INTO `order_detail_tb` VALUES ('1007', '普通vip', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5i8g62i1d7i5puat0mh99ah14.png', '365.00', '1', '2018-02-10 13:59:05', '2018-02-10 13:59:05', '1002', '1007');
+INSERT INTO `order_detail_tb` VALUES ('1000', '普通vip', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5i8g62i1d7i5puat0mh99ah14.png', '365.00', '1', '2018-02-05 17:09:20', '2018-02-05 17:09:20', '1002', '1000');
+INSERT INTO `order_detail_tb` VALUES ('1001', '企业管理学', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52cfqu4fdk14f31c2u1q7j1dq1h.jpg', '1111.00', '1', '2018-02-05 21:04:34', '2018-02-05 21:04:34', '1002', '1001');
+INSERT INTO `order_detail_tb` VALUES ('1002', '企业管理学', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52cfqu4fdk14f31c2u1q7j1dq1h.jpg', '1111.00', '1', '2018-02-05 21:04:37', '2018-02-05 21:04:37', '1002', '1002');
+INSERT INTO `order_detail_tb` VALUES ('1003', '企业管理学', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52cfqu4fdk14f31c2u1q7j1dq1h.jpg', '1111.00', '1', '2018-02-05 22:39:27', '2018-02-05 22:39:27', '1002', '1003');
+INSERT INTO `order_detail_tb` VALUES ('1004', '普通vip', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5i8g62i1d7i5puat0mh99ah14.png', '365.00', '1', '2018-02-06 15:35:18', '2018-02-06 15:35:18', '1002', '1004');
+INSERT INTO `order_detail_tb` VALUES ('1005', '钻石vip', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5i8j4o210nm1ip459l127t1gt219.png', '4500.00', '1', '2018-02-09 15:41:55', '2018-02-09 15:41:55', '1003', '1005');
+INSERT INTO `order_detail_tb` VALUES ('1006', '企业管理学', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52cfqu4fdk14f31c2u1q7j1dq1h.jpg', '1111.00', '1', '2018-02-10 02:04:02', '2018-02-10 02:04:02', '1002', '1006');
+INSERT INTO `order_detail_tb` VALUES ('1007', '普通vip', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5i8g62i1d7i5puat0mh99ah14.png', '365.00', '1', '2018-02-10 13:59:05', '2018-02-10 13:59:05', '1002', '1007');
 INSERT INTO `order_detail_tb` VALUES ('1008', '恋爱先生', 'http://puui.qpic.cn/tv/0/18009322_188263/0', '0.01', '1', '2018-02-22 16:14:52', '2018-02-22 16:14:52', '1006', '1008');
 INSERT INTO `order_detail_tb` VALUES ('1009', '恋爱先生', 'http://puui.qpic.cn/tv/0/18009322_188263/0', '0.01', '1', '2018-02-23 14:20:13', '2018-02-23 14:20:13', '1006', '1009');
-INSERT INTO `order_detail_tb` VALUES ('1010', '联合发起人', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5i8jh02bes1eje8d6nm91ei71e.png', '25000.00', '1', '2018-02-24 11:07:30', '2018-02-24 11:07:30', '1004', '1010');
+INSERT INTO `order_detail_tb` VALUES ('1010', '联合发起人', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5i8jh02bes1eje8d6nm91ei71e.png', '25000.00', '1', '2018-02-24 11:07:30', '2018-02-24 11:07:30', '1004', '1010');
 INSERT INTO `order_detail_tb` VALUES ('1011', '恋爱先生', 'http://puui.qpic.cn/tv/0/18009322_188263/0', '0.01', '1', '2018-02-27 17:26:27', '2018-02-27 17:26:27', '1006', '1011');
 INSERT INTO `order_detail_tb` VALUES ('1012', '恋爱先生', 'http://puui.qpic.cn/tv/0/18009322_188263/0', '0.01', '1', '2018-02-28 10:04:47', '2018-02-28 10:04:47', '1006', '1012');
-INSERT INTO `order_detail_tb` VALUES ('1013', '如何打造高效团队？最重要的是这三件事', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52aoej510601ootgs21vm5jkd9n.jpg', '0.01', '1', '2018-02-28 21:34:28', '2018-02-28 21:34:28', '1001', '1013');
-INSERT INTO `order_detail_tb` VALUES ('1014', '如何打造高效团队？最重要的是这三件事', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52aoej510601ootgs21vm5jkd9n.jpg', '0.01', '1', '2018-03-01 13:38:04', '2018-03-01 13:38:04', '1001', '1014');
-INSERT INTO `order_detail_tb` VALUES ('1015', '钻石vip', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5i8j4o210nm1ip459l127t1gt219.png', '4500.00', '1', '2018-03-05 12:35:01', '2018-03-05 12:35:01', '1003', '1015');
+INSERT INTO `order_detail_tb` VALUES ('1013', '如何打造高效团队？最重要的是这三件事', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52aoej510601ootgs21vm5jkd9n.jpg', '0.01', '1', '2018-02-28 21:34:28', '2018-02-28 21:34:28', '1001', '1013');
+INSERT INTO `order_detail_tb` VALUES ('1014', '如何打造高效团队？最重要的是这三件事', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52aoej510601ootgs21vm5jkd9n.jpg', '0.01', '1', '2018-03-01 13:38:04', '2018-03-01 13:38:04', '1001', '1014');
+INSERT INTO `order_detail_tb` VALUES ('1015', '钻石vip', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5i8j4o210nm1ip459l127t1gt219.png', '4500.00', '1', '2018-03-05 12:35:01', '2018-03-05 12:35:01', '1003', '1015');
 INSERT INTO `order_detail_tb` VALUES ('1016', '恋爱先生', 'http://puui.qpic.cn/tv/0/18009322_188263/0', '0.01', '1', '2018-03-08 17:53:23', '2018-03-08 17:53:23', '1006', '1016');
-INSERT INTO `order_detail_tb` VALUES ('1017', '如何打造高效团队？最重要的是这三件事', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52aoej510601ootgs21vm5jkd9n.jpg', '0.01', '1', '2018-03-13 00:51:24', '2018-03-13 00:51:24', '1001', '1017');
-INSERT INTO `order_detail_tb` VALUES ('1018', '联合发起人', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5i8jh02bes1eje8d6nm91ei71e.png', '25000.00', '1', '2018-03-13 01:06:14', '2018-03-13 01:06:14', '1004', '1018');
-INSERT INTO `order_detail_tb` VALUES ('1019', '企业管理学', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52cfqu4fdk14f31c2u1q7j1dq1h.jpg', '1111.00', '1', '2018-03-14 09:32:06', '2018-03-14 09:32:06', '1002', '1019');
-INSERT INTO `order_detail_tb` VALUES ('1020', '如何打造高效团队？最重要的是这三件事', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52aoej510601ootgs21vm5jkd9n.jpg', '0.01', '1', '2018-03-26 17:20:47', '2018-03-26 17:20:47', '1001', '1020');
-INSERT INTO `order_detail_tb` VALUES ('1021', '关于微商的趋势', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu2obr21opijfc18ar1m6fuch1vm.jpg', '100.00', '2', '2018-05-31 16:42:44', '2018-05-31 16:42:44', '1031', '1021');
-INSERT INTO `order_detail_tb` VALUES ('1022', '关于微商的趋势', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu2obr21opijfc18ar1m6fuch1vm.jpg', '100.00', '2', '2018-05-31 16:50:32', '2018-05-31 16:50:32', '1031', '1022');
-INSERT INTO `order_detail_tb` VALUES ('1024', '普通vip', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5i8g62i1d7i5puat0mh99ah14.png', '365.00', '1', '2018-05-31 17:11:40', '2018-05-31 17:11:40', '1002', '1024');
-INSERT INTO `order_detail_tb` VALUES ('1025', '普通vip', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5i8g62i1d7i5puat0mh99ah14.png', '365.00', '1', '2018-06-01 11:05:13', '2018-06-01 11:05:13', '1002', '1025');
-INSERT INTO `order_detail_tb` VALUES ('1026', '普通vip', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5i8g62i1d7i5puat0mh99ah14.png', '365.00', '1', '2018-06-01 17:46:32', '2018-06-01 17:46:32', '1002', '1026');
-INSERT INTO `order_detail_tb` VALUES ('1027', '钻石vip', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5i8j4o210nm1ip459l127t1gt219.png', '4500.00', '1', '2018-06-12 16:09:55', '2018-06-12 16:09:55', '1003', '1027');
-INSERT INTO `order_detail_tb` VALUES ('1028', '普通vip', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5i8g62i1d7i5puat0mh99ah14.png', '365.00', '1', '2018-06-27 10:18:52', '2018-06-27 10:18:52', '1002', '1028');
+INSERT INTO `order_detail_tb` VALUES ('1017', '如何打造高效团队？最重要的是这三件事', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52aoej510601ootgs21vm5jkd9n.jpg', '0.01', '1', '2018-03-13 00:51:24', '2018-03-13 00:51:24', '1001', '1017');
+INSERT INTO `order_detail_tb` VALUES ('1018', '联合发起人', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5i8jh02bes1eje8d6nm91ei71e.png', '25000.00', '1', '2018-03-13 01:06:14', '2018-03-13 01:06:14', '1004', '1018');
+INSERT INTO `order_detail_tb` VALUES ('1019', '企业管理学', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52cfqu4fdk14f31c2u1q7j1dq1h.jpg', '1111.00', '1', '2018-03-14 09:32:06', '2018-03-14 09:32:06', '1002', '1019');
+INSERT INTO `order_detail_tb` VALUES ('1020', '如何打造高效团队？最重要的是这三件事', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52aoej510601ootgs21vm5jkd9n.jpg', '0.01', '1', '2018-03-26 17:20:47', '2018-03-26 17:20:47', '1001', '1020');
+INSERT INTO `order_detail_tb` VALUES ('1021', '关于微商的趋势', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu2obr21opijfc18ar1m6fuch1vm.jpg', '100.00', '2', '2018-05-31 16:42:44', '2018-05-31 16:42:44', '1031', '1021');
+INSERT INTO `order_detail_tb` VALUES ('1022', '关于微商的趋势', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu2obr21opijfc18ar1m6fuch1vm.jpg', '100.00', '2', '2018-05-31 16:50:32', '2018-05-31 16:50:32', '1031', '1022');
+INSERT INTO `order_detail_tb` VALUES ('1024', '普通vip', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5i8g62i1d7i5puat0mh99ah14.png', '365.00', '1', '2018-05-31 17:11:40', '2018-05-31 17:11:40', '1002', '1024');
+INSERT INTO `order_detail_tb` VALUES ('1025', '普通vip', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5i8g62i1d7i5puat0mh99ah14.png', '365.00', '1', '2018-06-01 11:05:13', '2018-06-01 11:05:13', '1002', '1025');
+INSERT INTO `order_detail_tb` VALUES ('1026', '普通vip', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5i8g62i1d7i5puat0mh99ah14.png', '365.00', '1', '2018-06-01 17:46:32', '2018-06-01 17:46:32', '1002', '1026');
+INSERT INTO `order_detail_tb` VALUES ('1027', '钻石vip', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5i8j4o210nm1ip459l127t1gt219.png', '4500.00', '1', '2018-06-12 16:09:55', '2018-06-12 16:09:55', '1003', '1027');
+INSERT INTO `order_detail_tb` VALUES ('1028', '普通vip', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5i8g62i1d7i5puat0mh99ah14.png', '365.00', '1', '2018-06-27 10:18:52', '2018-06-27 10:18:52', '1002', '1028');
+INSERT INTO `order_detail_tb` VALUES ('1029', '普通vip', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5i8g62i1d7i5puat0mh99ah14.png', '365.00', '1', '2018-07-20 15:38:46', '2018-07-20 15:38:46', '1002', '1029');
+INSERT INTO `order_detail_tb` VALUES ('1030', '关于微商的趋势', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu2obr21opijfc18ar1m6fuch1vm.jpg', '0.01', '2', '2018-07-30 17:12:03', '2018-07-30 17:12:03', '1031', '1030');
+INSERT INTO `order_detail_tb` VALUES ('1031', '关于微商的趋势', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu2obr21opijfc18ar1m6fuch1vm.jpg', '0.01', '2', '2018-11-23 10:50:18', '2018-11-23 10:50:18', '1031', '1031');
+INSERT INTO `order_detail_tb` VALUES ('1032', '关于微商的趋势', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu2obr21opijfc18ar1m6fuch1vm.jpg', '0.01', '2', '2018-11-23 10:50:25', '2018-11-23 10:50:25', '1031', '1032');
+INSERT INTO `order_detail_tb` VALUES ('1033', '关于微商的趋势', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu2obr21opijfc18ar1m6fuch1vm.jpg', '0.01', '2', '2018-11-23 13:14:10', '2018-11-23 13:14:10', '1031', '1033');
+INSERT INTO `order_detail_tb` VALUES ('1034', '关于微商的趋势', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu2obr21opijfc18ar1m6fuch1vm.jpg', '0.01', '2', '2018-11-23 13:14:15', '2018-11-23 13:14:15', '1031', '1034');
 
 -- ----------------------------
 -- Table structure for `order_tb`
@@ -2897,7 +3161,7 @@ CREATE TABLE `order_tb` (
   KEY `INDEX_UPDATEDATE` (`update_date`) USING BTREE,
   KEY `INDEX_STATUS` (`status`) USING BTREE,
   KEY `INDEX_PAYTYPE` (`pay_type`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1029 DEFAULT CHARSET=utf8 COMMENT='视频订单表';
+) ENGINE=InnoDB AUTO_INCREMENT=1035 DEFAULT CHARSET=utf8 COMMENT='视频订单表';
 
 -- ----------------------------
 -- Records of order_tb
@@ -2930,6 +3194,12 @@ INSERT INTO `order_tb` VALUES ('1025', '1019201806011105126616', '1', '3', '2', 
 INSERT INTO `order_tb` VALUES ('1026', '1042201806011746324379', '1', '3', '2', '2018-06-01 17:46:32', '2018-06-01 17:46:32', '1042');
 INSERT INTO `order_tb` VALUES ('1027', '1038201806121609557683', '2', '3', '1', '2018-06-12 16:09:55', '2018-06-12 16:09:55', '1038');
 INSERT INTO `order_tb` VALUES ('1028', '1052201806271018529985', '1', '3', '2', '2018-06-27 10:18:52', '2018-06-27 10:18:52', '1052');
+INSERT INTO `order_tb` VALUES ('1029', '1041201807201538455331', '1', '3', '2', '2018-07-20 15:38:46', '2018-07-20 15:38:46', '1041');
+INSERT INTO `order_tb` VALUES ('1030', '1041201807301712025274', '3', '3', '2', '2018-07-30 17:12:03', '2018-07-30 17:12:03', '1041');
+INSERT INTO `order_tb` VALUES ('1031', '1016201811231050188944', '3', '3', '2', '2018-11-23 10:50:18', '2018-11-23 10:50:18', '1016');
+INSERT INTO `order_tb` VALUES ('1032', '1016201811231050258544', '3', '3', '2', '2018-11-23 10:50:25', '2018-11-23 10:50:25', '1016');
+INSERT INTO `order_tb` VALUES ('1033', '1055201811231314099022', '3', '3', '2', '2018-11-23 13:14:10', '2018-11-23 13:14:10', '1055');
+INSERT INTO `order_tb` VALUES ('1034', '1055201811231314157661', '3', '3', '2', '2018-11-23 13:14:15', '2018-11-23 13:14:15', '1055');
 
 -- ----------------------------
 -- Table structure for `payment_tb`
@@ -2958,7 +3228,7 @@ CREATE TABLE `payment_tb` (
   KEY `INDEX_STATUS` (`status`) USING BTREE,
   KEY `INDEX_CREATEDATE` (`create_date`) USING BTREE,
   KEY `INDEX_UPDATEDATE` (`update_date`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1147 DEFAULT CHARSET=utf8 COMMENT='支付表';
+) ENGINE=InnoDB AUTO_INCREMENT=1163 DEFAULT CHARSET=utf8 COMMENT='支付表';
 
 -- ----------------------------
 -- Records of payment_tb
@@ -3110,6 +3380,22 @@ INSERT INTO `payment_tb` VALUES ('1143', '充值', '充值', 'http://server.laoy
 INSERT INTO `payment_tb` VALUES ('1144', '充值', '充值', 'http://server.laoyeshuo.cn/finance/alipayRechargeNotifyUrl', '1', '1016201807051646437258', '0.20', '2', '4', null, null, '1016', '2018-07-05 16:46:43', '2018-07-05 16:46:47');
 INSERT INTO `payment_tb` VALUES ('1145', '充值', '充值', 'http://server.laoyeshuo.cn/finance/alipayRechargeNotifyUrl', '1', '1016201807051647306629', '0.10', '2', '4', null, null, '1016', '2018-07-05 16:47:30', '2018-07-05 16:47:35');
 INSERT INTO `payment_tb` VALUES ('1146', '充值', '充值', 'http://server.laoyeshuo.cn/finance/alipayRechargeNotifyUrl', '1', '1041201807051658076312', '0.01', '2', '4', null, null, '1041', '2018-07-05 16:58:07', '2018-07-05 16:58:14');
+INSERT INTO `payment_tb` VALUES ('1147', '充值', '充值', 'http://server.laoyeshuo.cn/finance/alipayRechargeNotifyUrl', '1', '1041201807201521357519', '0.01', '2', '4', null, null, '1041', '2018-07-20 15:21:35', '2018-07-20 15:21:52');
+INSERT INTO `payment_tb` VALUES ('1148', '充值', '充值', 'http://server.laoyeshuo.cn/finance/alipayRechargeNotifyUrl', '1', '1016201807301434016387', '0.10', '2', '4', null, null, '1016', '2018-07-30 14:34:01', '2018-07-30 14:34:07');
+INSERT INTO `payment_tb` VALUES ('1149', '充值', '充值', 'http://server.laoyeshuo.cn/finance/alipayRechargeNotifyUrl', '1', '1016201807301446574693', '0.01', '2', '4', null, null, '1016', '2018-07-30 14:46:57', '2018-07-30 14:47:01');
+INSERT INTO `payment_tb` VALUES ('1150', '充值', '充值', 'http://server.laoyeshuo.cn/finance/alipayRechargeNotifyUrl', '1', '1041201807301549542362', '0.01', '2', '4', null, null, '1041', '2018-07-30 15:49:54', '2018-07-30 15:50:12');
+INSERT INTO `payment_tb` VALUES ('1151', '充值', '充值', 'http://server.laoyeshuo.cn/finance/alipayRechargeNotifyUrl', '1', '1041201807301559074157', '0.01', '1', '4', null, null, '1041', '2018-07-30 15:59:08', '2018-07-30 15:59:08');
+INSERT INTO `payment_tb` VALUES ('1152', '充值', '充值', 'http://server.laoyeshuo.cn/finance/alipayRechargeNotifyUrl', '1', '1016201807301618203459', '0.10', '2', '4', null, null, '1016', '2018-07-30 16:18:21', '2018-07-30 16:19:45');
+INSERT INTO `payment_tb` VALUES ('1153', '充值', '充值', 'http://server.laoyeshuo.cn/finance/alipayRechargeNotifyUrl', '1', '1052201807311114332156', '0.01', '2', '4', null, null, '1052', '2018-07-31 11:14:33', '2018-07-31 11:15:31');
+INSERT INTO `payment_tb` VALUES ('1154', '充值', '充值', 'http://server.laoyeshuo.cn/finance/alipayRechargeNotifyUrl', '1', '1052201807311443178198', '0.01', '2', '4', null, null, '1052', '2018-07-31 14:43:17', '2018-07-31 14:43:48');
+INSERT INTO `payment_tb` VALUES ('1155', '充值', '充值', 'http://server.laoyeshuo.cn/finance/alipayRechargeNotifyUrl', '1', '1052201807311447448089', '0.01', '2', '4', null, null, '1052', '2018-07-31 14:47:44', '2018-07-31 14:48:08');
+INSERT INTO `payment_tb` VALUES ('1156', '充值', '充值', 'http://server.laoyeshuo.cn/finance/alipayRechargeNotifyUrl', '1', '1052201807311450423472', '0.01', '2', '4', null, null, '1052', '2018-07-31 14:50:42', '2018-07-31 14:51:01');
+INSERT INTO `payment_tb` VALUES ('1157', '充值', '充值', 'http://server.laoyeshuo.cn/finance/alipayRechargeNotifyUrl', '1', '1052201807311454334836', '0.01', '2', '4', null, null, '1052', '2018-07-31 14:54:34', '2018-07-31 14:55:13');
+INSERT INTO `payment_tb` VALUES ('1158', '充值', '充值', 'http://server.laoyeshuo.cn/finance/alipayRechargeNotifyUrl', '1', '1052201807311457146075', '0.01', '2', '4', null, null, '1052', '2018-07-31 14:57:15', '2018-07-31 14:57:40');
+INSERT INTO `payment_tb` VALUES ('1159', '充值', '充值', 'http://server.laoyeshuo.cn/finance/alipayRechargeNotifyUrl', '1', '1014201810251600251431', '0.01', '1', '4', null, null, '1014', '2018-10-25 16:00:26', '2018-10-25 16:00:26');
+INSERT INTO `payment_tb` VALUES ('1160', '充值', '充值', 'http://server.laoyeshuo.cn/finance/alipayRechargeNotifyUrl', '1', '1055201811231103144858', '0.10', '2', '4', null, null, '1055', '2018-11-23 11:03:14', '2018-11-23 11:04:18');
+INSERT INTO `payment_tb` VALUES ('1161', 'VIP购买', 'VIP购买', 'http://server.laoyeshuo.cn/payment/alipayNotifyUrl', '1', '1016201811231606273138', '365.00', '1', '1', '1002', null, '1016', '2018-11-23 16:06:27', '2018-11-23 16:06:27');
+INSERT INTO `payment_tb` VALUES ('1162', 'VIP购买', 'VIP购买', 'http://server.laoyeshuo.cn/payment/alipayNotifyUrl', '1', '1016201811231607202829', '365.00', '1', '1', '1002', null, '1016', '2018-11-23 16:07:21', '2018-11-23 16:07:21');
 
 -- ----------------------------
 -- Table structure for `platform_day_tb`
@@ -3253,19 +3539,20 @@ CREATE TABLE `team_purchase_info_tb` (
   KEY `INDEX_ACCOUNTID` (`account_id`) USING BTREE,
   KEY `INDEX_CREATEDATE` (`create_date`) USING BTREE,
   KEY `INDEX_UPDATEDATE` (`update_date`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1009 DEFAULT CHARSET=utf8 COMMENT='团购信息表 ';
+) ENGINE=InnoDB AUTO_INCREMENT=1010 DEFAULT CHARSET=utf8 COMMENT='团购信息表 ';
 
 -- ----------------------------
 -- Records of team_purchase_info_tb
 -- ----------------------------
 INSERT INTO `team_purchase_info_tb` VALUES ('1000', '1892', '0', '0', '0.00', '2018-02-05 15:18:48', '0', '0.00', '2018-02-05 15:19:07', '578', '59000.00', '2018-03-13 16:47:59', '0', '0.00', '2018-02-05 15:20:20', '2018-02-05 15:20:22', '2018-05-31 17:11:40', '1000');
 INSERT INTO `team_purchase_info_tb` VALUES ('1001', '289', '289', '0', '0.00', '2018-03-13 16:47:59', '289', '29500.00', '2018-03-13 16:47:59', '0', '0.00', '2018-02-05 17:09:20', '0', '0.00', '2018-02-05 17:09:20', '2018-02-05 17:09:20', '2018-03-13 16:47:59', '1010');
-INSERT INTO `team_purchase_info_tb` VALUES ('1002', '286', '289', '0', '0.00', '2018-02-24 18:00:04', '289', '29500.00', '2018-02-24 18:00:04', '0', '0.00', '2018-02-06 15:35:18', '0', '0.00', '2018-02-06 15:35:18', '2018-02-06 15:35:18', '2018-06-27 10:18:52', '1009');
+INSERT INTO `team_purchase_info_tb` VALUES ('1002', '285', '289', '0', '0.00', '2018-02-24 18:00:04', '289', '29500.00', '2018-02-24 18:00:04', '0', '0.00', '2018-02-06 15:35:18', '0', '0.00', '2018-02-06 15:35:18', '2018-02-06 15:35:18', '2018-07-20 15:38:46', '1009');
 INSERT INTO `team_purchase_info_tb` VALUES ('1003', '0', '0', '0', '0.00', '2018-02-10 13:59:05', '0', '0.00', '2018-02-10 13:59:05', '0', '0.00', '2018-02-10 13:59:05', '0', '0.00', '2018-02-10 13:59:05', '2018-02-10 13:59:05', '2018-02-10 13:59:05', '1014');
 INSERT INTO `team_purchase_info_tb` VALUES ('1005', '0', '39', '39', '4500.00', '2018-06-12 16:09:55', '0', '0.00', '2018-05-31 17:11:40', '0', '0.00', '2018-05-31 17:11:40', '0', '0.00', '2018-05-31 17:11:40', '2018-05-31 17:11:40', '2018-06-12 16:09:55', '1038');
 INSERT INTO `team_purchase_info_tb` VALUES ('1006', '0', '0', '0', '0.00', '2018-06-01 11:05:13', '0', '0.00', '2018-06-01 11:05:13', '0', '0.00', '2018-06-01 11:05:13', '0', '0.00', '2018-06-01 11:05:13', '2018-06-01 11:05:13', '2018-06-01 11:05:13', '1019');
 INSERT INTO `team_purchase_info_tb` VALUES ('1007', '0', '0', '0', '0.00', '2018-06-01 17:46:32', '0', '0.00', '2018-06-01 17:46:32', '0', '0.00', '2018-06-01 17:46:32', '0', '0.00', '2018-06-01 17:46:32', '2018-06-01 17:46:32', '2018-06-01 17:46:32', '1042');
 INSERT INTO `team_purchase_info_tb` VALUES ('1008', '0', '0', '0', '0.00', '2018-06-27 10:18:52', '0', '0.00', '2018-06-27 10:18:52', '0', '0.00', '2018-06-27 10:18:52', '0', '0.00', '2018-06-27 10:18:52', '2018-06-27 10:18:52', '2018-06-27 10:18:52', '1052');
+INSERT INTO `team_purchase_info_tb` VALUES ('1009', '0', '0', '0', '0.00', '2018-07-20 15:38:46', '0', '0.00', '2018-07-20 15:38:46', '0', '0.00', '2018-07-20 15:38:46', '0', '0.00', '2018-07-20 15:38:46', '2018-07-20 15:38:46', '2018-07-20 15:38:46', '1041');
 
 -- ----------------------------
 -- Table structure for `video_cache_tb`
@@ -3288,9 +3575,9 @@ CREATE TABLE `video_cache_tb` (
 -- ----------------------------
 -- Records of video_cache_tb
 -- ----------------------------
-INSERT INTO `video_cache_tb` VALUES ('1000', 'cs5', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52q1n2e1qc87a3c7r1o8i1v9k1d.jpg', '6', '4.20MB', '1009', '2018-03-02 14:04:40', '5');
-INSERT INTO `video_cache_tb` VALUES ('1001', 'cesh3', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52q1n2e1qc87a3c7r1o8i1v9k1d.jpg', '6', '15.76MB', '1009', '2018-03-02 14:05:18', '3');
-INSERT INTO `video_cache_tb` VALUES ('1002', '测试22', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52q1n2e1qc87a3c7r1o8i1v9k1d.jpg', '6', '15.76MB', '1009', '2018-03-02 14:05:22', '2');
+INSERT INTO `video_cache_tb` VALUES ('1000', 'cs5', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52q1n2e1qc87a3c7r1o8i1v9k1d.jpg', '6', '4.20MB', '1009', '2018-03-02 14:04:40', '5');
+INSERT INTO `video_cache_tb` VALUES ('1001', 'cesh3', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52q1n2e1qc87a3c7r1o8i1v9k1d.jpg', '6', '15.76MB', '1009', '2018-03-02 14:05:18', '3');
+INSERT INTO `video_cache_tb` VALUES ('1002', '测试22', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52q1n2e1qc87a3c7r1o8i1v9k1d.jpg', '6', '15.76MB', '1009', '2018-03-02 14:05:22', '2');
 
 -- ----------------------------
 -- Table structure for `video_play_record_tb`
@@ -3308,85 +3595,112 @@ CREATE TABLE `video_play_record_tb` (
   PRIMARY KEY (`video_play_record_id`),
   KEY `INDEX_VIDEOID` (`video_id`) USING BTREE,
   KEY `INDEX_ACCOUNTID` (`account_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1641 DEFAULT CHARSET=utf8 COMMENT='视频播放记录表';
+) ENGINE=InnoDB AUTO_INCREMENT=1668 DEFAULT CHARSET=utf8 COMMENT='视频播放记录表';
 
 -- ----------------------------
 -- Records of video_play_record_tb
 -- ----------------------------
-INSERT INTO `video_play_record_tb` VALUES ('1530', 'ccccc', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52aoej510601ootgs21vm5jkd9n.jpg', '00:02:03', '0.7', '1010', '2018-04-01 13:05:35', '10');
+INSERT INTO `video_play_record_tb` VALUES ('1530', 'ccccc', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52aoej510601ootgs21vm5jkd9n.jpg', '00:02:03', '0.7', '1010', '2018-04-01 13:05:35', '10');
 INSERT INTO `video_play_record_tb` VALUES ('1531', '第一集', 'http://puui.qpic.cn/tv/0/18009322_188263/0', '00:06:32', '200', '1010', '2018-04-01 16:46:33', '12');
-INSERT INTO `video_play_record_tb` VALUES ('1532', 'cc2', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52cr6t3mhh1d071ekc11d61sinm.jpg', '00:02:03', '0.7', '1010', '2018-04-01 17:46:18', '7');
-INSERT INTO `video_play_record_tb` VALUES ('1533', 'cccccd', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52rts8k1kid14su1jaj1qpppc155.jpg', '00:02:03', '0.7', '1010', '2018-04-01 02:20:50', '11');
-INSERT INTO `video_play_record_tb` VALUES ('1536', 'ccc', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52cfqu4fdk14f31c2u1q7j1dq1h.jpg', '00:02:03', '0.7', '1014', '2018-03-16 21:15:02', '8');
-INSERT INTO `video_play_record_tb` VALUES ('1540', 'cc2', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52cr6t3mhh1d071ekc11d61sinm.jpg', '00:02:03', '0.7', '1009', '2018-04-01 21:38:27', '7');
-INSERT INTO `video_play_record_tb` VALUES ('1544', 'cc2', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52cr6t3mhh1d071ekc11d61sinm.jpg', '00:02:03', '0.7', '1019', '2018-04-03 10:20:18', '7');
+INSERT INTO `video_play_record_tb` VALUES ('1532', 'cc2', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52cr6t3mhh1d071ekc11d61sinm.jpg', '00:02:03', '0.7', '1010', '2018-04-01 17:46:18', '7');
+INSERT INTO `video_play_record_tb` VALUES ('1533', 'cccccd', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52rts8k1kid14su1jaj1qpppc155.jpg', '00:02:03', '0.7', '1010', '2018-04-01 02:20:50', '11');
+INSERT INTO `video_play_record_tb` VALUES ('1536', 'ccc', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52cfqu4fdk14f31c2u1q7j1dq1h.jpg', '00:02:03', '0.7', '1014', '2018-03-16 21:15:02', '8');
+INSERT INTO `video_play_record_tb` VALUES ('1540', 'cc2', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52cr6t3mhh1d071ekc11d61sinm.jpg', '00:02:03', '0.7', '1009', '2018-04-01 21:38:27', '7');
+INSERT INTO `video_play_record_tb` VALUES ('1544', 'cc2', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52cr6t3mhh1d071ekc11d61sinm.jpg', '00:02:03', '0.7', '1019', '2018-04-03 10:20:18', '7');
 INSERT INTO `video_play_record_tb` VALUES ('1549', '第一集', 'http://puui.qpic.cn/vcover_hz_pic/0/ttqxo9s3cblgofl1506503143/0', '00:06:32', '25', '1000', '2018-03-27 14:01:45', '13');
 INSERT INTO `video_play_record_tb` VALUES ('1550', '第一集', 'http://puui.qpic.cn/tv/0/18009322_188263/0', '00:06:32', '200', '1000', '2018-03-27 14:02:33', '12');
-INSERT INTO `video_play_record_tb` VALUES ('1551', 'cccccd', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52rts8k1kid14su1jaj1qpppc155.jpg', '00:02:03', '0.7', '1000', '2018-03-27 14:03:09', '11');
-INSERT INTO `video_play_record_tb` VALUES ('1552', 'ccccc', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52aoej510601ootgs21vm5jkd9n.jpg', '00:02:03', '0.7', '1000', '2018-03-27 14:04:55', '10');
+INSERT INTO `video_play_record_tb` VALUES ('1551', 'cccccd', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52rts8k1kid14su1jaj1qpppc155.jpg', '00:02:03', '0.7', '1000', '2018-03-27 14:03:09', '11');
+INSERT INTO `video_play_record_tb` VALUES ('1552', 'ccccc', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52aoej510601ootgs21vm5jkd9n.jpg', '00:02:03', '0.7', '1000', '2018-03-27 14:04:55', '10');
 INSERT INTO `video_play_record_tb` VALUES ('1553', '第一集', 'http://puui.qpic.cn/vcover_hz_pic/0/xvlhj7cglyfwx8x1489802187/0', '00:06:32', '25', '1000', '2018-04-03 11:11:59', '14');
-INSERT INTO `video_play_record_tb` VALUES ('1554', 'ccc', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52cfqu4fdk14f31c2u1q7j1dq1h.jpg', '00:02:03', '0.7', '1000', '2018-03-27 14:13:50', '8');
-INSERT INTO `video_play_record_tb` VALUES ('1555', '测试22', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52q1n2e1qc87a3c7r1o8i1v9k1d.jpg', '00:06:32', '0.7', '1000', '2018-03-27 14:13:54', '2');
-INSERT INTO `video_play_record_tb` VALUES ('1556', 'cc2', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52cr6t3mhh1d071ekc11d61sinm.jpg', '00:02:03', '0.7', '1000', '2018-03-27 14:14:35', '7');
-INSERT INTO `video_play_record_tb` VALUES ('1557', 'cc', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52cr6t3mhh1d071ekc11d61sinm.jpg', '00:02:03', '0.7', '1000', '2018-03-27 14:16:46', '6');
-INSERT INTO `video_play_record_tb` VALUES ('1558', '测试', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3j6fm3ae1pd21efcf8u1pvq2f.jpg', '00:00:12', '1.54', '1018', '2018-03-27 14:58:52', '15');
+INSERT INTO `video_play_record_tb` VALUES ('1554', 'ccc', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52cfqu4fdk14f31c2u1q7j1dq1h.jpg', '00:02:03', '0.7', '1000', '2018-03-27 14:13:50', '8');
+INSERT INTO `video_play_record_tb` VALUES ('1555', '测试22', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52q1n2e1qc87a3c7r1o8i1v9k1d.jpg', '00:06:32', '0.7', '1000', '2018-03-27 14:13:54', '2');
+INSERT INTO `video_play_record_tb` VALUES ('1556', 'cc2', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52cr6t3mhh1d071ekc11d61sinm.jpg', '00:02:03', '0.7', '1000', '2018-03-27 14:14:35', '7');
+INSERT INTO `video_play_record_tb` VALUES ('1557', 'cc', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52cr6t3mhh1d071ekc11d61sinm.jpg', '00:02:03', '0.7', '1000', '2018-03-27 14:16:46', '6');
+INSERT INTO `video_play_record_tb` VALUES ('1558', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3j6fm3ae1pd21efcf8u1pvq2f.jpg', '00:00:12', '1.54', '1018', '2018-03-27 14:58:52', '15');
 INSERT INTO `video_play_record_tb` VALUES ('1559', '第一集', 'http://puui.qpic.cn/vcover_hz_pic/0/ttqxo9s3cblgofl1506503143/0', '00:06:32', '25', '1010', '2018-03-31 19:21:29', '13');
-INSERT INTO `video_play_record_tb` VALUES ('1560', '测试', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3j6fm3ae1pd21efcf8u1pvq2f.jpg', '00:00:12', '1.54', '1010', '2018-04-01 16:51:44', '15');
-INSERT INTO `video_play_record_tb` VALUES ('1561', 'cccc', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52aoej510601ootgs21vm5jkd9n.jpg', '00:02:03', '0.7', '1010', '2018-04-01 16:42:13', '9');
-INSERT INTO `video_play_record_tb` VALUES ('1563', '测试', 'http://p2bhwwngu.bkt.clouddn.com/o_1c9j3j6fm3ae1pd21efcf8u1pvq2f.jpg', '00:00:12', '1.54', '1000', '2018-04-03 11:11:08', '15');
+INSERT INTO `video_play_record_tb` VALUES ('1560', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3j6fm3ae1pd21efcf8u1pvq2f.jpg', '00:00:12', '1.54', '1010', '2018-04-01 16:51:44', '15');
+INSERT INTO `video_play_record_tb` VALUES ('1561', 'cccc', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52aoej510601ootgs21vm5jkd9n.jpg', '00:02:03', '0.7', '1010', '2018-04-01 16:42:13', '9');
+INSERT INTO `video_play_record_tb` VALUES ('1563', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c9j3j6fm3ae1pd21efcf8u1pvq2f.jpg', '00:00:12', '1.54', '1000', '2018-04-03 11:11:08', '15');
 INSERT INTO `video_play_record_tb` VALUES ('1566', '第一集', 'http://puui.qpic.cn/vcover_hz_pic/0/xvlhj7cglyfwx8x1489802187/0', '00:06:32', '25', '1010', '2018-04-03 09:06:38', '14');
-INSERT INTO `video_play_record_tb` VALUES ('1569', '测试视频04031006', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca4k2ng6anh1iovhun12k11jf71d.jpg', '00:00:16', '20.19', '1019', '2018-04-03 10:16:12', '16');
-INSERT INTO `video_play_record_tb` VALUES ('1570', 'cc', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52cr6t3mhh1d071ekc11d61sinm.jpg', '00:02:03', '0.7', '1019', '2018-04-03 10:20:23', '6');
-INSERT INTO `video_play_record_tb` VALUES ('1574', '测试', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca4lqkts56a1tgo1gc1qmokjp1h.jpg', '00:08:02', '83.42', '1000', '2018-04-03 11:12:34', '17');
-INSERT INTO `video_play_record_tb` VALUES ('1576', '如何为自己的公司团队提供附加值', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca57ti8d19p893kh1o10tduac22h.jpg', '00:25:08', '191.68', '1010', '2018-04-05 23:13:05', '27');
-INSERT INTO `video_play_record_tb` VALUES ('1577', '微商的五件事', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca5b08701arf18dl1t82vs315n6316.jpg', '00:25:09', '191.68', '1000', '2018-05-01 16:20:55', '30');
-INSERT INTO `video_play_record_tb` VALUES ('1583', '如何计算自己的时间价值', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai7se4o14rp18ef1cleu7f197tqu.jpg', '00:25:08', '191.68', '1000', '2018-04-11 10:30:25', '37');
-INSERT INTO `video_play_record_tb` VALUES ('1584', '微商当中的各种怂坑', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai67e2ljoa1p5u1gnt1f3i1e8eam.jpg', '00:25:07', '191.67', '1000', '2018-04-11 10:28:56', '35');
-INSERT INTO `video_play_record_tb` VALUES ('1585', '成功人士的八个武器', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca534c3v18f7651f85ksr2hgu1.jpg', '00:25:08', '191.72', '1000', '2018-06-26 23:38:24', '21');
-INSERT INTO `video_play_record_tb` VALUES ('1586', '如何针对顾客的心理需求', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca522ojmmaq1asoa5hq917dbi8.jpg', '00:25:02', '191.71', '1000', '2018-05-23 22:30:49', '20');
-INSERT INTO `video_play_record_tb` VALUES ('1587', '人怎么给到产品附加值', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai2ce0h10ak1v8p1sb51idbujfhr.jpg', '00:25:06', '191.70', '1000', '2018-04-11 10:29:27', '33');
-INSERT INTO `video_play_record_tb` VALUES ('1588', '人怎么给到产品附加值', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai2ce0h10ak1v8p1sb51idbujfhr.jpg', '00:25:06', '191.70', '1010', '2018-04-11 19:46:49', '33');
-INSERT INTO `video_play_record_tb` VALUES ('1589', '团队老大给到团队的扶持是什么', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai3i3soasdaqt1pfv1l24gkt2n.jpg', '00:25:06', '191.69', '1010', '2018-04-11 21:32:29', '34');
-INSERT INTO `video_play_record_tb` VALUES ('1597', '如何借力用力', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai6ss471i11f4ip35fhmgqpiq.jpg', '00:25:06', '191.71', '1021', '2018-04-17 14:39:05', '36');
-INSERT INTO `video_play_record_tb` VALUES ('1598', '如何借力用力', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai6ss471i11f4ip35fhmgqpiq.jpg', '00:25:06', '191.71', '1017', '2018-04-17 16:54:11', '36');
-INSERT INTO `video_play_record_tb` VALUES ('1599', '如何计算自己的时间价值', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai7se4o14rp18ef1cleu7f197tqu.jpg', '00:25:08', '191.68', '1009', '2018-04-17 17:06:53', '37');
-INSERT INTO `video_play_record_tb` VALUES ('1600', '微商当中的各种怂坑', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai67e2ljoa1p5u1gnt1f3i1e8eam.jpg', '00:25:07', '191.67', '1009', '2018-04-17 17:07:05', '35');
-INSERT INTO `video_play_record_tb` VALUES ('1601', '如何借力用力', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai6ss471i11f4ip35fhmgqpiq.jpg', '00:25:06', '191.71', '1009', '2018-04-17 17:42:02', '36');
-INSERT INTO `video_play_record_tb` VALUES ('1603', '团队老大给到团队的扶持是什么', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai3i3soasdaqt1pfv1l24gkt2n.jpg', '00:25:06', '191.69', '1009', '2018-04-17 17:41:54', '34');
-INSERT INTO `video_play_record_tb` VALUES ('1605', '如何借力用力', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai6ss471i11f4ip35fhmgqpiq.jpg', '00:25:06', '191.71', '1015', '2018-04-17 17:48:55', '36');
-INSERT INTO `video_play_record_tb` VALUES ('1606', '成功人士的八个武器', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca534c3v18f7651f85ksr2hgu1.jpg', '00:25:08', '191.72', '1009', '2018-04-17 17:50:02', '21');
-INSERT INTO `video_play_record_tb` VALUES ('1607', '如何搞定自己', 'http://p2bhwwngu.bkt.clouddn.com/o_1cb9ftd4s14jn1nlo1kbfsjt1c3kg3.jpg', '00:25:08', '191.71', '1000', '2018-04-22 15:14:42', '38');
-INSERT INTO `video_play_record_tb` VALUES ('1608', '一个良好的职业形象是你成功的根本', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbtubb0q1301178m1fsb17egaf8n2.jpg', '00:25:04', '191.67', '1010', '2018-05-01 15:17:11', '41');
-INSERT INTO `video_play_record_tb` VALUES ('1609', '带领团队跟父母教育的雷同', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu0n12cb6iueihh33vs1t1l16s.jpg', '00:25:04', '191.67', '1010', '2018-05-15 13:05:56', '43');
-INSERT INTO `video_play_record_tb` VALUES ('1610', '通过筛选产品告诉你，你缺的是什么', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu1g2vmcph1384tbn7ai61o1en.jpg', '00:25:05', '191.67', '1000', '2018-06-26 23:36:14', '44');
-INSERT INTO `video_play_record_tb` VALUES ('1611', '一个人的消费观念和是否跟你购买产品是两回事', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu1u003pv21fqn1du31ad0stb1md.jpg', '00:25:10', '191.67', '1000', '2018-05-01 16:21:47', '45');
-INSERT INTO `video_play_record_tb` VALUES ('1612', '人怎么给到产品附加值', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai2ce0h10ak1v8p1sb51idbujfhr.jpg', '00:25:06', '191.70', '1009', '2018-05-07 13:54:15', '33');
-INSERT INTO `video_play_record_tb` VALUES ('1615', '带领团队跟父母教育的雷同', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu0n12cb6iueihh33vs1t1l16s.jpg', '00:25:04', '191.67', '1009', '2018-07-04 14:50:05', '43');
-INSERT INTO `video_play_record_tb` VALUES ('1616', '如何现身说法', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca51c5fukus20n133e16ok1hplad.jpg', '00:25:07', '191.69', '1000', '2018-05-23 22:29:08', '19');
-INSERT INTO `video_play_record_tb` VALUES ('1617', '如何快速转战成为代理', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca4ohvat5v3kc32dr149065k1b.jpg', '00:25:08', '96.33', '1000', '2018-05-23 22:30:25', '18');
-INSERT INTO `video_play_record_tb` VALUES ('1618', '如何纳新和管理', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca54lnom1hd09mu131t6bu1maq1f7.jpg', '00:25:08', '191.71', '1000', '2018-05-23 22:30:46', '26');
-INSERT INTO `video_play_record_tb` VALUES ('1619', '一个良好的职业形象是你成功的根本', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbtubb0q1301178m1fsb17egaf8n2.jpg', '00:25:04', '191.67', '1000', '2018-05-29 18:08:39', '41');
-INSERT INTO `video_play_record_tb` VALUES ('1620', '通过筛选产品告诉你，你缺的是什么', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu1g2vmcph1384tbn7ai61o1en.jpg', '00:25:05', '191.67', '1009', '2018-05-31 14:28:10', '44');
-INSERT INTO `video_play_record_tb` VALUES ('1621', '如何快速转战成为代理', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca4ohvat5v3kc32dr149065k1b.jpg', '00:25:08', '96.33', '1009', '2018-07-04 14:49:57', '18');
-INSERT INTO `video_play_record_tb` VALUES ('1622', '一个人的消费观念和是否跟你购买产品是两回事', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu1u003pv21fqn1du31ad0stb1md.jpg', '00:25:10', '191.67', '1009', '2018-07-04 14:50:47', '45');
-INSERT INTO `video_play_record_tb` VALUES ('1623', '老梗的新认知', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu3cn7l1apt1s191pkj1i6sov9v.jpg', '00:25:04', '191.71', '1000', '2018-05-31 16:42:54', '47');
-INSERT INTO `video_play_record_tb` VALUES ('1624', '老梗的新认知', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu3cn7l1apt1s191pkj1i6sov9v.jpg', '00:25:04', '191.71', '1038', '2018-05-31 17:03:19', '47');
-INSERT INTO `video_play_record_tb` VALUES ('1625', '关于微商的趋势', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu2vugj1vna19f03r6e5p1lnk226.jpg', '00:25:06', '191.71', '1038', '2018-05-31 17:03:20', '46');
-INSERT INTO `video_play_record_tb` VALUES ('1626', '微商的五件事', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca5b08701arf18dl1t82vs315n6316.jpg', '00:25:09', '191.68', '1009', '2018-06-05 11:19:43', '30');
-INSERT INTO `video_play_record_tb` VALUES ('1627', '如何针对顾客的心理需求', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca522ojmmaq1asoa5hq917dbi8.jpg', '00:25:02', '191.71', '1009', '2018-06-08 13:44:56', '20');
-INSERT INTO `video_play_record_tb` VALUES ('1628', '如何搞定自己', 'http://p2bhwwngu.bkt.clouddn.com/o_1cb9ftd4s14jn1nlo1kbfsjt1c3kg3.jpg', '00:25:08', '191.71', '1009', '2018-06-08 13:41:56', '38');
-INSERT INTO `video_play_record_tb` VALUES ('1629', '人怎么给到产品附加值', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai2ce0h10ak1v8p1sb51idbujfhr.jpg', '00:25:06', '191.70', '1038', '2018-06-12 16:14:23', '33');
-INSERT INTO `video_play_record_tb` VALUES ('1630', '带领团队跟父母教育的雷同', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu0n12cb6iueihh33vs1t1l16s.jpg', '00:25:04', '191.67', '1016', '2018-07-05 15:09:59', '43');
-INSERT INTO `video_play_record_tb` VALUES ('1631', '带领团队跟父母教育的雷同', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu0n12cb6iueihh33vs1t1l16s.jpg', '00:25:04', '191.67', '1041', '2018-06-26 17:06:20', '43');
-INSERT INTO `video_play_record_tb` VALUES ('1632', '如何为自己的公司团队提供附加值', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca57ti8d19p893kh1o10tduac22h.jpg', '00:25:08', '191.68', '1014', '2018-06-26 23:22:28', '27');
-INSERT INTO `video_play_record_tb` VALUES ('1633', '微商的四个现代化', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai19htf1shrslm10hc1tb61jd9n.jpg', '00:25:08', '191.72', '1000', '2018-06-26 23:36:17', '32');
-INSERT INTO `video_play_record_tb` VALUES ('1634', '云商和支商有什么不同？', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbtrefa11gpcki4kjrp9inn41.jpg', '00:25:06', '191.67', '1000', '2018-06-26 23:38:21', '39');
-INSERT INTO `video_play_record_tb` VALUES ('1635', '微商的五件事', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca5b08701arf18dl1t82vs315n6316.jpg', '00:25:09', '191.68', '1014', '2018-06-28 10:49:11', '30');
-INSERT INTO `video_play_record_tb` VALUES ('1636', '营销和谈恋爱的相似度', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbtv9o2i1l82n7o1gg5nn27t0v1.jpg', '00:25:06', '191.67', '1009', '2018-07-04 14:49:43', '42');
-INSERT INTO `video_play_record_tb` VALUES ('1637', '关于线下市场开拓', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca59j35o7kd3vr19uo6hfogq2o1.jpg', '00:25:05', '191.67', '1009', '2018-07-04 14:48:06', '29');
-INSERT INTO `video_play_record_tb` VALUES ('1638', '测试', 'http://p2bhwwngu.bkt.clouddn.com/o_1chkl1kot1hcu46f7kt11nm1so65e.gif', '00:16:50', '16.50', '1016', '2018-07-05 17:51:23', '49');
-INSERT INTO `video_play_record_tb` VALUES ('1639', '测试', 'http://p2bhwwngu.bkt.clouddn.com/o_1chkl1kot1hcu46f7kt11nm1so65e.gif', '00:16:50', '16.50', '1041', '2018-07-09 10:17:56', '49');
-INSERT INTO `video_play_record_tb` VALUES ('1640', '测试', 'http://p2bhwwngu.bkt.clouddn.com/o_1chkl1kot1hcu46f7kt11nm1so65e.gif', '00:16:50', '16.50', '1014', '2018-07-10 18:52:50', '49');
+INSERT INTO `video_play_record_tb` VALUES ('1569', '测试视频04031006', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca4k2ng6anh1iovhun12k11jf71d.jpg', '00:00:16', '20.19', '1019', '2018-04-03 10:16:12', '16');
+INSERT INTO `video_play_record_tb` VALUES ('1570', 'cc', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52cr6t3mhh1d071ekc11d61sinm.jpg', '00:02:03', '0.7', '1019', '2018-04-03 10:20:23', '6');
+INSERT INTO `video_play_record_tb` VALUES ('1574', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca4lqkts56a1tgo1gc1qmokjp1h.jpg', '00:08:02', '83.42', '1000', '2018-04-03 11:12:34', '17');
+INSERT INTO `video_play_record_tb` VALUES ('1576', '如何为自己的公司团队提供附加值', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca57ti8d19p893kh1o10tduac22h.jpg', '00:25:08', '191.68', '1010', '2018-04-05 23:13:05', '27');
+INSERT INTO `video_play_record_tb` VALUES ('1577', '微商的五件事', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca5b08701arf18dl1t82vs315n6316.jpg', '00:25:09', '191.68', '1000', '2018-05-01 16:20:55', '30');
+INSERT INTO `video_play_record_tb` VALUES ('1583', '如何计算自己的时间价值', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai7se4o14rp18ef1cleu7f197tqu.jpg', '00:25:08', '191.68', '1000', '2018-04-11 10:30:25', '37');
+INSERT INTO `video_play_record_tb` VALUES ('1584', '微商当中的各种怂坑', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai67e2ljoa1p5u1gnt1f3i1e8eam.jpg', '00:25:07', '191.67', '1000', '2018-04-11 10:28:56', '35');
+INSERT INTO `video_play_record_tb` VALUES ('1585', '成功人士的八个武器', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca534c3v18f7651f85ksr2hgu1.jpg', '00:25:08', '191.72', '1000', '2018-11-23 11:18:35', '21');
+INSERT INTO `video_play_record_tb` VALUES ('1586', '如何针对顾客的心理需求', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca522ojmmaq1asoa5hq917dbi8.jpg', '00:25:02', '191.71', '1000', '2018-11-23 11:18:47', '20');
+INSERT INTO `video_play_record_tb` VALUES ('1587', '人怎么给到产品附加值', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai2ce0h10ak1v8p1sb51idbujfhr.jpg', '00:25:06', '191.70', '1000', '2018-04-11 10:29:27', '33');
+INSERT INTO `video_play_record_tb` VALUES ('1588', '人怎么给到产品附加值', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai2ce0h10ak1v8p1sb51idbujfhr.jpg', '00:25:06', '191.70', '1010', '2018-04-11 19:46:49', '33');
+INSERT INTO `video_play_record_tb` VALUES ('1589', '团队老大给到团队的扶持是什么', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai3i3soasdaqt1pfv1l24gkt2n.jpg', '00:25:06', '191.69', '1010', '2018-04-11 21:32:29', '34');
+INSERT INTO `video_play_record_tb` VALUES ('1597', '如何借力用力', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai6ss471i11f4ip35fhmgqpiq.jpg', '00:25:06', '191.71', '1021', '2018-04-17 14:39:05', '36');
+INSERT INTO `video_play_record_tb` VALUES ('1598', '如何借力用力', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai6ss471i11f4ip35fhmgqpiq.jpg', '00:25:06', '191.71', '1017', '2018-04-17 16:54:11', '36');
+INSERT INTO `video_play_record_tb` VALUES ('1599', '如何计算自己的时间价值', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai7se4o14rp18ef1cleu7f197tqu.jpg', '00:25:08', '191.68', '1009', '2018-04-17 17:06:53', '37');
+INSERT INTO `video_play_record_tb` VALUES ('1600', '微商当中的各种怂坑', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai67e2ljoa1p5u1gnt1f3i1e8eam.jpg', '00:25:07', '191.67', '1009', '2018-04-17 17:07:05', '35');
+INSERT INTO `video_play_record_tb` VALUES ('1601', '如何借力用力', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai6ss471i11f4ip35fhmgqpiq.jpg', '00:25:06', '191.71', '1009', '2018-04-17 17:42:02', '36');
+INSERT INTO `video_play_record_tb` VALUES ('1603', '团队老大给到团队的扶持是什么', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai3i3soasdaqt1pfv1l24gkt2n.jpg', '00:25:06', '191.69', '1009', '2018-04-17 17:41:54', '34');
+INSERT INTO `video_play_record_tb` VALUES ('1605', '如何借力用力', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai6ss471i11f4ip35fhmgqpiq.jpg', '00:25:06', '191.71', '1015', '2018-04-17 17:48:55', '36');
+INSERT INTO `video_play_record_tb` VALUES ('1606', '成功人士的八个武器', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca534c3v18f7651f85ksr2hgu1.jpg', '00:25:08', '191.72', '1009', '2018-04-17 17:50:02', '21');
+INSERT INTO `video_play_record_tb` VALUES ('1607', '如何搞定自己', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cb9ftd4s14jn1nlo1kbfsjt1c3kg3.jpg', '00:25:08', '191.71', '1000', '2018-04-22 15:14:42', '38');
+INSERT INTO `video_play_record_tb` VALUES ('1608', '一个良好的职业形象是你成功的根本', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbtubb0q1301178m1fsb17egaf8n2.jpg', '00:25:04', '191.67', '1010', '2018-05-01 15:17:11', '41');
+INSERT INTO `video_play_record_tb` VALUES ('1609', '带领团队跟父母教育的雷同', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu0n12cb6iueihh33vs1t1l16s.jpg', '00:25:04', '191.67', '1010', '2018-05-15 13:05:56', '43');
+INSERT INTO `video_play_record_tb` VALUES ('1610', '通过筛选产品告诉你，你缺的是什么', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu1g2vmcph1384tbn7ai61o1en.jpg', '00:25:05', '191.67', '1000', '2018-06-26 23:36:14', '44');
+INSERT INTO `video_play_record_tb` VALUES ('1611', '一个人的消费观念和是否跟你购买产品是两回事', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu1u003pv21fqn1du31ad0stb1md.jpg', '00:25:10', '191.67', '1000', '2018-05-01 16:21:47', '45');
+INSERT INTO `video_play_record_tb` VALUES ('1612', '人怎么给到产品附加值', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai2ce0h10ak1v8p1sb51idbujfhr.jpg', '00:25:06', '191.70', '1009', '2018-05-07 13:54:15', '33');
+INSERT INTO `video_play_record_tb` VALUES ('1615', '带领团队跟父母教育的雷同', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu0n12cb6iueihh33vs1t1l16s.jpg', '00:25:04', '191.67', '1009', '2018-07-04 14:50:05', '43');
+INSERT INTO `video_play_record_tb` VALUES ('1616', '如何现身说法', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca51c5fukus20n133e16ok1hplad.jpg', '00:25:07', '191.69', '1000', '2018-05-23 22:29:08', '19');
+INSERT INTO `video_play_record_tb` VALUES ('1617', '如何快速转战成为代理', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca4ohvat5v3kc32dr149065k1b.jpg', '00:25:08', '96.33', '1000', '2018-05-23 22:30:25', '18');
+INSERT INTO `video_play_record_tb` VALUES ('1618', '如何纳新和管理', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca54lnom1hd09mu131t6bu1maq1f7.jpg', '00:25:08', '191.71', '1000', '2018-05-23 22:30:46', '26');
+INSERT INTO `video_play_record_tb` VALUES ('1619', '一个良好的职业形象是你成功的根本', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbtubb0q1301178m1fsb17egaf8n2.jpg', '00:25:04', '191.67', '1000', '2018-05-29 18:08:39', '41');
+INSERT INTO `video_play_record_tb` VALUES ('1620', '通过筛选产品告诉你，你缺的是什么', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu1g2vmcph1384tbn7ai61o1en.jpg', '00:25:05', '191.67', '1009', '2018-05-31 14:28:10', '44');
+INSERT INTO `video_play_record_tb` VALUES ('1621', '如何快速转战成为代理', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca4ohvat5v3kc32dr149065k1b.jpg', '00:25:08', '96.33', '1009', '2018-07-04 14:49:57', '18');
+INSERT INTO `video_play_record_tb` VALUES ('1622', '一个人的消费观念和是否跟你购买产品是两回事', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu1u003pv21fqn1du31ad0stb1md.jpg', '00:25:10', '191.67', '1009', '2018-07-04 14:50:47', '45');
+INSERT INTO `video_play_record_tb` VALUES ('1623', '老梗的新认知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu3cn7l1apt1s191pkj1i6sov9v.jpg', '00:25:04', '191.71', '1000', '2018-05-31 16:42:54', '47');
+INSERT INTO `video_play_record_tb` VALUES ('1624', '老梗的新认知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu3cn7l1apt1s191pkj1i6sov9v.jpg', '00:25:04', '191.71', '1038', '2018-05-31 17:03:19', '47');
+INSERT INTO `video_play_record_tb` VALUES ('1625', '关于微商的趋势', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu2vugj1vna19f03r6e5p1lnk226.jpg', '00:25:06', '191.71', '1038', '2018-05-31 17:03:20', '46');
+INSERT INTO `video_play_record_tb` VALUES ('1626', '微商的五件事', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca5b08701arf18dl1t82vs315n6316.jpg', '00:25:09', '191.68', '1009', '2018-06-05 11:19:43', '30');
+INSERT INTO `video_play_record_tb` VALUES ('1627', '如何针对顾客的心理需求', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca522ojmmaq1asoa5hq917dbi8.jpg', '00:25:02', '191.71', '1009', '2018-06-08 13:44:56', '20');
+INSERT INTO `video_play_record_tb` VALUES ('1628', '如何搞定自己', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cb9ftd4s14jn1nlo1kbfsjt1c3kg3.jpg', '00:25:08', '191.71', '1009', '2018-06-08 13:41:56', '38');
+INSERT INTO `video_play_record_tb` VALUES ('1629', '人怎么给到产品附加值', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai2ce0h10ak1v8p1sb51idbujfhr.jpg', '00:25:06', '191.70', '1038', '2018-06-12 16:14:23', '33');
+INSERT INTO `video_play_record_tb` VALUES ('1630', '带领团队跟父母教育的雷同', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu0n12cb6iueihh33vs1t1l16s.jpg', '00:25:04', '191.67', '1016', '2018-11-23 12:34:03', '43');
+INSERT INTO `video_play_record_tb` VALUES ('1631', '带领团队跟父母教育的雷同', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu0n12cb6iueihh33vs1t1l16s.jpg', '00:25:04', '191.67', '1041', '2018-07-20 16:33:52', '43');
+INSERT INTO `video_play_record_tb` VALUES ('1632', '如何为自己的公司团队提供附加值', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca57ti8d19p893kh1o10tduac22h.jpg', '00:25:08', '191.68', '1014', '2018-06-26 23:22:28', '27');
+INSERT INTO `video_play_record_tb` VALUES ('1633', '微商的四个现代化', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai19htf1shrslm10hc1tb61jd9n.jpg', '00:25:08', '191.72', '1000', '2018-06-26 23:36:17', '32');
+INSERT INTO `video_play_record_tb` VALUES ('1634', '云商和支商有什么不同？', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbtrefa11gpcki4kjrp9inn41.jpg', '00:25:06', '191.67', '1000', '2018-06-26 23:38:21', '39');
+INSERT INTO `video_play_record_tb` VALUES ('1635', '微商的五件事', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca5b08701arf18dl1t82vs315n6316.jpg', '00:25:09', '191.68', '1014', '2018-06-28 10:49:11', '30');
+INSERT INTO `video_play_record_tb` VALUES ('1636', '营销和谈恋爱的相似度', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbtv9o2i1l82n7o1gg5nn27t0v1.jpg', '00:25:06', '191.67', '1009', '2018-07-04 14:49:43', '42');
+INSERT INTO `video_play_record_tb` VALUES ('1637', '关于线下市场开拓', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca59j35o7kd3vr19uo6hfogq2o1.jpg', '00:25:05', '191.67', '1009', '2018-07-04 14:48:06', '29');
+INSERT INTO `video_play_record_tb` VALUES ('1638', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/o_1chkl1kot1hcu46f7kt11nm1so65e.gif', '00:16:50', '16.50', '1016', '2018-07-05 17:51:23', '49');
+INSERT INTO `video_play_record_tb` VALUES ('1639', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/o_1chkl1kot1hcu46f7kt11nm1so65e.gif', '00:16:50', '16.50', '1041', '2018-07-27 09:45:14', '49');
+INSERT INTO `video_play_record_tb` VALUES ('1640', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/o_1chkl1kot1hcu46f7kt11nm1so65e.gif', '00:16:50', '16.50', '1014', '2018-07-26 09:23:17', '49');
+INSERT INTO `video_play_record_tb` VALUES ('1641', '如何纳新和管理', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca54lnom1hd09mu131t6bu1maq1f7.jpg', '00:25:08', '191.71', '1014', '2018-07-16 18:09:08', '26');
+INSERT INTO `video_play_record_tb` VALUES ('1642', '带领团队跟父母教育的雷同', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu0n12cb6iueihh33vs1t1l16s.jpg', '00:25:04', '191.67', '1014', '2018-09-06 21:46:48', '43');
+INSERT INTO `video_play_record_tb` VALUES ('1643', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/o_1chkl1kot1hcu46f7kt11nm1so65e.gif', '00:16:50', '16.50', '1052', '2018-07-26 14:04:55', '49');
+INSERT INTO `video_play_record_tb` VALUES ('1644', '带领团队跟父母教育的雷同', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu0n12cb6iueihh33vs1t1l16s.jpg', '00:25:04', '191.67', '1052', '2018-07-31 16:37:21', '43');
+INSERT INTO `video_play_record_tb` VALUES ('1645', '如何借力用力', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai6ss471i11f4ip35fhmgqpiq.jpg', '00:25:06', '191.71', '1052', '2018-07-31 16:24:20', '36');
+INSERT INTO `video_play_record_tb` VALUES ('1646', '人怎么给到产品附加值', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai2ce0h10ak1v8p1sb51idbujfhr.jpg', '00:25:06', '191.70', '1052', '2018-07-17 13:54:53', '33');
+INSERT INTO `video_play_record_tb` VALUES ('1647', '通过筛选产品告诉你，你缺的是什么', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu1g2vmcph1384tbn7ai61o1en.jpg', '00:25:05', '191.67', '1041', '2018-07-30 17:16:29', '44');
+INSERT INTO `video_play_record_tb` VALUES ('1648', '带领团队跟父母教育的雷同', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu0n12cb6iueihh33vs1t1l16s.jpg', '00:25:04', '191.67', '1042', '2018-07-31 16:07:04', '43');
+INSERT INTO `video_play_record_tb` VALUES ('1649', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/o_1chkl1kot1hcu46f7kt11nm1so65e.gif', '00:16:50', '16.50', '1042', '2018-07-20 16:36:27', '49');
+INSERT INTO `video_play_record_tb` VALUES ('1650', '一个人的消费观念和是否跟你购买产品是两回事', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu1u003pv21fqn1du31ad0stb1md.jpg', '00:25:10', '191.67', '1014', '2018-07-26 09:46:35', '45');
+INSERT INTO `video_play_record_tb` VALUES ('1651', '一个良好的职业形象是你成功的根本', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbtubb0q1301178m1fsb17egaf8n2.jpg', '00:25:04', '191.67', '1014', '2018-07-26 09:37:59', '41');
+INSERT INTO `video_play_record_tb` VALUES ('1652', '通过筛选产品告诉你，你缺的是什么', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu1g2vmcph1384tbn7ai61o1en.jpg', '00:25:05', '191.67', '1014', '2018-07-26 09:49:34', '44');
+INSERT INTO `video_play_record_tb` VALUES ('1653', '通过筛选产品告诉你，你缺的是什么', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu1g2vmcph1384tbn7ai61o1en.jpg', '00:25:05', '191.67', '1052', '2018-07-26 14:03:52', '44');
+INSERT INTO `video_play_record_tb` VALUES ('1654', '带领团队跟父母教育的雷同', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu0n12cb6iueihh33vs1t1l16s.jpg', '00:25:04', '191.67', '1012', '2018-07-31 23:09:13', '43');
+INSERT INTO `video_play_record_tb` VALUES ('1655', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/o_1chkl1kot1hcu46f7kt11nm1so65e.gif', '00:16:50', '16.50', '1012', '2018-07-26 22:47:55', '49');
+INSERT INTO `video_play_record_tb` VALUES ('1656', '老梗的新认知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu3cn7l1apt1s191pkj1i6sov9v.jpg', '00:25:04', '191.71', '1041', '2018-08-02 10:05:43', '47');
+INSERT INTO `video_play_record_tb` VALUES ('1657', '关于微商的趋势', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu2vugj1vna19f03r6e5p1lnk226.jpg', '00:25:06', '191.71', '1041', '2018-07-30 17:12:19', '46');
+INSERT INTO `video_play_record_tb` VALUES ('1658', '如何借力用力', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai6ss471i11f4ip35fhmgqpiq.jpg', '00:25:06', '191.71', '1042', '2018-07-31 16:04:35', '36');
+INSERT INTO `video_play_record_tb` VALUES ('1659', '一个良好的职业形象是你成功的根本', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbtubb0q1301178m1fsb17egaf8n2.jpg', '00:25:04', '191.67', '1052', '2018-07-31 16:58:48', '41');
+INSERT INTO `video_play_record_tb` VALUES ('1660', '如何快速转战成为代理', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca4ohvat5v3kc32dr149065k1b.jpg', '00:25:08', '96.33', '1052', '2018-07-31 16:37:43', '18');
+INSERT INTO `video_play_record_tb` VALUES ('1661', '一个人的消费观念和是否跟你购买产品是两回事', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu1u003pv21fqn1du31ad0stb1md.jpg', '00:25:10', '191.67', '1052', '2018-07-31 16:43:18', '45');
+INSERT INTO `video_play_record_tb` VALUES ('1662', '如何搞定自己', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cb9ftd4s14jn1nlo1kbfsjt1c3kg3.jpg', '00:25:08', '191.71', '1014', '2018-08-23 15:02:45', '38');
+INSERT INTO `video_play_record_tb` VALUES ('1663', '老梗的新认知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu3cn7l1apt1s191pkj1i6sov9v.jpg', '00:25:04', '191.71', '1016', '2018-11-23 10:50:30', '47');
+INSERT INTO `video_play_record_tb` VALUES ('1664', '带领团队跟父母教育的雷同', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu0n12cb6iueihh33vs1t1l16s.jpg', '00:25:04', '191.67', '1000', '2018-11-23 11:18:51', '43');
+INSERT INTO `video_play_record_tb` VALUES ('1665', '带领团队跟父母教育的雷同', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu0n12cb6iueihh33vs1t1l16s.jpg', '00:25:04', '191.67', '1055', '2018-11-23 13:20:18', '43');
+INSERT INTO `video_play_record_tb` VALUES ('1666', '老梗的新认知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu3cn7l1apt1s191pkj1i6sov9v.jpg', '00:25:04', '191.71', '1055', '2018-11-23 13:39:54', '47');
+INSERT INTO `video_play_record_tb` VALUES ('1667', '关于微商的趋势', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu2vugj1vna19f03r6e5p1lnk226.jpg', '00:25:06', '191.71', '1055', '2018-11-23 13:21:37', '46');
 
 -- ----------------------------
 -- Table structure for `video_set_cate_tb`
@@ -3406,14 +3720,14 @@ CREATE TABLE `video_set_cate_tb` (
 -- ----------------------------
 -- Records of video_set_cate_tb
 -- ----------------------------
-INSERT INTO `video_set_cate_tb` VALUES ('1000', '婚姻家庭', '婚姻家庭咨询师是为在恋爱、婚姻、家庭生活中遇到各种问题的求助者提供咨询和辅导服务的人员，他们会恪守职业道德，保护求助者的个人隐私，更好地为求助者服务。', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5a23rgp1lttge8ogq13c717cf1f.png', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca2n8cap1au411v01r20ldo1vvq2l.jpg', '110', '2018-04-02 23:10:29');
-INSERT INTO `video_set_cate_tb` VALUES ('1001', '子女教育', '教育子女要以引导，引诱，方法，在游戏中学习，娱乐中提高，比赛中锻炼，人才共生就是要吧学习的人放在一起所以他们就爱学习，所以你要运用适当的方法和技巧去引导他，当上学的时候就可以竞争中提高了。', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5a239ko11im15na1gr0b5n1uec1a.png', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca2na7dt14pi1fedorkbkf1nf833.jpg', '146', '2018-07-05 15:09:59');
-INSERT INTO `video_set_cate_tb` VALUES ('1002', '演讲口才', '《演讲与口才》是一个杂志出刊。该杂志创始人为邵守义，他对我国演讲与口才理论的研究做出了巨大的贡献，被誉为“新时期演讲事业的开拓者”。', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5a22n7t17de8g913e7gghnou15.png', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca2oj4m5o5e4h01l3g1b951uv1v.jpg', '102', '2018-06-26 23:38:24');
-INSERT INTO `video_set_cate_tb` VALUES ('1003', '自我成长', '人一生的主线基本围绕家庭，工作，情感三个方面，其中工作是实现自我最直接的一条线，身边总会有一些成功或是不成功的案例。多数人对成功的理解就是拥有更多的财富，而作为一个从事多年猎头顾问以及心理咨询的我来说，如何将自我成长发挥到极致才是真正的成功。', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5a224rvlcnqfr1h5ao11p4610.png', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca2ljoqjac3lgt8k9hac1e0i1e.jpg', '117', '2018-07-10 18:52:50');
-INSERT INTO `video_set_cate_tb` VALUES ('1004', '人际关系', '人际关系这个词是在20世纪初由美国人事管理协会率先提出的，也被称为人际关系论，1933年由美国哈佛大学教授梅约创立。这个概念可以从三个方面理解：\n1、人际关系表明人与人相互交往过程中心理关系的亲密性、融洽性和协调性的程度\n2、人际关系有三种心理成分组成。认知、情感和行为成分\n3、人际关系是在彼此交往的过程中建立和发展起来的。', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5a21jr7r8aang1ih21na11ol8r.png', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca2mu711v441qd6m6hg54vgi2g.jpg', '75', '2018-06-12 16:14:23');
-INSERT INTO `video_set_cate_tb` VALUES ('1005', '企业管理', '企业管理是对企业生产经营活动进行计划、组织、指挥、协调和控制等一系列活动的总称，是社会化大生产的客观要求。企业管理是尽可能利用企业的人力、物力、财力、信息等资源，实现多、快、好、省的目标，取得最大的投入产出效率。', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5a21642lig1i7a12siea1m01m.png', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca2mi8he10qf1unb1auq1jobgso2b.jpg', '53', '2018-06-26 23:22:28');
-INSERT INTO `video_set_cate_tb` VALUES ('1006', '团队打造', '“没有行动的远见只能是一种梦想，没有远见的行动只能是一种苦役，远见和行动才是世界的希望”', 'http://p2bhwwngu.bkt.clouddn.com/o_1c5a20f1q9ka31d1acl1l7h18ioh.png', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca2jpt5g1r6t18lb19026l71thi38.jpg', '147', '2018-06-28 10:49:11');
-INSERT INTO `video_set_cate_tb` VALUES ('1007', '市场营销', '市场营销（Marketing），又称作市场学、市场行销或行销学，MBA、EMBA等经典商管课程均将市场营销作为对管理者进行管理和教育的重要模块包含在内。市场营销是在创造、沟通、传播和交换产品中，为顾客、客户、合作伙伴以及整个社会带来经济价值的活动、过程和体系。主要是指营销人员针对市场开展经营活动、销售行为的过程。', 'http://p2bhwwngu.bkt.clouddn.com/o_1c58i4jkm123t1mpa2bkgp8i17h.png', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca2mhl8qg0h18hm1anr124q17t126.jpg', '122', '2018-07-04 14:49:57');
+INSERT INTO `video_set_cate_tb` VALUES ('1000', '婚姻家庭', '婚姻家庭咨询师是为在恋爱、婚姻、家庭生活中遇到各种问题的求助者提供咨询和辅导服务的人员，他们会恪守职业道德，保护求助者的个人隐私，更好地为求助者服务。', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5a23rgp1lttge8ogq13c717cf1f.png', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca2n8cap1au411v01r20ldo1vvq2l.jpg', '110', '2018-04-02 23:10:29');
+INSERT INTO `video_set_cate_tb` VALUES ('1001', '子女教育', '教育子女要以引导，引诱，方法，在游戏中学习，娱乐中提高，比赛中锻炼，人才共生就是要吧学习的人放在一起所以他们就爱学习，所以你要运用适当的方法和技巧去引导他，当上学的时候就可以竞争中提高了。', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5a239ko11im15na1gr0b5n1uec1a.png', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca2na7dt14pi1fedorkbkf1nf833.jpg', '195', '2018-11-23 13:20:18');
+INSERT INTO `video_set_cate_tb` VALUES ('1002', '演讲口才', '《演讲与口才》是一个杂志出刊。该杂志创始人为邵守义，他对我国演讲与口才理论的研究做出了巨大的贡献，被誉为“新时期演讲事业的开拓者”。', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5a22n7t17de8g913e7gghnou15.png', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca2oj4m5o5e4h01l3g1b951uv1v.jpg', '103', '2018-11-23 11:18:35');
+INSERT INTO `video_set_cate_tb` VALUES ('1003', '自我成长', '人一生的主线基本围绕家庭，工作，情感三个方面，其中工作是实现自我最直接的一条线，身边总会有一些成功或是不成功的案例。多数人对成功的理解就是拥有更多的财富，而作为一个从事多年猎头顾问以及心理咨询的我来说，如何将自我成长发挥到极致才是真正的成功。', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5a224rvlcnqfr1h5ao11p4610.png', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca2ljoqjac3lgt8k9hac1e0i1e.jpg', '151', '2018-07-31 16:43:18');
+INSERT INTO `video_set_cate_tb` VALUES ('1004', '人际关系', '人际关系这个词是在20世纪初由美国人事管理协会率先提出的，也被称为人际关系论，1933年由美国哈佛大学教授梅约创立。这个概念可以从三个方面理解：\n1、人际关系表明人与人相互交往过程中心理关系的亲密性、融洽性和协调性的程度\n2、人际关系有三种心理成分组成。认知、情感和行为成分\n3、人际关系是在彼此交往的过程中建立和发展起来的。', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5a21jr7r8aang1ih21na11ol8r.png', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca2mu711v441qd6m6hg54vgi2g.jpg', '77', '2018-11-23 11:18:47');
+INSERT INTO `video_set_cate_tb` VALUES ('1005', '企业管理', '企业管理是对企业生产经营活动进行计划、组织、指挥、协调和控制等一系列活动的总称，是社会化大生产的客观要求。企业管理是尽可能利用企业的人力、物力、财力、信息等资源，实现多、快、好、省的目标，取得最大的投入产出效率。', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5a21642lig1i7a12siea1m01m.png', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca2mi8he10qf1unb1auq1jobgso2b.jpg', '59', '2018-07-31 16:24:20');
+INSERT INTO `video_set_cate_tb` VALUES ('1006', '团队打造', '“没有行动的远见只能是一种梦想，没有远见的行动只能是一种苦役，远见和行动才是世界的希望”', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c5a20f1q9ka31d1acl1l7h18ioh.png', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca2jpt5g1r6t18lb19026l71thi38.jpg', '147', '2018-06-28 10:49:11');
+INSERT INTO `video_set_cate_tb` VALUES ('1007', '市场营销', '市场营销（Marketing），又称作市场学、市场行销或行销学，MBA、EMBA等经典商管课程均将市场营销作为对管理者进行管理和教育的重要模块包含在内。市场营销是在创造、沟通、传播和交换产品中，为顾客、客户、合作伙伴以及整个社会带来经济价值的活动、过程和体系。主要是指营销人员针对市场开展经营活动、销售行为的过程。', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c58i4jkm123t1mpa2bkgp8i17h.png', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca2mhl8qg0h18hm1anr124q17t126.jpg', '140', '2018-11-23 13:39:54');
 
 -- ----------------------------
 -- Table structure for `video_set_collect_tb`
@@ -3431,26 +3745,27 @@ CREATE TABLE `video_set_collect_tb` (
   PRIMARY KEY (`video_set_collect_id`),
   KEY `INDEX_VIDEOSETID` (`video_set_id`) USING BTREE,
   KEY `INDEX_ACCOUNTID` (`account_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1098 DEFAULT CHARSET=utf8 COMMENT='视频集收藏表';
+) ENGINE=InnoDB AUTO_INCREMENT=1099 DEFAULT CHARSET=utf8 COMMENT='视频集收藏表';
 
 -- ----------------------------
 -- Records of video_set_collect_tb
 -- ----------------------------
 INSERT INTO `video_set_collect_tb` VALUES ('1029', '第一集', 'http://puui.qpic.cn/vcover_hz_pic/0/ttqxo9s3cblgofl1506503143/0', '00:06:32', '25', '1000', '2018-03-27 13:59:48', '1007');
 INSERT INTO `video_set_collect_tb` VALUES ('1030', '第一集', 'http://puui.qpic.cn/vcover_hz_pic/0/xvlhj7cglyfwx8x1489802187/0', '00:06:32', '25', '1000', '2018-03-27 14:15:09', '1008');
-INSERT INTO `video_set_collect_tb` VALUES ('1033', 'cccccd', 'http://p2bhwwngu.bkt.clouddn.com/o_1c52rts8k1kid14su1jaj1qpppc155.jpg', '00:02:03', '0.7', '1019', '2018-04-03 10:18:28', '1000');
-INSERT INTO `video_set_collect_tb` VALUES ('1038', '如何借力用力', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai6sc6hag12041i4oc8h1ep5hk.jpg', '00:25:06', '191.71', '1021', '2018-04-17 14:39:18', '1024');
-INSERT INTO `video_set_collect_tb` VALUES ('1039', '如何借力用力', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai6ss471i11f4ip35fhmgqpiq.jpg', '00:25:06', '191.71', '1017', '2018-04-17 16:47:15', '1024');
-INSERT INTO `video_set_collect_tb` VALUES ('1040', '如何搞定自己', 'http://p2bhwwngu.bkt.clouddn.com/o_1cb9ftd4s14jn1nlo1kbfsjt1c3kg3.jpg', '00:25:08', '191.71', '1019', '2018-04-18 09:21:07', '1025');
-INSERT INTO `video_set_collect_tb` VALUES ('1041', '一个良好的职业形象是你成功的根本', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbttv6bl1obfqtavof1p691k6om1.jpg', '00:25:04', '191.67', '1010', '2018-05-01 14:43:22', '1028');
-INSERT INTO `video_set_collect_tb` VALUES ('1049', '团队老大给到团队的扶持是什么', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai3i3soasdaqt1pfv1l24gkt2n.jpg', '00:25:06', '191.69', '1012', '2018-05-03 21:01:36', '1022');
-INSERT INTO `video_set_collect_tb` VALUES ('1063', '一个良好的职业形象是你成功的根本', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbttv6bl1obfqtavof1p691k6om1.jpg', '00:25:04', '191.67', '1009', '2018-05-07 14:15:04', '1028');
-INSERT INTO `video_set_collect_tb` VALUES ('1068', '云商和支商有什么不同？', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbtrefa11gpcki4kjrp9inn41.jpg', '00:25:06', '191.67', '1012', '2018-05-12 20:33:56', '1026');
-INSERT INTO `video_set_collect_tb` VALUES ('1086', '带领团队跟父母教育的雷同', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu0ave654k196h3aaev0crj15r.jpg', '00:25:04', '191.67', '1009', '2018-05-13 13:50:06', '1029');
-INSERT INTO `video_set_collect_tb` VALUES ('1087', '一个人的消费观念和是否跟你购买产品是两回事', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu1u003pv21fqn1du31ad0stb1md.jpg', '00:25:10', '191.67', '1013', '2018-05-13 13:55:25', '1027');
-INSERT INTO `video_set_collect_tb` VALUES ('1095', '如何计算自己的时间价值', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai7ruuu1oird2p5pk1h04rtmpk.jpg', '00:25:08', '191.71', '1009', '2018-06-08 13:42:02', '1025');
-INSERT INTO `video_set_collect_tb` VALUES ('1096', '人怎么给到产品附加值', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai2ce0h10ak1v8p1sb51idbujfhr.jpg', '00:25:06', '191.70', '1038', '2018-06-12 16:14:15', '1021');
-INSERT INTO `video_set_collect_tb` VALUES ('1097', '带领团队跟父母教育的雷同', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu0ave654k196h3aaev0crj15r.jpg', '00:25:04', '191.67', '1016', '2018-06-23 13:49:18', '1029');
+INSERT INTO `video_set_collect_tb` VALUES ('1033', 'cccccd', 'http://laoyeshuovideo.laoyeshuo.cn/o_1c52rts8k1kid14su1jaj1qpppc155.jpg', '00:02:03', '0.7', '1019', '2018-04-03 10:18:28', '1000');
+INSERT INTO `video_set_collect_tb` VALUES ('1038', '如何借力用力', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai6sc6hag12041i4oc8h1ep5hk.jpg', '00:25:06', '191.71', '1021', '2018-04-17 14:39:18', '1024');
+INSERT INTO `video_set_collect_tb` VALUES ('1039', '如何借力用力', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai6ss471i11f4ip35fhmgqpiq.jpg', '00:25:06', '191.71', '1017', '2018-04-17 16:47:15', '1024');
+INSERT INTO `video_set_collect_tb` VALUES ('1040', '如何搞定自己', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cb9ftd4s14jn1nlo1kbfsjt1c3kg3.jpg', '00:25:08', '191.71', '1019', '2018-04-18 09:21:07', '1025');
+INSERT INTO `video_set_collect_tb` VALUES ('1041', '一个良好的职业形象是你成功的根本', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbttv6bl1obfqtavof1p691k6om1.jpg', '00:25:04', '191.67', '1010', '2018-05-01 14:43:22', '1028');
+INSERT INTO `video_set_collect_tb` VALUES ('1049', '团队老大给到团队的扶持是什么', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai3i3soasdaqt1pfv1l24gkt2n.jpg', '00:25:06', '191.69', '1012', '2018-05-03 21:01:36', '1022');
+INSERT INTO `video_set_collect_tb` VALUES ('1063', '一个良好的职业形象是你成功的根本', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbttv6bl1obfqtavof1p691k6om1.jpg', '00:25:04', '191.67', '1009', '2018-05-07 14:15:04', '1028');
+INSERT INTO `video_set_collect_tb` VALUES ('1068', '云商和支商有什么不同？', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbtrefa11gpcki4kjrp9inn41.jpg', '00:25:06', '191.67', '1012', '2018-05-12 20:33:56', '1026');
+INSERT INTO `video_set_collect_tb` VALUES ('1086', '带领团队跟父母教育的雷同', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu0ave654k196h3aaev0crj15r.jpg', '00:25:04', '191.67', '1009', '2018-05-13 13:50:06', '1029');
+INSERT INTO `video_set_collect_tb` VALUES ('1087', '一个人的消费观念和是否跟你购买产品是两回事', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu1u003pv21fqn1du31ad0stb1md.jpg', '00:25:10', '191.67', '1013', '2018-05-13 13:55:25', '1027');
+INSERT INTO `video_set_collect_tb` VALUES ('1095', '如何计算自己的时间价值', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai7ruuu1oird2p5pk1h04rtmpk.jpg', '00:25:08', '191.71', '1009', '2018-06-08 13:42:02', '1025');
+INSERT INTO `video_set_collect_tb` VALUES ('1096', '人怎么给到产品附加值', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai2ce0h10ak1v8p1sb51idbujfhr.jpg', '00:25:06', '191.70', '1038', '2018-06-12 16:14:15', '1021');
+INSERT INTO `video_set_collect_tb` VALUES ('1097', '带领团队跟父母教育的雷同', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu0ave654k196h3aaev0crj15r.jpg', '00:25:04', '191.67', '1016', '2018-06-23 13:49:18', '1029');
+INSERT INTO `video_set_collect_tb` VALUES ('1098', '测试', 'http://laoyeshuovideo.laoyeshuo.cn/o_1chkktjmc1icccfd1fv4cob1fomo.jpg', '00:16:50', '16.50', '1052', '2018-07-26 14:04:48', '1034');
 
 -- ----------------------------
 -- Table structure for `video_set_search_tb`
@@ -3478,7 +3793,7 @@ INSERT INTO `video_set_search_tb` VALUES ('1006', '口才', '13459', '2018-06-08
 INSERT INTO `video_set_search_tb` VALUES ('1007', '成长', '12332', '2018-06-08 13:22:21');
 INSERT INTO `video_set_search_tb` VALUES ('1008', '营销', '12338', '2018-06-08 13:22:43');
 INSERT INTO `video_set_search_tb` VALUES ('1009', '222', '7', '2018-04-08 16:32:28');
-INSERT INTO `video_set_search_tb` VALUES ('1010', '如何', '36', '2018-06-08 13:22:24');
+INSERT INTO `video_set_search_tb` VALUES ('1010', '如何', '37', '2018-07-30 15:09:43');
 INSERT INTO `video_set_search_tb` VALUES ('1011', '没有', '1', '2018-04-08 16:37:06');
 INSERT INTO `video_set_search_tb` VALUES ('1012', '如何借力', '2', '2018-04-11 21:14:17');
 INSERT INTO `video_set_search_tb` VALUES ('1013', 'r', '7', '2018-04-11 19:13:45');
@@ -3591,29 +3906,28 @@ CREATE TABLE `video_set_tb` (
 -- ----------------------------
 -- Records of video_set_tb
 -- ----------------------------
-INSERT INTO `video_set_tb` VALUES ('1010', '如何快速转战成为代理', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca4hjuhu9s9sqo1pcn6f41bkl2r.jpg', '老爷', '如何快速转战成为代理，微商的朋友圈是个人的广告版，个人的日记本，个人的衣食住行。在别人做的不好还要死撑着的情况下，我是否要去戳破它。不戳破就看着他硬撑死扛，戳破又怕吵架...', '2', '1', '0.00', '1', '26', '1', '1007', '2018-04-03 09:29:49', '2018-04-03 13:57:38');
-INSERT INTO `video_set_tb` VALUES ('1011', '如何现身说法', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca5135uloi51foo19br1pvu7ci97.jpg', '老爷', '如何现身说法。就比如从哪个方面去推广，加入市场这个问题。不管什么产品，什么模式，什么团队，你加入就有你加入的理由，在你加入之后写一份对此的说明，你为什么要做这个模式或者这个产品...', '1', '1', '0.00', '1', '3', '1', '1006', '2018-04-03 13:54:38', '2018-04-03 15:56:05');
-INSERT INTO `video_set_tb` VALUES ('1012', '如何针对顾客的心理需求', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca51s6bp1l0as0615vp1hai1gdbh7.jpg', '老爷', '如何针对顾客的心理需求。在你与顾客沟通的时候，顾客的心里到底是如何想的，而不是只根据嘴上说的。比如顾客常说的我需要考虑考虑，我现在正用着某产品，等用完再找你买等等。那么在这些言语的背后到底是真是假...', '2', '1', '0.00', '1', '7', '1', '1004', '2018-04-03 14:10:37', '2018-04-03 15:38:27');
-INSERT INTO `video_set_tb` VALUES ('1013', '成功人士的八个武器', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca52rkb860733hkbfe191ddpsr.jpg', '老爷', '大实话听起来都像废话，但是这些废话恰恰是我们要反复去听的话。因为往往在我们遇到事情的时候，回过头看着写废话就变成了最有用的话。就向我推荐的这本成功人士的八个武器，热爱、努力、专注、自我强迫、创新、不断学习、服务团队、坚持到底...', '2', '1', '0.00', '1', '9', '1', '1002', '2018-04-03 14:29:20', '2018-04-03 15:55:26');
-INSERT INTO `video_set_tb` VALUES ('1014', '如何纳新和管理', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca54fvfd10mpij13sr2fl1ru01e1.jpg', '老爷', '家人、聊天、沟通、群发、私聊都有做到一定的量，也经常分析自我身上的问题，但是纳新还是非常的慢，感觉努力和回报严重不对等。关于每天要做到的量，以及课程频率要达到多少...', '2', '1', '0.00', '1', '5', '1', '1005', '2018-04-03 14:56:18', '2018-04-03 14:58:40');
-INSERT INTO `video_set_tb` VALUES ('1015', '如何为自己的公司团队提供附加值', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca57ivknb3tvp817j21ut0lo7217.jpg', '老爷', '为什么自己的微信朋友人很多，却没人买，连懒人分红都没有收入，这属于半封积状态。微信上的利润空间比在其他的网站或者线下的专柜上都要大得多。而顾客不是因为便宜或者名气来买这个商品，之所以轮到在我们这边买是因为我们的主动销售及推荐...', '1', '1', '0.00', '1', '2', '1', '1005', '2018-04-03 15:52:56', '2018-04-03 15:59:18');
-INSERT INTO `video_set_tb` VALUES ('1016', '如何更好的与意向代理沟通', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca58hnhkct915ga18vs7668t629f.jpg', '老爷', '经常和意向代理或者意向代理聊天，三两句就聊死了，总是觉得自己和对方聊天无话可说，不知道怎么继续，往往以失败告终，老感觉自己不适合做微商。当你没有办法继续聊下去，就可以用这个话题无限的聊下去，那就是让客户对你产生无限的兴趣...', '0', '1', '0.00', '1', '0', '1', '1003', '2018-04-03 16:07:05', '2018-04-03 16:12:39');
-INSERT INTO `video_set_tb` VALUES ('1017', '关于线下市场开拓', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca59b618tn13saiejd1ops82lh.jpg', '老爷', '想要开拓线下市场，那么在没有经验的情况下，又如何去开拓这个市场。微商要落地，其实是一个误区。落地是指在线下开店，在大街上能买到这个产品，因而觉得很骄傲。但是微商这种业界形态的落地跟落到地面是两回事...', '0', '1', '0.00', '1', '2', '1', '1007', '2018-04-03 16:22:04', '2018-04-03 16:28:01');
-INSERT INTO `video_set_tb` VALUES ('1018', '微商的五件事', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca5aoakhcf341rgaivirugu2ur.jpg', '老爷', '微商该怎么做的五件事：朋友圈该怎么发，人该怎么加，怎么开公开课，内部管理怎么管，私聊沟通该怎么沟通。原理循环都是这些，讲来讲去都是这五件事，很容易疲惫去听，那么就要推陈出新，用案例或者故事来讲同一个原理引起好奇...', '3', '1', '0.00', '1', '5', '1', '1006', '2018-04-03 16:46:43', '2018-04-03 16:49:10');
-INSERT INTO `video_set_tb` VALUES ('1019', '微商必备的三点条件', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai0e4t414pn1g5jug35a02ddh.jpg', '老爷', '用酒吧撩汉子论来讲述怎么将微商做的更好。微商的基本三点条件，也可以说是所有营销人员的基本三点条件，叫做脸皮厚，嘴皮溜，执行透，这九个字。', '0', '1', '0.00', '2', '5', '1', '1007', '2018-04-08 14:55:41', '2018-04-25 16:46:18');
-INSERT INTO `video_set_tb` VALUES ('1020', '微商的四个现代化', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai1720c4j01tmqn8n6qg1u328h.jpg', '老爷', '微商的趋势及发展总结为微商的四个现代化，分别为：产品碎片化，团队集中化，客户成熟化，模式多样化。未来也是按这样的两个大思路来发展...', '0', '1', '0.00', '1', '1', '1', '1003', '2018-04-08 15:07:21', '2018-04-08 15:09:57');
-INSERT INTO `video_set_tb` VALUES ('1021', '人给到产品的附加值', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai1vqd2pe9128lpov4o21216gh.jpg', '老爷', '用一个问题入手，比如说顾客嫌价格贵，顾客觉得有品牌贵还好，怎么样是顾客觉得划算，值得这个价。不是知名品牌就贵，不是知名品牌就不贵,就像人们熟知的大宝这一款产品，他难道不是知名品牌吗？是啊，但是它的价格并不高啊...', '3', '1', '0.00', '1', '7', '1', '1004', '2018-04-08 15:26:21', '2018-04-08 15:29:30');
-INSERT INTO `video_set_tb` VALUES ('1022', '团队老大给到团队的扶持是什么', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai39n60ldr414lek19i71gl8op.jpg', '老爷', '高层有两种人：一个是业绩最好，销售最好，货走的很快的，但对代理并不体贴，扶持也不尽心。另一种是比前者业绩差，但是对代理尽心体贴，扶持也很上心。要选其中一种，要如何抉择？', '3', '1', '0.00', '1', '4', '1', '1006', '2018-04-08 15:46:17', '2018-04-08 15:54:19');
-INSERT INTO `video_set_tb` VALUES ('1023', '微商当中的各种怂坑', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai5tped1k1o1eh514mrb1usa9c.jpg', '老爷', '微商当中的怂坑，我们要怎么从这个怂坑里面爬出来。大家都还记得的是微商有四个非常重要的基本技能：不要怂，脸皮厚，嘴皮溜，执行透，12字箴言...', '0', '1', '0.00', '1', '3', '1', '1003', '2018-04-08 16:33:34', '2018-04-08 16:35:46');
-INSERT INTO `video_set_tb` VALUES ('1024', '如何借力用力', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai6sc6hag12041i4oc8h1ep5hk.jpg', '老爷', '思维格局气场，如果要做成一件事，道法术器四个层面都必须要可以。如果要 别人对你更感兴趣，就要用一个公式：取势明道 优术践行。取一个大的趋势，明确你的道路，优化你的战术，用你的实践性动来达到最终的结果...', '0', '1', '0.00', '1', '27', '1', '1005', '2018-04-08 16:45:17', '2018-04-25 13:56:27');
-INSERT INTO `video_set_tb` VALUES ('1025', '如何计算自己的时间价值', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai7ruuu1oird2p5pk1h04rtmpk.jpg', '老爷', '如何行之有效的利用每天的时间做有效率的事情，关于时间管理，有一个问题，你认为是时间更重要还是金钱跟重要？认为时间更重要的人会拿时间来换金钱，认为金钱更重要的人会拿金钱换时间...', '0', '1', '0.00', '2', '8', '1', '1001', '2018-04-08 17:02:31', '2018-04-17 17:48:20');
-INSERT INTO `video_set_tb` VALUES ('1026', '云商和支商有什么不同？', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbtmls013e01qif6mm153l1ju62n.jpg', '老爷', '云商和支商有什么不一样的地方，云商可能是类似于微商的另一种叫法，在微信做生意在微商，在支付宝里做生意叫支商，在什么渠道进行销售并且成交，就叫什么渠道的商人，其实没什么不一样，我们这一票人在什么渠道能成单就可以...', '0', '1', '0.00', '1', '1', '1', '1002', '2018-04-25 15:31:42', '2018-04-25 15:38:17');
-INSERT INTO `video_set_tb` VALUES ('1027', '如何克服内心恐惧的干货', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbtsajhu15lj1gqvsod1n0c4jhav.jpg', '老爷', '很多人的问题都趋向于做A事情要怕，做B事情要怕，做C事情还是要怕。例如有人想在微商做高级别，让自己有一些改变，但是又过不了自己的那一关，她就是害怕，害怕自己做不好，害怕自己的货卖不出去，一直犹豫，一直纠结...', '0', '1', '0.00', '2', '3', '1', '1003', '2018-04-25 15:54:15', '2018-04-25 17:30:31');
-INSERT INTO `video_set_tb` VALUES ('1028', '一个良好的职业形象是你成功的根本', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbttv6bl1obfqtavof1p691k6om1.jpg', '老爷', '形象是关系到一个集团企业利益的根本，必须打造自己相对比较高大上的形象，再也不要那种屌丝一样或者办公很累的样子出现在大众的视野之内。脸上干净，着装正经这个非常重要，一个良好的职业化的形象是你成功的根本...', '0', '1', '0.00', '1', '8', '1', '1001', '2018-04-25 16:22:28', '2018-04-25 16:24:39');
-INSERT INTO `video_set_tb` VALUES ('1029', '带领团队跟父母教育的雷同', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu0ave654k196h3aaev0crj15r.jpg', '老爷', '团队老大的对代理的误区就是要像代理的妈妈一样把他们带着成长。总结来说，这一部分人可以称为团队老妈子。这是最错的一种做法，掏心掏肺听起来是很不错，能够成长到今天全部拜你父母所赐吗，当然客观因素是因为他们...', '2', '0', '0.00', '1', '46', '1', '1001', '2018-04-25 17:03:50', '2018-07-05 15:13:59');
-INSERT INTO `video_set_tb` VALUES ('1030', '通过筛选产品告诉你，你缺的是什么', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu1bev21ql61ejgtuivo4j1b1dh.jpg', '老爷', '凡是选产品的同学，请反思几个问题。第一，你为什么要换产品或者加一个产品。第二，只做一款产品的同学，你是不是这一款产品里最里害收入最高的那一个，如果不是，请你想想，这个最厉害的人为什么不是你...', '0', '1', '0.00', '1', '8', '1', '1003', '2018-04-25 17:17:31', '2018-04-25 17:21:02');
-INSERT INTO `video_set_tb` VALUES ('1031', '关于微商的趋势', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu2obr21opijfc18ar1m6fuch1vm.jpg', '老爷', '真正的大咖在碰到这类的问题的时候在大脑里想的就是这些大环境与他毫无关系。小白喜欢研究大趋势，大咖喜欢营造小环境。小白总觉得大环境能跟他怎么样，举个例子，GDP每年上涨8%，跟他是什么关系...', '1', '2', '100.00', '2', '5', '1', '1007', '2018-04-25 17:43:32', '2018-05-07 13:43:54');
-INSERT INTO `video_set_tb` VALUES ('1034', '测试', 'http://p2bhwwngu.bkt.clouddn.com/o_1chkktjmc1icccfd1fv4cob1fomo.jpg', '测试', '测试', '0', '0', '0.00', '1', '7', '1', '1003', '2018-07-05 15:18:52', '2018-07-05 15:22:19');
+INSERT INTO `video_set_tb` VALUES ('1010', '如何快速转战成为代理', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca4hjuhu9s9sqo1pcn6f41bkl2r.jpg', '老爷', '如何快速转战成为代理，微商的朋友圈是个人的广告版，个人的日记本，个人的衣食住行。在别人做的不好还要死撑着的情况下，我是否要去戳破它。不戳破就看着他硬撑死扛，戳破又怕吵架...', '2', '1', '0.00', '1', '29', '1', '1007', '2018-04-03 09:29:49', '2018-04-03 13:57:38');
+INSERT INTO `video_set_tb` VALUES ('1011', '如何现身说法', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca5135uloi51foo19br1pvu7ci97.jpg', '老爷', '如何现身说法。就比如从哪个方面去推广，加入市场这个问题。不管什么产品，什么模式，什么团队，你加入就有你加入的理由，在你加入之后写一份对此的说明，你为什么要做这个模式或者这个产品...', '1', '1', '0.00', '1', '3', '1', '1006', '2018-04-03 13:54:38', '2018-04-03 15:56:05');
+INSERT INTO `video_set_tb` VALUES ('1012', '如何针对顾客的心理需求', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca51s6bp1l0as0615vp1hai1gdbh7.jpg', '老爷', '如何针对顾客的心理需求。在你与顾客沟通的时候，顾客的心里到底是如何想的，而不是只根据嘴上说的。比如顾客常说的我需要考虑考虑，我现在正用着某产品，等用完再找你买等等。那么在这些言语的背后到底是真是假...', '2', '1', '0.00', '1', '8', '1', '1004', '2018-04-03 14:10:37', '2018-04-03 15:38:27');
+INSERT INTO `video_set_tb` VALUES ('1013', '成功人士的八个武器', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca52rkb860733hkbfe191ddpsr.jpg', '老爷', '大实话听起来都像废话，但是这些废话恰恰是我们要反复去听的话。因为往往在我们遇到事情的时候，回过头看着写废话就变成了最有用的话。就向我推荐的这本成功人士的八个武器，热爱、努力、专注、自我强迫、创新、不断学习、服务团队、坚持到底...', '2', '1', '0.00', '1', '10', '1', '1002', '2018-04-03 14:29:20', '2018-04-03 15:55:26');
+INSERT INTO `video_set_tb` VALUES ('1014', '如何纳新和管理', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca54fvfd10mpij13sr2fl1ru01e1.jpg', '老爷', '家人、聊天、沟通、群发、私聊都有做到一定的量，也经常分析自我身上的问题，但是纳新还是非常的慢，感觉努力和回报严重不对等。关于每天要做到的量，以及课程频率要达到多少...', '2', '1', '0.00', '1', '6', '1', '1005', '2018-04-03 14:56:18', '2018-04-03 14:58:40');
+INSERT INTO `video_set_tb` VALUES ('1015', '如何为自己的公司团队提供附加值', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca57ivknb3tvp817j21ut0lo7217.jpg', '老爷', '为什么自己的微信朋友人很多，却没人买，连懒人分红都没有收入，这属于半封积状态。微信上的利润空间比在其他的网站或者线下的专柜上都要大得多。而顾客不是因为便宜或者名气来买这个商品，之所以轮到在我们这边买是因为我们的主动销售及推荐...', '1', '1', '0.00', '1', '2', '1', '1005', '2018-04-03 15:52:56', '2018-04-03 15:59:18');
+INSERT INTO `video_set_tb` VALUES ('1016', '如何更好的与意向代理沟通', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca58hnhkct915ga18vs7668t629f.jpg', '老爷', '经常和意向代理或者意向代理聊天，三两句就聊死了，总是觉得自己和对方聊天无话可说，不知道怎么继续，往往以失败告终，老感觉自己不适合做微商。当你没有办法继续聊下去，就可以用这个话题无限的聊下去，那就是让客户对你产生无限的兴趣...', '0', '1', '0.00', '1', '0', '1', '1003', '2018-04-03 16:07:05', '2018-04-03 16:12:39');
+INSERT INTO `video_set_tb` VALUES ('1017', '关于线下市场开拓', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca59b618tn13saiejd1ops82lh.jpg', '老爷', '想要开拓线下市场，那么在没有经验的情况下，又如何去开拓这个市场。微商要落地，其实是一个误区。落地是指在线下开店，在大街上能买到这个产品，因而觉得很骄傲。但是微商这种业界形态的落地跟落到地面是两回事...', '0', '1', '0.00', '1', '2', '1', '1007', '2018-04-03 16:22:04', '2018-04-03 16:28:01');
+INSERT INTO `video_set_tb` VALUES ('1018', '微商的五件事', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca5aoakhcf341rgaivirugu2ur.jpg', '老爷', '微商该怎么做的五件事：朋友圈该怎么发，人该怎么加，怎么开公开课，内部管理怎么管，私聊沟通该怎么沟通。原理循环都是这些，讲来讲去都是这五件事，很容易疲惫去听，那么就要推陈出新，用案例或者故事来讲同一个原理引起好奇...', '3', '1', '0.00', '1', '5', '1', '1006', '2018-04-03 16:46:43', '2018-04-03 16:49:10');
+INSERT INTO `video_set_tb` VALUES ('1019', '微商必备的三点条件', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai0e4t414pn1g5jug35a02ddh.jpg', '老爷', '用酒吧撩汉子论来讲述怎么将微商做的更好。微商的基本三点条件，也可以说是所有营销人员的基本三点条件，叫做脸皮厚，嘴皮溜，执行透，这九个字。', '0', '1', '0.00', '2', '5', '1', '1007', '2018-04-08 14:55:41', '2018-04-25 16:46:18');
+INSERT INTO `video_set_tb` VALUES ('1020', '微商的四个现代化', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai1720c4j01tmqn8n6qg1u328h.jpg', '老爷', '微商的趋势及发展总结为微商的四个现代化，分别为：产品碎片化，团队集中化，客户成熟化，模式多样化。未来也是按这样的两个大思路来发展...', '0', '1', '0.00', '1', '1', '1', '1003', '2018-04-08 15:07:21', '2018-04-08 15:09:57');
+INSERT INTO `video_set_tb` VALUES ('1021', '人给到产品的附加值', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai1vqd2pe9128lpov4o21216gh.jpg', '老爷', '用一个问题入手，比如说顾客嫌价格贵，顾客觉得有品牌贵还好，怎么样是顾客觉得划算，值得这个价。不是知名品牌就贵，不是知名品牌就不贵,就像人们熟知的大宝这一款产品，他难道不是知名品牌吗？是啊，但是它的价格并不高啊...', '3', '1', '0.00', '1', '8', '1', '1004', '2018-04-08 15:26:21', '2018-04-08 15:29:30');
+INSERT INTO `video_set_tb` VALUES ('1022', '团队老大给到团队的扶持是什么', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai39n60ldr414lek19i71gl8op.jpg', '老爷', '高层有两种人：一个是业绩最好，销售最好，货走的很快的，但对代理并不体贴，扶持也不尽心。另一种是比前者业绩差，但是对代理尽心体贴，扶持也很上心。要选其中一种，要如何抉择？', '3', '1', '0.00', '1', '4', '1', '1006', '2018-04-08 15:46:17', '2018-04-08 15:54:19');
+INSERT INTO `video_set_tb` VALUES ('1023', '微商当中的各种怂坑', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai5tped1k1o1eh514mrb1usa9c.jpg', '老爷', '微商当中的怂坑，我们要怎么从这个怂坑里面爬出来。大家都还记得的是微商有四个非常重要的基本技能：不要怂，脸皮厚，嘴皮溜，执行透，12字箴言...', '0', '1', '0.00', '1', '3', '1', '1003', '2018-04-08 16:33:34', '2018-04-08 16:35:46');
+INSERT INTO `video_set_tb` VALUES ('1024', '如何借力用力', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai6sc6hag12041i4oc8h1ep5hk.jpg', '老爷', '思维格局气场，如果要做成一件事，道法术器四个层面都必须要可以。如果要 别人对你更感兴趣，就要用一个公式：取势明道 优术践行。取一个大的趋势，明确你的道路，优化你的战术，用你的实践性动来达到最终的结果...', '0', '1', '0.00', '1', '32', '1', '1005', '2018-04-08 16:45:17', '2018-04-25 13:56:27');
+INSERT INTO `video_set_tb` VALUES ('1025', '如何计算自己的时间价值', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai7ruuu1oird2p5pk1h04rtmpk.jpg', '老爷', '如何行之有效的利用每天的时间做有效率的事情，关于时间管理，有一个问题，你认为是时间更重要还是金钱跟重要？认为时间更重要的人会拿时间来换金钱，认为金钱更重要的人会拿金钱换时间...', '0', '1', '0.00', '2', '9', '1', '1001', '2018-04-08 17:02:31', '2018-04-17 17:48:20');
+INSERT INTO `video_set_tb` VALUES ('1026', '云商和支商有什么不同？', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbtmls013e01qif6mm153l1ju62n.jpg', '老爷', '云商和支商有什么不一样的地方，云商可能是类似于微商的另一种叫法，在微信做生意在微商，在支付宝里做生意叫支商，在什么渠道进行销售并且成交，就叫什么渠道的商人，其实没什么不一样，我们这一票人在什么渠道能成单就可以...', '0', '1', '0.00', '1', '1', '1', '1002', '2018-04-25 15:31:42', '2018-04-25 15:38:17');
+INSERT INTO `video_set_tb` VALUES ('1027', '如何克服内心恐惧的干货', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbtsajhu15lj1gqvsod1n0c4jhav.jpg', '老爷', '很多人的问题都趋向于做A事情要怕，做B事情要怕，做C事情还是要怕。例如有人想在微商做高级别，让自己有一些改变，但是又过不了自己的那一关，她就是害怕，害怕自己做不好，害怕自己的货卖不出去，一直犹豫，一直纠结...', '0', '1', '0.00', '2', '6', '1', '1003', '2018-04-25 15:54:15', '2018-04-25 17:30:31');
+INSERT INTO `video_set_tb` VALUES ('1028', '一个良好的职业形象是你成功的根本', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbttv6bl1obfqtavof1p691k6om1.jpg', '老爷', '形象是关系到一个集团企业利益的根本，必须打造自己相对比较高大上的形象，再也不要那种屌丝一样或者办公很累的样子出现在大众的视野之内。脸上干净，着装正经这个非常重要，一个良好的职业化的形象是你成功的根本...', '0', '1', '0.00', '1', '17', '1', '1001', '2018-04-25 16:22:28', '2018-04-25 16:24:39');
+INSERT INTO `video_set_tb` VALUES ('1029', '带领团队跟父母教育的雷同', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu0ave654k196h3aaev0crj15r.jpg', '老爷', '团队老大的对代理的误区就是要像代理的妈妈一样把他们带着成长。总结来说，这一部分人可以称为团队老妈子。这是最错的一种做法，掏心掏肺听起来是很不错，能够成长到今天全部拜你父母所赐吗，当然客观因素是因为他们...', '2', '0', '0.00', '1', '85', '1', '1001', '2018-04-25 17:03:50', '2018-07-05 15:13:59');
+INSERT INTO `video_set_tb` VALUES ('1030', '通过筛选产品告诉你，你缺的是什么', 'http://laoyeshuovideo.laoyeshuo.cn/o_1csvlbnfl13vi1scp1ij51qed1tva1r.png', '老爷', '凡是选产品的同学，请反思几个问题。第一，你为什么要换产品或者加一个产品。第二，只做一款产品的同学，你是不是这一款产品里最里害收入最高的那一个，如果不是，请你想想，这个最厉害的人为什么不是你...', '0', '2', '0.00', '2', '17', '1', '1003', '2018-04-25 17:17:31', '2018-11-23 15:17:33');
+INSERT INTO `video_set_tb` VALUES ('1031', '关于微商的趋势', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu2obr21opijfc18ar1m6fuch1vm.jpg', '老爷', '真正的大咖在碰到这类的问题的时候在大脑里想的就是这些大环境与他毫无关系。小白喜欢研究大趋势，大咖喜欢营造小环境。小白总觉得大环境能跟他怎么样，举个例子，GDP每年上涨8%，跟他是什么关系...', '1', '2', '0.01', '2', '20', '1', '1007', '2018-04-25 17:43:32', '2018-07-30 17:11:48');
 
 -- ----------------------------
 -- Table structure for `video_tb`
@@ -3636,38 +3950,38 @@ CREATE TABLE `video_tb` (
   KEY `INDEX_CREATEDATE` (`create_date`) USING BTREE,
   KEY `INDEX_UPDATEDATE` (`update_date`) USING BTREE,
   KEY `INDEX_STATUS` (`status`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8 COMMENT='视频表';
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8 COMMENT='视频表';
 
 -- ----------------------------
 -- Records of video_tb
 -- ----------------------------
-INSERT INTO `video_tb` VALUES ('18', '如何快速转战成为代理', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca4ohvat5v3kc32dr149065k1b.jpg', '00:25:08', '96.33', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca4vpsn21coa9k01gnn11t31ckvv.mp4', '10', '1', '1010', '2018-04-03 11:26:32', '2018-04-03 14:16:55');
-INSERT INTO `video_tb` VALUES ('19', '如何现身说法', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca51c5fukus20n133e16ok1hplad.jpg', '00:25:07', '191.69', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca51d2541sl415gdd4h8pf1prvan.mp4', '3', '1', '1011', '2018-04-03 14:01:12', '2018-04-03 14:16:41');
-INSERT INTO `video_tb` VALUES ('20', '如何针对顾客的心理需求', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca522ojmmaq1asoa5hq917dbi8.jpg', '00:25:02', '191.71', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca524a29141n1ei516ne1ttc1i6gid.mp4', '7', '1', '1012', '2018-04-03 14:14:31', '2018-04-03 14:14:31');
-INSERT INTO `video_tb` VALUES ('21', '成功人士的八个武器', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca534c3v18f7651f85ksr2hgu1.jpg', '00:25:08', '191.72', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca5355qk1efh1g9q1clk19831qvsub.mp4', '9', '1', '1013', '2018-04-03 14:32:33', '2018-04-03 14:32:33');
-INSERT INTO `video_tb` VALUES ('26', '如何纳新和管理', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca54lnom1hd09mu131t6bu1maq1f7.jpg', '00:25:08', '191.71', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca54mmgca7q1lqh13rvk1ug8d1fh.mp4', '5', '1', '1014', '2018-04-03 14:58:40', '2018-04-03 14:58:40');
-INSERT INTO `video_tb` VALUES ('27', '如何为自己的公司团队提供附加值', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca57ti8d19p893kh1o10tduac22h.jpg', '00:25:08', '191.68', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca57ucbc9prbkbbco1kdv11k122v.mp4', '2', '1', '1015', '2018-04-03 15:55:18', '2018-04-03 15:55:18');
-INSERT INTO `video_tb` VALUES ('28', '如何更好的与意向代理沟通', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca58nlk51io6grl1ooolbbtfm2bq.jpg', '00:25:07', '191.70', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca58o01l1e61m8a1pbf10op57n2bv.mp4', '0', '1', '1016', '2018-04-03 16:12:39', '2018-04-03 16:12:39');
-INSERT INTO `video_tb` VALUES ('29', '关于线下市场开拓', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca59j35o7kd3vr19uo6hfogq2o1.jpg', '00:25:05', '191.67', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca59q5be1ehs11ns1qr2mfh163m2ob.mp4', '2', '1', '1017', '2018-04-03 16:28:01', '2018-04-03 16:28:01');
-INSERT INTO `video_tb` VALUES ('30', '微商的五件事', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca5b08701arf18dl1t82vs315n6316.jpg', '00:25:09', '191.68', 'http://p2bhwwngu.bkt.clouddn.com/o_1ca5b0sug1rv9vbup4ge4j81b31b.mp4', '5', '1', '1018', '2018-04-03 16:49:10', '2018-04-03 16:49:10');
-INSERT INTO `video_tb` VALUES ('31', '微商必备的三点条件', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai0k82tp9q8j61plrpj91b5u1n.jpg', '00:25:05', '191.71', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai0kulg1ec5tgu179bcp019tm21.mp4', '0', '1', '1019', '2018-04-08 14:59:37', '2018-04-08 14:59:37');
-INSERT INTO `video_tb` VALUES ('32', '微商的四个现代化', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai19htf1shrslm10hc1tb61jd9n.jpg', '00:25:08', '191.72', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai1a3hrf9t1680mtlfpe1u8na1.mp4', '1', '1', '1020', '2018-04-08 15:09:57', '2018-04-08 15:09:57');
-INSERT INTO `video_tb` VALUES ('33', '人怎么给到产品附加值', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai2ce0h10ak1v8p1sb51idbujfhr.jpg', '00:25:06', '191.70', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai2d7o8na813921vfvedk1bsoi9.mp4', '7', '1', '1021', '2018-04-08 15:29:30', '2018-04-08 15:29:30');
-INSERT INTO `video_tb` VALUES ('34', '团队老大给到团队的扶持是什么', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai3i3soasdaqt1pfv1l24gkt2n.jpg', '00:25:06', '191.69', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai3ijom1c00l83as91pt5rvj2s.mp4', '4', '1', '1022', '2018-04-08 15:54:19', '2018-04-08 15:54:19');
-INSERT INTO `video_tb` VALUES ('35', '微商当中的各种怂坑', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai67e2ljoa1p5u1gnt1f3i1e8eam.jpg', '00:25:07', '191.67', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai680l1q7bklp1iu3md816knb4.mp4', '3', '1', '1023', '2018-04-08 16:35:46', '2018-04-08 16:35:46');
-INSERT INTO `video_tb` VALUES ('36', '如何借力用力', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai6ss471i11f4ip35fhmgqpiq.jpg', '00:25:06', '191.71', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai7124e1jkp1vqrma9s4ql18j4.mp4', '27', '1', '1024', '2018-04-08 16:49:24', '2018-04-08 16:49:24');
-INSERT INTO `video_tb` VALUES ('37', '如何计算自己的时间价值', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai7se4o14rp18ef1cleu7f197tqu.jpg', '00:25:08', '191.68', 'http://p2bhwwngu.bkt.clouddn.com/o_1cai85lii1n3855k5ln131317j411e.mp4', '6', '1', '1025', '2018-04-08 17:10:23', '2018-04-08 17:10:23');
-INSERT INTO `video_tb` VALUES ('38', '如何搞定自己', 'http://p2bhwwngu.bkt.clouddn.com/o_1cb9ftd4s14jn1nlo1kbfsjt1c3kg3.jpg', '00:25:08', '191.71', 'http://p2bhwwngu.bkt.clouddn.com/o_1cb9fug6d1kobefnuhrd9o54ggd.mp4', '2', '1', '1025', '2018-04-17 17:48:20', '2018-04-17 17:48:20');
-INSERT INTO `video_tb` VALUES ('39', '云商和支商有什么不同？', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbtrefa11gpcki4kjrp9inn41.jpg', '00:25:06', '191.67', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbtrf9lp5g1185t1cp0vko1ch74f.mp4', '1', '1', '1026', '2018-04-25 15:38:17', '2018-04-25 15:38:17');
-INSERT INTO `video_tb` VALUES ('40', '如何克服内心恐惧的干货', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbtso8ns72f1bl916us142pgcldf.jpg', '00:25:10', '191.68', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbtt2kfc3k41cope6o11qv6ccdp.mp4', '0', '1', '1027', '2018-04-25 16:03:12', '2018-04-25 16:03:12');
-INSERT INTO `video_tb` VALUES ('41', '一个良好的职业形象是你成功的根本', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbtubb0q1301178m1fsb17egaf8n2.jpg', '00:25:04', '191.67', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbtubra6v8r14o41hig1jo61ajan7.mp4', '8', '1', '1028', '2018-04-25 16:24:39', '2018-04-25 16:24:39');
-INSERT INTO `video_tb` VALUES ('42', '营销和谈恋爱的相似度', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbtv9o2i1l82n7o1gg5nn27t0v1.jpg', '00:25:06', '191.67', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbtvajdv1n2j1e1p1jib1li71aulvb.mp4', '5', '1', '1019', '2018-04-25 16:46:06', '2018-04-25 16:46:06');
-INSERT INTO `video_tb` VALUES ('43', '带领团队跟父母教育的雷同', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu0n12cb6iueihh33vs1t1l16s.jpg', '00:25:04', '191.67', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu0npf9o5t1jd51l7j1toj5sc171.mp4', '46', '1', '1029', '2018-04-25 17:06:29', '2018-04-25 17:06:29');
-INSERT INTO `video_tb` VALUES ('44', '通过筛选产品告诉你，你缺的是什么', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu1g2vmcph1384tbn7ai61o1en.jpg', '00:25:05', '191.67', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu1h2rq1iio1u5j1odifl57qn1f1.mp4', '8', '1', '1030', '2018-04-25 17:21:02', '2018-04-25 17:21:02');
-INSERT INTO `video_tb` VALUES ('45', '一个人的消费观念和是否跟你购买产品是两回事', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu1u003pv21fqn1du31ad0stb1md.jpg', '00:25:10', '191.67', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu1uoao1o3ir931cvl10lc1a0c1mi.mp4', '3', '1', '1027', '2018-04-25 17:30:31', '2018-04-25 17:30:31');
-INSERT INTO `video_tb` VALUES ('46', '关于微商的趋势', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu2vugj1vna19f03r6e5p1lnk226.jpg', '00:25:06', '191.71', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu310vl1amo116c6dk136gqm322g.mp4', '1', '1', '1031', '2018-04-25 17:46:16', '2018-04-25 17:46:16');
-INSERT INTO `video_tb` VALUES ('47', '老梗的新认知', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu3cn7l1apt1s191pkj1i6sov9v.jpg', '00:25:04', '191.71', 'http://p2bhwwngu.bkt.clouddn.com/o_1cbu3d7fu1f02p3p1htlojd1lmq14.mp4', '4', '1', '1031', '2018-04-25 17:53:00', '2018-04-25 17:53:00');
-INSERT INTO `video_tb` VALUES ('49', '测试', 'http://p2bhwwngu.bkt.clouddn.com/o_1chkl1kot1hcu46f7kt11nm1so65e.gif', '00:16:50', '16.50', 'http://p2bhwwngu.bkt.clouddn.com/o_1chkl2uujehie4k1og24ua1r425j.mp4', '7', '1', '1034', '2018-07-05 15:22:19', '2018-07-05 15:22:19');
+INSERT INTO `video_tb` VALUES ('18', '如何快速转战成为代理', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca4ohvat5v3kc32dr149065k1b.jpg', '00:25:08', '96.33', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca4vpsn21coa9k01gnn11t31ckvv.mp4', '13', '1', '1010', '2018-04-03 11:26:32', '2018-04-03 14:16:55');
+INSERT INTO `video_tb` VALUES ('19', '如何现身说法', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca51c5fukus20n133e16ok1hplad.jpg', '00:25:07', '191.69', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca51d2541sl415gdd4h8pf1prvan.mp4', '3', '1', '1011', '2018-04-03 14:01:12', '2018-04-03 14:16:41');
+INSERT INTO `video_tb` VALUES ('20', '如何针对顾客的心理需求', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca522ojmmaq1asoa5hq917dbi8.jpg', '00:25:02', '191.71', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca524a29141n1ei516ne1ttc1i6gid.mp4', '8', '1', '1012', '2018-04-03 14:14:31', '2018-04-03 14:14:31');
+INSERT INTO `video_tb` VALUES ('21', '成功人士的八个武器', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca534c3v18f7651f85ksr2hgu1.jpg', '00:25:08', '191.72', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca5355qk1efh1g9q1clk19831qvsub.mp4', '10', '1', '1013', '2018-04-03 14:32:33', '2018-04-03 14:32:33');
+INSERT INTO `video_tb` VALUES ('26', '如何纳新和管理', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca54lnom1hd09mu131t6bu1maq1f7.jpg', '00:25:08', '191.71', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca54mmgca7q1lqh13rvk1ug8d1fh.mp4', '6', '1', '1014', '2018-04-03 14:58:40', '2018-04-03 14:58:40');
+INSERT INTO `video_tb` VALUES ('27', '如何为自己的公司团队提供附加值', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca57ti8d19p893kh1o10tduac22h.jpg', '00:25:08', '191.68', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca57ucbc9prbkbbco1kdv11k122v.mp4', '2', '1', '1015', '2018-04-03 15:55:18', '2018-04-03 15:55:18');
+INSERT INTO `video_tb` VALUES ('28', '如何更好的与意向代理沟通', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca58nlk51io6grl1ooolbbtfm2bq.jpg', '00:25:07', '191.70', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca58o01l1e61m8a1pbf10op57n2bv.mp4', '0', '1', '1016', '2018-04-03 16:12:39', '2018-04-03 16:12:39');
+INSERT INTO `video_tb` VALUES ('29', '关于线下市场开拓', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca59j35o7kd3vr19uo6hfogq2o1.jpg', '00:25:05', '191.67', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca59q5be1ehs11ns1qr2mfh163m2ob.mp4', '2', '1', '1017', '2018-04-03 16:28:01', '2018-04-03 16:28:01');
+INSERT INTO `video_tb` VALUES ('30', '微商的五件事', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca5b08701arf18dl1t82vs315n6316.jpg', '00:25:09', '191.68', 'http://laoyeshuovideo.laoyeshuo.cn/o_1ca5b0sug1rv9vbup4ge4j81b31b.mp4', '5', '1', '1018', '2018-04-03 16:49:10', '2018-04-03 16:49:10');
+INSERT INTO `video_tb` VALUES ('31', '微商必备的三点条件', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai0k82tp9q8j61plrpj91b5u1n.jpg', '00:25:05', '191.71', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai0kulg1ec5tgu179bcp019tm21.mp4', '0', '1', '1019', '2018-04-08 14:59:37', '2018-04-08 14:59:37');
+INSERT INTO `video_tb` VALUES ('32', '微商的四个现代化', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai19htf1shrslm10hc1tb61jd9n.jpg', '00:25:08', '191.72', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai1a3hrf9t1680mtlfpe1u8na1.mp4', '1', '1', '1020', '2018-04-08 15:09:57', '2018-04-08 15:09:57');
+INSERT INTO `video_tb` VALUES ('33', '人怎么给到产品附加值', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai2ce0h10ak1v8p1sb51idbujfhr.jpg', '00:25:06', '191.70', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai2d7o8na813921vfvedk1bsoi9.mp4', '8', '1', '1021', '2018-04-08 15:29:30', '2018-04-08 15:29:30');
+INSERT INTO `video_tb` VALUES ('34', '团队老大给到团队的扶持是什么', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai3i3soasdaqt1pfv1l24gkt2n.jpg', '00:25:06', '191.69', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai3ijom1c00l83as91pt5rvj2s.mp4', '4', '1', '1022', '2018-04-08 15:54:19', '2018-04-08 15:54:19');
+INSERT INTO `video_tb` VALUES ('35', '微商当中的各种怂坑', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai67e2ljoa1p5u1gnt1f3i1e8eam.jpg', '00:25:07', '191.67', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai680l1q7bklp1iu3md816knb4.mp4', '3', '1', '1023', '2018-04-08 16:35:46', '2018-04-08 16:35:46');
+INSERT INTO `video_tb` VALUES ('36', '如何借力用力', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai6ss471i11f4ip35fhmgqpiq.jpg', '00:25:06', '191.71', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai7124e1jkp1vqrma9s4ql18j4.mp4', '32', '1', '1024', '2018-04-08 16:49:24', '2018-04-08 16:49:24');
+INSERT INTO `video_tb` VALUES ('37', '如何计算自己的时间价值', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai7se4o14rp18ef1cleu7f197tqu.jpg', '00:25:08', '191.68', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cai85lii1n3855k5ln131317j411e.mp4', '6', '1', '1025', '2018-04-08 17:10:23', '2018-04-08 17:10:23');
+INSERT INTO `video_tb` VALUES ('38', '如何搞定自己', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cb9ftd4s14jn1nlo1kbfsjt1c3kg3.jpg', '00:25:08', '191.71', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cb9fug6d1kobefnuhrd9o54ggd.mp4', '3', '1', '1025', '2018-04-17 17:48:20', '2018-04-17 17:48:20');
+INSERT INTO `video_tb` VALUES ('39', '云商和支商有什么不同？', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbtrefa11gpcki4kjrp9inn41.jpg', '00:25:06', '191.67', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbtrf9lp5g1185t1cp0vko1ch74f.mp4', '1', '1', '1026', '2018-04-25 15:38:17', '2018-04-25 15:38:17');
+INSERT INTO `video_tb` VALUES ('40', '如何克服内心恐惧的干货', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbtso8ns72f1bl916us142pgcldf.jpg', '00:25:10', '191.68', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbtt2kfc3k41cope6o11qv6ccdp.mp4', '0', '1', '1027', '2018-04-25 16:03:12', '2018-04-25 16:03:12');
+INSERT INTO `video_tb` VALUES ('41', '一个良好的职业形象是你成功的根本', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbtubb0q1301178m1fsb17egaf8n2.jpg', '00:25:04', '191.67', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbtubra6v8r14o41hig1jo61ajan7.mp4', '17', '1', '1028', '2018-04-25 16:24:39', '2018-04-25 16:24:39');
+INSERT INTO `video_tb` VALUES ('42', '营销和谈恋爱的相似度', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbtv9o2i1l82n7o1gg5nn27t0v1.jpg', '00:25:06', '191.67', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbtvajdv1n2j1e1p1jib1li71aulvb.mp4', '5', '1', '1019', '2018-04-25 16:46:06', '2018-04-25 16:46:06');
+INSERT INTO `video_tb` VALUES ('43', '带领团队跟父母教育的雷同', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu0n12cb6iueihh33vs1t1l16s.jpg', '00:25:04', '191.67', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu0npf9o5t1jd51l7j1toj5sc171.mp4', '85', '1', '1029', '2018-04-25 17:06:29', '2018-04-25 17:06:29');
+INSERT INTO `video_tb` VALUES ('44', '通过筛选产品告诉你，你缺的是什么', 'http://laoyeshuovideo.laoyeshuo.cn/o_1csvknq2214kq15ftkhg1i8g1hhe51.jpg', '00:25:05', '191.67', 'http://laoyeshuovideo.laoyeshuo.cn/o_1csvkkil29m412lg1vqjhukpvtv.mp4', '17', '1', '1030', '2018-04-25 17:21:02', '2018-11-23 14:40:01');
+INSERT INTO `video_tb` VALUES ('45', '一个人的消费观念和是否跟你购买产品是两回事', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu1u003pv21fqn1du31ad0stb1md.jpg', '00:25:10', '191.67', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu1uoao1o3ir931cvl10lc1a0c1mi.mp4', '6', '1', '1027', '2018-04-25 17:30:31', '2018-04-25 17:30:31');
+INSERT INTO `video_tb` VALUES ('46', '关于微商的趋势', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu2vugj1vna19f03r6e5p1lnk226.jpg', '00:25:06', '191.71', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu310vl1amo116c6dk136gqm322g.mp4', '3', '1', '1031', '2018-04-25 17:46:16', '2018-04-25 17:46:16');
+INSERT INTO `video_tb` VALUES ('47', '老梗的新认知', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu3cn7l1apt1s191pkj1i6sov9v.jpg', '00:25:04', '191.71', 'http://laoyeshuovideo.laoyeshuo.cn/o_1cbu3d7fu1f02p3p1htlojd1lmq14.mp4', '17', '1', '1031', '2018-04-25 17:53:00', '2018-04-25 17:53:00');
+INSERT INTO `video_tb` VALUES ('50', '团队作用的解答', 'http://laoyeshuovideo.laoyeshuo.cn/o_1csvkoekaros1n2ctr81f03bj56.jpg', '00:20:02', '127.97', 'http://laoyeshuovideo.laoyeshuo.cn/o_1csvkqdh0vh2et21e4j1t5g1fvh5d.mp4', '0', '1', '1030', '2018-11-23 14:49:34', '2018-11-23 14:49:34');
 
 -- ----------------------------
 -- Table structure for `vip_growth_record_tb`
@@ -3684,7 +3998,7 @@ CREATE TABLE `vip_growth_record_tb` (
   KEY `INDEX_ACCOUNTID` (`account_id`) USING BTREE,
   KEY `INDEX_LEVEL` (`level`) USING BTREE,
   KEY `INDEX_CREATEDATE` (`create_date`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1012 DEFAULT CHARSET=utf8 COMMENT='vip成长记录表';
+) ENGINE=InnoDB AUTO_INCREMENT=1013 DEFAULT CHARSET=utf8 COMMENT='vip成长记录表';
 
 -- ----------------------------
 -- Records of vip_growth_record_tb
@@ -3700,6 +4014,7 @@ INSERT INTO `vip_growth_record_tb` VALUES ('1008', '普通vip', '1', '365.00', '
 INSERT INTO `vip_growth_record_tb` VALUES ('1009', '普通vip', '1', '365.00', '2018-06-01 11:05:13', '1019');
 INSERT INTO `vip_growth_record_tb` VALUES ('1010', '普通vip', '1', '365.00', '2018-06-01 17:46:32', '1042');
 INSERT INTO `vip_growth_record_tb` VALUES ('1011', '普通vip', '1', '365.00', '2018-06-27 10:18:52', '1052');
+INSERT INTO `vip_growth_record_tb` VALUES ('1012', '普通vip', '1', '365.00', '2018-07-20 15:38:46', '1041');
 
 -- ----------------------------
 -- Table structure for `vip_number_tb`
@@ -3724,7 +4039,7 @@ CREATE TABLE `vip_number_tb` (
 -- ----------------------------
 -- Records of vip_number_tb
 -- ----------------------------
-INSERT INTO `vip_number_tb` VALUES ('1000', '2', '2018-06-01 16:27:02', '2018-06-12 16:07:07', '1041', '1038', '1');
+INSERT INTO `vip_number_tb` VALUES ('1000', '3', '2018-06-01 16:27:02', '2018-07-20 15:36:02', '1041', '1038', '3');
 
 -- ----------------------------
 -- Table structure for `vip_tb`
@@ -3743,7 +4058,7 @@ CREATE TABLE `vip_tb` (
   KEY `INDEX_ACCOUNTID` (`account_id`) USING BTREE,
   KEY `INDEX_LEVEL` (`level`) USING BTREE,
   KEY `INDEX_CREATEDATE` (`create_date`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1047 DEFAULT CHARSET=utf8 COMMENT='vip表';
+) ENGINE=InnoDB AUTO_INCREMENT=1048 DEFAULT CHARSET=utf8 COMMENT='vip表';
 
 -- ----------------------------
 -- Records of vip_tb
@@ -3781,7 +4096,7 @@ INSERT INTO `vip_tb` VALUES ('1029', '学徒', '0', '0', '2018-05-30 17:12:15', 
 INSERT INTO `vip_tb` VALUES ('1030', '普通vip', '1', '1', '2019-05-31 17:11:40', '2018-05-31 17:11:40', '2018-05-31 17:11:40', '1038');
 INSERT INTO `vip_tb` VALUES ('1031', '学徒', '0', '0', '2018-05-31 14:20:08', '2018-05-31 14:20:08', '2018-05-31 14:20:08', '1039');
 INSERT INTO `vip_tb` VALUES ('1032', '学徒', '0', '0', '2018-06-01 14:43:35', '2018-06-01 14:43:35', '2018-06-01 14:43:35', '1040');
-INSERT INTO `vip_tb` VALUES ('1033', '学徒', '0', '0', '2018-06-01 16:14:28', '2018-06-01 16:14:28', '2018-06-01 16:14:28', '1041');
+INSERT INTO `vip_tb` VALUES ('1033', '普通vip', '1', '1', '2019-07-20 15:38:46', '2018-07-20 15:38:46', '2018-07-20 15:38:46', '1041');
 INSERT INTO `vip_tb` VALUES ('1034', '普通vip', '1', '1', '2019-06-01 17:46:32', '2018-06-01 17:46:32', '2018-06-01 17:46:32', '1042');
 INSERT INTO `vip_tb` VALUES ('1035', '学徒', '0', '0', '2018-06-04 13:39:47', '2018-06-04 13:39:47', '2018-06-04 13:39:47', '1043');
 INSERT INTO `vip_tb` VALUES ('1036', '学徒', '0', '0', '2018-06-13 14:09:14', '2018-06-13 14:09:14', '2018-06-13 14:09:14', '1044');
@@ -3795,6 +4110,7 @@ INSERT INTO `vip_tb` VALUES ('1043', '学徒', '0', '0', '2018-06-25 09:35:22', 
 INSERT INTO `vip_tb` VALUES ('1044', '普通vip', '1', '1', '2019-06-27 10:18:52', '2018-06-27 10:18:52', '2018-06-27 10:18:52', '1052');
 INSERT INTO `vip_tb` VALUES ('1045', '学徒', '0', '0', '2018-07-04 10:54:56', '2018-07-04 10:54:56', '2018-07-04 10:54:56', '1053');
 INSERT INTO `vip_tb` VALUES ('1046', '学徒', '0', '0', '2018-07-04 13:54:55', '2018-07-04 13:54:55', '2018-07-04 13:54:55', '1054');
+INSERT INTO `vip_tb` VALUES ('1047', '学徒', '0', '0', '2018-11-23 10:35:15', '2018-11-23 10:35:15', '2018-11-23 10:35:15', '1055');
 
 -- ----------------------------
 -- Table structure for `withdrawals_tb`
@@ -3807,7 +4123,7 @@ CREATE TABLE `withdrawals_tb` (
   `finance_record_id` int(11) DEFAULT NULL COMMENT '财务记录id外键',
   PRIMARY KEY (`withdrawals_id`),
   KEY `INDEX_FINANCERECORDID` (`finance_record_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1008 DEFAULT CHARSET=utf8 COMMENT='提现信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=1015 DEFAULT CHARSET=utf8 COMMENT='提现信息表';
 
 -- ----------------------------
 -- Records of withdrawals_tb
@@ -3820,3 +4136,10 @@ INSERT INTO `withdrawals_tb` VALUES ('1004', '梁未', '2703687170@qq.com', '110
 INSERT INTO `withdrawals_tb` VALUES ('1005', '刘哥', '18300700235', '1101');
 INSERT INTO `withdrawals_tb` VALUES ('1006', '刘哥', '18300700235', '1102');
 INSERT INTO `withdrawals_tb` VALUES ('1007', '测试', '15068747539', '1107');
+INSERT INTO `withdrawals_tb` VALUES ('1008', '梁威', '986211891@qq.com', '1118');
+INSERT INTO `withdrawals_tb` VALUES ('1009', '梁威', '986211891@qq.com', '1119');
+INSERT INTO `withdrawals_tb` VALUES ('1010', '刘哥', '18300700235', '1121');
+INSERT INTO `withdrawals_tb` VALUES ('1011', '测试', '15068747539', '1126');
+INSERT INTO `withdrawals_tb` VALUES ('1012', '刘哥', '18300700235', '1131');
+INSERT INTO `withdrawals_tb` VALUES ('1013', '梁威', '2703687170@qq.com', '1132');
+INSERT INTO `withdrawals_tb` VALUES ('1014', '梁威', '2703687170@qq.com', '1134');
